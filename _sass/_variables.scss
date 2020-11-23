@@ -32,10 +32,15 @@
   --body-color: var(--gray-700);
   --body-bg: #fff;
 
-  --link-color: var(--blue);
-  --link-hover-color: #1c7ed6;
+  //--link-color: var(--blue);
+  //--link-hover-color: #1c7ed6;
+  --link-color: #a00000;
+  --link-hover-color: #a00000;
 
-  --heading-color: var(--gray-900);
+  //--heading-color: var(--gray-900);
+  --heading-color: #a00000;
+
+  --heading3-color: #a00000;
 
   --border-color: var(--gray-300);
   --border-radius: .25rem;
@@ -55,6 +60,8 @@
     --body-bg: var(--gray-800);
 
     --heading-color: #fff;
+
+    --heading3-color: #fff;
 
     --link-color: var(--blue-300);
     --link-hover-color: var(--blue-400);
