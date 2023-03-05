@@ -1,39 +1,46 @@
-# Setup
-title:
-tagline:
-url:
-paginate: 1
-baseurl: ""
-permalink: pretty
+# Site Info
+title:              "Blog of Daniel A. Matysiak"
+description:        "Stuff"
+google_verify:      abc123 # Put your Google Verification here
+google_analytics:   UA-123
 
-# Gems
-plugins:
-  - jekyll-gist
-  - jekyll-paginate
-  - jekyll-seo-tag
+# Author Info
 
-# Optimize Jekyll
-exclude:
-  - .editorconfig
-  - .git
-  - .jekyll-cache
-  - Gemfile
-  - Gemfile.lock
-  - LICENSE.md
-  - README.md
+# Site Settings
+url:                 https://dmatysiak.github.io
+baseurl:
+permalink:          /posts/:title
+timezone:           America/New_York # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+mathjax:            true  # enables support for mathjax - set to false to disable
 
+# Site Build
+highlighter:        rouge
+markdown:           kramdown
+kramdown:
+    input:          GFM
 sass:
-  sass_dir: _sass
-  style: :compressed
+    style:          :compressed
 
-# Options
+# Other Params
+include:            [ "robots.txt" ]
+exclude:            [ "LICENSE", "README.md", "CNAME", "vendor", "Gemfile" ]
+plugins:
+  - jekyll-sitemap
 
-# Replace this value and uncomment to enable Google Analytics tracking
-# ga_analytics: UA-000000-0
 
-# Specify the author for blog posts
-author:
-  name: Daniel A. Matysiak
-
-# Custom vars
-version: 3.0.0
+defaults:
+  -
+    scope:
+      path:         ""
+    values:
+      layout:       "null"
+  -
+    scope:
+      type:         "pages"
+    values:
+      layout:       "page"
+  -
+    scope:
+      type:         "posts"
+    values:
+      layout:       "post"
