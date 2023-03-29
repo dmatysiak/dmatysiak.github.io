@@ -14,13 +14,15 @@ layout: default
 
 <main class="home" id="main" role="main" aria-label="Content">
 
-  <h1 class="content-title divided">
+  <h1 class="content-title">
     {% if site.paginate and site.paginate_path and paginator.page > 1 %}
       Page {{ paginator.page }}
     {% else %}
       Contents
     {% endif %}
   </h1>
+
+  <div class="divided"></div>
 
   {% if site.paginate and site.paginate_path %}
 

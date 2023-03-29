@@ -8,7 +8,7 @@ body {
 
 h1 {
   font-size: 3em;
-  margin: .5em auto;
+  margin: auto auto;
 }
 
 h2 {
@@ -108,8 +108,10 @@ figcaption {
 }
 
 .divided::after {
-  content: "";
-  @include divider;
+    content: "";
+    display: block;
+    overflow: auto;
+    @include divider;
 }
 
 .home {
@@ -120,8 +122,9 @@ figcaption {
 
 .content-title {
   font-size: 2em;
-  margin-bottom: 2em;
+  //  margin-bottom: 2em;
   text-align: center;
+  padding: 0em 1em;
 }
 
 .post-date {
