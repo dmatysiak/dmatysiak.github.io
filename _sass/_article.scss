@@ -22,8 +22,15 @@
 
 .post p {
   text-align: justify;
-  text-indent: 1.5em;
   text-justify: inter-word;
+}
+
+figure + p {
+  text-indent: 0;
+}
+
+*:not(figure) + p {
+  text-indent: 1.5em;
 }
 
 .post p:first-of-type,
