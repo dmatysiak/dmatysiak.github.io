@@ -15,12 +15,14 @@ h2 {
   font-size: 2em;
   margin: 1em auto;
   text-align: center;
+  color: $heading-color;
 }
 
 h3 {
   font-size: 1.5em;
   margin: 1.3333em auto;
   text-align: center;
+  color: $heading-color;
 }
 
 h4 {
@@ -28,6 +30,7 @@ h4 {
   font-style: italic;
   margin: 1.875em auto;
   text-align: center;
+  color: $heading-color;
 }
 
 h5 {
@@ -35,6 +38,7 @@ h5 {
   font-style: italic;
   margin: 2em auto;
   text-align: center;
+  color: $heading-color;
 }
 
 h6 {
@@ -42,6 +46,7 @@ h6 {
   font-style: italic;
   margin: 2.25em auto;
   text-align: center;
+  color: $heading-color;
 }
 
 em {
