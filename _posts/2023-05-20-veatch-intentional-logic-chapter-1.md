@@ -1,5 +1,5 @@
 ---
-title: "Summary: \"Intentional Logic\" (Chapter One)"
+title: "Summary: \"Intentional Logic\"<br/>(Chapter One)"
 layout: post
 author: "Daniel A. Matysiak"
 categories: test
