@@ -2,7 +2,7 @@
 title: "Summary: \"Intentional Logic\"<br/>(Chapter One)"
 layout: post
 author: "Daniel A. Matysiak"
-categories: test
+categories: ["summary", "intentional-logic", "veatch"]
 usemathjax: true
 ---
 
