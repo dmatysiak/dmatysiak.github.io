@@ -30,7 +30,9 @@ figure + p {
 }
 
 *:not(figure) + p {
-  text-indent: 1.5em;
+    text-indent: 0em; //1.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 .post p:first-of-type,

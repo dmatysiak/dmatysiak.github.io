@@ -1,5 +1,5 @@
 ---
-title: "Summary: \"Locke\"<br/>(Chapter One)"
+title: "\"Locke\"<br/>(Chapter One)"
 layout: post
 author: "Daniel A. Matysiak"
 categories: ["summary", "locke", "feser"]
