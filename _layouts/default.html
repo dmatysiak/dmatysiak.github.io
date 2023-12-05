@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
   <head>
+    {%- if jekyll.environment == 'production' -%}
+      {%- include google-analytics.html -%}
+    {%- endif -%}
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,9 +17,6 @@
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | absolute_url }}?{{ site.time | date: '%s%N' }}">
 
     <link rel="apple-touch-icon" href="{{ site.icon }}">
-    {%- if jekyll.environment == 'production' -%}
-      {%- include google-analytics.html -%}
-    {%- endif -%}
 
     {%- include mathjax.html -%}
 
