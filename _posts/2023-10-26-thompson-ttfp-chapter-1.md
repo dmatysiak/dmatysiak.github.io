@@ -2,7 +2,6 @@
 title: "\"Type Theory and Functional Programming\"<br/>(Chapter One)"
 layout: post
 author: "Daniel A. Matysiak"
-categories: ["summary", "ttfp", "thompson"]
 usemathjax: true
 ---
 
@@ -67,9 +66,12 @@ $$\frac{A \land B}
        {B}(\mathtt{\land E_B})$$
 
 *Implication introduction* allows us to infer the formula $A \implies B$ from a proof of
-$B$. Note that $B$ *may* depend on $A$, but implication introduction does not depend
-on $A$. We do not need a proof of $A$, only a proof of $B$. Therefore, we can
-discharge $A$ (denoted by $[A]$):
+$B$. Note that $B$ *may* depend on $A$, but implication introduction does not depend on
+$A$. We do not need a proof of $A$, only a proof of $B$. (We are only interested in
+showing that $B$ follows from $A$, so to do that, we assume $A$ to prove $B$. Thus, $A$ is
+only temporarily assumed to show that the implication holds and may, therefore, be
+introduced.) Therefore, we can *discharge* $A$ from the set of premises (denoted by
+$[A]$):
 
 $$\frac{\begin{array}{c}[A]\\\vdots\\B\end{array}}
        {A \implies B}(\mathtt{\Rightarrow{I})}$$

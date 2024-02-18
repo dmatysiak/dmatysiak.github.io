@@ -2,7 +2,6 @@
 title: "\"Locke\"<br/>(Chapter One)"
 layout: post
 author: "Daniel A. Matysiak"
-categories: ["summary", "locke", "feser"]
 usemathjax: true
 ---
 
