@@ -43,4 +43,4 @@ relations, obscuring their "distinctively logical character and function". Accor
 the coming chapters, Veatch intends to address the question of whether the achievements of
 mathematical logic constitute *bona fide* achievements in logic proper, as well as the
 question of what the proper relation is of logic to philosophy, especially metaphysics,
-and whether logic can stand on its own, or else forced to presuppose metaphysics.
+and whether logic can stand on its own, or else is forced to presuppose metaphysics.
