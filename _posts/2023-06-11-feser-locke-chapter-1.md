@@ -5,8 +5,7 @@ author: "Daniel A. Matysiak"
 usemathjax: true
 ---
 
-In the opening chapter, Feser gives the reader an overview of Locke's significance as the
-perhaps not the father of *modern philosophy* (an "honor" reserved for Descartes), but the
+In the opening chapter, Feser gives the reader an overview of Locke's significance as perhaps not the father of *modern philosophy* (an "honor" reserved for Descartes), but the
 father of *modernity*. No other modern philosopher has had the influence on the modern
 world that Locke has had, and so, if we wish to understand ourselves, we need to
 understand Locke.
