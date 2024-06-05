@@ -47,6 +47,6 @@ are compatible with his conception of freedom. Finally, because Locke keeps some
 of medieval thought and rejects others, we must also determnine whether the retained
 elements can coherently be kept while excluding those Locke rejected.
 
-In the remainder of the chapter, Feser sketches an autobiography of Locke that helps to
+In the remainder of the chapter, Feser sketches an biography of Locke that helps to
 give the reader historical context that can aid him in understanding both the intellectual
 context and historical events that shaped or may have shaped Locke's reasoning.
