@@ -114,7 +114,7 @@ quodlibet*):
 $$\frac{\bot}
        {A}(\mathtt{\bot E})$$
 
-Using $\bot$ elimination, we can can define *negation*:
+Using $\bot$ elimination, we can define *negation*:
 
 $$\neg A \equiv_{\mathtt{def}} A \implies \bot$$
 
