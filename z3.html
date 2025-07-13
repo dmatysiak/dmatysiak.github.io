@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pebble Grid Game</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            overflow: hidden;
+        }
+
+        #gameContainer {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background: #e8e8e8;
+            cursor: grab;
+        }
+
+        #gameContainer:active {
+            cursor: grabbing;
+        }
+
+        #gameBoard {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background:
+                linear-gradient(90deg, #ddd 1px, transparent 1px),
+                linear-gradient(#ddd 1px, transparent 1px);
+            background-size: 40px 40px;
+            transform-origin: center;
+        }
+
+        .pebble {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 2px solid #333;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .pebble.red { background: #ff4444; }
+        .pebble.green { background: #44ff44; }
+        .pebble.blue { background: #4444ff; }
+
+        .pebble.selected {
+            transform: translate(-50%, -50%) scale(1.2);
+            box-shadow: 0 0 10px rgba(255, 255, 0, 0.8);
+            border-color: #ffd700;
+        }
+
+        .pebble:hover {
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .pebble.selected:hover {
+            transform: translate(-50%, -50%) scale(1.25);
+        }
+
+        #ui {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 8px;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        #controls {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 8px;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+
+        .rules {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 8px;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            max-width: 300px;
+            font-size: 12px;
+        }
+
+        #victory {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 255, 0, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            z-index: 200;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="gameContainer">
+        <div id="gameBoard"></div>
+
+        <div id="ui">
+            <div><strong>Level: </strong><span id="levelCount">1</span></div>
+            <div><strong>Moves: </strong><span id="moveCount">0</span></div>
+            <div><strong>Total Score: </strong><span id="totalMoves">0</span></div>
+            <div><strong>Pebbles: </strong><span id="pebbleCount">0</span></div>
+            <div><strong>Selected: </strong><span id="selectedCount">0</span></div>
+        </div>
+
+        <div id="controls">
+            <button onclick="resetGame()">New Game</button>
+            <button onclick="fullReset()">Reset All</button>
+            <button onclick="centerView()">Center View</button>
+        </div>
+
+        <div class="rules">
+            <strong>Rules:</strong><br>
+            • Double-click 1 pebble → Remove it, add 2 of other colors<br>
+            • Click 2 different colors → Replace with 3rd color<br>
+            • Click 2 same colors → Remove both<br>
+            • Goal: Clear all pebbles in fewest moves
+        </div>
+
+        <div id="victory">
+            🎉 Level Complete! 🎉<br>
+            Cleared in <span id="finalMoves"></span> moves!<br>
+            <button onclick="resetGame()" style="margin-top: 10px;">Next Level</button>
+        </div>
+    </div>
+
+    <script>
+        class PebbleGame {
+            constructor() {
+                this.board = document.getElementById('gameBoard');
+                this.container = document.getElementById('gameContainer');
+                this.pebbles = new Map(); // id -> pebble data
+                this.selectedPebbles = [];
+                this.moves = 0;
+                this.totalMoves = 0;
+                this.nextId = 1;
+                this.gridSize = 40;
+                this.occupiedPositions = new Set();
+                this.level = 1;
+                this.gamesCompleted = 0;
+
+                // Pan state
+                this.panX = 0;
+                this.panY = 0;
+                this.isPanning = false;
+                this.lastPanX = 0;
+                this.lastPanY = 0;
+
+                this.colors = ['red', 'green', 'blue'];
+                this.colorMap = { red: 0, green: 1, blue: 2 };
+
+                this.initializePanning();
+                this.resetGame();
+            }
+
+            initializePanning() {
+                let startX, startY;
+
+                this.container.addEventListener('mousedown', (e) => {
+                    if (e.target.classList.contains('pebble')) return;
+                    this.isPanning = true;
+                    startX = e.clientX - this.panX;
+                    startY = e.clientY - this.panY;
+                });
+
+                this.container.addEventListener('mousemove', (e) => {
+                    if (!this.isPanning) return;
+                    this.panX = e.clientX - startX;
+                    this.panY = e.clientY - startY;
+                    this.updateBoardTransform();
+                });
+
+                this.container.addEventListener('mouseup', () => {
+                    this.isPanning = false;
+                });
+
+                this.container.addEventListener('mouseleave', () => {
+                    this.isPanning = false;
+                });
+            }
+
+            updateBoardTransform() {
+                this.board.style.transform = `translate(${this.panX}px, ${this.panY}px)`;
+            }
+
+            resetGame() {
+                this.board.innerHTML = '';
+                this.pebbles.clear();
+                this.selectedPebbles = [];
+                this.moves = 0;
+                this.nextId = 1;
+                this.occupiedPositions.clear();
+                this.panX = 0;
+                this.panY = 0;
+                this.updateBoardTransform();
+                document.getElementById('victory').style.display = 'none';
+
+                this.generateInitialPebbles();
+                this.updateUI();
+            }
+
+            generateInitialPebbles() {
+                if (this.gamesCompleted === 0) {
+                    // First game: Simple, guaranteed solvable configuration
+                    const initialPebbles = [
+                        { color: 'red', x: 0, y: 0 },
+                        { color: 'red', x: 1, y: 0 },
+                        { color: 'green', x: 0, y: 1 },
+                        { color: 'green', x: 1, y: 1 },
+                        { color: 'blue', x: 0, y: -1 },
+                        { color: 'blue', x: 1, y: -1 }
+                    ];
+
+                    initialPebbles.forEach(pebble => {
+                        this.createPebble(pebble.color, pebble.x, pebble.y);
+                    });
+                } else {
+                    // Generate increasingly complex randomized configurations
+                    this.generateRandomSolvableConfiguration();
+                }
+            }
+
+            generateRandomSolvableConfiguration() {
+                // Calculate number of initial pairs based on games completed
+                const basePairs = 3; // Start with 3 pairs (6 pebbles)
+                const additionalPairs = Math.floor(this.gamesCompleted / 2); // +1 pair every 2 games
+                const maxPairs = 8; // Maximum pairs
+
+                const numPairs = Math.min(basePairs + additionalPairs, maxPairs);
+
+                // Step 1: Create initial pairs of same-colored pebbles
+                const pebbleList = [];
+                const positions = this.generateSpiralPositions(numPairs * 2);
+
+                for (let i = 0; i < numPairs; i++) {
+                    const color = this.colors[Math.floor(Math.random() * 3)];
+
+                    // Add a pair of the same color
+                    pebbleList.push({
+                        color: color,
+                        position: positions[i * 2],
+                        id: this.nextId++
+                    });
+                    pebbleList.push({
+                        color: color,
+                        position: positions[i * 2 + 1],
+                        id: this.nextId++
+                    });
+                }
+
+                // Step 2: Randomly select some pebbles and apply Rule 1 to them
+                // (Remove 1 pebble, add 2 of other colors)
+                const transformationCount = Math.floor(numPairs * 0.4) + Math.floor(Math.random() * Math.floor(numPairs * 0.4));
+
+                for (let i = 0; i < transformationCount && pebbleList.length > 0; i++) {
+                    // Pick a random pebble to transform
+                    const pebbleIndex = Math.floor(Math.random() * pebbleList.length);
+                    const pebble = pebbleList[pebbleIndex];
+
+                    // Remove the selected pebble
+                    pebbleList.splice(pebbleIndex, 1);
+
+                    // Add 2 pebbles of the other colors
+                    const otherColors = this.colors.filter(c => c !== pebble.color);
+                    const newPositions = this.findNearbyPositions(pebble.position.x, pebble.position.y, 2);
+
+                    if (newPositions.length >= 2) {
+                        pebbleList.push({
+                            color: otherColors[0],
+                            position: newPositions[0],
+                            id: this.nextId++
+                        });
+                        pebbleList.push({
+                            color: otherColors[1],
+                            position: newPositions[1],
+                            id: this.nextId++
+                        });
+                    } else {
+                        // Fallback: find any available positions
+                        const fallbackPositions = this.findEmptyPositionsNearCenter(2);
+                        if (fallbackPositions.length >= 2) {
+                            pebbleList.push({
+                                color: otherColors[0],
+                                position: fallbackPositions[0],
+                                id: this.nextId++
+                            });
+                            pebbleList.push({
+                                color: otherColors[1],
+                                position: fallbackPositions[1],
+                                id: this.nextId++
+                            });
+                        }
+                    }
+                }
+
+                // Step 3: Create all the pebbles on the board
+                pebbleList.forEach(pebble => {
+                    this.createPebble(pebble.color, pebble.position.x, pebble.position.y);
+                });
+            }
+
+            generateSpiralPositions(count) {
+                const positions = [];
+                const directions = [[0, 1], [1, 0], [0, -1], [-1, 0]]; // right, down, left, up
+
+                let x = 0, y = 0;
+                let dirIndex = 0;
+                let steps = 1;
+                let stepCount = 0;
+                let stepsInDirection = 0;
+
+                positions.push({ x, y });
+
+                for (let i = 1; i < count; i++) {
+                    const [dx, dy] = directions[dirIndex];
+                    x += dx;
+                    y += dy;
+
+                    // Add some randomness to make it less predictable
+                    if (Math.random() < 0.3) {
+                        x += Math.random() < 0.5 ? 1 : -1;
+                    }
+                    if (Math.random() < 0.3) {
+                        y += Math.random() < 0.5 ? 1 : -1;
+                    }
+
+                    positions.push({ x, y });
+
+                    stepsInDirection++;
+                    if (stepsInDirection === steps) {
+                        dirIndex = (dirIndex + 1) % 4;
+                        stepsInDirection = 0;
+                        stepCount++;
+                        if (stepCount === 2) {
+                            steps++;
+                            stepCount = 0;
+                        }
+                    }
+                }
+
+                return positions;
+            }
+
+            createPebble(color, gridX, gridY) {
+                const id = this.nextId++;
+                const element = document.createElement('div');
+                element.className = `pebble ${color}`;
+                element.dataset.id = id;
+
+                const screenX = window.innerWidth / 2 + gridX * this.gridSize;
+                const screenY = window.innerHeight / 2 + gridY * this.gridSize;
+
+                element.style.left = screenX + 'px';
+                element.style.top = screenY + 'px';
+
+                this.board.appendChild(element);
+
+                const pebbleData = {
+                    id: id,
+                    color: color,
+                    gridX: gridX,
+                    gridY: gridY,
+                    element: element
+                };
+
+                this.pebbles.set(id, pebbleData);
+                this.occupiedPositions.add(`${gridX},${gridY}`);
+
+                element.addEventListener('click', (e) => this.handlePebbleClick(e, id));
+                element.addEventListener('dblclick', (e) => this.handlePebbleDoubleClick(e, id));
+
+                return pebbleData;
+            }
+
+            handlePebbleClick(e, id) {
+                e.stopPropagation();
+
+                const pebble = this.pebbles.get(id);
+                if (!pebble) return;
+
+                if (this.selectedPebbles.includes(id)) {
+                    // Deselect
+                    this.selectedPebbles = this.selectedPebbles.filter(p => p !== id);
+                    pebble.element.classList.remove('selected');
+                } else {
+                    // Select
+                    this.selectedPebbles.push(id);
+                    pebble.element.classList.add('selected');
+
+                    if (this.selectedPebbles.length === 2) {
+                        this.processTwoPebbleSelection();
+                    }
+                }
+
+                this.updateUI();
+            }
+
+            handlePebbleDoubleClick(e, id) {
+                e.stopPropagation();
+
+                // Clear any selections first
+                this.clearSelections();
+
+                // Apply Rule 1: Remove 1 pebble, add 2 of other colors
+                const pebble = this.pebbles.get(id);
+                if (!pebble) return;
+
+                const otherColors = this.colors.filter(c => c !== pebble.color);
+                const pos = this.findNearbyPositions(pebble.gridX, pebble.gridY, 2);
+
+                this.removePebble(id);
+
+                if (pos.length >= 2) {
+                    this.createPebble(otherColors[0], pos[0].x, pos[0].y);
+                    this.createPebble(otherColors[1], pos[1].x, pos[1].y);
+                } else {
+                    // Fallback if no nearby positions
+                    const fallbackPos = this.findEmptyPositionsNearCenter(2);
+                    this.createPebble(otherColors[0], fallbackPos[0].x, fallbackPos[0].y);
+                    this.createPebble(otherColors[1], fallbackPos[1].x, fallbackPos[1].y);
+                }
+
+                this.moves++;
+                this.totalMoves++;
+                this.updateUI();
+                this.checkVictory();
+            }
+
+            processTwoPebbleSelection() {
+                const [id1, id2] = this.selectedPebbles;
+                const pebble1 = this.pebbles.get(id1);
+                const pebble2 = this.pebbles.get(id2);
+
+                if (!pebble1 || !pebble2) return;
+
+                if (pebble1.color === pebble2.color) {
+                    // Rule 3: Same color - remove both
+                    this.removePebble(id1);
+                    this.removePebble(id2);
+                } else {
+                    // Rule 2: Different colors - replace with third color
+                    const usedColors = [pebble1.color, pebble2.color];
+                    const newColor = this.colors.find(c => !usedColors.includes(c));
+
+                    // Place new pebble at the midpoint or nearby
+                    const midX = Math.round((pebble1.gridX + pebble2.gridX) / 2);
+                    const midY = Math.round((pebble1.gridY + pebble2.gridY) / 2);
+
+                    let newPos = this.findNearbyPositions(midX, midY, 1)[0];
+                    if (!newPos) {
+                        newPos = this.findEmptyPositionsNearCenter(1)[0];
+                    }
+
+                    this.removePebble(id1);
+                    this.removePebble(id2);
+                    this.createPebble(newColor, newPos.x, newPos.y);
+                }
+
+                this.moves++;
+                this.totalMoves++;
+                this.clearSelections();
+                this.updateUI();
+                this.checkVictory();
+            }
+
+            findNearbyPositions(centerX, centerY, count) {
+                const positions = [];
+                const checkedPositions = new Set();
+
+                // Check positions in expanding circles around the center
+                for (let radius = 1; radius <= 10 && positions.length < count; radius++) {
+                    const candidatePositions = [];
+
+                    for (let dx = -radius; dx <= radius; dx++) {
+                        for (let dy = -radius; dy <= radius; dy++) {
+                            if (Math.abs(dx) === radius || Math.abs(dy) === radius) {
+                                const x = centerX + dx;
+                                const y = centerY + dy;
+                                const posKey = `${x},${y}`;
+
+                                if (!this.occupiedPositions.has(posKey) && !checkedPositions.has(posKey)) {
+                                    candidatePositions.push({ x, y });
+                                    checkedPositions.add(posKey);
+                                }
+                            }
+                        }
+                    }
+
+                    // Shuffle candidate positions for randomness
+                    for (let i = candidatePositions.length - 1; i > 0; i--) {
+                        const j = Math.floor(Math.random() * (i + 1));
+                        [candidatePositions[i], candidatePositions[j]] = [candidatePositions[j], candidatePositions[i]];
+                    }
+
+                    // Add positions up to the count needed
+                    for (let i = 0; i < candidatePositions.length && positions.length < count; i++) {
+                        positions.push(candidatePositions[i]);
+                    }
+                }
+
+                return positions;
+            }
+
+            findEmptyPositionsNearCenter(count) {
+                const positions = [];
+
+                for (let radius = 0; radius <= 20 && positions.length < count; radius++) {
+                    for (let dx = -radius; dx <= radius && positions.length < count; dx++) {
+                        for (let dy = -radius; dy <= radius && positions.length < count; dy++) {
+                            if ((Math.abs(dx) === radius || Math.abs(dy) === radius) || radius === 0) {
+                                if (!this.occupiedPositions.has(`${dx},${dy}`)) {
+                                    positions.push({ x: dx, y: dy });
+                                }
+                            }
+                        }
+                    }
+                }
+
+                return positions;
+            }
+
+            removePebble(id) {
+                const pebble = this.pebbles.get(id);
+                if (!pebble) return;
+
+                this.occupiedPositions.delete(`${pebble.gridX},${pebble.gridY}`);
+                pebble.element.remove();
+                this.pebbles.delete(id);
+                this.selectedPebbles = this.selectedPebbles.filter(p => p !== id);
+            }
+
+            clearSelections() {
+                this.selectedPebbles.forEach(id => {
+                    const pebble = this.pebbles.get(id);
+                    if (pebble) {
+                        pebble.element.classList.remove('selected');
+                    }
+                });
+                this.selectedPebbles = [];
+            }
+
+            updateUI() {
+                document.getElementById('levelCount').textContent = this.gamesCompleted + 1;
+                document.getElementById('moveCount').textContent = this.moves;
+                document.getElementById('totalMoves').textContent = this.totalMoves;
+                document.getElementById('pebbleCount').textContent = this.pebbles.size;
+                document.getElementById('selectedCount').textContent = this.selectedPebbles.length;
+            }
+
+            checkVictory() {
+                if (this.pebbles.size === 0) {
+                    this.gamesCompleted++;
+                    document.getElementById('finalMoves').textContent = this.moves;
+                    document.getElementById('victory').style.display = 'block';
+                }
+            }
+
+            centerView() {
+                // Calculate center of all pebbles
+                if (this.pebbles.size === 0) {
+                    this.panX = 0;
+                    this.panY = 0;
+                } else {
+                    let sumX = 0, sumY = 0;
+                    this.pebbles.forEach(pebble => {
+                        sumX += pebble.gridX;
+                        sumY += pebble.gridY;
+                    });
+
+                    const avgX = sumX / this.pebbles.size;
+                    const avgY = sumY / this.pebbles.size;
+
+                    this.panX = -avgX * this.gridSize;
+                    this.panY = -avgY * this.gridSize;
+                }
+
+                this.updateBoardTransform();
+            }
+
+            fullReset() {
+                this.gamesCompleted = 0;
+                this.totalMoves = 0;
+                this.resetGame();
+            }
+        }
+
+        // Global functions for buttons
+        let game;
+
+        function resetGame() {
+            game.resetGame();
+        }
+
+        function fullReset() {
+            game.fullReset();
+        }
+
+        function centerView() {
+            game.centerView();
+        }
+
+        // Initialize game when page loads
+        window.addEventListener('load', () => {
+            game = new PebbleGame();
+        });
+    </script>
+</body>
+</html>
