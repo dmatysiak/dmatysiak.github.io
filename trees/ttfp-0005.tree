@@ -1,0 +1,51 @@
+\title{Substitution in predicate logic}
+
+\p{After providing a few examples of how quantifiers may be used, Thompson explains how variables and substitutions operate in propositions with quantifiers. Quantifier variables may be consistently renamed as long as the new name is not already in use in the affected formula. A variable #{x} is \em{bound} in a fomula #{\forall x.A} or #{\exists x.B}. The quantifier binds values to #{x}. All other occurrences are \em{free}. So in the formula #{\forall x.P(x,y)}, #{x} is bound, while #{y} is free.}
+
+\p{\em{Substitution} is the act of consistently replacing a variable with an arbitrary term. Only free variables may be substituted arbitrarily in this way, unlike bound variables, which express a universal or existential claim. Thompson uses the notation #{A[t/x]} to mean the formula #{A} with #{t} substituted for #{x}.}
+
+\p{When substituting a variable with an arbitrary term, we must be careful to avoid \em{variable capture}. Variable capture occurs when a free variable within the term substituted for a variable contains a variable that is otherwise bound in the formula in which we are making the substitution. Thompson gives the example of substituting the term #{y+1} for #{x} in the formula #{\exists y.y>x}. This substitution results in the formula #{\exists y.y>y+1}, which is obviously false. To avoid this problem, we can rename the variable #{y} in #{y+1} to something that does not occur in #{\exists y.y>x} before performing the substitution.}
+
+\p{Formally, Thompson defines substitution, inductively, in the following way.
+
+For a term #{s}, #{s[t/x]} is defined as follows:
+
+\ul{
+  \li{#{x[t/x] \equiv_\text{df} t}}
+  \li{if #{y \not\equiv x}, then #{y[t/x] \equiv_\text{df} y}}
+  \li{#{f_{n,m}(t_1,\ldots,t_n)[t/x] \equiv_\text{df} f_{n,m}(t_1[t/x],\ldots,t_n[t/x])}}}}
+
+\p{For a formula #{A}, #{A[t/x]} is defined as follows. For atomic formulas:
+
+\ul{
+  \li{#{P_{n,m}(t_1,\ldots,t_n)[t/x] \equiv_{df} P_{n,m}(t_1[t/x],\ldots,t_n[t/x])}}
+  \li{#{(t_1 = t_2)[t/x] \equiv_\text{df} t_1[t/x] = t2[t/x]}}}}
+
+\p{Substitution distributes over propositional combinations:
+
+\ul{
+  \li{#{(A \lor B)[t/x] \equiv_\text{df} A[t/x] \lor B[t/x]}}
+  \li{#{(A \land B)[t/x] \equiv_\text{df} A[t/x] \land B[t/x]}}
+  \li{#{(A \implies B)[t/x] \equiv_\text{df} A[t/x] \implies B[t/x]}}
+  \li{#{(A \iff B)[t/x] \equiv_\text{df} A[t/x] \iff B[t/x]}}
+  \li{#{(\neg A)[t/x] \equiv_\text{df} \neg (A[t/x])}}}}
+
+\p{For quantifiers:
+
+\ul{
+  \li{#{(\forall x.B)[t/x] \equiv_\text{df} \forall x.B}}
+  \li{#{(\exists x.B)[t/x] \equiv_\text{df} \exists x.B}}}}
+
+\p{If #{y \not\equiv x} and #{y} \em{does not} appear in #{t}, then
+
+\ul{
+  \li{#{(\forall y.B)[t/x] \equiv_\text{df} \forall y.(B[t/x])}}
+  \li{#{(\exists y.B)[t/x] \equiv_\text{df} \exists y.(B[t/x])}}}}
+
+\p{On the other hand, if #{y \not\equiv x} and #{y} \em{does} appear in #{t}, then
+
+\ul{
+  \li{#{(\forall y.B)[t/x] \equiv_\text{df} \forall z.(B[z/y][t/x])}}
+  \li{#{(\exists y.B)[t/x] \equiv_\text{df} \exists z.(B[z/y][t/x])}}}
+
+where #{z} is a variable that does not appear in either #{t} or #{B}.}

@@ -1,0 +1,114 @@
+\title{Derivation rules for propositional logic}
+
+\p{The simplest derivation is the \em{assumption rule} which states that any formula #{A} may be derived from the assumption of #{A} itself. The proof is trivial:
+
+##{A}}
+
+\p{The \em{conjunction introduction rule} builds a composite derivation by combining derivations of the conjuncts into a derivation of the conjunction:
+
+##{\frac{\begin{array}{lr}A & B\end{array}}
+        {A \land B}(\mathtt{\land I})}}
+
+\p{The \em{elimination rules for conjunction} allows us to derive the constituent conjuncts from an existing conjunction:
+
+##{\frac{A \land B}
+        {A}(\mathtt{\land E_A})}
+
+##{\frac{A \land B}
+        {B}(\mathtt{\land E_B})}}
+
+\p{\em{Implication introduction} allows us to infer the formula #{A \implies B} from a proof of #{B}. Note that #{B} \em{may} depend on #{A}, but implication introduction does not depend on #{A}. We do not need a proof of #{A}, only a proof of #{B}. (We are only interested in showing that #{B} follows from #{A}, so to do that, we assume #{A} to prove #{B}. Thus, #{A} is only temporarily assumed to show that the implication holds and may, therefore, be introduced.) Therefore, we can \em{discharge} #{A} from the set of premises (denoted by #{[A]}):
+
+##{\frac{\begin{array}{c}[A]\\\vdots\\B\end{array}}
+        {A \implies B}(\mathtt{\Rightarrow{I}})}
+
+The application of the introduction rule can be related to the discharged premise by using a label.}
+
+\p{As with conjunction, there is an \em{implication elimination rule} which effectively expresses modus ponens:
+
+##{\frac{\begin{array}{lr}A & A \implies B\end{array}}
+       {B}(\mathtt{\Rightarrow{E}})}}
+
+\p{\em{Disjunction} has two introduction rules, depending on which disjunct we have a proof for:
+
+##{\frac{A}
+       {A \lor B}(\mathtt{\lor{I_A}})}
+
+##{\frac{B}
+       {A \lor B}(\mathtt{\lor{I_B}})}
+
+Because we don't necessarily know which disjunct in a disjuntion we have a proof for, the elimination rule works by showing that, if we know that #{A \lor B}, and that #{C} can be derived from both #{A} and #{B}, then we can conclude that #{C}:
+
+##{\frac{\begin{array}{ccc}
+          & [A] & [B] \\
+          & \vdots & \vdots \\
+          A \lor B & C & C
+        \end{array}}
+       {C}(\mathtt{\lor{E}})}
+
+The premises #{A} and #{B} are discharged in order to infer #{C}.}
+
+\p{Absurdity (#{\bot}), otherwise known as contradiction or the false proposition, does not have an introduction rule, though it can be inferred from a proposition like #{A \land \neg A}. But it can be eliminated, because anything follows from contradiction (\em{ex falso quodlibet}):
+
+##{\frac{\bot}
+       {A}(\mathtt{\bot E})}}
+
+\p{Using #{\bot} elimination, we can define \em{negation}:
+
+##{\neg A \equiv_{\mathtt{def}} A \implies \bot}
+
+and using this definition, we can define for negation its introduction rule:
+
+##{\frac{\begin{array}{cc}
+          [A] & [A] \\
+          \vdots & \vdots \\
+          B & \neg B
+        \end{array}}
+       {\neg A}(\mathtt{\neg{I}})}
+
+and elimination:
+
+##{\frac{\begin{array}{lr}
+          A & \neg A \\
+        \end{array}}
+       {B}(\mathtt{\neg{E}})}}
+
+\p{Bi-implication, as usual, can be defined as
+
+##{\begin{array}{ccc}
+    A \iff B & \equiv_{\mathtt{def}} & (A \implies B) \land (B \implies A)
+  \end{array}}
+
+which allows us to define introduction:
+
+##{\frac{\begin{array}{cc}
+          A \implies B & B \implies A
+        \end{array}}
+        {A \iff B}(\mathtt{\iff{I}})}
+
+and elimination:
+
+##{\frac{A \iff B}
+        {A \implies B}(\mathtt{\iff{E_A}})}
+
+##{\frac{A \iff B}
+        {B \implies A}(\mathtt{\iff{E_B}})}}
+
+\p{Thompson also notes that the approach taken here is intuitionistic, and that "classical logic" is an extension of the intuitionistic case. This extension is accomplished by adding the \em{law of excluded middle}:
+
+##{\frac{}
+        {A \lor \neg A}(\mathtt{EM})}}
+
+\p{Alternative rules that can be used to characterize classical logic are the \em{rule of double negation}:
+
+##{\frac{\neg\neg A}
+        {A}(\mathtt{DN})}
+
+and the \em{rule of proof by contradiction}:
+
+##{\frac{\begin{array}{c c}
+          [\neg A] & [\neg A]\\
+          \vdots & \vdots\\
+          B & \neg B
+        \end{array}}
+        {A}(\mathtt{CC})}}

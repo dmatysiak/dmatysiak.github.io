@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?>
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+  <fr:frontmatter>
+    <fr:anchor>265</fr:anchor>
+    <fr:addr type="user">ttfp-0005</fr:addr>
+    <fr:route>ttfp-0005.xml</fr:route>
+    <fr:title text="Substitution in predicate logic">Substitution in predicate logic</fr:title>
+    <fr:authors />
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <fr:p>After providing a few examples of how quantifiers may be used, Thompson explains how variables and substitutions operate in propositions with quantifiers. Quantifier variables may be consistently renamed as long as the new name is not already in use in the affected formula. A variable <fr:tex display="inline"><![CDATA[x]]></fr:tex> is <fr:em>bound</fr:em> in a fomula <fr:tex display="inline"><![CDATA[\forall  x.A]]></fr:tex> or <fr:tex display="inline"><![CDATA[\exists  x.B]]></fr:tex>. The quantifier binds values to <fr:tex display="inline"><![CDATA[x]]></fr:tex>. All other occurrences are <fr:em>free</fr:em>. So in the formula <fr:tex display="inline"><![CDATA[\forall  x.P(x,y)]]></fr:tex>, <fr:tex display="inline"><![CDATA[x]]></fr:tex> is bound, while <fr:tex display="inline"><![CDATA[y]]></fr:tex> is free.</fr:p>
+    <fr:p><fr:em>Substitution</fr:em> is the act of consistently replacing a variable with an arbitrary term. Only free variables may be substituted arbitrarily in this way, unlike bound variables, which express a universal or existential claim. Thompson uses the notation <fr:tex display="inline"><![CDATA[A[t/x]]]></fr:tex> to mean the formula <fr:tex display="inline"><![CDATA[A]]></fr:tex> with <fr:tex display="inline"><![CDATA[t]]></fr:tex> substituted for <fr:tex display="inline"><![CDATA[x]]></fr:tex>.</fr:p>
+    <fr:p>When substituting a variable with an arbitrary term, we must be careful to avoid <fr:em>variable capture</fr:em>. Variable capture occurs when a free variable within the term substituted for a variable contains a variable that is otherwise bound in the formula in which we are making the substitution. Thompson gives the example of substituting the term <fr:tex display="inline"><![CDATA[y+1]]></fr:tex> for <fr:tex display="inline"><![CDATA[x]]></fr:tex> in the formula <fr:tex display="inline"><![CDATA[\exists  y.y>x]]></fr:tex>. This substitution results in the formula <fr:tex display="inline"><![CDATA[\exists  y.y>y+1]]></fr:tex>, which is obviously false. To avoid this problem, we can rename the variable <fr:tex display="inline"><![CDATA[y]]></fr:tex> in <fr:tex display="inline"><![CDATA[y+1]]></fr:tex> to something that does not occur in <fr:tex display="inline"><![CDATA[\exists  y.y>x]]></fr:tex> before performing the substitution.</fr:p>
+    <fr:p>Formally, Thompson defines substitution, inductively, in the following way.
+
+For a term <fr:tex display="inline"><![CDATA[s]]></fr:tex>, <fr:tex display="inline"><![CDATA[s[t/x]]]></fr:tex> is defined as follows:
+
+<fr:ul><fr:li><fr:tex display="inline"><![CDATA[x[t/x] \equiv _\text {df} t]]></fr:tex></fr:li>
+  <fr:li>if <fr:tex display="inline"><![CDATA[y \not \equiv  x]]></fr:tex>, then <fr:tex display="inline"><![CDATA[y[t/x] \equiv _\text {df} y]]></fr:tex></fr:li>
+  <fr:li><fr:tex display="inline"><![CDATA[f_{n,m}(t_1,\ldots ,t_n)[t/x] \equiv _\text {df} f_{n,m}(t_1[t/x],\ldots ,t_n[t/x])]]></fr:tex></fr:li></fr:ul></fr:p>
+    <fr:p>For a formula <fr:tex display="inline"><![CDATA[A]]></fr:tex>, <fr:tex display="inline"><![CDATA[A[t/x]]]></fr:tex> is defined as follows. For atomic formulas:
+
+<fr:ul><fr:li><fr:tex display="inline"><![CDATA[P_{n,m}(t_1,\ldots ,t_n)[t/x] \equiv _{df} P_{n,m}(t_1[t/x],\ldots ,t_n[t/x])]]></fr:tex></fr:li>
+  <fr:li><fr:tex display="inline"><![CDATA[(t_1 = t_2)[t/x] \equiv _\text {df} t_1[t/x] = t2[t/x]]]></fr:tex></fr:li></fr:ul></fr:p>
+    <fr:p>Substitution distributes over propositional combinations:
+
+<fr:ul><fr:li><fr:tex display="inline"><![CDATA[(A \lor  B)[t/x] \equiv _\text {df} A[t/x] \lor  B[t/x]]]></fr:tex></fr:li>
+  <fr:li><fr:tex display="inline"><![CDATA[(A \land  B)[t/x] \equiv _\text {df} A[t/x] \land  B[t/x]]]></fr:tex></fr:li>
+  <fr:li><fr:tex display="inline"><![CDATA[(A \implies  B)[t/x] \equiv _\text {df} A[t/x] \implies  B[t/x]]]></fr:tex></fr:li>
+  <fr:li><fr:tex display="inline"><![CDATA[(A \iff  B)[t/x] \equiv _\text {df} A[t/x] \iff  B[t/x]]]></fr:tex></fr:li>
+  <fr:li><fr:tex display="inline"><![CDATA[(\neg  A)[t/x] \equiv _\text {df} \neg  (A[t/x])]]></fr:tex></fr:li></fr:ul></fr:p>
+    <fr:p>For quantifiers:
+
+<fr:ul><fr:li><fr:tex display="inline"><![CDATA[(\forall  x.B)[t/x] \equiv _\text {df} \forall  x.B]]></fr:tex></fr:li>
+  <fr:li><fr:tex display="inline"><![CDATA[(\exists  x.B)[t/x] \equiv _\text {df} \exists  x.B]]></fr:tex></fr:li></fr:ul></fr:p>
+    <fr:p>If <fr:tex display="inline"><![CDATA[y \not \equiv  x]]></fr:tex> and <fr:tex display="inline"><![CDATA[y]]></fr:tex> <fr:em>does not</fr:em> appear in <fr:tex display="inline"><![CDATA[t]]></fr:tex>, then
+
+<fr:ul><fr:li><fr:tex display="inline"><![CDATA[(\forall  y.B)[t/x] \equiv _\text {df} \forall  y.(B[t/x])]]></fr:tex></fr:li>
+  <fr:li><fr:tex display="inline"><![CDATA[(\exists  y.B)[t/x] \equiv _\text {df} \exists  y.(B[t/x])]]></fr:tex></fr:li></fr:ul></fr:p>
+    <fr:p>On the other hand, if <fr:tex display="inline"><![CDATA[y \not \equiv  x]]></fr:tex> and <fr:tex display="inline"><![CDATA[y]]></fr:tex> <fr:em>does</fr:em> appear in <fr:tex display="inline"><![CDATA[t]]></fr:tex>, then
+
+<fr:ul><fr:li><fr:tex display="inline"><![CDATA[(\forall  y.B)[t/x] \equiv _\text {df} \forall  z.(B[z/y][t/x])]]></fr:tex></fr:li>
+  <fr:li><fr:tex display="inline"><![CDATA[(\exists  y.B)[t/x] \equiv _\text {df} \exists  z.(B[z/y][t/x])]]></fr:tex></fr:li></fr:ul>
+
+where <fr:tex display="inline"><![CDATA[z]]></fr:tex> is a variable that does not appear in either <fr:tex display="inline"><![CDATA[t]]></fr:tex> or <fr:tex display="inline"><![CDATA[B]]></fr:tex>.</fr:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:title text="Context">Context</fr:title>
+        <fr:authors />
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>266</fr:anchor>
+            <fr:addr type="user">ttfp-0004</fr:addr>
+            <fr:route>ttfp-0004.xml</fr:route>
+            <fr:title text="Predicate logic">Predicate logic</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>In the second section of the first chapter, Thompson covers predicate logic, "the logic of properties or <fr:em>predicates</fr:em>". Whereas propositional logic composes complex propositions from atomic, unanalyzed propositions, propositions in predicate logic are constructed from predicates, or statements about certain properties holding for certain objects.</fr:p>
+            <fr:p>Syntactically, the language of predicate logic can be divided into formulae and terms. Terms denote objects, and have one of the following forms:
+
+<fr:ul><fr:li>Variables (<fr:tex display="inline"><![CDATA[v_0, v_1,\ldots ]]></fr:tex>, or, <fr:tex display="inline"><![CDATA[x, y, z, u, v,\ldots ]]></fr:tex>).</fr:li>
+  <fr:li>Constants (<fr:tex display="inline"><![CDATA[c_0, c_1,\ldots ]]></fr:tex>, or, <fr:tex display="inline"><![CDATA[a, b, c,\ldots ]]></fr:tex>).</fr:li>
+  <fr:li>Composite terms (<fr:tex display="inline"><![CDATA[f_{n,m}(t_1, \ldots , t_n)]]></fr:tex>, formed by applying <fr:em>function symbols</fr:em>, like <fr:tex display="inline"><![CDATA[f, g, h,\ldots ]]></fr:tex>, to other terms <fr:tex display="inline"><![CDATA[s, t, t_1,\ldots ]]></fr:tex>, where <fr:tex display="inline"><![CDATA[n]]></fr:tex> is the <fr:em>arity</fr:em> and <fr:tex display="inline"><![CDATA[m]]></fr:tex> is some index to distinguish function symbols).</fr:li></fr:ul></fr:p>
+            <fr:p>Propositions have three forms:
+
+<fr:ul><fr:li>Atomic formulas. <fr:tex display="inline"><![CDATA[P_{n,m}(t_1,\ldots ,t_n)]]></fr:tex> (where <fr:tex display="inline"><![CDATA[P_{n,m}]]></fr:tex> is the predicate symbol with arity <fr:tex display="inline"><![CDATA[n]]></fr:tex>; <fr:tex display="inline"><![CDATA[P]]></fr:tex>, <fr:tex display="inline"><![CDATA[Q]]></fr:tex>, <fr:tex display="inline"><![CDATA[R]]></fr:tex>, etc. are used for this purpose) expressing the fact, that the relation <fr:tex display="inline"><![CDATA[P_{n,m}]]></fr:tex> holds for terms <fr:tex display="inline"><![CDATA[t_1,\dots ,t_n]]></fr:tex>, taken together. Equality (<fr:tex display="inline"><![CDATA[t_i = t_j$]]></fr:tex>) is taken to be primitive, defining another class of formulas in the language.</fr:li>
+ <fr:li>Propositional combinations. As with propositional calculus, connectives are used to combine propositional terms into new, compound propositions (<fr:tex display="inline"><![CDATA[A \lor  B]]></fr:tex>, <fr:tex display="inline"><![CDATA[A \land  B]]></fr:tex>, <fr:tex display="inline"><![CDATA[A \implies  B]]></fr:tex>, <fr:tex display="inline"><![CDATA[A \iff  B]]></fr:tex>, <fr:tex display="inline"><![CDATA[\neg  A]]></fr:tex>).</fr:li>
+ <fr:li>Quantified formulas, which are of the form <fr:tex display="inline"><![CDATA[\forall  x.A]]></fr:tex> and <fr:tex display="inline"><![CDATA[\exists  x.B]]></fr:tex>, where <fr:tex display="inline"><![CDATA[x]]></fr:tex> is an arbitrary variable, and <fr:tex display="inline"><![CDATA[A]]></fr:tex> and <fr:tex display="inline"><![CDATA[B]]></fr:tex> are arbitrary formulas.</fr:li></fr:ul></fr:p>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>252</fr:anchor>
+                <fr:addr type="user">ttfp-0005</fr:addr>
+                <fr:route>ttfp-0005.xml</fr:route>
+                <fr:title text="Substitution in predicate logic">Substitution in predicate logic</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>After providing a few examples of how quantifiers may be used, Thompson explains how variables and substitutions operate in propositions with quantifiers. Quantifier variables may be consistently renamed as long as the new name is not already in use in the affected formula. A variable <fr:tex display="inline"><![CDATA[x]]></fr:tex> is <fr:em>bound</fr:em> in a fomula <fr:tex display="inline"><![CDATA[\forall  x.A]]></fr:tex> or <fr:tex display="inline"><![CDATA[\exists  x.B]]></fr:tex>. The quantifier binds values to <fr:tex display="inline"><![CDATA[x]]></fr:tex>. All other occurrences are <fr:em>free</fr:em>. So in the formula <fr:tex display="inline"><![CDATA[\forall  x.P(x,y)]]></fr:tex>, <fr:tex display="inline"><![CDATA[x]]></fr:tex> is bound, while <fr:tex display="inline"><![CDATA[y]]></fr:tex> is free.</fr:p>
+                <fr:p><fr:em>Substitution</fr:em> is the act of consistently replacing a variable with an arbitrary term. Only free variables may be substituted arbitrarily in this way, unlike bound variables, which express a universal or existential claim. Thompson uses the notation <fr:tex display="inline"><![CDATA[A[t/x]]]></fr:tex> to mean the formula <fr:tex display="inline"><![CDATA[A]]></fr:tex> with <fr:tex display="inline"><![CDATA[t]]></fr:tex> substituted for <fr:tex display="inline"><![CDATA[x]]></fr:tex>.</fr:p>
+                <fr:p>When substituting a variable with an arbitrary term, we must be careful to avoid <fr:em>variable capture</fr:em>. Variable capture occurs when a free variable within the term substituted for a variable contains a variable that is otherwise bound in the formula in which we are making the substitution. Thompson gives the example of substituting the term <fr:tex display="inline"><![CDATA[y+1]]></fr:tex> for <fr:tex display="inline"><![CDATA[x]]></fr:tex> in the formula <fr:tex display="inline"><![CDATA[\exists  y.y>x]]></fr:tex>. This substitution results in the formula <fr:tex display="inline"><![CDATA[\exists  y.y>y+1]]></fr:tex>, which is obviously false. To avoid this problem, we can rename the variable <fr:tex display="inline"><![CDATA[y]]></fr:tex> in <fr:tex display="inline"><![CDATA[y+1]]></fr:tex> to something that does not occur in <fr:tex display="inline"><![CDATA[\exists  y.y>x]]></fr:tex> before performing the substitution.</fr:p>
+                <fr:p>Formally, Thompson defines substitution, inductively, in the following way.
+
+For a term <fr:tex display="inline"><![CDATA[s]]></fr:tex>, <fr:tex display="inline"><![CDATA[s[t/x]]]></fr:tex> is defined as follows:
+
+<fr:ul><fr:li><fr:tex display="inline"><![CDATA[x[t/x] \equiv _\text {df} t]]></fr:tex></fr:li>
+  <fr:li>if <fr:tex display="inline"><![CDATA[y \not \equiv  x]]></fr:tex>, then <fr:tex display="inline"><![CDATA[y[t/x] \equiv _\text {df} y]]></fr:tex></fr:li>
+  <fr:li><fr:tex display="inline"><![CDATA[f_{n,m}(t_1,\ldots ,t_n)[t/x] \equiv _\text {df} f_{n,m}(t_1[t/x],\ldots ,t_n[t/x])]]></fr:tex></fr:li></fr:ul></fr:p>
+                <fr:p>For a formula <fr:tex display="inline"><![CDATA[A]]></fr:tex>, <fr:tex display="inline"><![CDATA[A[t/x]]]></fr:tex> is defined as follows. For atomic formulas:
+
+<fr:ul><fr:li><fr:tex display="inline"><![CDATA[P_{n,m}(t_1,\ldots ,t_n)[t/x] \equiv _{df} P_{n,m}(t_1[t/x],\ldots ,t_n[t/x])]]></fr:tex></fr:li>
+  <fr:li><fr:tex display="inline"><![CDATA[(t_1 = t_2)[t/x] \equiv _\text {df} t_1[t/x] = t2[t/x]]]></fr:tex></fr:li></fr:ul></fr:p>
+                <fr:p>Substitution distributes over propositional combinations:
+
+<fr:ul><fr:li><fr:tex display="inline"><![CDATA[(A \lor  B)[t/x] \equiv _\text {df} A[t/x] \lor  B[t/x]]]></fr:tex></fr:li>
+  <fr:li><fr:tex display="inline"><![CDATA[(A \land  B)[t/x] \equiv _\text {df} A[t/x] \land  B[t/x]]]></fr:tex></fr:li>
+  <fr:li><fr:tex display="inline"><![CDATA[(A \implies  B)[t/x] \equiv _\text {df} A[t/x] \implies  B[t/x]]]></fr:tex></fr:li>
+  <fr:li><fr:tex display="inline"><![CDATA[(A \iff  B)[t/x] \equiv _\text {df} A[t/x] \iff  B[t/x]]]></fr:tex></fr:li>
+  <fr:li><fr:tex display="inline"><![CDATA[(\neg  A)[t/x] \equiv _\text {df} \neg  (A[t/x])]]></fr:tex></fr:li></fr:ul></fr:p>
+                <fr:p>For quantifiers:
+
+<fr:ul><fr:li><fr:tex display="inline"><![CDATA[(\forall  x.B)[t/x] \equiv _\text {df} \forall  x.B]]></fr:tex></fr:li>
+  <fr:li><fr:tex display="inline"><![CDATA[(\exists  x.B)[t/x] \equiv _\text {df} \exists  x.B]]></fr:tex></fr:li></fr:ul></fr:p>
+                <fr:p>If <fr:tex display="inline"><![CDATA[y \not \equiv  x]]></fr:tex> and <fr:tex display="inline"><![CDATA[y]]></fr:tex> <fr:em>does not</fr:em> appear in <fr:tex display="inline"><![CDATA[t]]></fr:tex>, then
+
+<fr:ul><fr:li><fr:tex display="inline"><![CDATA[(\forall  y.B)[t/x] \equiv _\text {df} \forall  y.(B[t/x])]]></fr:tex></fr:li>
+  <fr:li><fr:tex display="inline"><![CDATA[(\exists  y.B)[t/x] \equiv _\text {df} \exists  y.(B[t/x])]]></fr:tex></fr:li></fr:ul></fr:p>
+                <fr:p>On the other hand, if <fr:tex display="inline"><![CDATA[y \not \equiv  x]]></fr:tex> and <fr:tex display="inline"><![CDATA[y]]></fr:tex> <fr:em>does</fr:em> appear in <fr:tex display="inline"><![CDATA[t]]></fr:tex>, then
+
+<fr:ul><fr:li><fr:tex display="inline"><![CDATA[(\forall  y.B)[t/x] \equiv _\text {df} \forall  z.(B[z/y][t/x])]]></fr:tex></fr:li>
+  <fr:li><fr:tex display="inline"><![CDATA[(\exists  y.B)[t/x] \equiv _\text {df} \exists  z.(B[z/y][t/x])]]></fr:tex></fr:li></fr:ul>
+
+where <fr:tex display="inline"><![CDATA[z]]></fr:tex> is a variable that does not appear in either <fr:tex display="inline"><![CDATA[t]]></fr:tex> or <fr:tex display="inline"><![CDATA[B]]></fr:tex>.</fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>253</fr:anchor>
+                <fr:addr type="user">ttfp-0006</fr:addr>
+                <fr:route>ttfp-0006.xml</fr:route>
+                <fr:title text="Quantifier rules">Quantifier rules</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>The first quantifier rule Thompson discusses is <fr:tex display="inline"><![CDATA[\forall ]]></fr:tex> introduction.
+
+<fr:tex display="block"><![CDATA[\frac {A}         {\forall  x.A}(\mathtt {\forall  I})]]></fr:tex>
+
+This rule obviously holds when all variables in <fr:tex display="inline"><![CDATA[A]]></fr:tex> are bound, but it is also true when <fr:tex display="inline"><![CDATA[x]]></fr:tex> is free. That is because free variables may be freely substituted, which means the formula is said to hold for <fr:em>any</fr:em> value in the same domain as the introduced universal quantifier. The tacit assumption here is that, in order for us to be able to make this inference, it must be the case that <fr:tex display="inline"><![CDATA[x]]></fr:tex> does not appear free in any assumptions in the proof of <fr:tex display="inline"><![CDATA[A]]></fr:tex>. The reason this condition must hold is, because for this introduction rule to hold, <fr:tex display="inline"><![CDATA[x]]></fr:tex> must be arbitrary, but an assumption can constrain the domain of values <fr:tex display="inline"><![CDATA[x]]></fr:tex> can take such that it is no longer arbitrary (e.g., <fr:tex display="inline"><![CDATA[x > 0]]></fr:tex>). Thompson calls this the <fr:em>side condition</fr:em> of the rule.</fr:p>
+                <fr:p><fr:tex display="inline"><![CDATA[\forall ]]></fr:tex> elimination, on the other hand, says that, because <fr:tex display="inline"><![CDATA[A]]></fr:tex> is true for all values of <fr:tex display="inline"><![CDATA[x]]></fr:tex>, it follows that <fr:tex display="inline"><![CDATA[A]]></fr:tex> is true for any arbitary value of <fr:tex display="inline"><![CDATA[x]]></fr:tex>.
+
+<fr:tex display="block"><![CDATA[\frac {\forall  x.A}         {A[t/x]}(\mathtt {\forall  E})]]></fr:tex></fr:p>
+                <fr:p><fr:tex display="inline"><![CDATA[\exists ]]></fr:tex> introduction is, likewise, straightforward. If we know that <fr:tex display="inline"><![CDATA[A]]></fr:tex> is true for some specific value of <fr:tex display="inline"><![CDATA[x]]></fr:tex>, then we know there exists an <fr:tex display="inline"><![CDATA[x]]></fr:tex> for which <fr:tex display="inline"><![CDATA[A]]></fr:tex> is true.
+
+<fr:tex display="block"><![CDATA[\frac {A[t/x]}         {\exists  x.A}(\mathtt {\exists  I})]]></fr:tex></fr:p>
+                <fr:p><fr:tex display="inline"><![CDATA[\exists ]]></fr:tex> elimination, however, has a side condition. Suppose that we can prove <fr:tex display="inline"><![CDATA[B]]></fr:tex> from <fr:tex display="inline"><![CDATA[A]]></fr:tex> and that <fr:tex display="inline"><![CDATA[x]]></fr:tex> is free in <fr:tex display="inline"><![CDATA[A]]></fr:tex> and not in any other of the assumptions in the proof of <fr:tex display="inline"><![CDATA[B]]></fr:tex>. We can then prove <fr:tex display="inline"><![CDATA[B]]></fr:tex>.
+
+<fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}                       & [A] \\                       & \vdots  \\           \exists  x.A & B         \end {array}}         {B}(\mathtt {\exists  E})]]></fr:tex>
+
+The introduction and elimination rules for quantifiers may be seen as generalizations of their propositional counterparts for conjunction and disjunction.</fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+      </fr:mainmatter>
+      <fr:backmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>
