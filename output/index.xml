@@ -30,7 +30,7 @@
             <fr:title text="Daniel A. Matysiak">Daniel A. Matysiak</fr:title>
             <fr:taxon>Person</fr:taxon>
             <fr:authors />
-            <fr:meta name="external">https://dmatysiak.github.io/notes</fr:meta>
+            <fr:meta name="external">https://dmatysiak.github.io</fr:meta>
           </fr:frontmatter>
           <fr:mainmatter />
           <fr:backmatter />
