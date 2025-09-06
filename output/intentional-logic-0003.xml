@@ -80,7 +80,8 @@ The first thesis, Veatch writes, concerns the "nature of the cognitive relation"
             <fr:authors />
           </fr:frontmatter>
           <fr:mainmatter>
-            <fr:p>My name is <fr:link type="local" href="danielamatysiak.xml" addr="danielamatysiak" title="Daniel A. Matysiak">Daniel A. Matysiak</fr:link>. This collection of notes is primarily meant to function as a repository of notes for my own reference, and secondarily or incidentally for anyone who is interested. I don't know how diligently this repository will be maintained. I generally prefer to maintain handwritten notes first, and so for the most part, any notes here will be dervied from my handwritten notes.</fr:p>
+            <fr:p>My name is <fr:link type="local" href="danielamatysiak.xml" addr="danielamatysiak" title="Daniel A. Matysiak">Daniel A. Matysiak</fr:link>. This collection of notes is primarily meant to function as a repository of notes (or "forest") for my own reference, and secondarily or incidentally for anyone who is interested. I don't know how diligently this repository will be maintained. I generally prefer to maintain handwritten notes first, and so for the most part, any notes here will be dervied from my handwritten notes.</fr:p>
+            <fr:p>You may use <fr:strong>Ctrl-k</fr:strong> to search for topics (or "trees") in this forest.</fr:p>
             <fr:p>
               <fr:ul><fr:li>Summaries of chapters in Veatch's <fr:link type="local" href="intentional-logic-0003.xml" addr="intentional-logic-0003" title="Veatch, Henry. Intentional Logic">Intentional Logic</fr:link></fr:li>
   <fr:li>Summaries of chapters in Thompson's <fr:link type="local" href="ttfp-0007.xml" addr="ttfp-0007" title="Thompson, Simon. Type Theory and Functional Programming">Type Theory and Functional Programming</fr:link></fr:li></fr:ul>
