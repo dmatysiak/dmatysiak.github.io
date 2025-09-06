@@ -1,0 +1,18 @@
+\title{Existential quantifier rules}
+
+\p{#{\exists} introduction is, likewise, straightforward. If we know that #{A} is true for
+some specific value of #{x}, then we know there exists an #{x} for which #{A} is true.
+
+##{\frac{A[t/x]}
+        {\exists x.A}(\mathtt{\exists I})}}
+
+\p{#{\exists} elimination, however, has a side condition. Suppose that we can prove #{B}
+from #{A} and that #{x} is free in #{A} and not in any other of the assumptions in the
+proof of #{B}. We can then prove #{B}.
+
+##{\frac{\begin{array}{cc}
+                      & [A] \\
+                      & \vdots \\
+          \exists x.A & B
+        \end{array}}
+        {B}(\mathtt{\exists E})}}

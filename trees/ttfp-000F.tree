@@ -1,0 +1,22 @@
+\title{Classical logic as extension of intuitionistic logic}
+
+\p{Classical logic is an extension of the intuitionistic case. This extension is
+accomplished by adding the \em{law of excluded middle}:
+
+##{\frac{}
+        {A \lor \neg A}(\mathtt{EM})}}
+
+\p{Alternative rules that can be used to characterize classical logic are the \em{rule of
+double negation}:
+
+##{\frac{\neg\neg A}
+        {A}(\mathtt{DN})}
+
+and the \em{rule of proof by contradiction}:
+
+##{\frac{\begin{array}{c c}
+          [\neg A] & [\neg A]\\
+          \vdots & \vdots\\
+          B & \neg B
+        \end{array}}
+        {A}(\mathtt{CC})}}

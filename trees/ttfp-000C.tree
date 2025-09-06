@@ -1,0 +1,6 @@
+\title{Absurdity}
+
+\p{Absurdity (#{\bot}), otherwise known as contradiction or the false proposition, does not have an introduction rule, though it can be inferred from a proposition like #{A \land \neg A}. But it can be eliminated, because anything follows from contradiction (\em{ex falso quodlibet}):
+
+##{\frac{\bot}
+       {A}(\mathtt{\bot E})}}

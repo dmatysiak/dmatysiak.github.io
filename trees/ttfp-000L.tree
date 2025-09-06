@@ -1,0 +1,21 @@
+\title{Universal quantifier rules}
+
+\p{The first quantifier rule Thompson discusses is #{\forall} introduction.
+
+##{\frac{A} {\forall x.A}(\mathtt{\forall I})}
+
+This rule obviously holds when all variables in #{A} are bound, but it is also true when
+#{x} is free. That is because free variables may be freely substituted, which means the
+formula is said to hold for \em{any} value in the same domain as the introduced universal
+quantifier. The tacit assumption here is that, in order for us to be able to make this
+inference, it must be the case that #{x} does not appear free in any assumptions in the
+proof of #{A}. The reason this condition must hold is, because for this introduction rule
+to hold, #{x} must be arbitrary, but an assumption can constrain the domain of values #{x}
+can take such that it is no longer arbitrary (e.g., #{x > 0}). Thompson calls this the
+\em{side condition} of the rule.}
+
+\p{#{\forall} elimination, on the other hand, says that, because #{A} is true for all
+values of #{x}, it follows that #{A} is true for any arbitary value of #{x}.
+
+##{\frac{\forall x.A}
+        {A[t/x]}(\mathtt{\forall E})}}

@@ -1,0 +1,8 @@
+\title{Substitution over terms}
+
+\p{For a term #{s}, #{s[t/x]} is defined as follows:
+
+\ul{
+  \li{#{x[t/x] \equiv_\text{df} t}}
+  \li{if #{y \not\equiv x}, then #{y[t/x] \equiv_\text{df} y}}
+  \li{#{f_{n,m}(t_1,\ldots,t_n)[t/x] \equiv_\text{df} f_{n,m}(t_1[t/x],\ldots,t_n[t/x])}}}}

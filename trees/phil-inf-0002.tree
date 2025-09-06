@@ -1,0 +1,20 @@
+\title{What is a computer?}
+
+\p{In common speech, the word "computer" signifies a physical device used for
+computation. Typically, the meaning is even more narrow than that, referring specifically
+to electronic computing devices, and even more specifically such electronic devices as
+personal desktop or notebook computers. Naturally, the full range of electronic devices
+that can qualify as "computing devices" is much broader than what popular intuition might
+admit, and it is here that our problems begins. Where do we draw the line between a
+computing device and something else as a matter of objective fact? If you try to approach
+the problem from a physical perspective, you will find it difficult to find this line. You
+may find yourself reaching for definitions like the [Church-Turing
+thesis](https://plato.stanford.edu/entries/church-turing/) to try to justify your
+claim. This latter tactic is progress—we are drawing on a foundational notion of the field
+to justify our claim—but it is also unsatisfactory, because the susbtance of the
+Church-Turing thesis depends on a presupposed notion of \em{computation}.}
+
+\transclude{phil-inf-0003}
+\transclude{phil-inf-0005}
+\transclude{phil-inf-0004}
+\transclude{phil-inf-0006}

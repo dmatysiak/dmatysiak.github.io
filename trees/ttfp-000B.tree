@@ -1,0 +1,20 @@
+\title{Disjunction rules}
+
+\p{\em{Disjunction} has two introduction rules, depending on which disjunct we have a proof for:
+
+##{\frac{A}
+       {A \lor B}(\mathtt{\lor{I_A}})}
+
+##{\frac{B}
+       {A \lor B}(\mathtt{\lor{I_B}})}
+
+Because we don't necessarily know which disjunct in a disjuntion we have a proof for, the elimination rule works by showing that, if we know that #{A \lor B}, and that #{C} can be derived from both #{A} and #{B}, then we can conclude that #{C}:
+
+##{\frac{\begin{array}{ccc}
+          & [A] & [B] \\
+          & \vdots & \vdots \\
+          A \lor B & C & C
+        \end{array}}
+       {C}(\mathtt{\lor{E}})}
+
+The premises #{A} and #{B} are discharged in order to infer #{C}.}

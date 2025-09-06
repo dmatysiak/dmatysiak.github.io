@@ -1,0 +1,17 @@
+\title{The proper object of computer science}
+
+\p{There is a [famous
+quote](https://quoteinvestigator.com/2021/04/02/computer-science/)—often attributed to
+Edsger Dijkstra, but predating the earliest records of him having made this claim—that
+computer science is not about computers, any more than astronomy is about telescopes, or
+biology about microscopes. I fully agree with this claim, but nonetheless, it has proved
+to be controversial for some. I believe the controversy is rooted in a misunderstanding of
+what a computer is and what computation is. We can clarify what these concepts with the
+help of the history of the field as well as some metaphysical analysis. Once we have done
+do, the distinctions between computer science, software engineering and computer
+engineering will follow naturally.}
+
+\transclude{phil-inf-0002}
+\transclude{phil-inf-0007}
+\transclude{phil-inf-0009}
+\transclude{phil-inf-0008}

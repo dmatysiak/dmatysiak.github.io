@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?>
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+  <fr:frontmatter>
+    <fr:anchor>343</fr:anchor>
+    <fr:addr type="user">phil-inf-0004</fr:addr>
+    <fr:route>phil-inf-0004.xml</fr:route>
+    <fr:title text="What is an artifact?">What is an artifact?</fr:title>
+    <fr:authors />
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <fr:p>The world is composed of a plurality of objects, coming into and going out of being,
+that exist in a variety of relations to one another. <fr:em>What</fr:em> an object is—a horse, a
+human being, a rock, an automobile—is central to its identity <fr:em>as</fr:em> the kind of thing
+that it is. This <fr:em>whatness</fr:em> of thing goes by a number of names: nature, form, essence,
+etc. It is that which causes a thing to be the kind of things it is. For that reason, it
+often goes by the name of <fr:em>formal cause</fr:em> to distinguish from the other kinds of causes
+like <fr:em>efficient cause</fr:em>.</fr:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:title text="Context">Context</fr:title>
+        <fr:authors />
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>344</fr:anchor>
+            <fr:addr type="user">phil-inf-0002</fr:addr>
+            <fr:route>phil-inf-0002.xml</fr:route>
+            <fr:title text="What is a computer?">What is a computer?</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>In common speech, the word "computer" signifies a physical device used for
+computation. Typically, the meaning is even more narrow than that, referring specifically
+to electronic computing devices, and even more specifically such electronic devices as
+personal desktop or notebook computers. Naturally, the full range of electronic devices
+that can qualify as "computing devices" is much broader than what popular intuition might
+admit, and it is here that our problems begins. Where do we draw the line between a
+computing device and something else as a matter of objective fact? If you try to approach
+the problem from a physical perspective, you will find it difficult to find this line. You
+may find yourself reaching for definitions like the <fr:link type="external" href="https://plato.stanford.edu/entries/church-turing/">Church-Turing
+thesis</fr:link> to try to justify your
+claim. This latter tactic is progress—we are drawing on a foundational notion of the field
+to justify our claim—but it is also unsatisfactory, because the susbtance of the
+Church-Turing thesis depends on a presupposed notion of <fr:em>computation</fr:em>.</fr:p>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>263</fr:anchor>
+                <fr:addr type="user">phil-inf-0003</fr:addr>
+                <fr:route>phil-inf-0003.xml</fr:route>
+                <fr:title text="What is computation?">What is computation?</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter />
+              <fr:backmatter />
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>264</fr:anchor>
+                <fr:addr type="user">phil-inf-0005</fr:addr>
+                <fr:route>phil-inf-0005.xml</fr:route>
+                <fr:title text="Computers as abstract constructs">Computers as abstract constructs</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter />
+              <fr:backmatter />
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>265</fr:anchor>
+                <fr:addr type="user">phil-inf-0004</fr:addr>
+                <fr:route>phil-inf-0004.xml</fr:route>
+                <fr:title text="What is an artifact?">What is an artifact?</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>The world is composed of a plurality of objects, coming into and going out of being,
+that exist in a variety of relations to one another. <fr:em>What</fr:em> an object is—a horse, a
+human being, a rock, an automobile—is central to its identity <fr:em>as</fr:em> the kind of thing
+that it is. This <fr:em>whatness</fr:em> of thing goes by a number of names: nature, form, essence,
+etc. It is that which causes a thing to be the kind of things it is. For that reason, it
+often goes by the name of <fr:em>formal cause</fr:em> to distinguish from the other kinds of causes
+like <fr:em>efficient cause</fr:em>.</fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>266</fr:anchor>
+                <fr:addr type="user">phil-inf-0006</fr:addr>
+                <fr:route>phil-inf-0006.xml</fr:route>
+                <fr:title text="Implementation and simulation of abstract constructs">Implementation and simulation of abstract constructs</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter />
+              <fr:backmatter />
+            </fr:tree>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+      </fr:mainmatter>
+      <fr:backmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

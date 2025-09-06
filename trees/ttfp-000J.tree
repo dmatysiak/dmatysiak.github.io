@@ -1,0 +1,10 @@
+\title{Substitution over compound propositions}
+
+\p{Substitution distributes over propositional combinations:
+
+\ul{
+  \li{#{(A \lor B)[t/x] \equiv_\text{df} A[t/x] \lor B[t/x]}}
+  \li{#{(A \land B)[t/x] \equiv_\text{df} A[t/x] \land B[t/x]}}
+  \li{#{(A \implies B)[t/x] \equiv_\text{df} A[t/x] \implies B[t/x]}}
+  \li{#{(A \iff B)[t/x] \equiv_\text{df} A[t/x] \iff B[t/x]}}
+  \li{#{(\neg A)[t/x] \equiv_\text{df} \neg (A[t/x])}}}}

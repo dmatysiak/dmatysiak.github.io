@@ -1,0 +1,13 @@
+\title{Implication rules}
+
+\p{\em{Implication introduction} allows us to infer the formula #{A \implies B} from a proof of #{B}. Note that #{B} \em{may} depend on #{A}, but implication introduction does not depend on #{A}. We do not need a proof of #{A}, only a proof of #{B}. (We are only interested in showing that #{B} follows from #{A}, so to do that, we assume #{A} to prove #{B}. Thus, #{A} is only temporarily assumed to show that the implication holds and may, therefore, be introduced.) Therefore, we can \em{discharge} #{A} from the set of premises (denoted by #{[A]}):
+
+##{\frac{\begin{array}{c}[A]\\\vdots\\B\end{array}}
+        {A \implies B}(\mathtt{\Rightarrow{I}})}
+
+The application of the introduction rule can be related to the discharged premise by using a label.}
+
+\p{As with conjunction, there is an \em{implication elimination rule} which effectively expresses modus ponens:
+
+##{\frac{\begin{array}{lr}A & A \implies B\end{array}}
+       {B}(\mathtt{\Rightarrow{E}})}}

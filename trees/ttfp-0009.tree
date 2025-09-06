@@ -1,0 +1,14 @@
+\title{Conjunction rules}
+
+\p{The \em{conjunction introduction rule} builds a composite derivation by combining derivations of the conjuncts into a derivation of the conjunction:
+
+##{\frac{\begin{array}{lr}A & B\end{array}}
+        {A \land B}(\mathtt{\land I})}}
+
+\p{The \em{elimination rules for conjunction} allows us to derive the constituent conjuncts from an existing conjunction:
+
+##{\frac{A \land B}
+        {A}(\mathtt{\land E_A})}
+
+##{\frac{A \land B}
+        {B}(\mathtt{\land E_B})}}

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?>
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+  <fr:frontmatter>
+    <fr:anchor>281</fr:anchor>
+    <fr:addr type="user">ttfp-000M</fr:addr>
+    <fr:route>ttfp-000M.xml</fr:route>
+    <fr:title text="Existential quantifier rules">Existential quantifier rules</fr:title>
+    <fr:authors />
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <fr:p><fr:tex display="inline"><![CDATA[\exists ]]></fr:tex> introduction is, likewise, straightforward. If we know that <fr:tex display="inline"><![CDATA[A]]></fr:tex> is true for
+some specific value of <fr:tex display="inline"><![CDATA[x]]></fr:tex>, then we know there exists an <fr:tex display="inline"><![CDATA[x]]></fr:tex> for which <fr:tex display="inline"><![CDATA[A]]></fr:tex> is true.
+
+<fr:tex display="block"><![CDATA[\frac {A[t/x]}         {\exists  x.A}(\mathtt {\exists  I})]]></fr:tex></fr:p>
+    <fr:p><fr:tex display="inline"><![CDATA[\exists ]]></fr:tex> elimination, however, has a side condition. Suppose that we can prove <fr:tex display="inline"><![CDATA[B]]></fr:tex>
+from <fr:tex display="inline"><![CDATA[A]]></fr:tex> and that <fr:tex display="inline"><![CDATA[x]]></fr:tex> is free in <fr:tex display="inline"><![CDATA[A]]></fr:tex> and not in any other of the assumptions in the
+proof of <fr:tex display="inline"><![CDATA[B]]></fr:tex>. We can then prove <fr:tex display="inline"><![CDATA[B]]></fr:tex>.
+
+<fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}                       & [A] \\                       & \vdots  \\           \exists  x.A & B         \end {array}}         {B}(\mathtt {\exists  E})]]></fr:tex></fr:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:title text="Context">Context</fr:title>
+        <fr:authors />
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>282</fr:anchor>
+            <fr:addr type="user">ttfp-0006</fr:addr>
+            <fr:route>ttfp-0006.xml</fr:route>
+            <fr:title text="Quantifier rules">Quantifier rules</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>283</fr:anchor>
+                <fr:addr type="user">ttfp-000L</fr:addr>
+                <fr:route>ttfp-000L.xml</fr:route>
+                <fr:title text="Universal quantifier rules">Universal quantifier rules</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>The first quantifier rule Thompson discusses is <fr:tex display="inline"><![CDATA[\forall ]]></fr:tex> introduction.
+
+<fr:tex display="block"><![CDATA[\frac {A} {\forall  x.A}(\mathtt {\forall  I})]]></fr:tex>
+
+This rule obviously holds when all variables in <fr:tex display="inline"><![CDATA[A]]></fr:tex> are bound, but it is also true when
+<fr:tex display="inline"><![CDATA[x]]></fr:tex> is free. That is because free variables may be freely substituted, which means the
+formula is said to hold for <fr:em>any</fr:em> value in the same domain as the introduced universal
+quantifier. The tacit assumption here is that, in order for us to be able to make this
+inference, it must be the case that <fr:tex display="inline"><![CDATA[x]]></fr:tex> does not appear free in any assumptions in the
+proof of <fr:tex display="inline"><![CDATA[A]]></fr:tex>. The reason this condition must hold is, because for this introduction rule
+to hold, <fr:tex display="inline"><![CDATA[x]]></fr:tex> must be arbitrary, but an assumption can constrain the domain of values <fr:tex display="inline"><![CDATA[x]]></fr:tex>
+can take such that it is no longer arbitrary (e.g., <fr:tex display="inline"><![CDATA[x > 0]]></fr:tex>). Thompson calls this the
+<fr:em>side condition</fr:em> of the rule.</fr:p>
+                <fr:p><fr:tex display="inline"><![CDATA[\forall ]]></fr:tex> elimination, on the other hand, says that, because <fr:tex display="inline"><![CDATA[A]]></fr:tex> is true for all
+values of <fr:tex display="inline"><![CDATA[x]]></fr:tex>, it follows that <fr:tex display="inline"><![CDATA[A]]></fr:tex> is true for any arbitary value of <fr:tex display="inline"><![CDATA[x]]></fr:tex>.
+
+<fr:tex display="block"><![CDATA[\frac {\forall  x.A}         {A[t/x]}(\mathtt {\forall  E})]]></fr:tex></fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>284</fr:anchor>
+                <fr:addr type="user">ttfp-000M</fr:addr>
+                <fr:route>ttfp-000M.xml</fr:route>
+                <fr:title text="Existential quantifier rules">Existential quantifier rules</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p><fr:tex display="inline"><![CDATA[\exists ]]></fr:tex> introduction is, likewise, straightforward. If we know that <fr:tex display="inline"><![CDATA[A]]></fr:tex> is true for
+some specific value of <fr:tex display="inline"><![CDATA[x]]></fr:tex>, then we know there exists an <fr:tex display="inline"><![CDATA[x]]></fr:tex> for which <fr:tex display="inline"><![CDATA[A]]></fr:tex> is true.
+
+<fr:tex display="block"><![CDATA[\frac {A[t/x]}         {\exists  x.A}(\mathtt {\exists  I})]]></fr:tex></fr:p>
+                <fr:p><fr:tex display="inline"><![CDATA[\exists ]]></fr:tex> elimination, however, has a side condition. Suppose that we can prove <fr:tex display="inline"><![CDATA[B]]></fr:tex>
+from <fr:tex display="inline"><![CDATA[A]]></fr:tex> and that <fr:tex display="inline"><![CDATA[x]]></fr:tex> is free in <fr:tex display="inline"><![CDATA[A]]></fr:tex> and not in any other of the assumptions in the
+proof of <fr:tex display="inline"><![CDATA[B]]></fr:tex>. We can then prove <fr:tex display="inline"><![CDATA[B]]></fr:tex>.
+
+<fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}                       & [A] \\                       & \vdots  \\           \exists  x.A & B         \end {array}}         {B}(\mathtt {\exists  E})]]></fr:tex></fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:p>The introduction and elimination rules for quantifiers may be seen as generalizations of
+their propositional counterparts for conjunction and disjunction.</fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+      </fr:mainmatter>
+      <fr:backmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

@@ -1,21 +1,11 @@
 \title{Predicate logic}
 
-\p{In the second section of the first chapter, Thompson covers predicate logic, "the logic of properties or \em{predicates}". Whereas propositional logic composes complex propositions from atomic, unanalyzed propositions, propositions in predicate logic are constructed from predicates, or statements about certain properties holding for certain objects.}
+\p{In the second section of the first chapter, Thompson covers predicate logic, "the logic
+of properties or \em{predicates}". Whereas propositional logic composes complex
+propositions from atomic, unanalyzed propositions, propositions in predicate logic are
+constructed from predicates, or statements about certain properties holding for certain
+objects.}
 
-\p{Syntactically, the language of predicate logic can be divided into formulae and terms. Terms denote objects, and have one of the following forms:
-
-\ul{
-  \li{Variables (#{v_0, v_1,\ldots}, or, #{x, y, z, u, v,\ldots}).}
-  \li{Constants (#{c_0, c_1,\ldots}, or, #{a, b, c,\ldots}).}
-  \li{Composite terms (#{f_{n,m}(t_1, \ldots, t_n)}, formed by applying \em{function symbols}, like #{f, g, h,\ldots}, to other terms #{s, t, t_1,\ldots}, where #{n} is the \em{arity} and #{m} is some index to distinguish function symbols).}}}
-
-\p{Propositions have three forms:
-
-\ul{
-  \li{Atomic formulas. #{P_{n,m}(t_1,\ldots,t_n)} (where #{P_{n,m}} is the predicate symbol with arity #{n}; #{P}, #{Q}, #{R}, etc. are used for this purpose) expressing the fact, that the relation #{P_{n,m}} holds for terms #{t_1,\dots,t_n}, taken together. Equality (#{t_i = t_j$}) is taken to be primitive, defining another class of formulas in the language.}
- \li{Propositional combinations. As with propositional calculus, connectives are used to combine propositional terms into new, compound propositions (#{A \lor B}, #{A \land B}, #{A \implies B}, #{A \iff B}, #{\neg A}).}
- \li{Quantified formulas, which are of the form #{\forall x.A} and #{\exists x.B}, where #{x} is an arbitrary variable, and #{A} and #{B} are arbitrary formulas.}}}
-
+\transclude{ttfp-000G}
 \transclude{ttfp-0005}
-
 \transclude{ttfp-0006}

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?>
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+  <fr:frontmatter>
+    <fr:anchor>316</fr:anchor>
+    <fr:addr type="user">ttfp-000H</fr:addr>
+    <fr:route>ttfp-000H.xml</fr:route>
+    <fr:title text="Substitution over terms">Substitution over terms</fr:title>
+    <fr:authors />
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <fr:p>For a term <fr:tex display="inline"><![CDATA[s]]></fr:tex>, <fr:tex display="inline"><![CDATA[s[t/x]]]></fr:tex> is defined as follows:
+
+<fr:ul><fr:li><fr:tex display="inline"><![CDATA[x[t/x] \equiv _\text {df} t]]></fr:tex></fr:li>
+  <fr:li>if <fr:tex display="inline"><![CDATA[y \not \equiv  x]]></fr:tex>, then <fr:tex display="inline"><![CDATA[y[t/x] \equiv _\text {df} y]]></fr:tex></fr:li>
+  <fr:li><fr:tex display="inline"><![CDATA[f_{n,m}(t_1,\ldots ,t_n)[t/x] \equiv _\text {df} f_{n,m}(t_1[t/x],\ldots ,t_n[t/x])]]></fr:tex></fr:li></fr:ul></fr:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:title text="Context">Context</fr:title>
+        <fr:authors />
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>317</fr:anchor>
+            <fr:addr type="user">ttfp-0005</fr:addr>
+            <fr:route>ttfp-0005.xml</fr:route>
+            <fr:title text="Substitution in predicate logic">Substitution in predicate logic</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>After providing a few examples of how quantifiers may be used, Thompson explains how
+variables and substitutions operate in propositions with quantifiers. Quantifier variables
+may be consistently renamed as long as the new name is not already in use in the affected
+formula. A variable <fr:tex display="inline"><![CDATA[x]]></fr:tex> is <fr:em>bound</fr:em> in a fomula <fr:tex display="inline"><![CDATA[\forall  x.A]]></fr:tex> or <fr:tex display="inline"><![CDATA[\exists  x.B]]></fr:tex>. The
+quantifier binds values to <fr:tex display="inline"><![CDATA[x]]></fr:tex>. All other occurrences are <fr:em>free</fr:em>. So in the formula
+<fr:tex display="inline"><![CDATA[\forall  x.P(x,y)]]></fr:tex>, <fr:tex display="inline"><![CDATA[x]]></fr:tex> is bound, while <fr:tex display="inline"><![CDATA[y]]></fr:tex> is free.</fr:p>
+            <fr:p><fr:em>Substitution</fr:em> is the act of consistently replacing a variable with an arbitrary
+term. Only free variables may be substituted arbitrarily in this way, unlike bound
+variables, which express a universal or existential claim. Thompson uses the notation
+<fr:tex display="inline"><![CDATA[A[t/x]]]></fr:tex> to mean the formula <fr:tex display="inline"><![CDATA[A]]></fr:tex> with <fr:tex display="inline"><![CDATA[t]]></fr:tex> substituted for <fr:tex display="inline"><![CDATA[x]]></fr:tex>.</fr:p>
+            <fr:p>When substituting a variable with an arbitrary term, we must be careful to avoid
+<fr:em>variable capture</fr:em>. Variable capture occurs when a free variable within the term
+substituted for a variable contains a variable that is otherwise bound in the formula in
+which we are making the substitution. Thompson gives the example of substituting the term
+<fr:tex display="inline"><![CDATA[y+1]]></fr:tex> for <fr:tex display="inline"><![CDATA[x]]></fr:tex> in the formula <fr:tex display="inline"><![CDATA[\exists  y.y>x]]></fr:tex>. This substitution results in the formula
+<fr:tex display="inline"><![CDATA[\exists  y.y>y+1]]></fr:tex>, which is obviously false. To avoid this problem, we can rename the
+variable <fr:tex display="inline"><![CDATA[y]]></fr:tex> in <fr:tex display="inline"><![CDATA[y+1]]></fr:tex> to something that does not occur in <fr:tex display="inline"><![CDATA[\exists  y.y>x]]></fr:tex> before
+performing the substitution.</fr:p>
+            <fr:p>Formally, Thompson defines substitution, inductively, in the following way.</fr:p>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>294</fr:anchor>
+                <fr:addr type="user">ttfp-000H</fr:addr>
+                <fr:route>ttfp-000H.xml</fr:route>
+                <fr:title text="Substitution over terms">Substitution over terms</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>For a term <fr:tex display="inline"><![CDATA[s]]></fr:tex>, <fr:tex display="inline"><![CDATA[s[t/x]]]></fr:tex> is defined as follows:
+
+<fr:ul><fr:li><fr:tex display="inline"><![CDATA[x[t/x] \equiv _\text {df} t]]></fr:tex></fr:li>
+  <fr:li>if <fr:tex display="inline"><![CDATA[y \not \equiv  x]]></fr:tex>, then <fr:tex display="inline"><![CDATA[y[t/x] \equiv _\text {df} y]]></fr:tex></fr:li>
+  <fr:li><fr:tex display="inline"><![CDATA[f_{n,m}(t_1,\ldots ,t_n)[t/x] \equiv _\text {df} f_{n,m}(t_1[t/x],\ldots ,t_n[t/x])]]></fr:tex></fr:li></fr:ul></fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:p>For a formula <fr:tex display="inline"><![CDATA[A]]></fr:tex>, <fr:tex display="inline"><![CDATA[A[t/x]]]></fr:tex> is defined as follows.</fr:p>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>295</fr:anchor>
+                <fr:addr type="user">ttfp-000I</fr:addr>
+                <fr:route>ttfp-000I.xml</fr:route>
+                <fr:title text="Substitution over atomic formulae">Substitution over atomic formulae</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>For atomic formulas:
+
+<fr:ul><fr:li><fr:tex display="inline"><![CDATA[P_{n,m}(t_1,\ldots ,t_n)[t/x] \equiv _{df} P_{n,m}(t_1[t/x],\ldots ,t_n[t/x])]]></fr:tex></fr:li>
+  <fr:li><fr:tex display="inline"><![CDATA[(t_1 = t_2)[t/x] \equiv _\text {df} t_1[t/x] = t2[t/x]]]></fr:tex></fr:li></fr:ul></fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>296</fr:anchor>
+                <fr:addr type="user">ttfp-000J</fr:addr>
+                <fr:route>ttfp-000J.xml</fr:route>
+                <fr:title text="Substitution over compound propositions">Substitution over compound propositions</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>Substitution distributes over propositional combinations:
+
+<fr:ul><fr:li><fr:tex display="inline"><![CDATA[(A \lor  B)[t/x] \equiv _\text {df} A[t/x] \lor  B[t/x]]]></fr:tex></fr:li>
+  <fr:li><fr:tex display="inline"><![CDATA[(A \land  B)[t/x] \equiv _\text {df} A[t/x] \land  B[t/x]]]></fr:tex></fr:li>
+  <fr:li><fr:tex display="inline"><![CDATA[(A \implies  B)[t/x] \equiv _\text {df} A[t/x] \implies  B[t/x]]]></fr:tex></fr:li>
+  <fr:li><fr:tex display="inline"><![CDATA[(A \iff  B)[t/x] \equiv _\text {df} A[t/x] \iff  B[t/x]]]></fr:tex></fr:li>
+  <fr:li><fr:tex display="inline"><![CDATA[(\neg  A)[t/x] \equiv _\text {df} \neg  (A[t/x])]]></fr:tex></fr:li></fr:ul></fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>297</fr:anchor>
+                <fr:addr type="user">ttfp-000K</fr:addr>
+                <fr:route>ttfp-000K.xml</fr:route>
+                <fr:title text="Substitution over quantifiers">Substitution over quantifiers</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>For quantifiers:
+
+<fr:ul><fr:li><fr:tex display="inline"><![CDATA[(\forall  x.B)[t/x] \equiv _\text {df} \forall  x.B]]></fr:tex></fr:li>
+  <fr:li><fr:tex display="inline"><![CDATA[(\exists  x.B)[t/x] \equiv _\text {df} \exists  x.B]]></fr:tex></fr:li></fr:ul></fr:p>
+                <fr:p>If <fr:tex display="inline"><![CDATA[y \not \equiv  x]]></fr:tex> and <fr:tex display="inline"><![CDATA[y]]></fr:tex> <fr:em>does not</fr:em> appear in <fr:tex display="inline"><![CDATA[t]]></fr:tex>, then
+
+<fr:ul><fr:li><fr:tex display="inline"><![CDATA[(\forall  y.B)[t/x] \equiv _\text {df} \forall  y.(B[t/x])]]></fr:tex></fr:li>
+  <fr:li><fr:tex display="inline"><![CDATA[(\exists  y.B)[t/x] \equiv _\text {df} \exists  y.(B[t/x])]]></fr:tex></fr:li></fr:ul></fr:p>
+                <fr:p>On the other hand, if <fr:tex display="inline"><![CDATA[y \not \equiv  x]]></fr:tex> and <fr:tex display="inline"><![CDATA[y]]></fr:tex> <fr:em>does</fr:em> appear in <fr:tex display="inline"><![CDATA[t]]></fr:tex>, then
+
+<fr:ul><fr:li><fr:tex display="inline"><![CDATA[(\forall  y.B)[t/x] \equiv _\text {df} \forall  z.(B[z/y][t/x])]]></fr:tex></fr:li>
+  <fr:li><fr:tex display="inline"><![CDATA[(\exists  y.B)[t/x] \equiv _\text {df} \exists  z.(B[z/y][t/x])]]></fr:tex></fr:li></fr:ul>
+
+where <fr:tex display="inline"><![CDATA[z]]></fr:tex> is a variable that does not appear in either <fr:tex display="inline"><![CDATA[t]]></fr:tex> or <fr:tex display="inline"><![CDATA[B]]></fr:tex>.</fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+      </fr:mainmatter>
+      <fr:backmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

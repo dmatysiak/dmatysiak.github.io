@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="default.xsl"?>
 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>239</fr:anchor>
+    <fr:anchor>249</fr:anchor>
     <fr:addr type="user">intentional-logic-0001</fr:addr>
     <fr:route>intentional-logic-0001.xml</fr:route>
     <fr:title text="An Introductory Challenge">An Introductory Challenge</fr:title>
@@ -22,7 +22,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>240</fr:anchor>
+            <fr:anchor>250</fr:anchor>
             <fr:addr type="user">intentional-logic-0003</fr:addr>
             <fr:route>intentional-logic-0003.xml</fr:route>
             <fr:title text="Veatch, Henry. Intentional Logic">Veatch, Henry. <fr:em>Intentional Logic</fr:em></fr:title>
@@ -31,7 +31,7 @@
           <fr:mainmatter>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>241</fr:anchor>
+                <fr:anchor>251</fr:anchor>
                 <fr:addr type="user">intentional-logic-0001</fr:addr>
                 <fr:route>intentional-logic-0001.xml</fr:route>
                 <fr:title text="An Introductory Challenge">An Introductory Challenge</fr:title>
@@ -46,7 +46,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>242</fr:anchor>
+                <fr:anchor>252</fr:anchor>
                 <fr:addr type="user">intentional-logic-0002</fr:addr>
                 <fr:route>intentional-logic-0002.xml</fr:route>
                 <fr:title text="On the Idea of an Intentional Logic">On the Idea of an Intentional Logic</fr:title>
@@ -97,7 +97,7 @@ The first thesis, Veatch writes, concerns the "nature of the cognitive relation"
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>243</fr:anchor>
+            <fr:anchor>253</fr:anchor>
             <fr:addr type="user">intentional-logic-0002</fr:addr>
             <fr:route>intentional-logic-0002.xml</fr:route>
             <fr:title text="On the Idea of an Intentional Logic">On the Idea of an Intentional Logic</fr:title>

@@ -1,0 +1,22 @@
+\title{Bi-implication rules}
+
+\p{Bi-implication, as usual, can be defined as
+
+##{\begin{array}{ccc}
+    A \iff B & \equiv_{\mathtt{def}} & (A \implies B) \land (B \implies A)
+  \end{array}}
+
+which allows us to define introduction:
+
+##{\frac{\begin{array}{cc}
+          A \implies B & B \implies A
+        \end{array}}
+        {A \iff B}(\mathtt{\iff{I}})}
+
+and elimination:
+
+##{\frac{A \iff B}
+        {A \implies B}(\mathtt{\iff{E_A}})}
+
+##{\frac{A \iff B}
+        {B \implies A}(\mathtt{\iff{E_B}})}}

@@ -1,0 +1,21 @@
+\title{Negation rule}
+
+\p{Using #{\bot} elimination, we can define \em{negation}:
+
+##{\neg A \equiv_{\mathtt{def}} A \implies \bot}
+
+and using this definition, we can define for negation its introduction rule:
+
+##{\frac{\begin{array}{cc}
+          [A] & [A] \\
+          \vdots & \vdots \\
+          B & \neg B
+        \end{array}}
+       {\neg A}(\mathtt{\neg{I}})}
+
+and elimination:
+
+##{\frac{\begin{array}{lr}
+          A & \neg A \\
+        \end{array}}
+       {B}(\mathtt{\neg{E}})}}

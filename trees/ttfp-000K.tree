@@ -1,0 +1,21 @@
+\title{Substitution over quantifiers}
+
+\p{For quantifiers:
+
+\ul{
+  \li{#{(\forall x.B)[t/x] \equiv_\text{df} \forall x.B}}
+  \li{#{(\exists x.B)[t/x] \equiv_\text{df} \exists x.B}}}}
+
+\p{If #{y \not\equiv x} and #{y} \em{does not} appear in #{t}, then
+
+\ul{
+  \li{#{(\forall y.B)[t/x] \equiv_\text{df} \forall y.(B[t/x])}}
+  \li{#{(\exists y.B)[t/x] \equiv_\text{df} \exists y.(B[t/x])}}}}
+
+\p{On the other hand, if #{y \not\equiv x} and #{y} \em{does} appear in #{t}, then
+
+\ul{
+  \li{#{(\forall y.B)[t/x] \equiv_\text{df} \forall z.(B[z/y][t/x])}}
+  \li{#{(\exists y.B)[t/x] \equiv_\text{df} \exists z.(B[z/y][t/x])}}}
+
+where #{z} is a variable that does not appear in either #{t} or #{B}.}

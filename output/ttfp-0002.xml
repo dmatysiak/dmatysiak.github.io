@@ -2,14 +2,16 @@
 <?xml-stylesheet type="text/xsl" href="default.xsl"?>
 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>261</fr:anchor>
+    <fr:anchor>310</fr:anchor>
     <fr:addr type="user">ttfp-0002</fr:addr>
     <fr:route>ttfp-0002.xml</fr:route>
     <fr:title text="Propositional logic">Propositional logic</fr:title>
     <fr:authors />
   </fr:frontmatter>
   <fr:mainmatter>
-    <fr:p>Propositional logic formalizes arguments that make use of connectives like "and", "or", "not" and "implies" to join simpler formulas together into more complex formulas, beginning with propositional variables and atomic propositions. A formula is either
+    <fr:p>Propositional logic formalizes arguments that make use of connectives like "and", "or",
+"not" and "implies" to join simpler formulas together into more complex formulas,
+beginning with propositional variables and atomic propositions. A formula is either
 
 <fr:ol><fr:li>a propositional variable <fr:tex display="inline"><![CDATA[X_i]]></fr:tex>, or</fr:li>
   <fr:li>a compound formula of one of the following forms:
@@ -20,36 +22,86 @@
       <fr:li><fr:tex display="inline"><![CDATA[A \iff  B]]></fr:tex></fr:li>
       <fr:li><fr:tex display="inline"><![CDATA[\bot ]]></fr:tex></fr:li></fr:ul></fr:li></fr:ol>
 
-where <fr:tex display="inline"><![CDATA[A]]></fr:tex>, <fr:tex display="inline"><![CDATA[B]]></fr:tex>,... are variables in the meta-language standing in for arbitary formulas. This description is of the language in which propositions are encoded. A logical system also needs to specify what constitutes a valid argument, often called <fr:em>proofs</fr:em> or <fr:em>derivations</fr:em> of the system. An argument encodes an inference of some conclusions from zero or more assumptions. Deduction rules are used to construct larger derivations out of smaller deductions.</fr:p>
+where <fr:tex display="inline"><![CDATA[A]]></fr:tex>, <fr:tex display="inline"><![CDATA[B]]></fr:tex>,... are variables in the meta-language standing in for arbitary
+formulas. This description is of the language in which propositions are encoded. A logical
+system also needs to specify what constitutes a valid argument, often called <fr:em>proofs</fr:em>
+or <fr:em>derivations</fr:em> of the system. An argument encodes an inference of some conclusions
+from zero or more assumptions. Deduction rules are used to construct larger derivations
+out of smaller deductions.</fr:p>
     <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
       <fr:frontmatter>
-        <fr:anchor>248</fr:anchor>
+        <fr:anchor>278</fr:anchor>
         <fr:addr type="user">ttfp-0003</fr:addr>
         <fr:route>ttfp-0003.xml</fr:route>
         <fr:title text="Derivation rules for propositional logic">Derivation rules for propositional logic</fr:title>
         <fr:authors />
       </fr:frontmatter>
       <fr:mainmatter>
-        <fr:p>The simplest derivation is the <fr:em>assumption rule</fr:em> which states that any formula <fr:tex display="inline"><![CDATA[A]]></fr:tex> may be derived from the assumption of <fr:tex display="inline"><![CDATA[A]]></fr:tex> itself. The proof is trivial:
+        <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>241</fr:anchor>
+            <fr:addr type="user">ttfp-0008</fr:addr>
+            <fr:route>ttfp-0008.xml</fr:route>
+            <fr:title text="Assumption rule">Assumption rule</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>The simplest derivation is the <fr:em>assumption rule</fr:em> which states that any formula <fr:tex display="inline"><![CDATA[A]]></fr:tex> may be derived from the assumption of <fr:tex display="inline"><![CDATA[A]]></fr:tex> itself. The proof is trivial:
 
 <fr:tex display="block"><![CDATA[A]]></fr:tex></fr:p>
-        <fr:p>The <fr:em>conjunction introduction rule</fr:em> builds a composite derivation by combining derivations of the conjuncts into a derivation of the conjunction:
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+        <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>242</fr:anchor>
+            <fr:addr type="user">ttfp-0009</fr:addr>
+            <fr:route>ttfp-0009.xml</fr:route>
+            <fr:title text="Conjunction rules">Conjunction rules</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>The <fr:em>conjunction introduction rule</fr:em> builds a composite derivation by combining derivations of the conjuncts into a derivation of the conjunction:
 
 <fr:tex display="block"><![CDATA[\frac {\begin {array}{lr}A & B\end {array}}         {A \land  B}(\mathtt {\land  I})]]></fr:tex></fr:p>
-        <fr:p>The <fr:em>elimination rules for conjunction</fr:em> allows us to derive the constituent conjuncts from an existing conjunction:
+            <fr:p>The <fr:em>elimination rules for conjunction</fr:em> allows us to derive the constituent conjuncts from an existing conjunction:
 
 <fr:tex display="block"><![CDATA[\frac {A \land  B}         {A}(\mathtt {\land  E_A})]]></fr:tex>
 
 <fr:tex display="block"><![CDATA[\frac {A \land  B}         {B}(\mathtt {\land  E_B})]]></fr:tex></fr:p>
-        <fr:p><fr:em>Implication introduction</fr:em> allows us to infer the formula <fr:tex display="inline"><![CDATA[A \implies  B]]></fr:tex> from a proof of <fr:tex display="inline"><![CDATA[B]]></fr:tex>. Note that <fr:tex display="inline"><![CDATA[B]]></fr:tex> <fr:em>may</fr:em> depend on <fr:tex display="inline"><![CDATA[A]]></fr:tex>, but implication introduction does not depend on <fr:tex display="inline"><![CDATA[A]]></fr:tex>. We do not need a proof of <fr:tex display="inline"><![CDATA[A]]></fr:tex>, only a proof of <fr:tex display="inline"><![CDATA[B]]></fr:tex>. (We are only interested in showing that <fr:tex display="inline"><![CDATA[B]]></fr:tex> follows from <fr:tex display="inline"><![CDATA[A]]></fr:tex>, so to do that, we assume <fr:tex display="inline"><![CDATA[A]]></fr:tex> to prove <fr:tex display="inline"><![CDATA[B]]></fr:tex>. Thus, <fr:tex display="inline"><![CDATA[A]]></fr:tex> is only temporarily assumed to show that the implication holds and may, therefore, be introduced.) Therefore, we can <fr:em>discharge</fr:em> <fr:tex display="inline"><![CDATA[A]]></fr:tex> from the set of premises (denoted by <fr:tex display="inline"><![CDATA[[A]]]></fr:tex>):
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+        <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>243</fr:anchor>
+            <fr:addr type="user">ttfp-000A</fr:addr>
+            <fr:route>ttfp-000A.xml</fr:route>
+            <fr:title text="Implication rules">Implication rules</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p><fr:em>Implication introduction</fr:em> allows us to infer the formula <fr:tex display="inline"><![CDATA[A \implies  B]]></fr:tex> from a proof of <fr:tex display="inline"><![CDATA[B]]></fr:tex>. Note that <fr:tex display="inline"><![CDATA[B]]></fr:tex> <fr:em>may</fr:em> depend on <fr:tex display="inline"><![CDATA[A]]></fr:tex>, but implication introduction does not depend on <fr:tex display="inline"><![CDATA[A]]></fr:tex>. We do not need a proof of <fr:tex display="inline"><![CDATA[A]]></fr:tex>, only a proof of <fr:tex display="inline"><![CDATA[B]]></fr:tex>. (We are only interested in showing that <fr:tex display="inline"><![CDATA[B]]></fr:tex> follows from <fr:tex display="inline"><![CDATA[A]]></fr:tex>, so to do that, we assume <fr:tex display="inline"><![CDATA[A]]></fr:tex> to prove <fr:tex display="inline"><![CDATA[B]]></fr:tex>. Thus, <fr:tex display="inline"><![CDATA[A]]></fr:tex> is only temporarily assumed to show that the implication holds and may, therefore, be introduced.) Therefore, we can <fr:em>discharge</fr:em> <fr:tex display="inline"><![CDATA[A]]></fr:tex> from the set of premises (denoted by <fr:tex display="inline"><![CDATA[[A]]]></fr:tex>):
 
 <fr:tex display="block"><![CDATA[\frac {\begin {array}{c}[A]\\\vdots \\B\end {array}}         {A \implies  B}(\mathtt {\Rightarrow {I}})]]></fr:tex>
 
 The application of the introduction rule can be related to the discharged premise by using a label.</fr:p>
-        <fr:p>As with conjunction, there is an <fr:em>implication elimination rule</fr:em> which effectively expresses modus ponens:
+            <fr:p>As with conjunction, there is an <fr:em>implication elimination rule</fr:em> which effectively expresses modus ponens:
 
 <fr:tex display="block"><![CDATA[\frac {\begin {array}{lr}A & A \implies  B\end {array}}        {B}(\mathtt {\Rightarrow {E}})]]></fr:tex></fr:p>
-        <fr:p><fr:em>Disjunction</fr:em> has two introduction rules, depending on which disjunct we have a proof for:
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+        <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>244</fr:anchor>
+            <fr:addr type="user">ttfp-000B</fr:addr>
+            <fr:route>ttfp-000B.xml</fr:route>
+            <fr:title text="Disjunction rules">Disjunction rules</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p><fr:em>Disjunction</fr:em> has two introduction rules, depending on which disjunct we have a proof for:
 
 <fr:tex display="block"><![CDATA[\frac {A}        {A \lor  B}(\mathtt {\lor {I_A}})]]></fr:tex>
 
@@ -60,10 +112,34 @@ Because we don't necessarily know which disjunct in a disjuntion we have a proof
 <fr:tex display="block"><![CDATA[\frac {\begin {array}{ccc}           & [A] & [B] \\           & \vdots  & \vdots  \\           A \lor  B & C & C         \end {array}}        {C}(\mathtt {\lor {E}})]]></fr:tex>
 
 The premises <fr:tex display="inline"><![CDATA[A]]></fr:tex> and <fr:tex display="inline"><![CDATA[B]]></fr:tex> are discharged in order to infer <fr:tex display="inline"><![CDATA[C]]></fr:tex>.</fr:p>
-        <fr:p>Absurdity (<fr:tex display="inline"><![CDATA[\bot ]]></fr:tex>), otherwise known as contradiction or the false proposition, does not have an introduction rule, though it can be inferred from a proposition like <fr:tex display="inline"><![CDATA[A \land  \neg  A]]></fr:tex>. But it can be eliminated, because anything follows from contradiction (<fr:em>ex falso quodlibet</fr:em>):
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+        <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>245</fr:anchor>
+            <fr:addr type="user">ttfp-000C</fr:addr>
+            <fr:route>ttfp-000C.xml</fr:route>
+            <fr:title text="Absurdity">Absurdity</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>Absurdity (<fr:tex display="inline"><![CDATA[\bot ]]></fr:tex>), otherwise known as contradiction or the false proposition, does not have an introduction rule, though it can be inferred from a proposition like <fr:tex display="inline"><![CDATA[A \land  \neg  A]]></fr:tex>. But it can be eliminated, because anything follows from contradiction (<fr:em>ex falso quodlibet</fr:em>):
 
 <fr:tex display="block"><![CDATA[\frac {\bot }        {A}(\mathtt {\bot  E})]]></fr:tex></fr:p>
-        <fr:p>Using <fr:tex display="inline"><![CDATA[\bot ]]></fr:tex> elimination, we can define <fr:em>negation</fr:em>:
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+        <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>246</fr:anchor>
+            <fr:addr type="user">ttfp-000D</fr:addr>
+            <fr:route>ttfp-000D.xml</fr:route>
+            <fr:title text="Negation rule">Negation rule</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>Using <fr:tex display="inline"><![CDATA[\bot ]]></fr:tex> elimination, we can define <fr:em>negation</fr:em>:
 
 <fr:tex display="block"><![CDATA[\neg  A \equiv _{\mathtt {def}} A \implies  \bot ]]></fr:tex>
 
@@ -74,7 +150,19 @@ and using this definition, we can define for negation its introduction rule:
 and elimination:
 
 <fr:tex display="block"><![CDATA[\frac {\begin {array}{lr}           A & \neg  A \\         \end {array}}        {B}(\mathtt {\neg {E}})]]></fr:tex></fr:p>
-        <fr:p>Bi-implication, as usual, can be defined as
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+        <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>247</fr:anchor>
+            <fr:addr type="user">ttfp-000E</fr:addr>
+            <fr:route>ttfp-000E.xml</fr:route>
+            <fr:title text="Bi-implication rules">Bi-implication rules</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>Bi-implication, as usual, can be defined as
 
 <fr:tex display="block"><![CDATA[\begin {array}{ccc}     A \iff  B & \equiv _{\mathtt {def}} & (A \implies  B) \land  (B \implies  A)   \end {array}]]></fr:tex>
 
@@ -87,16 +175,34 @@ and elimination:
 <fr:tex display="block"><![CDATA[\frac {A \iff  B}         {A \implies  B}(\mathtt {\iff {E_A}})]]></fr:tex>
 
 <fr:tex display="block"><![CDATA[\frac {A \iff  B}         {B \implies  A}(\mathtt {\iff {E_B}})]]></fr:tex></fr:p>
-        <fr:p>Thompson also notes that the approach taken here is intuitionistic, and that "classical logic" is an extension of the intuitionistic case. This extension is accomplished by adding the <fr:em>law of excluded middle</fr:em>:
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+        <fr:p>Thompson notes that the approach taken here is intuitionistic.</fr:p>
+        <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>248</fr:anchor>
+            <fr:addr type="user">ttfp-000F</fr:addr>
+            <fr:route>ttfp-000F.xml</fr:route>
+            <fr:title text="Classical logic as extension of intuitionistic logic">Classical logic as extension of intuitionistic logic</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>Classical logic is an extension of the intuitionistic case. This extension is
+accomplished by adding the <fr:em>law of excluded middle</fr:em>:
 
 <fr:tex display="block"><![CDATA[\frac {}         {A \lor  \neg  A}(\mathtt {EM})]]></fr:tex></fr:p>
-        <fr:p>Alternative rules that can be used to characterize classical logic are the <fr:em>rule of double negation</fr:em>:
+            <fr:p>Alternative rules that can be used to characterize classical logic are the <fr:em>rule of
+double negation</fr:em>:
 
 <fr:tex display="block"><![CDATA[\frac {\neg \neg  A}         {A}(\mathtt {DN})]]></fr:tex>
 
 and the <fr:em>rule of proof by contradiction</fr:em>:
 
 <fr:tex display="block"><![CDATA[\frac {\begin {array}{c c}           [\neg  A] & [\neg  A]\\           \vdots  & \vdots \\           B & \neg  B         \end {array}}         {A}(\mathtt {CC})]]></fr:tex></fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
       </fr:mainmatter>
       <fr:backmatter />
     </fr:tree>
@@ -110,30 +216,42 @@ and the <fr:em>rule of proof by contradiction</fr:em>:
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>262</fr:anchor>
+            <fr:anchor>311</fr:anchor>
             <fr:addr type="user">ttfp-0001</fr:addr>
             <fr:route>ttfp-0001.xml</fr:route>
             <fr:title text="Introduction to Logic">Introduction to Logic</fr:title>
             <fr:authors />
           </fr:frontmatter>
           <fr:mainmatter>
-            <fr:p>In the introduction, Thompson introduces the reader to logic, which the author defines as "the science of argument". Thompson focuses especially on <fr:em>formal logic</fr:em>, and endeavors to give the reader a few justifications for the formalization of logic. Principal among these justifications are:
+            <fr:p>In the introduction, Thompson introduces the reader to logic, which the author defines
+as "the science of argument". Thompson focuses especially on <fr:em>formal logic</fr:em>, and
+endeavors to give the reader a few justifications for the formalization of
+logic. Principal among these justifications are:
 
-<fr:ol><fr:li>clarity of characterization of valid proofs, which aids in judging particular arguments and in "sharpening our understanding of informal reasoning";</fr:li>
+<fr:ol><fr:li>clarity of characterization of valid proofs, which aids in judging particular
+      arguments and in "sharpening our understanding of informal reasoning";</fr:li>
+
   <fr:li>the ability to check the correctness of arguments mechanically;</fr:li>
-  <fr:li>its usefulness in mathematically studying properties, like expressive strength, of formal theories relative to other formal theories or according to some semantic interpretation for them.</fr:li></fr:ol>
 
-Thompson's stated aim is to provide the reader a formal system by which he can express arguments for the validity of particular sentences. He begins by introducing the reader to natural deduction systems for propositional, and later, predicate logic.</fr:p>
+  <fr:li>its usefulness in mathematically studying properties, like expressive strength, of
+      formal theories relative to other formal theories or according to some semantic
+      interpretation for them.</fr:li></fr:ol>
+
+Thompson's stated aim is to provide the reader a formal system by which he can express
+arguments for the validity of particular sentences. He begins by introducing the reader to
+natural deduction systems for propositional, and later, predicate logic.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>250</fr:anchor>
+                <fr:anchor>290</fr:anchor>
                 <fr:addr type="user">ttfp-0002</fr:addr>
                 <fr:route>ttfp-0002.xml</fr:route>
                 <fr:title text="Propositional logic">Propositional logic</fr:title>
                 <fr:authors />
               </fr:frontmatter>
               <fr:mainmatter>
-                <fr:p>Propositional logic formalizes arguments that make use of connectives like "and", "or", "not" and "implies" to join simpler formulas together into more complex formulas, beginning with propositional variables and atomic propositions. A formula is either
+                <fr:p>Propositional logic formalizes arguments that make use of connectives like "and", "or",
+"not" and "implies" to join simpler formulas together into more complex formulas,
+beginning with propositional variables and atomic propositions. A formula is either
 
 <fr:ol><fr:li>a propositional variable <fr:tex display="inline"><![CDATA[X_i]]></fr:tex>, or</fr:li>
   <fr:li>a compound formula of one of the following forms:
@@ -144,36 +262,86 @@ Thompson's stated aim is to provide the reader a formal system by which he can e
       <fr:li><fr:tex display="inline"><![CDATA[A \iff  B]]></fr:tex></fr:li>
       <fr:li><fr:tex display="inline"><![CDATA[\bot ]]></fr:tex></fr:li></fr:ul></fr:li></fr:ol>
 
-where <fr:tex display="inline"><![CDATA[A]]></fr:tex>, <fr:tex display="inline"><![CDATA[B]]></fr:tex>,... are variables in the meta-language standing in for arbitary formulas. This description is of the language in which propositions are encoded. A logical system also needs to specify what constitutes a valid argument, often called <fr:em>proofs</fr:em> or <fr:em>derivations</fr:em> of the system. An argument encodes an inference of some conclusions from zero or more assumptions. Deduction rules are used to construct larger derivations out of smaller deductions.</fr:p>
+where <fr:tex display="inline"><![CDATA[A]]></fr:tex>, <fr:tex display="inline"><![CDATA[B]]></fr:tex>,... are variables in the meta-language standing in for arbitary
+formulas. This description is of the language in which propositions are encoded. A logical
+system also needs to specify what constitutes a valid argument, often called <fr:em>proofs</fr:em>
+or <fr:em>derivations</fr:em> of the system. An argument encodes an inference of some conclusions
+from zero or more assumptions. Deduction rules are used to construct larger derivations
+out of smaller deductions.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>248</fr:anchor>
+                    <fr:anchor>278</fr:anchor>
                     <fr:addr type="user">ttfp-0003</fr:addr>
                     <fr:route>ttfp-0003.xml</fr:route>
                     <fr:title text="Derivation rules for propositional logic">Derivation rules for propositional logic</fr:title>
                     <fr:authors />
                   </fr:frontmatter>
                   <fr:mainmatter>
-                    <fr:p>The simplest derivation is the <fr:em>assumption rule</fr:em> which states that any formula <fr:tex display="inline"><![CDATA[A]]></fr:tex> may be derived from the assumption of <fr:tex display="inline"><![CDATA[A]]></fr:tex> itself. The proof is trivial:
+                    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                      <fr:frontmatter>
+                        <fr:anchor>241</fr:anchor>
+                        <fr:addr type="user">ttfp-0008</fr:addr>
+                        <fr:route>ttfp-0008.xml</fr:route>
+                        <fr:title text="Assumption rule">Assumption rule</fr:title>
+                        <fr:authors />
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <fr:p>The simplest derivation is the <fr:em>assumption rule</fr:em> which states that any formula <fr:tex display="inline"><![CDATA[A]]></fr:tex> may be derived from the assumption of <fr:tex display="inline"><![CDATA[A]]></fr:tex> itself. The proof is trivial:
 
 <fr:tex display="block"><![CDATA[A]]></fr:tex></fr:p>
-                    <fr:p>The <fr:em>conjunction introduction rule</fr:em> builds a composite derivation by combining derivations of the conjuncts into a derivation of the conjunction:
+                      </fr:mainmatter>
+                      <fr:backmatter />
+                    </fr:tree>
+                    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                      <fr:frontmatter>
+                        <fr:anchor>242</fr:anchor>
+                        <fr:addr type="user">ttfp-0009</fr:addr>
+                        <fr:route>ttfp-0009.xml</fr:route>
+                        <fr:title text="Conjunction rules">Conjunction rules</fr:title>
+                        <fr:authors />
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <fr:p>The <fr:em>conjunction introduction rule</fr:em> builds a composite derivation by combining derivations of the conjuncts into a derivation of the conjunction:
 
 <fr:tex display="block"><![CDATA[\frac {\begin {array}{lr}A & B\end {array}}         {A \land  B}(\mathtt {\land  I})]]></fr:tex></fr:p>
-                    <fr:p>The <fr:em>elimination rules for conjunction</fr:em> allows us to derive the constituent conjuncts from an existing conjunction:
+                        <fr:p>The <fr:em>elimination rules for conjunction</fr:em> allows us to derive the constituent conjuncts from an existing conjunction:
 
 <fr:tex display="block"><![CDATA[\frac {A \land  B}         {A}(\mathtt {\land  E_A})]]></fr:tex>
 
 <fr:tex display="block"><![CDATA[\frac {A \land  B}         {B}(\mathtt {\land  E_B})]]></fr:tex></fr:p>
-                    <fr:p><fr:em>Implication introduction</fr:em> allows us to infer the formula <fr:tex display="inline"><![CDATA[A \implies  B]]></fr:tex> from a proof of <fr:tex display="inline"><![CDATA[B]]></fr:tex>. Note that <fr:tex display="inline"><![CDATA[B]]></fr:tex> <fr:em>may</fr:em> depend on <fr:tex display="inline"><![CDATA[A]]></fr:tex>, but implication introduction does not depend on <fr:tex display="inline"><![CDATA[A]]></fr:tex>. We do not need a proof of <fr:tex display="inline"><![CDATA[A]]></fr:tex>, only a proof of <fr:tex display="inline"><![CDATA[B]]></fr:tex>. (We are only interested in showing that <fr:tex display="inline"><![CDATA[B]]></fr:tex> follows from <fr:tex display="inline"><![CDATA[A]]></fr:tex>, so to do that, we assume <fr:tex display="inline"><![CDATA[A]]></fr:tex> to prove <fr:tex display="inline"><![CDATA[B]]></fr:tex>. Thus, <fr:tex display="inline"><![CDATA[A]]></fr:tex> is only temporarily assumed to show that the implication holds and may, therefore, be introduced.) Therefore, we can <fr:em>discharge</fr:em> <fr:tex display="inline"><![CDATA[A]]></fr:tex> from the set of premises (denoted by <fr:tex display="inline"><![CDATA[[A]]]></fr:tex>):
+                      </fr:mainmatter>
+                      <fr:backmatter />
+                    </fr:tree>
+                    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                      <fr:frontmatter>
+                        <fr:anchor>243</fr:anchor>
+                        <fr:addr type="user">ttfp-000A</fr:addr>
+                        <fr:route>ttfp-000A.xml</fr:route>
+                        <fr:title text="Implication rules">Implication rules</fr:title>
+                        <fr:authors />
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <fr:p><fr:em>Implication introduction</fr:em> allows us to infer the formula <fr:tex display="inline"><![CDATA[A \implies  B]]></fr:tex> from a proof of <fr:tex display="inline"><![CDATA[B]]></fr:tex>. Note that <fr:tex display="inline"><![CDATA[B]]></fr:tex> <fr:em>may</fr:em> depend on <fr:tex display="inline"><![CDATA[A]]></fr:tex>, but implication introduction does not depend on <fr:tex display="inline"><![CDATA[A]]></fr:tex>. We do not need a proof of <fr:tex display="inline"><![CDATA[A]]></fr:tex>, only a proof of <fr:tex display="inline"><![CDATA[B]]></fr:tex>. (We are only interested in showing that <fr:tex display="inline"><![CDATA[B]]></fr:tex> follows from <fr:tex display="inline"><![CDATA[A]]></fr:tex>, so to do that, we assume <fr:tex display="inline"><![CDATA[A]]></fr:tex> to prove <fr:tex display="inline"><![CDATA[B]]></fr:tex>. Thus, <fr:tex display="inline"><![CDATA[A]]></fr:tex> is only temporarily assumed to show that the implication holds and may, therefore, be introduced.) Therefore, we can <fr:em>discharge</fr:em> <fr:tex display="inline"><![CDATA[A]]></fr:tex> from the set of premises (denoted by <fr:tex display="inline"><![CDATA[[A]]]></fr:tex>):
 
 <fr:tex display="block"><![CDATA[\frac {\begin {array}{c}[A]\\\vdots \\B\end {array}}         {A \implies  B}(\mathtt {\Rightarrow {I}})]]></fr:tex>
 
 The application of the introduction rule can be related to the discharged premise by using a label.</fr:p>
-                    <fr:p>As with conjunction, there is an <fr:em>implication elimination rule</fr:em> which effectively expresses modus ponens:
+                        <fr:p>As with conjunction, there is an <fr:em>implication elimination rule</fr:em> which effectively expresses modus ponens:
 
 <fr:tex display="block"><![CDATA[\frac {\begin {array}{lr}A & A \implies  B\end {array}}        {B}(\mathtt {\Rightarrow {E}})]]></fr:tex></fr:p>
-                    <fr:p><fr:em>Disjunction</fr:em> has two introduction rules, depending on which disjunct we have a proof for:
+                      </fr:mainmatter>
+                      <fr:backmatter />
+                    </fr:tree>
+                    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                      <fr:frontmatter>
+                        <fr:anchor>244</fr:anchor>
+                        <fr:addr type="user">ttfp-000B</fr:addr>
+                        <fr:route>ttfp-000B.xml</fr:route>
+                        <fr:title text="Disjunction rules">Disjunction rules</fr:title>
+                        <fr:authors />
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <fr:p><fr:em>Disjunction</fr:em> has two introduction rules, depending on which disjunct we have a proof for:
 
 <fr:tex display="block"><![CDATA[\frac {A}        {A \lor  B}(\mathtt {\lor {I_A}})]]></fr:tex>
 
@@ -184,10 +352,34 @@ Because we don't necessarily know which disjunct in a disjuntion we have a proof
 <fr:tex display="block"><![CDATA[\frac {\begin {array}{ccc}           & [A] & [B] \\           & \vdots  & \vdots  \\           A \lor  B & C & C         \end {array}}        {C}(\mathtt {\lor {E}})]]></fr:tex>
 
 The premises <fr:tex display="inline"><![CDATA[A]]></fr:tex> and <fr:tex display="inline"><![CDATA[B]]></fr:tex> are discharged in order to infer <fr:tex display="inline"><![CDATA[C]]></fr:tex>.</fr:p>
-                    <fr:p>Absurdity (<fr:tex display="inline"><![CDATA[\bot ]]></fr:tex>), otherwise known as contradiction or the false proposition, does not have an introduction rule, though it can be inferred from a proposition like <fr:tex display="inline"><![CDATA[A \land  \neg  A]]></fr:tex>. But it can be eliminated, because anything follows from contradiction (<fr:em>ex falso quodlibet</fr:em>):
+                      </fr:mainmatter>
+                      <fr:backmatter />
+                    </fr:tree>
+                    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                      <fr:frontmatter>
+                        <fr:anchor>245</fr:anchor>
+                        <fr:addr type="user">ttfp-000C</fr:addr>
+                        <fr:route>ttfp-000C.xml</fr:route>
+                        <fr:title text="Absurdity">Absurdity</fr:title>
+                        <fr:authors />
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <fr:p>Absurdity (<fr:tex display="inline"><![CDATA[\bot ]]></fr:tex>), otherwise known as contradiction or the false proposition, does not have an introduction rule, though it can be inferred from a proposition like <fr:tex display="inline"><![CDATA[A \land  \neg  A]]></fr:tex>. But it can be eliminated, because anything follows from contradiction (<fr:em>ex falso quodlibet</fr:em>):
 
 <fr:tex display="block"><![CDATA[\frac {\bot }        {A}(\mathtt {\bot  E})]]></fr:tex></fr:p>
-                    <fr:p>Using <fr:tex display="inline"><![CDATA[\bot ]]></fr:tex> elimination, we can define <fr:em>negation</fr:em>:
+                      </fr:mainmatter>
+                      <fr:backmatter />
+                    </fr:tree>
+                    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                      <fr:frontmatter>
+                        <fr:anchor>246</fr:anchor>
+                        <fr:addr type="user">ttfp-000D</fr:addr>
+                        <fr:route>ttfp-000D.xml</fr:route>
+                        <fr:title text="Negation rule">Negation rule</fr:title>
+                        <fr:authors />
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <fr:p>Using <fr:tex display="inline"><![CDATA[\bot ]]></fr:tex> elimination, we can define <fr:em>negation</fr:em>:
 
 <fr:tex display="block"><![CDATA[\neg  A \equiv _{\mathtt {def}} A \implies  \bot ]]></fr:tex>
 
@@ -198,7 +390,19 @@ and using this definition, we can define for negation its introduction rule:
 and elimination:
 
 <fr:tex display="block"><![CDATA[\frac {\begin {array}{lr}           A & \neg  A \\         \end {array}}        {B}(\mathtt {\neg {E}})]]></fr:tex></fr:p>
-                    <fr:p>Bi-implication, as usual, can be defined as
+                      </fr:mainmatter>
+                      <fr:backmatter />
+                    </fr:tree>
+                    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                      <fr:frontmatter>
+                        <fr:anchor>247</fr:anchor>
+                        <fr:addr type="user">ttfp-000E</fr:addr>
+                        <fr:route>ttfp-000E.xml</fr:route>
+                        <fr:title text="Bi-implication rules">Bi-implication rules</fr:title>
+                        <fr:authors />
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <fr:p>Bi-implication, as usual, can be defined as
 
 <fr:tex display="block"><![CDATA[\begin {array}{ccc}     A \iff  B & \equiv _{\mathtt {def}} & (A \implies  B) \land  (B \implies  A)   \end {array}]]></fr:tex>
 
@@ -211,16 +415,34 @@ and elimination:
 <fr:tex display="block"><![CDATA[\frac {A \iff  B}         {A \implies  B}(\mathtt {\iff {E_A}})]]></fr:tex>
 
 <fr:tex display="block"><![CDATA[\frac {A \iff  B}         {B \implies  A}(\mathtt {\iff {E_B}})]]></fr:tex></fr:p>
-                    <fr:p>Thompson also notes that the approach taken here is intuitionistic, and that "classical logic" is an extension of the intuitionistic case. This extension is accomplished by adding the <fr:em>law of excluded middle</fr:em>:
+                      </fr:mainmatter>
+                      <fr:backmatter />
+                    </fr:tree>
+                    <fr:p>Thompson notes that the approach taken here is intuitionistic.</fr:p>
+                    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                      <fr:frontmatter>
+                        <fr:anchor>248</fr:anchor>
+                        <fr:addr type="user">ttfp-000F</fr:addr>
+                        <fr:route>ttfp-000F.xml</fr:route>
+                        <fr:title text="Classical logic as extension of intuitionistic logic">Classical logic as extension of intuitionistic logic</fr:title>
+                        <fr:authors />
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <fr:p>Classical logic is an extension of the intuitionistic case. This extension is
+accomplished by adding the <fr:em>law of excluded middle</fr:em>:
 
 <fr:tex display="block"><![CDATA[\frac {}         {A \lor  \neg  A}(\mathtt {EM})]]></fr:tex></fr:p>
-                    <fr:p>Alternative rules that can be used to characterize classical logic are the <fr:em>rule of double negation</fr:em>:
+                        <fr:p>Alternative rules that can be used to characterize classical logic are the <fr:em>rule of
+double negation</fr:em>:
 
 <fr:tex display="block"><![CDATA[\frac {\neg \neg  A}         {A}(\mathtt {DN})]]></fr:tex>
 
 and the <fr:em>rule of proof by contradiction</fr:em>:
 
 <fr:tex display="block"><![CDATA[\frac {\begin {array}{c c}           [\neg  A] & [\neg  A]\\           \vdots  & \vdots \\           B & \neg  B         \end {array}}         {A}(\mathtt {CC})]]></fr:tex></fr:p>
+                      </fr:mainmatter>
+                      <fr:backmatter />
+                    </fr:tree>
                   </fr:mainmatter>
                   <fr:backmatter />
                 </fr:tree>
@@ -229,96 +451,222 @@ and the <fr:em>rule of proof by contradiction</fr:em>:
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>251</fr:anchor>
+                <fr:anchor>291</fr:anchor>
                 <fr:addr type="user">ttfp-0004</fr:addr>
                 <fr:route>ttfp-0004.xml</fr:route>
                 <fr:title text="Predicate logic">Predicate logic</fr:title>
                 <fr:authors />
               </fr:frontmatter>
               <fr:mainmatter>
-                <fr:p>In the second section of the first chapter, Thompson covers predicate logic, "the logic of properties or <fr:em>predicates</fr:em>". Whereas propositional logic composes complex propositions from atomic, unanalyzed propositions, propositions in predicate logic are constructed from predicates, or statements about certain properties holding for certain objects.</fr:p>
-                <fr:p>Syntactically, the language of predicate logic can be divided into formulae and terms. Terms denote objects, and have one of the following forms:
+                <fr:p>In the second section of the first chapter, Thompson covers predicate logic, "the logic
+of properties or <fr:em>predicates</fr:em>". Whereas propositional logic composes complex
+propositions from atomic, unanalyzed propositions, propositions in predicate logic are
+constructed from predicates, or statements about certain properties holding for certain
+objects.</fr:p>
+                <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                  <fr:frontmatter>
+                    <fr:anchor>292</fr:anchor>
+                    <fr:addr type="user">ttfp-000G</fr:addr>
+                    <fr:route>ttfp-000G.xml</fr:route>
+                    <fr:title text="Syntax of predicate logic">Syntax of predicate logic</fr:title>
+                    <fr:authors />
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <fr:p>Syntactically, the language of predicate logic can be divided into formulae and
+terms. Terms denote objects, and have one of the following forms:
 
 <fr:ul><fr:li>Variables (<fr:tex display="inline"><![CDATA[v_0, v_1,\ldots ]]></fr:tex>, or, <fr:tex display="inline"><![CDATA[x, y, z, u, v,\ldots ]]></fr:tex>).</fr:li>
   <fr:li>Constants (<fr:tex display="inline"><![CDATA[c_0, c_1,\ldots ]]></fr:tex>, or, <fr:tex display="inline"><![CDATA[a, b, c,\ldots ]]></fr:tex>).</fr:li>
-  <fr:li>Composite terms (<fr:tex display="inline"><![CDATA[f_{n,m}(t_1, \ldots , t_n)]]></fr:tex>, formed by applying <fr:em>function symbols</fr:em>, like <fr:tex display="inline"><![CDATA[f, g, h,\ldots ]]></fr:tex>, to other terms <fr:tex display="inline"><![CDATA[s, t, t_1,\ldots ]]></fr:tex>, where <fr:tex display="inline"><![CDATA[n]]></fr:tex> is the <fr:em>arity</fr:em> and <fr:tex display="inline"><![CDATA[m]]></fr:tex> is some index to distinguish function symbols).</fr:li></fr:ul></fr:p>
-                <fr:p>Propositions have three forms:
+  <fr:li>Composite terms (<fr:tex display="inline"><![CDATA[f_{n,m}(t_1, \ldots , t_n)]]></fr:tex>, formed by applying <fr:em>function
+      symbols</fr:em>, like <fr:tex display="inline"><![CDATA[f, g, h,\ldots ]]></fr:tex>, to other terms <fr:tex display="inline"><![CDATA[s, t, t_1,\ldots ]]></fr:tex>, where <fr:tex display="inline"><![CDATA[n]]></fr:tex> is
+      the <fr:em>arity</fr:em> and <fr:tex display="inline"><![CDATA[m]]></fr:tex> is some index to distinguish function symbols).</fr:li></fr:ul></fr:p>
+                    <fr:p>Propositions have three forms:
 
-<fr:ul><fr:li>Atomic formulas. <fr:tex display="inline"><![CDATA[P_{n,m}(t_1,\ldots ,t_n)]]></fr:tex> (where <fr:tex display="inline"><![CDATA[P_{n,m}]]></fr:tex> is the predicate symbol with arity <fr:tex display="inline"><![CDATA[n]]></fr:tex>; <fr:tex display="inline"><![CDATA[P]]></fr:tex>, <fr:tex display="inline"><![CDATA[Q]]></fr:tex>, <fr:tex display="inline"><![CDATA[R]]></fr:tex>, etc. are used for this purpose) expressing the fact, that the relation <fr:tex display="inline"><![CDATA[P_{n,m}]]></fr:tex> holds for terms <fr:tex display="inline"><![CDATA[t_1,\dots ,t_n]]></fr:tex>, taken together. Equality (<fr:tex display="inline"><![CDATA[t_i = t_j$]]></fr:tex>) is taken to be primitive, defining another class of formulas in the language.</fr:li>
- <fr:li>Propositional combinations. As with propositional calculus, connectives are used to combine propositional terms into new, compound propositions (<fr:tex display="inline"><![CDATA[A \lor  B]]></fr:tex>, <fr:tex display="inline"><![CDATA[A \land  B]]></fr:tex>, <fr:tex display="inline"><![CDATA[A \implies  B]]></fr:tex>, <fr:tex display="inline"><![CDATA[A \iff  B]]></fr:tex>, <fr:tex display="inline"><![CDATA[\neg  A]]></fr:tex>).</fr:li>
- <fr:li>Quantified formulas, which are of the form <fr:tex display="inline"><![CDATA[\forall  x.A]]></fr:tex> and <fr:tex display="inline"><![CDATA[\exists  x.B]]></fr:tex>, where <fr:tex display="inline"><![CDATA[x]]></fr:tex> is an arbitrary variable, and <fr:tex display="inline"><![CDATA[A]]></fr:tex> and <fr:tex display="inline"><![CDATA[B]]></fr:tex> are arbitrary formulas.</fr:li></fr:ul></fr:p>
+<fr:ul><fr:li>Atomic formulas. <fr:tex display="inline"><![CDATA[P_{n,m}(t_1,\ldots ,t_n)]]></fr:tex> (where <fr:tex display="inline"><![CDATA[P_{n,m}]]></fr:tex> is the predicate symbol
+     with arity <fr:tex display="inline"><![CDATA[n]]></fr:tex>; <fr:tex display="inline"><![CDATA[P]]></fr:tex>, <fr:tex display="inline"><![CDATA[Q]]></fr:tex>, <fr:tex display="inline"><![CDATA[R]]></fr:tex>, etc. are used for this purpose) expressing the fa
+     ct, that the relation <fr:tex display="inline"><![CDATA[P_{n,m}]]></fr:tex> holds for terms <fr:tex display="inline"><![CDATA[t_1,\dots ,t_n]]></fr:tex>, taken
+     together. Equality (<fr:tex display="inline"><![CDATA[t_i = t_j$]]></fr:tex>) is taken to be primitive, defining another class
+     of formulas in the language.</fr:li>
+
+ <fr:li>Propositional combinations. As with propositional calculus, connectives are used to
+     combine propositional terms into new, compound propositions (<fr:tex display="inline"><![CDATA[A \lor  B]]></fr:tex>, <fr:tex display="inline"><![CDATA[A \land       B]]></fr:tex>, <fr:tex display="inline"><![CDATA[A \implies  B]]></fr:tex>, <fr:tex display="inline"><![CDATA[A \iff  B]]></fr:tex>, <fr:tex display="inline"><![CDATA[\neg  A]]></fr:tex>).</fr:li>
+
+ <fr:li>Quantified formulas, which are of the form <fr:tex display="inline"><![CDATA[\forall  x.A]]></fr:tex> and <fr:tex display="inline"><![CDATA[\exists  x.B]]></fr:tex>, where
+     <fr:tex display="inline"><![CDATA[x]]></fr:tex> is an arbitrary variable, and <fr:tex display="inline"><![CDATA[A]]></fr:tex> and <fr:tex display="inline"><![CDATA[B]]></fr:tex> are arbitrary formulas.</fr:li></fr:ul></fr:p>
+                  </fr:mainmatter>
+                  <fr:backmatter />
+                </fr:tree>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>252</fr:anchor>
+                    <fr:anchor>293</fr:anchor>
                     <fr:addr type="user">ttfp-0005</fr:addr>
                     <fr:route>ttfp-0005.xml</fr:route>
                     <fr:title text="Substitution in predicate logic">Substitution in predicate logic</fr:title>
                     <fr:authors />
                   </fr:frontmatter>
                   <fr:mainmatter>
-                    <fr:p>After providing a few examples of how quantifiers may be used, Thompson explains how variables and substitutions operate in propositions with quantifiers. Quantifier variables may be consistently renamed as long as the new name is not already in use in the affected formula. A variable <fr:tex display="inline"><![CDATA[x]]></fr:tex> is <fr:em>bound</fr:em> in a fomula <fr:tex display="inline"><![CDATA[\forall  x.A]]></fr:tex> or <fr:tex display="inline"><![CDATA[\exists  x.B]]></fr:tex>. The quantifier binds values to <fr:tex display="inline"><![CDATA[x]]></fr:tex>. All other occurrences are <fr:em>free</fr:em>. So in the formula <fr:tex display="inline"><![CDATA[\forall  x.P(x,y)]]></fr:tex>, <fr:tex display="inline"><![CDATA[x]]></fr:tex> is bound, while <fr:tex display="inline"><![CDATA[y]]></fr:tex> is free.</fr:p>
-                    <fr:p><fr:em>Substitution</fr:em> is the act of consistently replacing a variable with an arbitrary term. Only free variables may be substituted arbitrarily in this way, unlike bound variables, which express a universal or existential claim. Thompson uses the notation <fr:tex display="inline"><![CDATA[A[t/x]]]></fr:tex> to mean the formula <fr:tex display="inline"><![CDATA[A]]></fr:tex> with <fr:tex display="inline"><![CDATA[t]]></fr:tex> substituted for <fr:tex display="inline"><![CDATA[x]]></fr:tex>.</fr:p>
-                    <fr:p>When substituting a variable with an arbitrary term, we must be careful to avoid <fr:em>variable capture</fr:em>. Variable capture occurs when a free variable within the term substituted for a variable contains a variable that is otherwise bound in the formula in which we are making the substitution. Thompson gives the example of substituting the term <fr:tex display="inline"><![CDATA[y+1]]></fr:tex> for <fr:tex display="inline"><![CDATA[x]]></fr:tex> in the formula <fr:tex display="inline"><![CDATA[\exists  y.y>x]]></fr:tex>. This substitution results in the formula <fr:tex display="inline"><![CDATA[\exists  y.y>y+1]]></fr:tex>, which is obviously false. To avoid this problem, we can rename the variable <fr:tex display="inline"><![CDATA[y]]></fr:tex> in <fr:tex display="inline"><![CDATA[y+1]]></fr:tex> to something that does not occur in <fr:tex display="inline"><![CDATA[\exists  y.y>x]]></fr:tex> before performing the substitution.</fr:p>
-                    <fr:p>Formally, Thompson defines substitution, inductively, in the following way.
-
-For a term <fr:tex display="inline"><![CDATA[s]]></fr:tex>, <fr:tex display="inline"><![CDATA[s[t/x]]]></fr:tex> is defined as follows:
+                    <fr:p>After providing a few examples of how quantifiers may be used, Thompson explains how
+variables and substitutions operate in propositions with quantifiers. Quantifier variables
+may be consistently renamed as long as the new name is not already in use in the affected
+formula. A variable <fr:tex display="inline"><![CDATA[x]]></fr:tex> is <fr:em>bound</fr:em> in a fomula <fr:tex display="inline"><![CDATA[\forall  x.A]]></fr:tex> or <fr:tex display="inline"><![CDATA[\exists  x.B]]></fr:tex>. The
+quantifier binds values to <fr:tex display="inline"><![CDATA[x]]></fr:tex>. All other occurrences are <fr:em>free</fr:em>. So in the formula
+<fr:tex display="inline"><![CDATA[\forall  x.P(x,y)]]></fr:tex>, <fr:tex display="inline"><![CDATA[x]]></fr:tex> is bound, while <fr:tex display="inline"><![CDATA[y]]></fr:tex> is free.</fr:p>
+                    <fr:p><fr:em>Substitution</fr:em> is the act of consistently replacing a variable with an arbitrary
+term. Only free variables may be substituted arbitrarily in this way, unlike bound
+variables, which express a universal or existential claim. Thompson uses the notation
+<fr:tex display="inline"><![CDATA[A[t/x]]]></fr:tex> to mean the formula <fr:tex display="inline"><![CDATA[A]]></fr:tex> with <fr:tex display="inline"><![CDATA[t]]></fr:tex> substituted for <fr:tex display="inline"><![CDATA[x]]></fr:tex>.</fr:p>
+                    <fr:p>When substituting a variable with an arbitrary term, we must be careful to avoid
+<fr:em>variable capture</fr:em>. Variable capture occurs when a free variable within the term
+substituted for a variable contains a variable that is otherwise bound in the formula in
+which we are making the substitution. Thompson gives the example of substituting the term
+<fr:tex display="inline"><![CDATA[y+1]]></fr:tex> for <fr:tex display="inline"><![CDATA[x]]></fr:tex> in the formula <fr:tex display="inline"><![CDATA[\exists  y.y>x]]></fr:tex>. This substitution results in the formula
+<fr:tex display="inline"><![CDATA[\exists  y.y>y+1]]></fr:tex>, which is obviously false. To avoid this problem, we can rename the
+variable <fr:tex display="inline"><![CDATA[y]]></fr:tex> in <fr:tex display="inline"><![CDATA[y+1]]></fr:tex> to something that does not occur in <fr:tex display="inline"><![CDATA[\exists  y.y>x]]></fr:tex> before
+performing the substitution.</fr:p>
+                    <fr:p>Formally, Thompson defines substitution, inductively, in the following way.</fr:p>
+                    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                      <fr:frontmatter>
+                        <fr:anchor>294</fr:anchor>
+                        <fr:addr type="user">ttfp-000H</fr:addr>
+                        <fr:route>ttfp-000H.xml</fr:route>
+                        <fr:title text="Substitution over terms">Substitution over terms</fr:title>
+                        <fr:authors />
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <fr:p>For a term <fr:tex display="inline"><![CDATA[s]]></fr:tex>, <fr:tex display="inline"><![CDATA[s[t/x]]]></fr:tex> is defined as follows:
 
 <fr:ul><fr:li><fr:tex display="inline"><![CDATA[x[t/x] \equiv _\text {df} t]]></fr:tex></fr:li>
   <fr:li>if <fr:tex display="inline"><![CDATA[y \not \equiv  x]]></fr:tex>, then <fr:tex display="inline"><![CDATA[y[t/x] \equiv _\text {df} y]]></fr:tex></fr:li>
   <fr:li><fr:tex display="inline"><![CDATA[f_{n,m}(t_1,\ldots ,t_n)[t/x] \equiv _\text {df} f_{n,m}(t_1[t/x],\ldots ,t_n[t/x])]]></fr:tex></fr:li></fr:ul></fr:p>
-                    <fr:p>For a formula <fr:tex display="inline"><![CDATA[A]]></fr:tex>, <fr:tex display="inline"><![CDATA[A[t/x]]]></fr:tex> is defined as follows. For atomic formulas:
+                      </fr:mainmatter>
+                      <fr:backmatter />
+                    </fr:tree>
+                    <fr:p>For a formula <fr:tex display="inline"><![CDATA[A]]></fr:tex>, <fr:tex display="inline"><![CDATA[A[t/x]]]></fr:tex> is defined as follows.</fr:p>
+                    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                      <fr:frontmatter>
+                        <fr:anchor>295</fr:anchor>
+                        <fr:addr type="user">ttfp-000I</fr:addr>
+                        <fr:route>ttfp-000I.xml</fr:route>
+                        <fr:title text="Substitution over atomic formulae">Substitution over atomic formulae</fr:title>
+                        <fr:authors />
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <fr:p>For atomic formulas:
 
 <fr:ul><fr:li><fr:tex display="inline"><![CDATA[P_{n,m}(t_1,\ldots ,t_n)[t/x] \equiv _{df} P_{n,m}(t_1[t/x],\ldots ,t_n[t/x])]]></fr:tex></fr:li>
   <fr:li><fr:tex display="inline"><![CDATA[(t_1 = t_2)[t/x] \equiv _\text {df} t_1[t/x] = t2[t/x]]]></fr:tex></fr:li></fr:ul></fr:p>
-                    <fr:p>Substitution distributes over propositional combinations:
+                      </fr:mainmatter>
+                      <fr:backmatter />
+                    </fr:tree>
+                    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                      <fr:frontmatter>
+                        <fr:anchor>296</fr:anchor>
+                        <fr:addr type="user">ttfp-000J</fr:addr>
+                        <fr:route>ttfp-000J.xml</fr:route>
+                        <fr:title text="Substitution over compound propositions">Substitution over compound propositions</fr:title>
+                        <fr:authors />
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <fr:p>Substitution distributes over propositional combinations:
 
 <fr:ul><fr:li><fr:tex display="inline"><![CDATA[(A \lor  B)[t/x] \equiv _\text {df} A[t/x] \lor  B[t/x]]]></fr:tex></fr:li>
   <fr:li><fr:tex display="inline"><![CDATA[(A \land  B)[t/x] \equiv _\text {df} A[t/x] \land  B[t/x]]]></fr:tex></fr:li>
   <fr:li><fr:tex display="inline"><![CDATA[(A \implies  B)[t/x] \equiv _\text {df} A[t/x] \implies  B[t/x]]]></fr:tex></fr:li>
   <fr:li><fr:tex display="inline"><![CDATA[(A \iff  B)[t/x] \equiv _\text {df} A[t/x] \iff  B[t/x]]]></fr:tex></fr:li>
   <fr:li><fr:tex display="inline"><![CDATA[(\neg  A)[t/x] \equiv _\text {df} \neg  (A[t/x])]]></fr:tex></fr:li></fr:ul></fr:p>
-                    <fr:p>For quantifiers:
+                      </fr:mainmatter>
+                      <fr:backmatter />
+                    </fr:tree>
+                    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                      <fr:frontmatter>
+                        <fr:anchor>297</fr:anchor>
+                        <fr:addr type="user">ttfp-000K</fr:addr>
+                        <fr:route>ttfp-000K.xml</fr:route>
+                        <fr:title text="Substitution over quantifiers">Substitution over quantifiers</fr:title>
+                        <fr:authors />
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <fr:p>For quantifiers:
 
 <fr:ul><fr:li><fr:tex display="inline"><![CDATA[(\forall  x.B)[t/x] \equiv _\text {df} \forall  x.B]]></fr:tex></fr:li>
   <fr:li><fr:tex display="inline"><![CDATA[(\exists  x.B)[t/x] \equiv _\text {df} \exists  x.B]]></fr:tex></fr:li></fr:ul></fr:p>
-                    <fr:p>If <fr:tex display="inline"><![CDATA[y \not \equiv  x]]></fr:tex> and <fr:tex display="inline"><![CDATA[y]]></fr:tex> <fr:em>does not</fr:em> appear in <fr:tex display="inline"><![CDATA[t]]></fr:tex>, then
+                        <fr:p>If <fr:tex display="inline"><![CDATA[y \not \equiv  x]]></fr:tex> and <fr:tex display="inline"><![CDATA[y]]></fr:tex> <fr:em>does not</fr:em> appear in <fr:tex display="inline"><![CDATA[t]]></fr:tex>, then
 
 <fr:ul><fr:li><fr:tex display="inline"><![CDATA[(\forall  y.B)[t/x] \equiv _\text {df} \forall  y.(B[t/x])]]></fr:tex></fr:li>
   <fr:li><fr:tex display="inline"><![CDATA[(\exists  y.B)[t/x] \equiv _\text {df} \exists  y.(B[t/x])]]></fr:tex></fr:li></fr:ul></fr:p>
-                    <fr:p>On the other hand, if <fr:tex display="inline"><![CDATA[y \not \equiv  x]]></fr:tex> and <fr:tex display="inline"><![CDATA[y]]></fr:tex> <fr:em>does</fr:em> appear in <fr:tex display="inline"><![CDATA[t]]></fr:tex>, then
+                        <fr:p>On the other hand, if <fr:tex display="inline"><![CDATA[y \not \equiv  x]]></fr:tex> and <fr:tex display="inline"><![CDATA[y]]></fr:tex> <fr:em>does</fr:em> appear in <fr:tex display="inline"><![CDATA[t]]></fr:tex>, then
 
 <fr:ul><fr:li><fr:tex display="inline"><![CDATA[(\forall  y.B)[t/x] \equiv _\text {df} \forall  z.(B[z/y][t/x])]]></fr:tex></fr:li>
   <fr:li><fr:tex display="inline"><![CDATA[(\exists  y.B)[t/x] \equiv _\text {df} \exists  z.(B[z/y][t/x])]]></fr:tex></fr:li></fr:ul>
 
 where <fr:tex display="inline"><![CDATA[z]]></fr:tex> is a variable that does not appear in either <fr:tex display="inline"><![CDATA[t]]></fr:tex> or <fr:tex display="inline"><![CDATA[B]]></fr:tex>.</fr:p>
+                      </fr:mainmatter>
+                      <fr:backmatter />
+                    </fr:tree>
                   </fr:mainmatter>
                   <fr:backmatter />
                 </fr:tree>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>253</fr:anchor>
+                    <fr:anchor>298</fr:anchor>
                     <fr:addr type="user">ttfp-0006</fr:addr>
                     <fr:route>ttfp-0006.xml</fr:route>
                     <fr:title text="Quantifier rules">Quantifier rules</fr:title>
                     <fr:authors />
                   </fr:frontmatter>
                   <fr:mainmatter>
-                    <fr:p>The first quantifier rule Thompson discusses is <fr:tex display="inline"><![CDATA[\forall ]]></fr:tex> introduction.
+                    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                      <fr:frontmatter>
+                        <fr:anchor>283</fr:anchor>
+                        <fr:addr type="user">ttfp-000L</fr:addr>
+                        <fr:route>ttfp-000L.xml</fr:route>
+                        <fr:title text="Universal quantifier rules">Universal quantifier rules</fr:title>
+                        <fr:authors />
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <fr:p>The first quantifier rule Thompson discusses is <fr:tex display="inline"><![CDATA[\forall ]]></fr:tex> introduction.
 
-<fr:tex display="block"><![CDATA[\frac {A}         {\forall  x.A}(\mathtt {\forall  I})]]></fr:tex>
+<fr:tex display="block"><![CDATA[\frac {A} {\forall  x.A}(\mathtt {\forall  I})]]></fr:tex>
 
-This rule obviously holds when all variables in <fr:tex display="inline"><![CDATA[A]]></fr:tex> are bound, but it is also true when <fr:tex display="inline"><![CDATA[x]]></fr:tex> is free. That is because free variables may be freely substituted, which means the formula is said to hold for <fr:em>any</fr:em> value in the same domain as the introduced universal quantifier. The tacit assumption here is that, in order for us to be able to make this inference, it must be the case that <fr:tex display="inline"><![CDATA[x]]></fr:tex> does not appear free in any assumptions in the proof of <fr:tex display="inline"><![CDATA[A]]></fr:tex>. The reason this condition must hold is, because for this introduction rule to hold, <fr:tex display="inline"><![CDATA[x]]></fr:tex> must be arbitrary, but an assumption can constrain the domain of values <fr:tex display="inline"><![CDATA[x]]></fr:tex> can take such that it is no longer arbitrary (e.g., <fr:tex display="inline"><![CDATA[x > 0]]></fr:tex>). Thompson calls this the <fr:em>side condition</fr:em> of the rule.</fr:p>
-                    <fr:p><fr:tex display="inline"><![CDATA[\forall ]]></fr:tex> elimination, on the other hand, says that, because <fr:tex display="inline"><![CDATA[A]]></fr:tex> is true for all values of <fr:tex display="inline"><![CDATA[x]]></fr:tex>, it follows that <fr:tex display="inline"><![CDATA[A]]></fr:tex> is true for any arbitary value of <fr:tex display="inline"><![CDATA[x]]></fr:tex>.
+This rule obviously holds when all variables in <fr:tex display="inline"><![CDATA[A]]></fr:tex> are bound, but it is also true when
+<fr:tex display="inline"><![CDATA[x]]></fr:tex> is free. That is because free variables may be freely substituted, which means the
+formula is said to hold for <fr:em>any</fr:em> value in the same domain as the introduced universal
+quantifier. The tacit assumption here is that, in order for us to be able to make this
+inference, it must be the case that <fr:tex display="inline"><![CDATA[x]]></fr:tex> does not appear free in any assumptions in the
+proof of <fr:tex display="inline"><![CDATA[A]]></fr:tex>. The reason this condition must hold is, because for this introduction rule
+to hold, <fr:tex display="inline"><![CDATA[x]]></fr:tex> must be arbitrary, but an assumption can constrain the domain of values <fr:tex display="inline"><![CDATA[x]]></fr:tex>
+can take such that it is no longer arbitrary (e.g., <fr:tex display="inline"><![CDATA[x > 0]]></fr:tex>). Thompson calls this the
+<fr:em>side condition</fr:em> of the rule.</fr:p>
+                        <fr:p><fr:tex display="inline"><![CDATA[\forall ]]></fr:tex> elimination, on the other hand, says that, because <fr:tex display="inline"><![CDATA[A]]></fr:tex> is true for all
+values of <fr:tex display="inline"><![CDATA[x]]></fr:tex>, it follows that <fr:tex display="inline"><![CDATA[A]]></fr:tex> is true for any arbitary value of <fr:tex display="inline"><![CDATA[x]]></fr:tex>.
 
 <fr:tex display="block"><![CDATA[\frac {\forall  x.A}         {A[t/x]}(\mathtt {\forall  E})]]></fr:tex></fr:p>
-                    <fr:p><fr:tex display="inline"><![CDATA[\exists ]]></fr:tex> introduction is, likewise, straightforward. If we know that <fr:tex display="inline"><![CDATA[A]]></fr:tex> is true for some specific value of <fr:tex display="inline"><![CDATA[x]]></fr:tex>, then we know there exists an <fr:tex display="inline"><![CDATA[x]]></fr:tex> for which <fr:tex display="inline"><![CDATA[A]]></fr:tex> is true.
+                      </fr:mainmatter>
+                      <fr:backmatter />
+                    </fr:tree>
+                    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+                      <fr:frontmatter>
+                        <fr:anchor>284</fr:anchor>
+                        <fr:addr type="user">ttfp-000M</fr:addr>
+                        <fr:route>ttfp-000M.xml</fr:route>
+                        <fr:title text="Existential quantifier rules">Existential quantifier rules</fr:title>
+                        <fr:authors />
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <fr:p><fr:tex display="inline"><![CDATA[\exists ]]></fr:tex> introduction is, likewise, straightforward. If we know that <fr:tex display="inline"><![CDATA[A]]></fr:tex> is true for
+some specific value of <fr:tex display="inline"><![CDATA[x]]></fr:tex>, then we know there exists an <fr:tex display="inline"><![CDATA[x]]></fr:tex> for which <fr:tex display="inline"><![CDATA[A]]></fr:tex> is true.
 
 <fr:tex display="block"><![CDATA[\frac {A[t/x]}         {\exists  x.A}(\mathtt {\exists  I})]]></fr:tex></fr:p>
-                    <fr:p><fr:tex display="inline"><![CDATA[\exists ]]></fr:tex> elimination, however, has a side condition. Suppose that we can prove <fr:tex display="inline"><![CDATA[B]]></fr:tex> from <fr:tex display="inline"><![CDATA[A]]></fr:tex> and that <fr:tex display="inline"><![CDATA[x]]></fr:tex> is free in <fr:tex display="inline"><![CDATA[A]]></fr:tex> and not in any other of the assumptions in the proof of <fr:tex display="inline"><![CDATA[B]]></fr:tex>. We can then prove <fr:tex display="inline"><![CDATA[B]]></fr:tex>.
+                        <fr:p><fr:tex display="inline"><![CDATA[\exists ]]></fr:tex> elimination, however, has a side condition. Suppose that we can prove <fr:tex display="inline"><![CDATA[B]]></fr:tex>
+from <fr:tex display="inline"><![CDATA[A]]></fr:tex> and that <fr:tex display="inline"><![CDATA[x]]></fr:tex> is free in <fr:tex display="inline"><![CDATA[A]]></fr:tex> and not in any other of the assumptions in the
+proof of <fr:tex display="inline"><![CDATA[B]]></fr:tex>. We can then prove <fr:tex display="inline"><![CDATA[B]]></fr:tex>.
 
-<fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}                       & [A] \\                       & \vdots  \\           \exists  x.A & B         \end {array}}         {B}(\mathtt {\exists  E})]]></fr:tex>
-
-The introduction and elimination rules for quantifiers may be seen as generalizations of their propositional counterparts for conjunction and disjunction.</fr:p>
+<fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}                       & [A] \\                       & \vdots  \\           \exists  x.A & B         \end {array}}         {B}(\mathtt {\exists  E})]]></fr:tex></fr:p>
+                      </fr:mainmatter>
+                      <fr:backmatter />
+                    </fr:tree>
+                    <fr:p>The introduction and elimination rules for quantifiers may be seen as generalizations of
+their propositional counterparts for conjunction and disjunction.</fr:p>
                   </fr:mainmatter>
                   <fr:backmatter />
                 </fr:tree>

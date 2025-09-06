@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?>
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+  <fr:frontmatter>
+    <fr:anchor>254</fr:anchor>
+    <fr:addr type="user">ttfp-0008</fr:addr>
+    <fr:route>ttfp-0008.xml</fr:route>
+    <fr:title text="Assumption rule">Assumption rule</fr:title>
+    <fr:authors />
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <fr:p>The simplest derivation is the <fr:em>assumption rule</fr:em> which states that any formula <fr:tex display="inline"><![CDATA[A]]></fr:tex> may be derived from the assumption of <fr:tex display="inline"><![CDATA[A]]></fr:tex> itself. The proof is trivial:
+
+<fr:tex display="block"><![CDATA[A]]></fr:tex></fr:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:title text="Context">Context</fr:title>
+        <fr:authors />
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>255</fr:anchor>
+            <fr:addr type="user">ttfp-0003</fr:addr>
+            <fr:route>ttfp-0003.xml</fr:route>
+            <fr:title text="Derivation rules for propositional logic">Derivation rules for propositional logic</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>241</fr:anchor>
+                <fr:addr type="user">ttfp-0008</fr:addr>
+                <fr:route>ttfp-0008.xml</fr:route>
+                <fr:title text="Assumption rule">Assumption rule</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>The simplest derivation is the <fr:em>assumption rule</fr:em> which states that any formula <fr:tex display="inline"><![CDATA[A]]></fr:tex> may be derived from the assumption of <fr:tex display="inline"><![CDATA[A]]></fr:tex> itself. The proof is trivial:
+
+<fr:tex display="block"><![CDATA[A]]></fr:tex></fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>242</fr:anchor>
+                <fr:addr type="user">ttfp-0009</fr:addr>
+                <fr:route>ttfp-0009.xml</fr:route>
+                <fr:title text="Conjunction rules">Conjunction rules</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>The <fr:em>conjunction introduction rule</fr:em> builds a composite derivation by combining derivations of the conjuncts into a derivation of the conjunction:
+
+<fr:tex display="block"><![CDATA[\frac {\begin {array}{lr}A & B\end {array}}         {A \land  B}(\mathtt {\land  I})]]></fr:tex></fr:p>
+                <fr:p>The <fr:em>elimination rules for conjunction</fr:em> allows us to derive the constituent conjuncts from an existing conjunction:
+
+<fr:tex display="block"><![CDATA[\frac {A \land  B}         {A}(\mathtt {\land  E_A})]]></fr:tex>
+
+<fr:tex display="block"><![CDATA[\frac {A \land  B}         {B}(\mathtt {\land  E_B})]]></fr:tex></fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>243</fr:anchor>
+                <fr:addr type="user">ttfp-000A</fr:addr>
+                <fr:route>ttfp-000A.xml</fr:route>
+                <fr:title text="Implication rules">Implication rules</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p><fr:em>Implication introduction</fr:em> allows us to infer the formula <fr:tex display="inline"><![CDATA[A \implies  B]]></fr:tex> from a proof of <fr:tex display="inline"><![CDATA[B]]></fr:tex>. Note that <fr:tex display="inline"><![CDATA[B]]></fr:tex> <fr:em>may</fr:em> depend on <fr:tex display="inline"><![CDATA[A]]></fr:tex>, but implication introduction does not depend on <fr:tex display="inline"><![CDATA[A]]></fr:tex>. We do not need a proof of <fr:tex display="inline"><![CDATA[A]]></fr:tex>, only a proof of <fr:tex display="inline"><![CDATA[B]]></fr:tex>. (We are only interested in showing that <fr:tex display="inline"><![CDATA[B]]></fr:tex> follows from <fr:tex display="inline"><![CDATA[A]]></fr:tex>, so to do that, we assume <fr:tex display="inline"><![CDATA[A]]></fr:tex> to prove <fr:tex display="inline"><![CDATA[B]]></fr:tex>. Thus, <fr:tex display="inline"><![CDATA[A]]></fr:tex> is only temporarily assumed to show that the implication holds and may, therefore, be introduced.) Therefore, we can <fr:em>discharge</fr:em> <fr:tex display="inline"><![CDATA[A]]></fr:tex> from the set of premises (denoted by <fr:tex display="inline"><![CDATA[[A]]]></fr:tex>):
+
+<fr:tex display="block"><![CDATA[\frac {\begin {array}{c}[A]\\\vdots \\B\end {array}}         {A \implies  B}(\mathtt {\Rightarrow {I}})]]></fr:tex>
+
+The application of the introduction rule can be related to the discharged premise by using a label.</fr:p>
+                <fr:p>As with conjunction, there is an <fr:em>implication elimination rule</fr:em> which effectively expresses modus ponens:
+
+<fr:tex display="block"><![CDATA[\frac {\begin {array}{lr}A & A \implies  B\end {array}}        {B}(\mathtt {\Rightarrow {E}})]]></fr:tex></fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>244</fr:anchor>
+                <fr:addr type="user">ttfp-000B</fr:addr>
+                <fr:route>ttfp-000B.xml</fr:route>
+                <fr:title text="Disjunction rules">Disjunction rules</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p><fr:em>Disjunction</fr:em> has two introduction rules, depending on which disjunct we have a proof for:
+
+<fr:tex display="block"><![CDATA[\frac {A}        {A \lor  B}(\mathtt {\lor {I_A}})]]></fr:tex>
+
+<fr:tex display="block"><![CDATA[\frac {B}        {A \lor  B}(\mathtt {\lor {I_B}})]]></fr:tex>
+
+Because we don't necessarily know which disjunct in a disjuntion we have a proof for, the elimination rule works by showing that, if we know that <fr:tex display="inline"><![CDATA[A \lor  B]]></fr:tex>, and that <fr:tex display="inline"><![CDATA[C]]></fr:tex> can be derived from both <fr:tex display="inline"><![CDATA[A]]></fr:tex> and <fr:tex display="inline"><![CDATA[B]]></fr:tex>, then we can conclude that <fr:tex display="inline"><![CDATA[C]]></fr:tex>:
+
+<fr:tex display="block"><![CDATA[\frac {\begin {array}{ccc}           & [A] & [B] \\           & \vdots  & \vdots  \\           A \lor  B & C & C         \end {array}}        {C}(\mathtt {\lor {E}})]]></fr:tex>
+
+The premises <fr:tex display="inline"><![CDATA[A]]></fr:tex> and <fr:tex display="inline"><![CDATA[B]]></fr:tex> are discharged in order to infer <fr:tex display="inline"><![CDATA[C]]></fr:tex>.</fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>245</fr:anchor>
+                <fr:addr type="user">ttfp-000C</fr:addr>
+                <fr:route>ttfp-000C.xml</fr:route>
+                <fr:title text="Absurdity">Absurdity</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>Absurdity (<fr:tex display="inline"><![CDATA[\bot ]]></fr:tex>), otherwise known as contradiction or the false proposition, does not have an introduction rule, though it can be inferred from a proposition like <fr:tex display="inline"><![CDATA[A \land  \neg  A]]></fr:tex>. But it can be eliminated, because anything follows from contradiction (<fr:em>ex falso quodlibet</fr:em>):
+
+<fr:tex display="block"><![CDATA[\frac {\bot }        {A}(\mathtt {\bot  E})]]></fr:tex></fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>246</fr:anchor>
+                <fr:addr type="user">ttfp-000D</fr:addr>
+                <fr:route>ttfp-000D.xml</fr:route>
+                <fr:title text="Negation rule">Negation rule</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>Using <fr:tex display="inline"><![CDATA[\bot ]]></fr:tex> elimination, we can define <fr:em>negation</fr:em>:
+
+<fr:tex display="block"><![CDATA[\neg  A \equiv _{\mathtt {def}} A \implies  \bot ]]></fr:tex>
+
+and using this definition, we can define for negation its introduction rule:
+
+<fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}           [A] & [A] \\           \vdots  & \vdots  \\           B & \neg  B         \end {array}}        {\neg  A}(\mathtt {\neg {I}})]]></fr:tex>
+
+and elimination:
+
+<fr:tex display="block"><![CDATA[\frac {\begin {array}{lr}           A & \neg  A \\         \end {array}}        {B}(\mathtt {\neg {E}})]]></fr:tex></fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>247</fr:anchor>
+                <fr:addr type="user">ttfp-000E</fr:addr>
+                <fr:route>ttfp-000E.xml</fr:route>
+                <fr:title text="Bi-implication rules">Bi-implication rules</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>Bi-implication, as usual, can be defined as
+
+<fr:tex display="block"><![CDATA[\begin {array}{ccc}     A \iff  B & \equiv _{\mathtt {def}} & (A \implies  B) \land  (B \implies  A)   \end {array}]]></fr:tex>
+
+which allows us to define introduction:
+
+<fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}           A \implies  B & B \implies  A         \end {array}}         {A \iff  B}(\mathtt {\iff {I}})]]></fr:tex>
+
+and elimination:
+
+<fr:tex display="block"><![CDATA[\frac {A \iff  B}         {A \implies  B}(\mathtt {\iff {E_A}})]]></fr:tex>
+
+<fr:tex display="block"><![CDATA[\frac {A \iff  B}         {B \implies  A}(\mathtt {\iff {E_B}})]]></fr:tex></fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:p>Thompson notes that the approach taken here is intuitionistic.</fr:p>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>248</fr:anchor>
+                <fr:addr type="user">ttfp-000F</fr:addr>
+                <fr:route>ttfp-000F.xml</fr:route>
+                <fr:title text="Classical logic as extension of intuitionistic logic">Classical logic as extension of intuitionistic logic</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>Classical logic is an extension of the intuitionistic case. This extension is
+accomplished by adding the <fr:em>law of excluded middle</fr:em>:
+
+<fr:tex display="block"><![CDATA[\frac {}         {A \lor  \neg  A}(\mathtt {EM})]]></fr:tex></fr:p>
+                <fr:p>Alternative rules that can be used to characterize classical logic are the <fr:em>rule of
+double negation</fr:em>:
+
+<fr:tex display="block"><![CDATA[\frac {\neg \neg  A}         {A}(\mathtt {DN})]]></fr:tex>
+
+and the <fr:em>rule of proof by contradiction</fr:em>:
+
+<fr:tex display="block"><![CDATA[\frac {\begin {array}{c c}           [\neg  A] & [\neg  A]\\           \vdots  & \vdots \\           B & \neg  B         \end {array}}         {A}(\mathtt {CC})]]></fr:tex></fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+      </fr:mainmatter>
+      <fr:backmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

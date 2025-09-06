@@ -1,14 +1,24 @@
 \title{Introduction to Logic}
 
-\p{In the introduction, Thompson introduces the reader to logic, which the author defines as "the science of argument". Thompson focuses especially on \em{formal logic}, and endeavors to give the reader a few justifications for the formalization of logic. Principal among these justifications are:
+\p{In the introduction, Thompson introduces the reader to logic, which the author defines
+as "the science of argument". Thompson focuses especially on \em{formal logic}, and
+endeavors to give the reader a few justifications for the formalization of
+logic. Principal among these justifications are:
 
 \ol{
-  \li{clarity of characterization of valid proofs, which aids in judging particular arguments and in "sharpening our understanding of informal reasoning";}
-  \li{the ability to check the correctness of arguments mechanically;}
-  \li{its usefulness in mathematically studying properties, like expressive strength, of formal theories relative to other formal theories or according to some semantic interpretation for them.}}
 
-Thompson's stated aim is to provide the reader a formal system by which he can express arguments for the validity of particular sentences. He begins by introducing the reader to natural deduction systems for propositional, and later, predicate logic.}
+  \li{clarity of characterization of valid proofs, which aids in judging particular
+      arguments and in "sharpening our understanding of informal reasoning";}
+
+  \li{the ability to check the correctness of arguments mechanically;}
+
+  \li{its usefulness in mathematically studying properties, like expressive strength, of
+      formal theories relative to other formal theories or according to some semantic
+      interpretation for them.}}
+
+Thompson's stated aim is to provide the reader a formal system by which he can express
+arguments for the validity of particular sentences. He begins by introducing the reader to
+natural deduction systems for propositional, and later, predicate logic.}
 
 \transclude{ttfp-0002}
-
 \transclude{ttfp-0004}

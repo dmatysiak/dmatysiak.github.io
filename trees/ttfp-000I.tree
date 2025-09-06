@@ -1,0 +1,7 @@
+\title{Substitution over atomic formulae}
+
+\p{For atomic formulas:
+
+\ul{
+  \li{#{P_{n,m}(t_1,\ldots,t_n)[t/x] \equiv_{df} P_{n,m}(t_1[t/x],\ldots,t_n[t/x])}}
+  \li{#{(t_1 = t_2)[t/x] \equiv_\text{df} t_1[t/x] = t2[t/x]}}}}

@@ -5,4 +5,8 @@ To rebuild your forest:
 To create a new tree, add it to the `trees` directory, or invoke the following command for
 forester to do it for you:
 
-  forester new forest.toml --dest=trees
+  forester new forest.toml --dest=trees --prefix=your-prefix
+
+To run a server locally:
+
+  python3 -m http.server 1313 -d output

@@ -1,6 +1,8 @@
 \title{Propositional logic}
 
-\p{Propositional logic formalizes arguments that make use of connectives like "and", "or", "not" and "implies" to join simpler formulas together into more complex formulas, beginning with propositional variables and atomic propositions. A formula is either
+\p{Propositional logic formalizes arguments that make use of connectives like "and", "or",
+"not" and "implies" to join simpler formulas together into more complex formulas,
+beginning with propositional variables and atomic propositions. A formula is either
 
 \ol{
   \li{a propositional variable #{X_i}, or}
@@ -13,6 +15,11 @@
       \li{#{A \iff B}}
       \li{#{\bot}}}}}
 
-where #{A}, #{B},... are variables in the meta-language standing in for arbitary formulas. This description is of the language in which propositions are encoded. A logical system also needs to specify what constitutes a valid argument, often called \em{proofs} or \em{derivations} of the system. An argument encodes an inference of some conclusions from zero or more assumptions. Deduction rules are used to construct larger derivations out of smaller deductions.}
+where #{A}, #{B},... are variables in the meta-language standing in for arbitary
+formulas. This description is of the language in which propositions are encoded. A logical
+system also needs to specify what constitutes a valid argument, often called \em{proofs}
+or \em{derivations} of the system. An argument encodes an inference of some conclusions
+from zero or more assumptions. Deduction rules are used to construct larger derivations
+out of smaller deductions.}
 
 \transclude{ttfp-0003}
