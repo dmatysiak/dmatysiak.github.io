@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="default.xsl"?>
 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>274</fr:anchor>
+    <fr:anchor>262</fr:anchor>
     <fr:addr type="user">danielamatysiak</fr:addr>
     <fr:route>danielamatysiak.xml</fr:route>
     <fr:title text="Daniel A. Matysiak">Daniel A. Matysiak</fr:title>
@@ -20,7 +20,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>275</fr:anchor>
+            <fr:anchor>263</fr:anchor>
             <fr:addr type="user">index</fr:addr>
             <fr:route>index.xml</fr:route>
             <fr:title text="Topics">Topics</fr:title>
@@ -29,10 +29,6 @@
           <fr:mainmatter>
             <fr:p>My name is <fr:link type="local" href="danielamatysiak.xml" addr="danielamatysiak" title="Daniel A. Matysiak">Daniel A. Matysiak</fr:link>. This collection of notes is primarily meant to function as a repository of notes (or "forest") for my own reference, and secondarily or incidentally for anyone who is interested. I don't know how diligently this repository will be maintained. I generally prefer to maintain handwritten notes first, and so for the most part, any notes here will be dervied from my handwritten notes.</fr:p>
             <fr:p>You may use <fr:strong>Ctrl-k</fr:strong> to search for topics (or "trees") in this forest.</fr:p>
-            <fr:p>
-              <fr:ul><fr:li>Summaries of chapters in Veatch's <fr:link type="local" href="intentional-logic-0003.xml" addr="intentional-logic-0003" title="Veatch, Henry. Intentional Logic">Intentional Logic</fr:link></fr:li>
-  <fr:li>Summaries of chapters in Thompson's <fr:link type="local" href="ttfp-0007.xml" addr="ttfp-0007" title="Thompson, Simon. Type Theory and Functional Programming">Type Theory and Functional Programming</fr:link></fr:li></fr:ul>
-            </fr:p>
           </fr:mainmatter>
           <fr:backmatter />
         </fr:tree>

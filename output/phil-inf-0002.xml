@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="default.xsl"?>
 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>339</fr:anchor>
+    <fr:anchor>336</fr:anchor>
     <fr:addr type="user">phil-inf-0002</fr:addr>
     <fr:route>phil-inf-0002.xml</fr:route>
     <fr:title text="What is a computer?">What is a computer?</fr:title>
@@ -58,8 +58,30 @@ that exist in a variety of relations to one another. <fr:em>What</fr:em> an obje
 human being, a rock, an automobile—is central to its identity <fr:em>as</fr:em> the kind of thing
 that it is. This <fr:em>whatness</fr:em> of thing goes by a number of names: nature, form, essence,
 etc. It is that which causes a thing to be the kind of things it is. For that reason, it
-often goes by the name of <fr:em>formal cause</fr:em> to distinguish from the other kinds of causes
-like <fr:em>efficient cause</fr:em>.</fr:p>
+often goes by the name of <fr:em>formal cause</fr:em> to distinguish from the other kinds of causes,
+viz., <fr:em>efficient cause</fr:em>, <fr:em>material cause</fr:em> and <fr:em>final cause</fr:em>.</fr:p>
+        <fr:p>However, even where the form of a thing is concerned, there are further distinctions to
+be made. The most important distinction is that of <fr:em>substantial form</fr:em> and
+<fr:em>accidental form</fr:em>. Substantial form is the cause of <fr:em>substance</fr:em>, a thing with
+independent existence—that which has properties and attributes, but which is not a
+property or attribute of something else. The components of a substance are causally
+intrinsically ordered. The paradigmatic example is the living organism. An example might
+be a tree. The leaves of a tree are not something tacked onto the tree or incidental to a
+tree. They are an integral part of the tree, when the tree grows them. They are inherently
+ordered, both structurally and functionally, toward the fulfillment of the ends of the
+tree. The ends of a tree are intrinsinc to the tree itself. It has an inherent tendency to
+be and function the way it does.</fr:p>
+        <fr:p>Compare substantial form with <fr:em>accidental form</fr:em>, where the cause of unity is
+incidental, involving relations between components that are incidental to the composite or
+any of the subtances in the composite. Tables, automobiles, sculptures and computers are
+all examples. Nothing in the things themselves makes necessary the shape or arrangement
+they are in. In the case of an automobile, engineers imposed an accidental form onto a
+collections of objects, arranging them in a certain way so that these objects interact in
+ways that further the ends of the human user. The ends of such a thing are extrinsic to
+the thing itself. It have no inherent tendencies to do or be what it is.</fr:p>
+        <fr:p>Whether the identity of at thing is intrinsic to a thing or extrinsic has significant
+and far-reaching consequences, one of which is what can be said to be objectively true
+about the structure and function of the object.</fr:p>
       </fr:mainmatter>
       <fr:backmatter />
     </fr:tree>
@@ -84,7 +106,7 @@ like <fr:em>efficient cause</fr:em>.</fr:p>
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>340</fr:anchor>
+            <fr:anchor>337</fr:anchor>
             <fr:addr type="user">phil-inf-0001</fr:addr>
             <fr:route>phil-inf-0001.xml</fr:route>
             <fr:title text="The proper object of computer science">The proper object of computer science</fr:title>
@@ -97,10 +119,10 @@ Edsger Dijkstra, but predating the earliest records of him having made this clai
 computer science is not about computers, any more than astronomy is about telescopes, or
 biology about microscopes. I fully agree with this claim, but nonetheless, it has proved
 to be controversial for some. I believe the controversy is rooted in a misunderstanding of
-what a computer is and what computation is. We can clarify what these concepts with the
-help of the history of the field as well as some metaphysical analysis. Once we have done
-do, the distinctions between computer science, software engineering and computer
-engineering will follow naturally.</fr:p>
+what a computer is and what computation is. We can clarify these concepts with the help of
+the history of the field as well as some metaphysical analysis. Once we have done do, the
+distinctions between computer science, software engineering and computer engineering will
+follow naturally.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
                 <fr:anchor>262</fr:anchor>
@@ -159,8 +181,30 @@ that exist in a variety of relations to one another. <fr:em>What</fr:em> an obje
 human being, a rock, an automobile—is central to its identity <fr:em>as</fr:em> the kind of thing
 that it is. This <fr:em>whatness</fr:em> of thing goes by a number of names: nature, form, essence,
 etc. It is that which causes a thing to be the kind of things it is. For that reason, it
-often goes by the name of <fr:em>formal cause</fr:em> to distinguish from the other kinds of causes
-like <fr:em>efficient cause</fr:em>.</fr:p>
+often goes by the name of <fr:em>formal cause</fr:em> to distinguish from the other kinds of causes,
+viz., <fr:em>efficient cause</fr:em>, <fr:em>material cause</fr:em> and <fr:em>final cause</fr:em>.</fr:p>
+                    <fr:p>However, even where the form of a thing is concerned, there are further distinctions to
+be made. The most important distinction is that of <fr:em>substantial form</fr:em> and
+<fr:em>accidental form</fr:em>. Substantial form is the cause of <fr:em>substance</fr:em>, a thing with
+independent existence—that which has properties and attributes, but which is not a
+property or attribute of something else. The components of a substance are causally
+intrinsically ordered. The paradigmatic example is the living organism. An example might
+be a tree. The leaves of a tree are not something tacked onto the tree or incidental to a
+tree. They are an integral part of the tree, when the tree grows them. They are inherently
+ordered, both structurally and functionally, toward the fulfillment of the ends of the
+tree. The ends of a tree are intrinsinc to the tree itself. It has an inherent tendency to
+be and function the way it does.</fr:p>
+                    <fr:p>Compare substantial form with <fr:em>accidental form</fr:em>, where the cause of unity is
+incidental, involving relations between components that are incidental to the composite or
+any of the subtances in the composite. Tables, automobiles, sculptures and computers are
+all examples. Nothing in the things themselves makes necessary the shape or arrangement
+they are in. In the case of an automobile, engineers imposed an accidental form onto a
+collections of objects, arranging them in a certain way so that these objects interact in
+ways that further the ends of the human user. The ends of such a thing are extrinsic to
+the thing itself. It have no inherent tendencies to do or be what it is.</fr:p>
+                    <fr:p>Whether the identity of at thing is intrinsic to a thing or extrinsic has significant
+and far-reaching consequences, one of which is what can be said to be objectively true
+about the structure and function of the object.</fr:p>
                   </fr:mainmatter>
                   <fr:backmatter />
                 </fr:tree>

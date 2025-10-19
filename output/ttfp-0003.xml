@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="default.xsl"?>
 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>276</fr:anchor>
+    <fr:anchor>264</fr:anchor>
     <fr:addr type="user">ttfp-0003</fr:addr>
     <fr:route>ttfp-0003.xml</fr:route>
     <fr:title text="Derivation rules for propositional logic">Derivation rules for propositional logic</fr:title>
@@ -185,7 +185,7 @@ and the <fr:em>rule of proof by contradiction</fr:em>:
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>277</fr:anchor>
+            <fr:anchor>265</fr:anchor>
             <fr:addr type="user">ttfp-0002</fr:addr>
             <fr:route>ttfp-0002.xml</fr:route>
             <fr:title text="Propositional logic">Propositional logic</fr:title>
@@ -213,7 +213,7 @@ from zero or more assumptions. Deduction rules are used to construct larger deri
 out of smaller deductions.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>278</fr:anchor>
+                <fr:anchor>266</fr:anchor>
                 <fr:addr type="user">ttfp-0003</fr:addr>
                 <fr:route>ttfp-0003.xml</fr:route>
                 <fr:title text="Derivation rules for propositional logic">Derivation rules for propositional logic</fr:title>

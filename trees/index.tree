@@ -4,8 +4,3 @@
 \p{My name is [[danielamatysiak]]. This collection of notes is primarily meant to function as a repository of notes (or "forest") for my own reference, and secondarily or incidentally for anyone who is interested. I don't know how diligently this repository will be maintained. I generally prefer to maintain handwritten notes first, and so for the most part, any notes here will be dervied from my handwritten notes.}
 
 \p{You may use \strong{Ctrl-k} to search for topics (or "trees") in this forest.}
-
-\p{
-\ul{
-  \li{Summaries of chapters in Veatch's [Intentional Logic](intentional-logic-0003)}
-  \li{Summaries of chapters in Thompson's [Type Theory and Functional Programming](ttfp-0007)}}}

@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="default.xsl"?>
 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>324</fr:anchor>
+    <fr:anchor>308</fr:anchor>
     <fr:addr type="user">ttfp-000G</fr:addr>
     <fr:route>ttfp-000G.xml</fr:route>
     <fr:title text="Syntax of predicate logic">Syntax of predicate logic</fr:title>
@@ -40,7 +40,7 @@ terms. Terms denote objects, and have one of the following forms:
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>325</fr:anchor>
+            <fr:anchor>309</fr:anchor>
             <fr:addr type="user">ttfp-0004</fr:addr>
             <fr:route>ttfp-0004.xml</fr:route>
             <fr:title text="Predicate logic">Predicate logic</fr:title>
@@ -54,7 +54,7 @@ constructed from predicates, or statements about certain properties holding for 
 objects.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>292</fr:anchor>
+                <fr:anchor>278</fr:anchor>
                 <fr:addr type="user">ttfp-000G</fr:addr>
                 <fr:route>ttfp-000G.xml</fr:route>
                 <fr:title text="Syntax of predicate logic">Syntax of predicate logic</fr:title>
@@ -87,7 +87,7 @@ terms. Terms denote objects, and have one of the following forms:
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>293</fr:anchor>
+                <fr:anchor>279</fr:anchor>
                 <fr:addr type="user">ttfp-0005</fr:addr>
                 <fr:route>ttfp-0005.xml</fr:route>
                 <fr:title text="Substitution in predicate logic">Substitution in predicate logic</fr:title>
@@ -115,7 +115,7 @@ performing the substitution.</fr:p>
                 <fr:p>Formally, Thompson defines substitution, inductively, in the following way.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>294</fr:anchor>
+                    <fr:anchor>280</fr:anchor>
                     <fr:addr type="user">ttfp-000H</fr:addr>
                     <fr:route>ttfp-000H.xml</fr:route>
                     <fr:title text="Substitution over terms">Substitution over terms</fr:title>
@@ -133,7 +133,7 @@ performing the substitution.</fr:p>
                 <fr:p>For a formula <fr:tex display="inline"><![CDATA[A]]></fr:tex>, <fr:tex display="inline"><![CDATA[A[t/x]]]></fr:tex> is defined as follows.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>295</fr:anchor>
+                    <fr:anchor>281</fr:anchor>
                     <fr:addr type="user">ttfp-000I</fr:addr>
                     <fr:route>ttfp-000I.xml</fr:route>
                     <fr:title text="Substitution over atomic formulae">Substitution over atomic formulae</fr:title>
@@ -149,7 +149,7 @@ performing the substitution.</fr:p>
                 </fr:tree>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>296</fr:anchor>
+                    <fr:anchor>282</fr:anchor>
                     <fr:addr type="user">ttfp-000J</fr:addr>
                     <fr:route>ttfp-000J.xml</fr:route>
                     <fr:title text="Substitution over compound propositions">Substitution over compound propositions</fr:title>
@@ -168,7 +168,7 @@ performing the substitution.</fr:p>
                 </fr:tree>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>297</fr:anchor>
+                    <fr:anchor>283</fr:anchor>
                     <fr:addr type="user">ttfp-000K</fr:addr>
                     <fr:route>ttfp-000K.xml</fr:route>
                     <fr:title text="Substitution over quantifiers">Substitution over quantifiers</fr:title>
@@ -197,7 +197,7 @@ where <fr:tex display="inline"><![CDATA[z]]></fr:tex> is a variable that does no
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>298</fr:anchor>
+                <fr:anchor>284</fr:anchor>
                 <fr:addr type="user">ttfp-0006</fr:addr>
                 <fr:route>ttfp-0006.xml</fr:route>
                 <fr:title text="Quantifier rules">Quantifier rules</fr:title>
@@ -206,7 +206,7 @@ where <fr:tex display="inline"><![CDATA[z]]></fr:tex> is a variable that does no
               <fr:mainmatter>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>283</fr:anchor>
+                    <fr:anchor>271</fr:anchor>
                     <fr:addr type="user">ttfp-000L</fr:addr>
                     <fr:route>ttfp-000L.xml</fr:route>
                     <fr:title text="Universal quantifier rules">Universal quantifier rules</fr:title>
@@ -235,7 +235,7 @@ values of <fr:tex display="inline"><![CDATA[x]]></fr:tex>, it follows that <fr:t
                 </fr:tree>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>284</fr:anchor>
+                    <fr:anchor>272</fr:anchor>
                     <fr:addr type="user">ttfp-000M</fr:addr>
                     <fr:route>ttfp-000M.xml</fr:route>
                     <fr:title text="Existential quantifier rules">Existential quantifier rules</fr:title>
