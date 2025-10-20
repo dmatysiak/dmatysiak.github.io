@@ -11,7 +11,7 @@
   <fr:mainmatter>
     <fr:p>Structural induction is a syntax-directed proof style that defines a <fr:em>base case</fr:em> and
 an <fr:em>inductive case</fr:em>. The base case provides an term for which a property <fr:tex display="inline"><![CDATA[P]]></fr:tex> holds,
-while the inductive case shows how—assuming <fr:tex display="inline"><![CDATA[P]]></fr:tex> holds for some arbitrary term(s), it also
+while the inductive case shows how—assuming <fr:tex display="inline"><![CDATA[P]]></fr:tex> holds for some arbitrary term(s)—it also
 holds for a composition that includes these terms as subterms.</fr:p>
     <fr:p>Consider the case where you have a type <fr:code>NatExpr</fr:code> whose constructors are
 <fr:code>One</fr:code>—representing the natural number <fr:tex display="inline"><![CDATA[1]]></fr:tex>—and <fr:code>Double NatExpr</fr:code>—representing the

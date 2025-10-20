@@ -2,7 +2,7 @@
 
 \p{Structural induction is a syntax-directed proof style that defines a \em{base case} and
 an \em{inductive case}. The base case provides an term for which a property #{P} holds,
-while the inductive case shows how—assuming #{P} holds for some arbitrary term(s), it also
+while the inductive case shows how—assuming #{P} holds for some arbitrary term(s)—it also
 holds for a composition that includes these terms as subterms.}
 
 \p{Consider the case where you have a type \code{NatExpr} whose constructors are
