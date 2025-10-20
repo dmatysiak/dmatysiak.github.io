@@ -1,0 +1,25 @@
+\title{Structural induction}
+
+\p{Structural induction is a syntax-directed proof style that defines a \em{base case} and
+an \em{inductive case}. The base case provides an term for which a property #{P} holds,
+while the inductive case shows how—assuming #{P} holds for some arbitrary term(s), it also
+holds for a composition that includes these terms as subterms.}
+
+\p{Consider the case where you have a type \code{NatExpr} whose constructors are
+\code{One}—representing the natural number #{1}—and \code{Double NatExpr}—representing the
+value of doubling a given \code{NatExpr}. So, for example, \code{Double (Double One)} can
+be used to represent the value #{1 \times 2 \times 2 = 4}, because \code{Double n} is
+equal to #{n \times 2}.}
+
+\p{Suppose that we wish to prove the property #{P} that \code{Double n} is even for any
+\code{n:NatExpr} and that we have the following rule that governs the transmission of
+evenness between \code{NatExpr}s:
+
+##{\frac{P(e)}{P(e \times 2)}}
+}
+
+\p{The base case here would be \code{Double One}, since #{P(1 \times 2) = P(2)}.}
+
+\p{The inductive case would assume \code{e} is even to show that \code{Double e} is also
+even. If \code{Double e} is even, then by the rule above, \code{Double (Double e)} is also
+even, because #{P((e \times 2) \times 2)} is even if #{P(e \times 2)}}

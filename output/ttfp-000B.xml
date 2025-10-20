@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="default.xsl"?>
 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>267</fr:anchor>
+    <fr:anchor>269</fr:anchor>
     <fr:addr type="user">ttfp-000B</fr:addr>
     <fr:route>ttfp-000B.xml</fr:route>
     <fr:title text="Disjunction rules">Disjunction rules</fr:title>
@@ -30,7 +30,7 @@ The premises <fr:tex display="inline"><![CDATA[A]]></fr:tex> and <fr:tex display
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>268</fr:anchor>
+            <fr:anchor>270</fr:anchor>
             <fr:addr type="user">ttfp-0003</fr:addr>
             <fr:route>ttfp-0003.xml</fr:route>
             <fr:title text="Derivation rules for propositional logic">Derivation rules for propositional logic</fr:title>

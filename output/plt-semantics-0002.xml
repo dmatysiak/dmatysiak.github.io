@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?>
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+  <fr:frontmatter>
+    <fr:anchor>264</fr:anchor>
+    <fr:addr type="user">plt-semantics-0002</fr:addr>
+    <fr:route>plt-semantics-0002.xml</fr:route>
+    <fr:title text="Denotational semantics">Denotational semantics</fr:title>
+    <fr:authors />
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <fr:p>The <fr:em>denotational semantics</fr:em> defines the meanings of terms in a language <fr:tex display="inline"><![CDATA[T]]></fr:tex> using
+a <fr:em>valuation function</fr:em> that maps syntactic terms in the syntactic domain <fr:tex display="inline"><![CDATA[T]]></fr:tex> to
+semantic values in the semantic domain <fr:tex display="inline"><![CDATA[V]]></fr:tex>. Usually, we enclose expressions in
+<fr:em>semantic brackets</fr:em> to express their denotation, e.g., for term <fr:tex display="inline"><![CDATA[e]]></fr:tex>, we can write
+
+<fr:tex display="block"><![CDATA[\llbracket  e \rrbracket ]]></fr:tex>
+
+such that <fr:tex display="inline"><![CDATA[\llbracket  - \rrbracket  : T \to  V]]></fr:tex>.</fr:p>
+    <fr:p>The valuation function is <fr:em>compositional</fr:em>; the meaning of a compound term is defined
+purely in terms of the meanings of its subterms. This compositionality simplifies
+reasoning, allowing us to replace "equals by equals", i.e., we can substitute terms with
+other terms having the same meaning.
+
+<fr:tex display="block"><![CDATA[\frac {\llbracket  x \rrbracket  = \llbracket  x' \rrbracket }{\llbracket  f(x) \rrbracket  = \llbracket  f(x') \rrbracket }]]></fr:tex></fr:p>
+    <fr:p>Because terms and their semantics are built up inductively, proofs about denotation
+semantics typically proceed using <fr:link type="local" href="proof-techniques-0001.xml" addr="proof-techniques-0001" title="Structural induction">structural induction</fr:link>. For
+instance, we can prove that our expression semantics is <fr:em>total</fr:em>: for every expression
+<fr:tex display="inline"><![CDATA[e]]></fr:tex> in the language, there is a value <fr:tex display="inline"><![CDATA[v]]></fr:tex> such that <fr:tex display="inline"><![CDATA[\llbracket  e \rrbracket  = v]]></fr:tex>. The
+proof of totality proceeds by induction on the structure of the expression <fr:tex display="inline"><![CDATA[e]]></fr:tex>.</fr:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:title text="Related">Related</fr:title>
+        <fr:authors />
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>265</fr:anchor>
+            <fr:addr type="user">proof-techniques-0001</fr:addr>
+            <fr:route>proof-techniques-0001.xml</fr:route>
+            <fr:title text="Structural induction">Structural induction</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>Structural induction is a syntax-directed proof style that defines a <fr:em>base case</fr:em> and
+an <fr:em>inductive case</fr:em>. The base case provides an term for which a property <fr:tex display="inline"><![CDATA[P]]></fr:tex> holds,
+while the inductive case shows how—assuming <fr:tex display="inline"><![CDATA[P]]></fr:tex> holds for some arbitrary term(s), it also
+holds for a composition that includes these terms as subterms.</fr:p>
+            <fr:p>Consider the case where you have a type <fr:code>NatExpr</fr:code> whose constructors are
+<fr:code>One</fr:code>—representing the natural number <fr:tex display="inline"><![CDATA[1]]></fr:tex>—and <fr:code>Double NatExpr</fr:code>—representing the
+value of doubling a given <fr:code>NatExpr</fr:code>. So, for example, <fr:code>Double (Double One)</fr:code> can
+be used to represent the value <fr:tex display="inline"><![CDATA[1 \times  2 \times  2 = 4]]></fr:tex>, because <fr:code>Double n</fr:code> is
+equal to <fr:tex display="inline"><![CDATA[n \times  2]]></fr:tex>.</fr:p>
+            <fr:p>Suppose that we wish to prove the property <fr:tex display="inline"><![CDATA[P]]></fr:tex> that <fr:code>Double n</fr:code> is even for any
+<fr:code>n:NatExpr</fr:code> and that we have the following rule that governs the transmission of
+evenness between <fr:code>NatExpr</fr:code>s:
+
+<fr:tex display="block"><![CDATA[\frac {P(e)}{P(e \times  2)}]]></fr:tex></fr:p>
+            <fr:p>The base case here would be <fr:code>Double One</fr:code>, since <fr:tex display="inline"><![CDATA[P(1 \times  2) = P(2)]]></fr:tex>.</fr:p>
+            <fr:p>The inductive case would assume <fr:code>e</fr:code> is even to show that <fr:code>Double e</fr:code> is also
+even. If <fr:code>Double e</fr:code> is even, then by the rule above, <fr:code>Double (Double e)</fr:code> is also
+even, because <fr:tex display="inline"><![CDATA[P((e \times  2) \times  2)]]></fr:tex> is even if <fr:tex display="inline"><![CDATA[P(e \times  2)]]></fr:tex></fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+      </fr:mainmatter>
+      <fr:backmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

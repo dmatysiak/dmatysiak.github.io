@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?>
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+  <fr:frontmatter>
+    <fr:anchor>296</fr:anchor>
+    <fr:addr type="user">plt-semantics-0001</fr:addr>
+    <fr:route>plt-semantics-0001.xml</fr:route>
+    <fr:title text="Programming language semantics">Programming language semantics</fr:title>
+    <fr:authors />
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <fr:p>In computer science, programming language semantics seeks to give precise mathematical
+meaning to programs.</fr:p>
+  </fr:mainmatter>
+  <fr:backmatter />
+</fr:tree>

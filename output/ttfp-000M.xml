@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="default.xsl"?>
 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>269</fr:anchor>
+    <fr:anchor>271</fr:anchor>
     <fr:addr type="user">ttfp-000M</fr:addr>
     <fr:route>ttfp-000M.xml</fr:route>
     <fr:title text="Existential quantifier rules">Existential quantifier rules</fr:title>
@@ -28,7 +28,7 @@ proof of <fr:tex display="inline"><![CDATA[B]]></fr:tex>. We can then prove <fr:
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>270</fr:anchor>
+            <fr:anchor>272</fr:anchor>
             <fr:addr type="user">ttfp-0006</fr:addr>
             <fr:route>ttfp-0006.xml</fr:route>
             <fr:title text="Quantifier rules">Quantifier rules</fr:title>
@@ -37,7 +37,7 @@ proof of <fr:tex display="inline"><![CDATA[B]]></fr:tex>. We can then prove <fr:
           <fr:mainmatter>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>271</fr:anchor>
+                <fr:anchor>273</fr:anchor>
                 <fr:addr type="user">ttfp-000L</fr:addr>
                 <fr:route>ttfp-000L.xml</fr:route>
                 <fr:title text="Universal quantifier rules">Universal quantifier rules</fr:title>
@@ -66,7 +66,7 @@ values of <fr:tex display="inline"><![CDATA[x]]></fr:tex>, it follows that <fr:t
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>272</fr:anchor>
+                <fr:anchor>274</fr:anchor>
                 <fr:addr type="user">ttfp-000M</fr:addr>
                 <fr:route>ttfp-000M.xml</fr:route>
                 <fr:title text="Existential quantifier rules">Existential quantifier rules</fr:title>

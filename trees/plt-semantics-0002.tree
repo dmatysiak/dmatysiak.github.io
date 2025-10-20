@@ -1,0 +1,24 @@
+\title{Denotational semantics}
+
+\p{The \em{denotational semantics} defines the meanings of terms in a language #{T} using
+a \em{valuation function} that maps syntactic terms in the syntactic domain #{T} to
+semantic values in the semantic domain #{V}. Usually, we enclose expressions in
+\em{semantic brackets} to express their denotation, e.g., for term #{e}, we can write
+
+%% From stmaryrd
+##{\llbracket e \rrbracket}
+
+such that #{\llbracket - \rrbracket : T \to V}.}
+
+\p{The valuation function is \em{compositional}; the meaning of a compound term is defined
+purely in terms of the meanings of its subterms. This compositionality simplifies
+reasoning, allowing us to replace "equals by equals", i.e., we can substitute terms with
+other terms having the same meaning.
+
+##{\frac{\llbracket x \rrbracket = \llbracket x' \rrbracket}{\llbracket f(x) \rrbracket = \llbracket f(x') \rrbracket}}}
+
+\p{Because terms and their semantics are built up inductively, proofs about denotation
+semantics typically proceed using [structural induction](proof-techniques-0001). For
+instance, we can prove that our expression semantics is \em{total}: for every expression
+#{e} in the language, there is a value #{v} such that #{\llbracket e \rrbracket = v}. The
+proof of totality proceeds by induction on the structure of the expression #{e}.}

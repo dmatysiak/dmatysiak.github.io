@@ -2,10 +2,14 @@
 <?xml-stylesheet type="text/xsl" href="default.xsl"?>
 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>318</fr:anchor>
-    <fr:addr type="user">tractatus-0001</fr:addr>
-    <fr:route>tractatus-0001.xml</fr:route>
-    <fr:title text="Tractatus Informatico-Philosophicus">Tractatus Informatico-Philosophicus</fr:title>
+    <fr:anchor>240</fr:anchor>
+    <fr:addr type="user">proof-techniques-0002</fr:addr>
+    <fr:route>proof-techniques-0002.xml</fr:route>
+    <fr:date>
+      <fr:year>2025</fr:year>
+      <fr:month>10</fr:month>
+      <fr:day>20</fr:day>
+    </fr:date>
     <fr:authors />
   </fr:frontmatter>
   <fr:mainmatter />

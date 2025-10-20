@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="default.xsl"?>
 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>287</fr:anchor>
+    <fr:anchor>289</fr:anchor>
     <fr:addr type="user">ttfp-000D</fr:addr>
     <fr:route>ttfp-000D.xml</fr:route>
     <fr:title text="Negation rule">Negation rule</fr:title>
@@ -30,7 +30,7 @@ and elimination:
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>288</fr:anchor>
+            <fr:anchor>290</fr:anchor>
             <fr:addr type="user">ttfp-0003</fr:addr>
             <fr:route>ttfp-0003.xml</fr:route>
             <fr:title text="Derivation rules for propositional logic">Derivation rules for propositional logic</fr:title>
