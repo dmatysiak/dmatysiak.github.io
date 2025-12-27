@@ -93,4 +93,13 @@ fetch("./forest.json")
   ninja.data = items
  });
 
+function search() {
+    const ninja = document.querySelector('ninja-keys');
+    ninja.open();
+}
+
+// on document ready
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("search").onclick = search;
+});
 
