@@ -1,0 +1,29 @@
+\title{Criteria for selecting rules for a bidirectional type system}
+
+\p{Selecting rules for a bidirectional type system affords a certain degree of freedom. One
+must decide whether a particular premise or conclusion synthesizes or checks a type. It is
+impractical to cover all possible combinations. Consider the following #{\rightarrow E
+\Rightarrow}
+rule: 
+
+##{\frac{\begin{array}{cc}
+           \Gamma \vdash e_1 : A \rightarrow B 
+           & \Gamma \vdash e_2 : A
+           \end{array}}
+        {\Gamma \vdash e_1 e_2 : B}}
+}
+
+\p{Because there are two judgement modes—synthesis and checking—and three typing
+judgements—#{\Gamma \vdash e_1 : A \rightarrow B}, #{\Gamma \vdash e_2 : A} and #{\Gamma
+\vdash e_1 e_2 : B}—each rule would have #{2^3=8} variants. Reasoning about such a type
+system would be difficult. Furthremore, having more than one variant introduces
+nondeterminism into the type system. One would need to guess or bruteforce or otherwise
+somehow determine which variant to apply. The performance cost could be significant.} 
+
+\p{This raises the question of what criteria the designer should use to select these
+rules.} 
+
+\transclude{type-systems-000D}
+\transclude{type-systems-000E}
+\transclude{type-systems-000F}
+\transclude{type-systems-000G}

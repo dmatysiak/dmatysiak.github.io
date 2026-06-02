@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?>
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+  <fr:frontmatter>
+    <fr:anchor>361</fr:anchor>
+    <fr:addr type="user">type-systems-000H</fr:addr>
+    <fr:route>type-systems-000H.xml</fr:route>
+    <fr:title text="Pfennig recipe">Pfennig recipe</fr:title>
+    <fr:authors />
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <fr:p>The <fr:em>Pfennig recipe</fr:em> is a method for</fr:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:title text="Backlinks">Backlinks</fr:title>
+        <fr:authors />
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>362</fr:anchor>
+            <fr:addr type="user">type-systems-000G</fr:addr>
+            <fr:route>type-systems-000G.xml</fr:route>
+            <fr:title text="Annotation character">Annotation character</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>A bidirectional system that required an annotation on every subterm would satisfy
+completeness, but it would be impractical to use. For this reason, a system should
+exemplify good <fr:em>annotation character</fr:em>, which can be defined as follows:
+
+<fr:ol><fr:li><fr:strong>Annotations should be <fr:em>lightweight</fr:em>.</fr:strong> They should constitutes a small
+  portion of the program text.</fr:li>
+
+  <fr:li><fr:strong>Annotations should be <fr:em>predictable</fr:em>.</fr:strong> There should be a clear
+  <fr:em>annotation discipline</fr:em> that programmers can follow to determine where annotations
+  are required.</fr:li> 
+
+  <fr:li><fr:strong>Annotations should be <fr:em>stable</fr:em>.</fr:strong> A small change to a program should have
+  a small effect on the annotation requirements.</fr:li>
+
+  <fr:li><fr:strong>Annotations should be <fr:em>legible</fr:em>.</fr:strong> They should be easy to read and
+  understand.</fr:li></fr:ol></fr:p>
+            <fr:p>Some hypotheses to clarify what good annotation character might entail:  
+
+<fr:ol><fr:li>A discipline that needs only local information is preferable to one that needs
+  global information.</fr:li>
+
+  <fr:li>A discpline that requires all non-obvious type annoations and no obvious type
+  annotations is preferable.</fr:li>
+
+  <fr:li>A discipline that needs obvious type annotations in certain situations is
+  acceptable, if those situations are rare.</fr:li></fr:ol></fr:p>
+            <fr:p>It is preferable to be able to detemine whether an annotation is required by a subterm
+by looking only at the neighborhood of the subterm and not the whole program. Toward that
+end, the <fr:link type="local" href="type-systems-000H.xml" addr="type-systems-000H" title="Pfennig recipe">Pfennig recipe</fr:link> leads to an annotation discipline that
+requires only the syntactic form of the subterm and its immediate context to determine
+whether the subterm requires an annotation. (Consider the difference between <fr:tex display="inline"><![CDATA[(\lambda  x. e)\ e']]></fr:tex> and <fr:tex display="inline"><![CDATA[f(\lambda  x. e)]]></fr:tex>. The first <fr:tex display="inline"><![CDATA[\lambda  x. e]]></fr:tex> requires a type annotation, while
+the second does not.) This locality reduces the effect of a change in another part of a
+program on the annotation requirements of a subterm, thus making it stable.</fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+      </fr:mainmatter>
+      <fr:backmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

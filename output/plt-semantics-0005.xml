@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?>
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+  <fr:frontmatter>
+    <fr:anchor>387</fr:anchor>
+    <fr:addr type="user">plt-semantics-0005</fr:addr>
+    <fr:route>plt-semantics-0005.xml</fr:route>
+    <fr:title text="Small-step operation semantics">Small-step operation semantics</fr:title>
+    <fr:authors />
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <fr:p>A small-step semantics for a language ${T} of syntactic terms comprises two components:
+
+<fr:ul><fr:li>a set of <fr:em>execution states</fr:em> <fr:tex display="inline"><![CDATA[S]]></fr:tex></fr:li>
+<fr:li>a <fr:em>transition relation</fr:em> <fr:tex display="inline"><![CDATA[s \rightarrow  s']]></fr:tex> on <fr:tex display="inline"><![CDATA[S]]></fr:tex> that relates each state
+<fr:tex display="inline"><![CDATA[s]]></fr:tex> to each state <fr:tex display="inline"><![CDATA[s']]></fr:tex> that may be reached by performaing a single execution step</fr:li></fr:ul></fr:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:title text="Context">Context</fr:title>
+        <fr:authors />
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>388</fr:anchor>
+            <fr:addr type="user">plt-semantics-0003</fr:addr>
+            <fr:route>plt-semantics-0003.xml</fr:route>
+            <fr:title text="Operational semantics">Operational semantics</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>The <fr:em>operational semantics</fr:em> defines the meaning of terms in a langauge <fr:tex display="inline"><![CDATA[T]]></fr:tex> using an
+<fr:em>execution relation</fr:em> that specifies how terms can be executed in an appropriate machine
+model.</fr:p>
+            <fr:p>There are two forms of operations semantics:
+
+<fr:ul><fr:li><fr:strong>small-step operational semantics</fr:strong> which describes the individual execution steps</fr:li>
+<fr:li><fr:strong>big-step operational semantics</fr:strong> which describes the overall results of execution</fr:li></fr:ul></fr:p>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>360</fr:anchor>
+                <fr:addr type="user">plt-semantics-0005</fr:addr>
+                <fr:route>plt-semantics-0005.xml</fr:route>
+                <fr:title text="Small-step operation semantics">Small-step operation semantics</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>A small-step semantics for a language ${T} of syntactic terms comprises two components:
+
+<fr:ul><fr:li>a set of <fr:em>execution states</fr:em> <fr:tex display="inline"><![CDATA[S]]></fr:tex></fr:li>
+<fr:li>a <fr:em>transition relation</fr:em> <fr:tex display="inline"><![CDATA[s \rightarrow  s']]></fr:tex> on <fr:tex display="inline"><![CDATA[S]]></fr:tex> that relates each state
+<fr:tex display="inline"><![CDATA[s]]></fr:tex> to each state <fr:tex display="inline"><![CDATA[s']]></fr:tex> that may be reached by performaing a single execution step</fr:li></fr:ul></fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+      </fr:mainmatter>
+      <fr:backmatter />
+    </fr:tree>
+    <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:title text="Backlinks">Backlinks</fr:title>
+        <fr:authors />
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>389</fr:anchor>
+            <fr:addr type="user">plt-languages-0006</fr:addr>
+            <fr:route>plt-languages-0006.xml</fr:route>
+            <fr:title text="Small-step operational semantics of the addition language">Small-step operational semantics of the addition language</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>The <fr:link type="local" href="plt-semantics-0005.xml" addr="plt-semantics-0005" title="Small-step operation semantics">small-step operational semantics</fr:link> of the <fr:link type="local" href="plt-languages-0001.xml" addr="plt-languages-0001" title="An addition language">addition
+language</fr:link> is given below.</fr:p>
+            <fr:p>The first rule is the <fr:em>reduction rule</fr:em> (or <fr:em>contraction rule</fr:em>). It specified how
+the basic operation (here, addition) can be performed. Expressions matching this rule are
+called <fr:em>reducible expressions</fr:em> or <fr:em>redexes</fr:em>:
+
+<fr:tex display="block"><![CDATA[\frac {}{\text {Add}\ (\text {Val}\ n)\ (\text {Val}\ m) \rightarrow  \text {Val}\ (n + m)}]]></fr:tex></fr:p>
+            <fr:p>The last two rules are <fr:em>structural rules</fr:em> (or <fr:em>congruence rules</fr:em>) that define how
+larger terms can be reduced:
+
+<fr:tex display="block"><![CDATA[\frac {x\rightarrow  x'}{\text {Add}\ x\ y \rightarrow  \text {Add}\ x'\ y}]]></fr:tex>
+<fr:tex display="block"><![CDATA[\frac {y\rightarrow  y'}{\text {Add}\ x\ y \rightarrow  \text {Add}\ x\ y'}]]></fr:tex></fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+      </fr:mainmatter>
+      <fr:backmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

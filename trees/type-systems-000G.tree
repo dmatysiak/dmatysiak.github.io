@@ -1,0 +1,43 @@
+\title{Annotation character}
+
+\p{A bidirectional system that required an annotation on every subterm would satisfy
+completeness, but it would be impractical to use. For this reason, a system should
+exemplify good \em{annotation character}, which can be defined as follows:
+
+\ol{
+
+  \li{\strong{Annotations should be \em{lightweight}.} They should constitutes a small
+  portion of the program text.}
+
+  \li{\strong{Annotations should be \em{predictable}.} There should be a clear
+  \em{annotation discipline} that programmers can follow to determine where annotations
+  are required.} 
+
+  \li{\strong{Annotations should be \em{stable}.} A small change to a program should have
+  a small effect on the annotation requirements.}
+
+  \li{\strong{Annotations should be \em{legible}.} They should be easy to read and
+  understand.}}}
+
+\p{Some hypotheses to clarify what good annotation character might entail:  
+
+\ol{
+
+  \li{A discipline that needs only local information is preferable to one that needs
+  global information.}
+
+  \li{A discpline that requires all non-obvious type annoations and no obvious type
+  annotations is preferable.}
+
+  \li{A discipline that needs obvious type annotations in certain situations is
+  acceptable, if those situations are rare.}}}
+
+\p{It is preferable to be able to detemine whether an annotation is required by a subterm
+by looking only at the neighborhood of the subterm and not the whole program. Toward that
+end, the [Pfennig recipe](type-systems-000H) leads to an annotation discipline that
+requires only the syntactic form of the subterm and its immediate context to determine
+whether the subterm requires an annotation. (Consider the difference between #{(\lambda x.
+e)\ e'} and #{f(\lambda x. e)}. The first #{\lambda x. e} requires a type annotation, while
+the second does not.) This locality reduces the effect of a change in another part of a
+program on the annotation requirements of a subterm, thus making it stable.}
+

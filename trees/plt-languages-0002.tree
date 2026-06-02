@@ -1,0 +1,8 @@
+\title{The addition language grammar}
+
+\p{The language may be defined using a grammar in the following way:
+
+##{\text{Expr} ::= \mathbb{Z}\ |\ \text{Expr} + \text{Expr}}
+
+where #{\text{Expr}} is the syntactic category of all expressions in the language and
+#{\mathbb{Z}} are the integers.}

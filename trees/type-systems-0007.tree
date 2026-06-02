@@ -1,0 +1,8 @@
+\title{Annotation synthesis (#{\mathtt{Anno\Rightarrow}})}
+
+\p{
+  ##{\frac{\begin{array}{cc}
+             \Gamma \vdash e \Leftarrow A
+           \end{array}}
+           {\Gamma \vdash (e::A) \Rightarrow A}(\mathtt{Anno\Rightarrow})}
+}

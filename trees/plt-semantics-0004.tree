@@ -1,0 +1,6 @@
+\title{Compositionality}
+
+\p{In the context of [semantics](plt-semantics-0001), the \em{principle of
+compositionality} holds that the meaning of a complex expression is determined by the
+meanings of its constituents and the way they enter into the structure of that complex
+expression.}

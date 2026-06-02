@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?>
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+  <fr:frontmatter>
+    <fr:anchor>350</fr:anchor>
+    <fr:addr type="user">type-systems-000D</fr:addr>
+    <fr:route>type-systems-000D.xml</fr:route>
+    <fr:title text="Mode-correctness">Mode-correctness</fr:title>
+    <fr:authors />
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <fr:p>A good rule avoids guessing types. A synthesized type should be derived from known
+information and not from, e.g., an enumeration of types.</fr:p>
+    <fr:p>A rule is <fr:em>mode-correct</fr:em> if there is a strategy for recursively deriving the
+premises such that two conditions hold:
+
+  <fr:ol><fr:li><fr:strong>The premises are mode-correct.</fr:strong> For each premise every input meta-variable is
+    known, both from the inputs to the rule's conclusions annd from the outputs of earlier
+    premises.</fr:li>
+
+    <fr:li><fr:strong>The conclusions are mode-correct.</fr:strong> If all premises have been derived, then the
+    outputs of the rule's conclusions are known.</fr:li></fr:ol></fr:p>
+    <fr:p>For the <fr:link type="local" href="type-systems-000C.xml" addr="type-systems-000C" title="Criteria for selecting rules for a bidirectional type system"><fr:tex display="inline"><![CDATA[\rightarrow  E \Rightarrow ]]></fr:tex> rule</fr:link>
+
+<fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}            \Gamma  \vdash  e_1 : A \rightarrow  B             & \Gamma  \vdash  e_2 : A            \end {array}}         {\Gamma  \vdash  e_1 e_2 : B}]]></fr:tex>
+
+while there are <fr:tex display="inline"><![CDATA[2^3=8]]></fr:tex> variations, only four are mode-correct:
+
+<fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}            \Gamma  \vdash  e_1 \Rightarrow  A \rightarrow  B             & \Gamma  \vdash  e_2 \Rightarrow  A            \end {array}}         {\Gamma  \vdash  e_1 e_2 \Rightarrow  B}]]></fr:tex>
+
+<fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}            \Gamma  \vdash  e_1 \Rightarrow  A \rightarrow  B             & \Gamma  \vdash  e_2 \Leftarrow  A            \end {array}}         {\Gamma  \vdash  e_1 e_2 \Rightarrow  B}]]></fr:tex>
+
+<fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}            \Gamma  \vdash  e_1 \Rightarrow  A \rightarrow  B             & \Gamma  \vdash  e_2 \Leftarrow  A            \end {array}}         {\Gamma  \vdash  e_1 e_2 \Leftarrow  B}]]></fr:tex>
+
+<fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}            \Gamma  \vdash  e_1 \Leftarrow  A \rightarrow  B             & \Gamma  \vdash  e_2 \Rightarrow  A            \end {array}}         {\Gamma  \vdash  e_1 e_2 \Leftarrow  B}]]></fr:tex>
+
+The last rule <fr:em>seems</fr:em> questionable, because <fr:tex display="inline"><![CDATA[A]]></fr:tex> is unknown in the conclusion, yet the
+first premise checks <fr:tex display="inline"><![CDATA[e_1]]></fr:tex> against <fr:tex display="inline"><![CDATA[A\rightarrow  B]]></fr:tex>. However, the rule is mode-correct,
+because the second premise synthesizes the type <fr:tex display="inline"><![CDATA[A]]></fr:tex>, which is then used to check <fr:tex display="inline"><![CDATA[e_1]]></fr:tex>
+against <fr:tex display="inline"><![CDATA[A \rightarrow  B]]></fr:tex>. The order of premises is, therefore, important, not for
+determining the meaning of the rule, but where the strategy of applying the rule is
+concerned. A strategy is effectively a set of permutations of the premises; in this case,
+there are two possible strategies, one of which is effective.</fr:p>
+    <fr:p>We can rewrite the last rule to reflect the effective strategy:
+
+<fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}            \Gamma  \vdash  e_2 \Rightarrow  A            & \Gamma  \vdash  e_1 \Leftarrow  A \rightarrow  B             \end {array}}         {\Gamma  \vdash  e_1 e_2 \Leftarrow  B}]]></fr:tex></fr:p>
+    <fr:p>An example of a rule that is not mode-correct is the following:
+
+<fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}            \Gamma  \vdash  e_1 \Leftarrow  A \rightarrow  B             & \Gamma  \vdash  e_2 \Leftarrow  A            \end {array}}         {\Gamma  \vdash  e_1 e_2 \Leftarrow  B}]]></fr:tex>
+
+While the type <fr:tex display="inline"><![CDATA[B]]></fr:tex> is known from the conclusion, the type <fr:tex display="inline"><![CDATA[A \rightarrow  B]]></fr:tex> is unknown
+when deriving the first premise, because the type <fr:tex display="inline"><![CDATA[A]]></fr:tex> is unknown and cannot be derived.
+For the same reason, the second premise <fr:tex display="inline"><![CDATA[\Gamma  \vdash  e_2 \Leftarrow  A]]></fr:tex> is not
+mode-correct.</fr:p>
+    <fr:p>Mode-correctness is necessary for directly implementing a bidirectional type system
+that is deterministic. However, mode-correctness alone is insufficient for a type system
+to be syntax-directed. For that, the inputs (the context, the term and if checking, the
+type) must match the conclusion of only one rule.</fr:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:title text="Context">Context</fr:title>
+        <fr:authors />
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>351</fr:anchor>
+            <fr:addr type="user">type-systems-000C</fr:addr>
+            <fr:route>type-systems-000C.xml</fr:route>
+            <fr:title text="Criteria for selecting rules for a bidirectional type system">Criteria for selecting rules for a bidirectional type system</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>Selecting rules for a bidirectional type system affords a certain degree of freedom. One
+must decide whether a particular premise or conclusion synthesizes or checks a type. It is
+impractical to cover all possible combinations. Consider the following <fr:tex display="inline"><![CDATA[\rightarrow  E \Rightarrow ]]></fr:tex>
+rule: 
+
+<fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}            \Gamma  \vdash  e_1 : A \rightarrow  B             & \Gamma  \vdash  e_2 : A            \end {array}}         {\Gamma  \vdash  e_1 e_2 : B}]]></fr:tex></fr:p>
+            <fr:p>Because there are two judgement modes—synthesis and checking—and three typing
+judgements—<fr:tex display="inline"><![CDATA[\Gamma  \vdash  e_1 : A \rightarrow  B]]></fr:tex>, <fr:tex display="inline"><![CDATA[\Gamma  \vdash  e_2 : A]]></fr:tex> and <fr:tex display="inline"><![CDATA[\Gamma  \vdash  e_1 e_2 : B]]></fr:tex>—each rule would have <fr:tex display="inline"><![CDATA[2^3=8]]></fr:tex> variants. Reasoning about such a type
+system would be difficult. Furthremore, having more than one variant introduces
+nondeterminism into the type system. One would need to guess or bruteforce or otherwise
+somehow determine which variant to apply. The performance cost could be significant.</fr:p>
+            <fr:p>This raises the question of what criteria the designer should use to select these
+rules.</fr:p>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>279</fr:anchor>
+                <fr:addr type="user">type-systems-000D</fr:addr>
+                <fr:route>type-systems-000D.xml</fr:route>
+                <fr:title text="Mode-correctness">Mode-correctness</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>A good rule avoids guessing types. A synthesized type should be derived from known
+information and not from, e.g., an enumeration of types.</fr:p>
+                <fr:p>A rule is <fr:em>mode-correct</fr:em> if there is a strategy for recursively deriving the
+premises such that two conditions hold:
+
+  <fr:ol><fr:li><fr:strong>The premises are mode-correct.</fr:strong> For each premise every input meta-variable is
+    known, both from the inputs to the rule's conclusions annd from the outputs of earlier
+    premises.</fr:li>
+
+    <fr:li><fr:strong>The conclusions are mode-correct.</fr:strong> If all premises have been derived, then the
+    outputs of the rule's conclusions are known.</fr:li></fr:ol></fr:p>
+                <fr:p>For the <fr:link type="local" href="type-systems-000C.xml" addr="type-systems-000C" title="Criteria for selecting rules for a bidirectional type system"><fr:tex display="inline"><![CDATA[\rightarrow  E \Rightarrow ]]></fr:tex> rule</fr:link>
+
+<fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}            \Gamma  \vdash  e_1 : A \rightarrow  B             & \Gamma  \vdash  e_2 : A            \end {array}}         {\Gamma  \vdash  e_1 e_2 : B}]]></fr:tex>
+
+while there are <fr:tex display="inline"><![CDATA[2^3=8]]></fr:tex> variations, only four are mode-correct:
+
+<fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}            \Gamma  \vdash  e_1 \Rightarrow  A \rightarrow  B             & \Gamma  \vdash  e_2 \Rightarrow  A            \end {array}}         {\Gamma  \vdash  e_1 e_2 \Rightarrow  B}]]></fr:tex>
+
+<fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}            \Gamma  \vdash  e_1 \Rightarrow  A \rightarrow  B             & \Gamma  \vdash  e_2 \Leftarrow  A            \end {array}}         {\Gamma  \vdash  e_1 e_2 \Rightarrow  B}]]></fr:tex>
+
+<fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}            \Gamma  \vdash  e_1 \Rightarrow  A \rightarrow  B             & \Gamma  \vdash  e_2 \Leftarrow  A            \end {array}}         {\Gamma  \vdash  e_1 e_2 \Leftarrow  B}]]></fr:tex>
+
+<fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}            \Gamma  \vdash  e_1 \Leftarrow  A \rightarrow  B             & \Gamma  \vdash  e_2 \Rightarrow  A            \end {array}}         {\Gamma  \vdash  e_1 e_2 \Leftarrow  B}]]></fr:tex>
+
+The last rule <fr:em>seems</fr:em> questionable, because <fr:tex display="inline"><![CDATA[A]]></fr:tex> is unknown in the conclusion, yet the
+first premise checks <fr:tex display="inline"><![CDATA[e_1]]></fr:tex> against <fr:tex display="inline"><![CDATA[A\rightarrow  B]]></fr:tex>. However, the rule is mode-correct,
+because the second premise synthesizes the type <fr:tex display="inline"><![CDATA[A]]></fr:tex>, which is then used to check <fr:tex display="inline"><![CDATA[e_1]]></fr:tex>
+against <fr:tex display="inline"><![CDATA[A \rightarrow  B]]></fr:tex>. The order of premises is, therefore, important, not for
+determining the meaning of the rule, but where the strategy of applying the rule is
+concerned. A strategy is effectively a set of permutations of the premises; in this case,
+there are two possible strategies, one of which is effective.</fr:p>
+                <fr:p>We can rewrite the last rule to reflect the effective strategy:
+
+<fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}            \Gamma  \vdash  e_2 \Rightarrow  A            & \Gamma  \vdash  e_1 \Leftarrow  A \rightarrow  B             \end {array}}         {\Gamma  \vdash  e_1 e_2 \Leftarrow  B}]]></fr:tex></fr:p>
+                <fr:p>An example of a rule that is not mode-correct is the following:
+
+<fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}            \Gamma  \vdash  e_1 \Leftarrow  A \rightarrow  B             & \Gamma  \vdash  e_2 \Leftarrow  A            \end {array}}         {\Gamma  \vdash  e_1 e_2 \Leftarrow  B}]]></fr:tex>
+
+While the type <fr:tex display="inline"><![CDATA[B]]></fr:tex> is known from the conclusion, the type <fr:tex display="inline"><![CDATA[A \rightarrow  B]]></fr:tex> is unknown
+when deriving the first premise, because the type <fr:tex display="inline"><![CDATA[A]]></fr:tex> is unknown and cannot be derived.
+For the same reason, the second premise <fr:tex display="inline"><![CDATA[\Gamma  \vdash  e_2 \Leftarrow  A]]></fr:tex> is not
+mode-correct.</fr:p>
+                <fr:p>Mode-correctness is necessary for directly implementing a bidirectional type system
+that is deterministic. However, mode-correctness alone is insufficient for a type system
+to be syntax-directed. For that, the inputs (the context, the term and if checking, the
+type) must match the conclusion of only one rule.</fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>280</fr:anchor>
+                <fr:addr type="user">type-systems-000E</fr:addr>
+                <fr:route>type-systems-000E.xml</fr:route>
+                <fr:title text="Completeness (Annotatability)">Completeness (Annotatability)</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>A bidirectional system is <fr:em>complete with respect to a type assignment system</fr:em> if
+every rule in the type assignment system has a corresponding rule in the bidirectional
+system. In general, this correspondence is easy to achieve if we begin with a type
+assignment system and "bidirectionalize" each of its rules.</fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>281</fr:anchor>
+                <fr:addr type="user">type-systems-000F</fr:addr>
+                <fr:route>type-systems-000F.xml</fr:route>
+                <fr:title text="Size of the rule set">Size of the rule set</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>While tbe number of rules in a type system is not a strict measure of its complexity,
+it can be an effective heuristic for comparing two system in an inclusion relationship,
+e.g., when system <fr:tex display="inline"><![CDATA[S_1]]></fr:tex> is a strict subset of system <fr:tex display="inline"><![CDATA[S_2]]></fr:tex>. In such cases, one can
+reasonably claim that <fr:tex display="inline"><![CDATA[S_1]]></fr:tex> is simpler than <fr:tex display="inline"><![CDATA[S_2]]></fr:tex>, because it has fewer rules. Smaller
+systems tend to be easier to work with.</fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>282</fr:anchor>
+                <fr:addr type="user">type-systems-000G</fr:addr>
+                <fr:route>type-systems-000G.xml</fr:route>
+                <fr:title text="Annotation character">Annotation character</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>A bidirectional system that required an annotation on every subterm would satisfy
+completeness, but it would be impractical to use. For this reason, a system should
+exemplify good <fr:em>annotation character</fr:em>, which can be defined as follows:
+
+<fr:ol><fr:li><fr:strong>Annotations should be <fr:em>lightweight</fr:em>.</fr:strong> They should constitutes a small
+  portion of the program text.</fr:li>
+
+  <fr:li><fr:strong>Annotations should be <fr:em>predictable</fr:em>.</fr:strong> There should be a clear
+  <fr:em>annotation discipline</fr:em> that programmers can follow to determine where annotations
+  are required.</fr:li> 
+
+  <fr:li><fr:strong>Annotations should be <fr:em>stable</fr:em>.</fr:strong> A small change to a program should have
+  a small effect on the annotation requirements.</fr:li>
+
+  <fr:li><fr:strong>Annotations should be <fr:em>legible</fr:em>.</fr:strong> They should be easy to read and
+  understand.</fr:li></fr:ol></fr:p>
+                <fr:p>Some hypotheses to clarify what good annotation character might entail:  
+
+<fr:ol><fr:li>A discipline that needs only local information is preferable to one that needs
+  global information.</fr:li>
+
+  <fr:li>A discpline that requires all non-obvious type annoations and no obvious type
+  annotations is preferable.</fr:li>
+
+  <fr:li>A discipline that needs obvious type annotations in certain situations is
+  acceptable, if those situations are rare.</fr:li></fr:ol></fr:p>
+                <fr:p>It is preferable to be able to detemine whether an annotation is required by a subterm
+by looking only at the neighborhood of the subterm and not the whole program. Toward that
+end, the <fr:link type="local" href="type-systems-000H.xml" addr="type-systems-000H" title="Pfennig recipe">Pfennig recipe</fr:link> leads to an annotation discipline that
+requires only the syntactic form of the subterm and its immediate context to determine
+whether the subterm requires an annotation. (Consider the difference between <fr:tex display="inline"><![CDATA[(\lambda  x. e)\ e']]></fr:tex> and <fr:tex display="inline"><![CDATA[f(\lambda  x. e)]]></fr:tex>. The first <fr:tex display="inline"><![CDATA[\lambda  x. e]]></fr:tex> requires a type annotation, while
+the second does not.) This locality reduces the effect of a change in another part of a
+program on the annotation requirements of a subterm, thus making it stable.</fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+      </fr:mainmatter>
+      <fr:backmatter />
+    </fr:tree>
+    <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:title text="Related">Related</fr:title>
+        <fr:authors />
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>352</fr:anchor>
+            <fr:addr type="user">type-systems-000C</fr:addr>
+            <fr:route>type-systems-000C.xml</fr:route>
+            <fr:title text="Criteria for selecting rules for a bidirectional type system">Criteria for selecting rules for a bidirectional type system</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>Selecting rules for a bidirectional type system affords a certain degree of freedom. One
+must decide whether a particular premise or conclusion synthesizes or checks a type. It is
+impractical to cover all possible combinations. Consider the following <fr:tex display="inline"><![CDATA[\rightarrow  E \Rightarrow ]]></fr:tex>
+rule: 
+
+<fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}            \Gamma  \vdash  e_1 : A \rightarrow  B             & \Gamma  \vdash  e_2 : A            \end {array}}         {\Gamma  \vdash  e_1 e_2 : B}]]></fr:tex></fr:p>
+            <fr:p>Because there are two judgement modes—synthesis and checking—and three typing
+judgements—<fr:tex display="inline"><![CDATA[\Gamma  \vdash  e_1 : A \rightarrow  B]]></fr:tex>, <fr:tex display="inline"><![CDATA[\Gamma  \vdash  e_2 : A]]></fr:tex> and <fr:tex display="inline"><![CDATA[\Gamma  \vdash  e_1 e_2 : B]]></fr:tex>—each rule would have <fr:tex display="inline"><![CDATA[2^3=8]]></fr:tex> variants. Reasoning about such a type
+system would be difficult. Furthremore, having more than one variant introduces
+nondeterminism into the type system. One would need to guess or bruteforce or otherwise
+somehow determine which variant to apply. The performance cost could be significant.</fr:p>
+            <fr:p>This raises the question of what criteria the designer should use to select these
+rules.</fr:p>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>279</fr:anchor>
+                <fr:addr type="user">type-systems-000D</fr:addr>
+                <fr:route>type-systems-000D.xml</fr:route>
+                <fr:title text="Mode-correctness">Mode-correctness</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>A good rule avoids guessing types. A synthesized type should be derived from known
+information and not from, e.g., an enumeration of types.</fr:p>
+                <fr:p>A rule is <fr:em>mode-correct</fr:em> if there is a strategy for recursively deriving the
+premises such that two conditions hold:
+
+  <fr:ol><fr:li><fr:strong>The premises are mode-correct.</fr:strong> For each premise every input meta-variable is
+    known, both from the inputs to the rule's conclusions annd from the outputs of earlier
+    premises.</fr:li>
+
+    <fr:li><fr:strong>The conclusions are mode-correct.</fr:strong> If all premises have been derived, then the
+    outputs of the rule's conclusions are known.</fr:li></fr:ol></fr:p>
+                <fr:p>For the <fr:link type="local" href="type-systems-000C.xml" addr="type-systems-000C" title="Criteria for selecting rules for a bidirectional type system"><fr:tex display="inline"><![CDATA[\rightarrow  E \Rightarrow ]]></fr:tex> rule</fr:link>
+
+<fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}            \Gamma  \vdash  e_1 : A \rightarrow  B             & \Gamma  \vdash  e_2 : A            \end {array}}         {\Gamma  \vdash  e_1 e_2 : B}]]></fr:tex>
+
+while there are <fr:tex display="inline"><![CDATA[2^3=8]]></fr:tex> variations, only four are mode-correct:
+
+<fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}            \Gamma  \vdash  e_1 \Rightarrow  A \rightarrow  B             & \Gamma  \vdash  e_2 \Rightarrow  A            \end {array}}         {\Gamma  \vdash  e_1 e_2 \Rightarrow  B}]]></fr:tex>
+
+<fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}            \Gamma  \vdash  e_1 \Rightarrow  A \rightarrow  B             & \Gamma  \vdash  e_2 \Leftarrow  A            \end {array}}         {\Gamma  \vdash  e_1 e_2 \Rightarrow  B}]]></fr:tex>
+
+<fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}            \Gamma  \vdash  e_1 \Rightarrow  A \rightarrow  B             & \Gamma  \vdash  e_2 \Leftarrow  A            \end {array}}         {\Gamma  \vdash  e_1 e_2 \Leftarrow  B}]]></fr:tex>
+
+<fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}            \Gamma  \vdash  e_1 \Leftarrow  A \rightarrow  B             & \Gamma  \vdash  e_2 \Rightarrow  A            \end {array}}         {\Gamma  \vdash  e_1 e_2 \Leftarrow  B}]]></fr:tex>
+
+The last rule <fr:em>seems</fr:em> questionable, because <fr:tex display="inline"><![CDATA[A]]></fr:tex> is unknown in the conclusion, yet the
+first premise checks <fr:tex display="inline"><![CDATA[e_1]]></fr:tex> against <fr:tex display="inline"><![CDATA[A\rightarrow  B]]></fr:tex>. However, the rule is mode-correct,
+because the second premise synthesizes the type <fr:tex display="inline"><![CDATA[A]]></fr:tex>, which is then used to check <fr:tex display="inline"><![CDATA[e_1]]></fr:tex>
+against <fr:tex display="inline"><![CDATA[A \rightarrow  B]]></fr:tex>. The order of premises is, therefore, important, not for
+determining the meaning of the rule, but where the strategy of applying the rule is
+concerned. A strategy is effectively a set of permutations of the premises; in this case,
+there are two possible strategies, one of which is effective.</fr:p>
+                <fr:p>We can rewrite the last rule to reflect the effective strategy:
+
+<fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}            \Gamma  \vdash  e_2 \Rightarrow  A            & \Gamma  \vdash  e_1 \Leftarrow  A \rightarrow  B             \end {array}}         {\Gamma  \vdash  e_1 e_2 \Leftarrow  B}]]></fr:tex></fr:p>
+                <fr:p>An example of a rule that is not mode-correct is the following:
+
+<fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}            \Gamma  \vdash  e_1 \Leftarrow  A \rightarrow  B             & \Gamma  \vdash  e_2 \Leftarrow  A            \end {array}}         {\Gamma  \vdash  e_1 e_2 \Leftarrow  B}]]></fr:tex>
+
+While the type <fr:tex display="inline"><![CDATA[B]]></fr:tex> is known from the conclusion, the type <fr:tex display="inline"><![CDATA[A \rightarrow  B]]></fr:tex> is unknown
+when deriving the first premise, because the type <fr:tex display="inline"><![CDATA[A]]></fr:tex> is unknown and cannot be derived.
+For the same reason, the second premise <fr:tex display="inline"><![CDATA[\Gamma  \vdash  e_2 \Leftarrow  A]]></fr:tex> is not
+mode-correct.</fr:p>
+                <fr:p>Mode-correctness is necessary for directly implementing a bidirectional type system
+that is deterministic. However, mode-correctness alone is insufficient for a type system
+to be syntax-directed. For that, the inputs (the context, the term and if checking, the
+type) must match the conclusion of only one rule.</fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>280</fr:anchor>
+                <fr:addr type="user">type-systems-000E</fr:addr>
+                <fr:route>type-systems-000E.xml</fr:route>
+                <fr:title text="Completeness (Annotatability)">Completeness (Annotatability)</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>A bidirectional system is <fr:em>complete with respect to a type assignment system</fr:em> if
+every rule in the type assignment system has a corresponding rule in the bidirectional
+system. In general, this correspondence is easy to achieve if we begin with a type
+assignment system and "bidirectionalize" each of its rules.</fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>281</fr:anchor>
+                <fr:addr type="user">type-systems-000F</fr:addr>
+                <fr:route>type-systems-000F.xml</fr:route>
+                <fr:title text="Size of the rule set">Size of the rule set</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>While tbe number of rules in a type system is not a strict measure of its complexity,
+it can be an effective heuristic for comparing two system in an inclusion relationship,
+e.g., when system <fr:tex display="inline"><![CDATA[S_1]]></fr:tex> is a strict subset of system <fr:tex display="inline"><![CDATA[S_2]]></fr:tex>. In such cases, one can
+reasonably claim that <fr:tex display="inline"><![CDATA[S_1]]></fr:tex> is simpler than <fr:tex display="inline"><![CDATA[S_2]]></fr:tex>, because it has fewer rules. Smaller
+systems tend to be easier to work with.</fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>282</fr:anchor>
+                <fr:addr type="user">type-systems-000G</fr:addr>
+                <fr:route>type-systems-000G.xml</fr:route>
+                <fr:title text="Annotation character">Annotation character</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>A bidirectional system that required an annotation on every subterm would satisfy
+completeness, but it would be impractical to use. For this reason, a system should
+exemplify good <fr:em>annotation character</fr:em>, which can be defined as follows:
+
+<fr:ol><fr:li><fr:strong>Annotations should be <fr:em>lightweight</fr:em>.</fr:strong> They should constitutes a small
+  portion of the program text.</fr:li>
+
+  <fr:li><fr:strong>Annotations should be <fr:em>predictable</fr:em>.</fr:strong> There should be a clear
+  <fr:em>annotation discipline</fr:em> that programmers can follow to determine where annotations
+  are required.</fr:li> 
+
+  <fr:li><fr:strong>Annotations should be <fr:em>stable</fr:em>.</fr:strong> A small change to a program should have
+  a small effect on the annotation requirements.</fr:li>
+
+  <fr:li><fr:strong>Annotations should be <fr:em>legible</fr:em>.</fr:strong> They should be easy to read and
+  understand.</fr:li></fr:ol></fr:p>
+                <fr:p>Some hypotheses to clarify what good annotation character might entail:  
+
+<fr:ol><fr:li>A discipline that needs only local information is preferable to one that needs
+  global information.</fr:li>
+
+  <fr:li>A discpline that requires all non-obvious type annoations and no obvious type
+  annotations is preferable.</fr:li>
+
+  <fr:li>A discipline that needs obvious type annotations in certain situations is
+  acceptable, if those situations are rare.</fr:li></fr:ol></fr:p>
+                <fr:p>It is preferable to be able to detemine whether an annotation is required by a subterm
+by looking only at the neighborhood of the subterm and not the whole program. Toward that
+end, the <fr:link type="local" href="type-systems-000H.xml" addr="type-systems-000H" title="Pfennig recipe">Pfennig recipe</fr:link> leads to an annotation discipline that
+requires only the syntactic form of the subterm and its immediate context to determine
+whether the subterm requires an annotation. (Consider the difference between <fr:tex display="inline"><![CDATA[(\lambda  x. e)\ e']]></fr:tex> and <fr:tex display="inline"><![CDATA[f(\lambda  x. e)]]></fr:tex>. The first <fr:tex display="inline"><![CDATA[\lambda  x. e]]></fr:tex> requires a type annotation, while
+the second does not.) This locality reduces the effect of a change in another part of a
+program on the annotation requirements of a subterm, thus making it stable.</fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+      </fr:mainmatter>
+      <fr:backmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

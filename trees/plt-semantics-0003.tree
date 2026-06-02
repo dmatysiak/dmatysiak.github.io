@@ -1,0 +1,14 @@
+\title{Operational semantics}
+
+\p{The \em{operational semantics} defines the meaning of terms in a langauge #{T} using an
+\em{execution relation} that specifies how terms can be executed in an appropriate machine
+model.}
+
+\p{There are two forms of operations semantics:
+
+\ul{
+\li{\strong{small-step operational semantics} which describes the individual execution steps}
+\li{\strong{big-step operational semantics} which describes the overall results of execution}
+}}
+
+\transclude{plt-semantics-0005}

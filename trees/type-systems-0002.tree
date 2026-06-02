@@ -1,0 +1,15 @@
+\title{Modes of metavariables in type judgements}
+
+\p{Automated deduction and logic programming can be a useful lens through which to view
+type systems. Given the typing judgement ##{\Gamma \vdash e : A} with metavariables
+#{\Gamma}, #{e} and #{A}, we can treat each of these metavariables as either inputs or
+outputs:
+
+\ul{
+  \li{If all three are inputs, then we are speaking of \em{type checking}.}
+  \li{If the type #{A} is an output, then we are speaking of \em{type synthesis }.}
+  \li{If the term #{e} is an output, then we are speaking of \em{program synthesis}.}
+}
+
+The "input" or "output" status of each metavariables is its \em{mode}. 
+}

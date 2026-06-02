@@ -1,25 +1,31 @@
 \title{Structural induction}
 
-\p{Structural induction is a syntax-directed proof style that defines a \em{base case} and
-an \em{inductive case}. The base case provides an term for which a property #{P} holds,
-while the inductive case shows how—assuming #{P} holds for some arbitrary term(s)—it also
-holds for a composition that includes these terms as subterms.}
+\p{\em{Structural induction} is a syntax-directed proof style that defines a \em{base
+case} and an \em{inductive case}. The base case provides a term for which a property #{P}
+holds, while the inductive case shows how—assuming #{P} holds for some arbitrary
+subterm(s)—it also holds for a composition that includes these subterms.}
 
-\p{Consider the case where you have a type \code{NatExpr} whose constructors are
-\code{One}—representing the natural number #{1}—and \code{Double NatExpr}—representing the
-value of doubling a given \code{NatExpr}. So, for example, \code{Double (Double One)} can
-be used to represent the value #{1 \times 2 \times 2 = 4}, because \code{Double n} is
-equal to #{n \times 2}.}
+\p{Consider the case where you have an small [addition
+language](plt-languages-0001). Suppose we wish to prove that the [denotational semantics
+of the language](plt-language-0004) is \em{total}, that is, that that for every expression
+#{e} there is an integer #{n} such that #{\llbracket e \rrbracket = n}. If we assume
+[compositionality](plt-semantics-0004), we can prove totality holds using structural
+induction.}
 
-\p{Suppose that we wish to prove the property #{P} that \code{Double n} is even for any
-\code{n:NatExpr} and that we have the following rule that governs the transmission of
-evenness between \code{NatExpr}s:
+\transclude{plt-languages-0005}
 
-##{\frac{P(e)}{P(e \times 2)}}
-}
+\p{The \strong{base case} is the constructor #{e = \text{Val}\ n}.}
 
-\p{The base case here would be \code{Double One}, since #{P(1 \times 2) = P(2)}.}
+\p{This case is trivial given the [semantics](plt-languages-0004), specifically
+#{\llbracket \text{Val}\ n \rrbracket = n}.}
 
-\p{The inductive case would assume \code{e} is even to show that \code{Double e} is also
-even. If \code{Double e} is even, then by the rule above, \code{Double (Double e)} is also
-even, because #{P((e \times 2) \times 2)} is even if #{P(e \times 2)}}
+\p{The \strong{inductive case} is the constructor #{e = \text{Add}\ x\ y}.}
+
+\p{Assume #{\llbracket x \rrbracket = n} and #{\llbracket y \rrbracket = m} for some
+integers #{n} and #{m}. It follows from the [valuation function](plt-languages-0004) that
+
+##{\llbracket \text{Add}\ x\ y \rrbracket = \llbracket x \rrbracket + \llbracket y \rrbracket = n + m}}
+
+\p{By assuming that the subterms of #{\text{Add}} already satisfy totality—the so-called
+[\em{inductive hypothesis}](proof-techniques-0002)—we can prove that totality also holds
+for #{\text{Add}\ x\ y}.}

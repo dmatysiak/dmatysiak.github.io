@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="default.xsl"?>
 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>258</fr:anchor>
+    <fr:anchor>297</fr:anchor>
     <fr:addr type="user">ttfp-000F</fr:addr>
     <fr:route>ttfp-000F.xml</fr:route>
     <fr:title text="Classical logic as extension of intuitionistic logic">Classical logic as extension of intuitionistic logic</fr:title>
@@ -31,7 +31,7 @@ and the <fr:em>rule of proof by contradiction</fr:em>:
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>259</fr:anchor>
+            <fr:anchor>298</fr:anchor>
             <fr:addr type="user">ttfp-0003</fr:addr>
             <fr:route>ttfp-0003.xml</fr:route>
             <fr:title text="Derivation rules for propositional logic">Derivation rules for propositional logic</fr:title>

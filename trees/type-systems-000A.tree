@@ -1,0 +1,6 @@
+\title{Unit introduction checking (#{\mathtt{Unit-I\Leftarrow}})}
+
+\p{
+  ##{\frac{}
+          {\Gamma \vdash ()\Leftarrow\text{unit}}(\mathtt{Unit-I\Leftarrow})}}
+

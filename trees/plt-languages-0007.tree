@@ -1,0 +1,58 @@
+\title{Preservation of denotation under small-step semantics of the addition language}
+
+\p{A transition according to the [small-step semantics of the language](plt-languages-0006) does not change the denotation:
+
+##{\frac{e \rightarrow e'}{\llbracket e \rrbracket = \llbracket e' \rrbracket}}}
+
+\p{This property can be proved using [structural induction](proof-techniques) on the
+structure of the expression #{e}:
+
+\ul{
+\li{\strong{Base case}
+\p{#{e = \text{Val}\ n}}
+
+\p{The base case is trivially true; it does not match any rule in the small-step
+semantics, because it is already in a terminal state and so there is no possible
+transition.}}
+
+\li{\strong{Inductive case}
+\p{#{e = \text{Add}\ x\ y}}
+
+\ol{
+\li{If the precondition #{e \rightarrow e'} has the form
+
+##{\text{Add}\ (\text{Val}\ n) (\text{Val}\ m) \rightarrow \text{Val}\ (n+m)}
+
+then the conclusion
+
+##{\llbracket \text{Add}\ (\text{Val}\ n) (\text{Val}\ m) \rrbracket = \llbracket \text{Val}\ (n+m) \rrbracket}
+
+is true, because both sides evaluate to #{n+m}.}
+
+\li{If the precondition #{e \rightarrow e'} has the form
+
+##{\text{Add}\ x\ y \rightarrow \text{Add}\ x'\ y}
+
+for some transition #{x \rightarrow x'}, then we must show that
+
+##{\llbracket \text{Add}\ x\ y  \rrbracket = \llbracket \text{Add}\ x'\ y \rrbracket}
+
+is true. #{\llbracket x \rrbracket = \llbracket x' \rrbracket} is true by induction—we
+assume the preservation property holds as our [inductive
+hypothesis](proof-techniques-0002)—and #{\llbracket y \rrbracket = \llbracket y'
+\rrbracket} is true by reflexivity. Under [compositionality](plt-languages-0005), we
+conclude that #{\llbracket \text{Add}\ x\ y \rrbracket = \llbracket \text{Add}\ x'\ y
+\rrbracket}.}
+
+\li{If the precondition #{e \rightarrow e'} has the form
+
+##{\text{Add}\ x\ y \rightarrow \text{Add}\ x\ y'}
+
+for some transition #{y \rightarrow y'}, then we must show that
+
+##{\llbracket \text{Add}\ x\ y  \rrbracket = \llbracket \text{Add}\ x\ y' \rrbracket}
+
+is true. The proof is the same as above. #{\llbracket x \rrbracket = \llbracket x
+\rrbracket} is true by reflexivity and #{\llbracket y \rrbracket = \llbracket y'
+\rrbracket} is true by induction. Therefore, #{\llbracket \text{Add}\ x\ y \rrbracket =
+\llbracket \text{Add}\ x\ y' \rrbracket}.}}}}}

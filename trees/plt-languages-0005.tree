@@ -1,0 +1,6 @@
+\title{The compositionality property of the addition language}
+
+\p{The [compositionality](plt-semantics-0004) of the language may be defined as follows:
+
+##{\frac{\llbracket x \rrbracket = \llbracket x' \rrbracket\ \llbracket y \rrbracket = \llbracket y' \rrbracket}
+        {\llbracket \text{Add}\ x\ y \rrbracket = \llbracket \text{Add}\ x'\ y' \rrbracket}}}

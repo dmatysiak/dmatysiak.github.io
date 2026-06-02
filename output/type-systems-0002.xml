@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?>
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+  <fr:frontmatter>
+    <fr:anchor>353</fr:anchor>
+    <fr:addr type="user">type-systems-0002</fr:addr>
+    <fr:route>type-systems-0002.xml</fr:route>
+    <fr:title text="Modes of metavariables in type judgements">Modes of metavariables in type judgements</fr:title>
+    <fr:authors />
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <fr:p>Automated deduction and logic programming can be a useful lens through which to view
+type systems. Given the typing judgement <fr:tex display="block"><![CDATA[\Gamma  \vdash  e : A]]></fr:tex> with metavariables
+<fr:tex display="inline"><![CDATA[\Gamma ]]></fr:tex>, <fr:tex display="inline"><![CDATA[e]]></fr:tex> and <fr:tex display="inline"><![CDATA[A]]></fr:tex>, we can treat each of these metavariables as either inputs or
+outputs:
+
+<fr:ul><fr:li>If all three are inputs, then we are speaking of <fr:em>type checking</fr:em>.</fr:li>
+  <fr:li>If the type <fr:tex display="inline"><![CDATA[A]]></fr:tex> is an output, then we are speaking of <fr:em>type synthesis</fr:em>.</fr:li>
+  <fr:li>If the term <fr:tex display="inline"><![CDATA[e]]></fr:tex> is an output, then we are speaking of <fr:em>program synthesis</fr:em>.</fr:li></fr:ul>
+
+The "input" or "output" status of each metavariables is its <fr:em>mode</fr:em>.</fr:p>
+  </fr:mainmatter>
+  <fr:backmatter />
+</fr:tree>

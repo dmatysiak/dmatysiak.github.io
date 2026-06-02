@@ -1,0 +1,8 @@
+\title{Denotational semantics of the addition language}
+
+\p{The [denotational semantics](plt-semantics-0002) of the [addition
+language](plt-languages-0001) is given below:
+
+##{\llbracket \text{Val}\ n \rrbracket = n}
+##{\llbracket \text{Add}\ x\ y \rrbracket = \llbracket x \rrbracket + \llbracket y \rrbracket}
+}

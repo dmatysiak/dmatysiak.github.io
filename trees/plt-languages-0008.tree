@@ -1,0 +1,8 @@
+\title{Evaluation of expressions of the addition language}
+
+\p{Evaluation under the [small-step semantics](plt-languages-0006) for the addition
+language consists of zero or more transition steps. Formally, this is captured by taking
+the reflexitive transitive closure of the transition relation, written
+#{{\overset{*}{\rightarrow}}}. The evaluation of #{e} to #{e'} may be writen
+
+##{e \overset{*}{ \rightarrow } e' = e \rightarrow e_1 \rightarrow \ldots \rightarrow e_n \rightarrow e'}}

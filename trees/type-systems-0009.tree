@@ -1,0 +1,8 @@
+\title{Arrow elimination synthesis (#{\mathtt{\rightarrow E\Rightarrow}})}
+
+\p{
+  ##{\frac{\begin{array}{cc}
+             \Gamma \vdash e_1 \Rightarrow A_1 \rightarrow A_2 & \Gamma \vdash e_2 \Leftarrow A_1
+           \end{array}}
+           {\Gamma \vdash (e_1 e_2) \Rightarrow A_2}(\mathtt{\rightarrow E\Rightarrow})}}
+

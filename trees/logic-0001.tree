@@ -1,0 +1,10 @@
+\title{Witness}
+
+\p{A \em{witness} is a value that proves that an existential proposition is true.}
+
+\p{For example, for the claim
+
+##{\exists x:\mathbb{Z}.x > 100}
+
+the value #{x=101} would be a witness.
+}

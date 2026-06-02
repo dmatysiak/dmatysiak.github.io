@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?>
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+  <fr:frontmatter>
+    <fr:anchor>413</fr:anchor>
+    <fr:addr type="user">plt-languages-0003</fr:addr>
+    <fr:route>plt-languages-0003.xml</fr:route>
+    <fr:title text="The addition language defined as a data type">The addition language defined as a data type</fr:title>
+    <fr:authors />
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <fr:p>As a Haskell type, we can define the language this way:
+
+<fr:blockquote><fr:code>data Expr = Val Int | Add Expr Expr</fr:code></fr:blockquote></fr:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:title text="Context">Context</fr:title>
+        <fr:authors />
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>414</fr:anchor>
+            <fr:addr type="user">plt-languages-0001</fr:addr>
+            <fr:route>plt-languages-0001.xml</fr:route>
+            <fr:title text="An addition language">An addition language</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>This language has only one operator—addition—and one data type—the integers. The
+purpose of such a simply language is to illustrate concepts in programming language theory
+without the complexity of more realistic languages to distract us.</fr:p>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>255</fr:anchor>
+                <fr:addr type="user">plt-languages-0002</fr:addr>
+                <fr:route>plt-languages-0002.xml</fr:route>
+                <fr:title text="The addition language grammar">The addition language grammar</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>The language may be defined using a grammar in the following way:
+
+<fr:tex display="block"><![CDATA[\text {Expr} ::= \mathbb {Z}\ |\ \text {Expr} + \text {Expr}]]></fr:tex>
+
+where <fr:tex display="inline"><![CDATA[\text {Expr}]]></fr:tex> is the syntactic category of all expressions in the language and
+<fr:tex display="inline"><![CDATA[\mathbb {Z}]]></fr:tex> are the integers.</fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>256</fr:anchor>
+                <fr:addr type="user">plt-languages-0003</fr:addr>
+                <fr:route>plt-languages-0003.xml</fr:route>
+                <fr:title text="The addition language defined as a data type">The addition language defined as a data type</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>As a Haskell type, we can define the language this way:
+
+<fr:blockquote><fr:code>data Expr = Val Int | Add Expr Expr</fr:code></fr:blockquote></fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>257</fr:anchor>
+                <fr:addr type="user">plt-languages-0004</fr:addr>
+                <fr:route>plt-languages-0004.xml</fr:route>
+                <fr:title text="Denotational semantics of the addition language">Denotational semantics of the addition language</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>The <fr:link type="local" href="plt-semantics-0002.xml" addr="plt-semantics-0002" title="Denotational semantics">denotational semantics</fr:link> of the <fr:link type="local" href="plt-languages-0001.xml" addr="plt-languages-0001" title="An addition language">addition
+language</fr:link> is given below:
+
+<fr:tex display="block"><![CDATA[\llbracket  \text {Val}\ n \rrbracket  = n]]></fr:tex>
+<fr:tex display="block"><![CDATA[\llbracket  \text {Add}\ x\ y \rrbracket  = \llbracket  x \rrbracket  + \llbracket  y \rrbracket ]]></fr:tex></fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>258</fr:anchor>
+                <fr:addr type="user">plt-languages-0005</fr:addr>
+                <fr:route>plt-languages-0005.xml</fr:route>
+                <fr:title text="The compositionality property of the addition language">The compositionality property of the addition language</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>The <fr:link type="local" href="plt-semantics-0004.xml" addr="plt-semantics-0004" title="Compositionality">compositionality</fr:link> of the language may be defined as follows:
+
+<fr:tex display="block"><![CDATA[\frac {\llbracket  x \rrbracket  = \llbracket  x' \rrbracket \ \llbracket  y \rrbracket  = \llbracket  y' \rrbracket }         {\llbracket  \text {Add}\ x\ y \rrbracket  = \llbracket  \text {Add}\ x'\ y' \rrbracket }]]></fr:tex></fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>259</fr:anchor>
+                <fr:addr type="user">plt-languages-0006</fr:addr>
+                <fr:route>plt-languages-0006.xml</fr:route>
+                <fr:title text="Small-step operational semantics of the addition language">Small-step operational semantics of the addition language</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>The <fr:link type="local" href="plt-semantics-0005.xml" addr="plt-semantics-0005" title="Small-step operation semantics">small-step operational semantics</fr:link> of the <fr:link type="local" href="plt-languages-0001.xml" addr="plt-languages-0001" title="An addition language">addition
+language</fr:link> is given below.</fr:p>
+                <fr:p>The first rule is the <fr:em>reduction rule</fr:em> (or <fr:em>contraction rule</fr:em>). It specified how
+the basic operation (here, addition) can be performed. Expressions matching this rule are
+called <fr:em>reducible expressions</fr:em> or <fr:em>redexes</fr:em>:
+
+<fr:tex display="block"><![CDATA[\frac {}{\text {Add}\ (\text {Val}\ n)\ (\text {Val}\ m) \rightarrow  \text {Val}\ (n + m)}]]></fr:tex></fr:p>
+                <fr:p>The last two rules are <fr:em>structural rules</fr:em> (or <fr:em>congruence rules</fr:em>) that define how
+larger terms can be reduced:
+
+<fr:tex display="block"><![CDATA[\frac {x\rightarrow  x'}{\text {Add}\ x\ y \rightarrow  \text {Add}\ x'\ y}]]></fr:tex>
+<fr:tex display="block"><![CDATA[\frac {y\rightarrow  y'}{\text {Add}\ x\ y \rightarrow  \text {Add}\ x\ y'}]]></fr:tex></fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>260</fr:anchor>
+                <fr:addr type="user">plt-languages-0007</fr:addr>
+                <fr:route>plt-languages-0007.xml</fr:route>
+                <fr:title text="Preservation of denotation under small-step semantics of the addition language">Preservation of denotation under small-step semantics of the addition language</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>A transition according to the <fr:link type="local" href="plt-languages-0006.xml" addr="plt-languages-0006" title="Small-step operational semantics of the addition language">small-step semantics of the language</fr:link> does not change the denotation:
+
+<fr:tex display="block"><![CDATA[\frac {e \rightarrow  e'}{\llbracket  e \rrbracket  = \llbracket  e' \rrbracket }]]></fr:tex></fr:p>
+                <fr:p>This property can be proved using <fr:link type="external" href="proof-techniques">structural induction</fr:link> on the
+structure of the expression <fr:tex display="inline"><![CDATA[e]]></fr:tex>:
+
+<fr:ul><fr:li><fr:strong>Base case</fr:strong>
+<fr:p><fr:tex display="inline"><![CDATA[e = \text {Val}\ n]]></fr:tex></fr:p>
+
+<fr:p>The base case is trivially true; it does not match any rule in the small-step
+semantics, because it is already in a terminal state and so there is no possible
+transition.</fr:p></fr:li>
+
+<fr:li><fr:strong>Inductive case</fr:strong>
+<fr:p><fr:tex display="inline"><![CDATA[e = \text {Add}\ x\ y]]></fr:tex></fr:p>
+
+<fr:ol><fr:li>If the precondition <fr:tex display="inline"><![CDATA[e \rightarrow  e']]></fr:tex> has the form
+
+<fr:tex display="block"><![CDATA[\text {Add}\ (\text {Val}\ n) (\text {Val}\ m) \rightarrow  \text {Val}\ (n+m)]]></fr:tex>
+
+then the conclusion
+
+<fr:tex display="block"><![CDATA[\llbracket  \text {Add}\ (\text {Val}\ n) (\text {Val}\ m) \rrbracket  = \llbracket  \text {Val}\ (n+m) \rrbracket ]]></fr:tex>
+
+is true, because both sides evaluate to <fr:tex display="inline"><![CDATA[n+m]]></fr:tex>.</fr:li>
+
+<fr:li>If the precondition <fr:tex display="inline"><![CDATA[e \rightarrow  e']]></fr:tex> has the form
+
+<fr:tex display="block"><![CDATA[\text {Add}\ x\ y \rightarrow  \text {Add}\ x'\ y]]></fr:tex>
+
+for some transition <fr:tex display="inline"><![CDATA[x \rightarrow  x']]></fr:tex>, then we must show that
+
+<fr:tex display="block"><![CDATA[\llbracket  \text {Add}\ x\ y  \rrbracket  = \llbracket  \text {Add}\ x'\ y \rrbracket ]]></fr:tex>
+
+is true. <fr:tex display="inline"><![CDATA[\llbracket  x \rrbracket  = \llbracket  x' \rrbracket ]]></fr:tex> is true by induction—we
+assume the preservation property holds as our <fr:link type="local" href="proof-techniques-0002.xml" addr="proof-techniques-0002" title="Inductive hypothesis">inductive
+hypothesis</fr:link>—and <fr:tex display="inline"><![CDATA[\llbracket  y \rrbracket  = \llbracket  y' \rrbracket ]]></fr:tex> is true by reflexivity. Under <fr:link type="local" href="plt-languages-0005.xml" addr="plt-languages-0005" title="The compositionality property of the addition language">compositionality</fr:link>, we
+conclude that <fr:tex display="inline"><![CDATA[\llbracket  \text {Add}\ x\ y \rrbracket  = \llbracket  \text {Add}\ x'\ y \rrbracket ]]></fr:tex>.</fr:li>
+
+<fr:li>If the precondition <fr:tex display="inline"><![CDATA[e \rightarrow  e']]></fr:tex> has the form
+
+<fr:tex display="block"><![CDATA[\text {Add}\ x\ y \rightarrow  \text {Add}\ x\ y']]></fr:tex>
+
+for some transition <fr:tex display="inline"><![CDATA[y \rightarrow  y']]></fr:tex>, then we must show that
+
+<fr:tex display="block"><![CDATA[\llbracket  \text {Add}\ x\ y  \rrbracket  = \llbracket  \text {Add}\ x\ y' \rrbracket ]]></fr:tex>
+
+is true. The proof is the same as above. <fr:tex display="inline"><![CDATA[\llbracket  x \rrbracket  = \llbracket  x \rrbracket ]]></fr:tex> is true by reflexivity and <fr:tex display="inline"><![CDATA[\llbracket  y \rrbracket  = \llbracket  y' \rrbracket ]]></fr:tex> is true by induction. Therefore, <fr:tex display="inline"><![CDATA[\llbracket  \text {Add}\ x\ y \rrbracket  = \llbracket  \text {Add}\ x\ y' \rrbracket ]]></fr:tex>.</fr:li></fr:ol></fr:li></fr:ul></fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>261</fr:anchor>
+                <fr:addr type="user">plt-languages-0008</fr:addr>
+                <fr:route>plt-languages-0008.xml</fr:route>
+                <fr:title text="Evaluation of expressions of the addition language">Evaluation of expressions of the addition language</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>Evaluation under the <fr:link type="local" href="plt-languages-0006.xml" addr="plt-languages-0006" title="Small-step operational semantics of the addition language">small-step semantics</fr:link> for the addition
+language consists of zero or more transition steps. Formally, this is captured by taking
+the reflexitive transitive closure of the transition relation, written
+<fr:tex display="inline"><![CDATA[{\overset {*}{\rightarrow }}]]></fr:tex>. The evaluation of <fr:tex display="inline"><![CDATA[e]]></fr:tex> to <fr:tex display="inline"><![CDATA[e']]></fr:tex> may be writen
+
+<fr:tex display="block"><![CDATA[e \overset {*}{ \rightarrow  } e' = e \rightarrow  e_1 \rightarrow  \ldots  \rightarrow  e_n \rightarrow  e']]></fr:tex></fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+      </fr:mainmatter>
+      <fr:backmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

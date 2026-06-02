@@ -1,0 +1,7 @@
+\title{Arrow introduction checking (#{\mathtt{\rightarrow I\Leftarrow}})}
+
+\p{
+  ##{\frac{\begin{array}{cc}
+             \Gamma, x:A_1 \vdash e \Leftarrow A_2
+           \end{array}}
+           {\Gamma \vdash (\lambda x.e) \Leftarrow A_1 \rightarrow A_2}(\mathtt{\rightarrow I\Leftarrow})}}

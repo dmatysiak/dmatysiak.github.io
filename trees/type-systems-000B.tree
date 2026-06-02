@@ -1,0 +1,7 @@
+\title{Subsumption checking (#{\mathtt{Sub\Leftarrow}})}
+
+\p{
+  ##{\frac{\begin{array}{cc}
+             \Gamma \vdash e \Rightarrow A & A = B
+           \end{array}}
+           {\Gamma \vdash e \Leftarrow B}(\mathtt{Sub\Leftarrow})}}

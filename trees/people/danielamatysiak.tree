@@ -1,3 +1,7 @@
 \title{Daniel A. Matysiak}
 \taxon{Person}
 \meta{external}{https://dmatysiak.github.io}
+
+%% \p{
+%% \xmlns:html{http://www.w3.org/1999/xhtml}
+%% \<html:img>[src]{\route-asset{assets/images/face.jpg}}{}}

@@ -1,19 +1,19 @@
 \title{Denotational semantics}
 
 \p{The \em{denotational semantics} defines the meanings of terms in a language #{T} using
-a \em{valuation function} that maps syntactic terms in the syntactic domain #{T} to
-semantic values in the semantic domain #{V}. Usually, we enclose expressions in
-\em{semantic brackets} to express their denotation, e.g., for term #{e}, we can write
+a \em{valuation function} that maps syntactic terms in the \strong{syntactic domain} #{T}
+to semantic values in the \strong{semantic domain} #{V}. Usually, we enclose expressions
+in \em{semantic brackets} to express their denotation, e.g., for term #{e}, we can write
 
 %% From stmaryrd
 ##{\llbracket e \rrbracket}
 
 such that #{\llbracket - \rrbracket : T \to V}.}
 
-\p{The valuation function is \em{compositional}; the meaning of a compound term is defined
-purely in terms of the meanings of its subterms. This compositionality simplifies
-reasoning, allowing us to replace "equals by equals", i.e., we can substitute terms with
-other terms having the same meaning.
+\p{The valuation function is [\em{compositional}](plt-semantics-0004); the meaning of a
+compound term is defined purely in terms of the meanings of its subterms. This
+compositionality simplifies reasoning, allowing us to replace "equals by equals", i.e., we
+can substitute terms with other terms having the same meaning.
 
 ##{\frac{\llbracket x \rrbracket = \llbracket x' \rrbracket}{\llbracket f(x) \rrbracket = \llbracket f(x') \rrbracket}}}
 

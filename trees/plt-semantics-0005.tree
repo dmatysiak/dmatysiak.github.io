@@ -1,0 +1,8 @@
+\title{Small-step operation semantics}
+
+\p{A small-step semantics for a language ${T} of syntactic terms comprises two components:
+
+\ul{
+\li{a set of \em{execution states} #{S}}
+\li{a \em{transition relation} #{s \rightarrow s'} on #{S} that relates each state
+#{s} to each state #{s'} that may be reached by performaing a single execution step}}}

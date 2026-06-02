@@ -2,16 +2,37 @@
 <?xml-stylesheet type="text/xsl" href="default.xsl"?>
 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>239</fr:anchor>
+    <fr:anchor>359</fr:anchor>
     <fr:addr type="user">plt-semantics-0003</fr:addr>
     <fr:route>plt-semantics-0003.xml</fr:route>
-    <fr:date>
-      <fr:year>2025</fr:year>
-      <fr:month>10</fr:month>
-      <fr:day>20</fr:day>
-    </fr:date>
+    <fr:title text="Operational semantics">Operational semantics</fr:title>
     <fr:authors />
   </fr:frontmatter>
-  <fr:mainmatter />
+  <fr:mainmatter>
+    <fr:p>The <fr:em>operational semantics</fr:em> defines the meaning of terms in a langauge <fr:tex display="inline"><![CDATA[T]]></fr:tex> using an
+<fr:em>execution relation</fr:em> that specifies how terms can be executed in an appropriate machine
+model.</fr:p>
+    <fr:p>There are two forms of operations semantics:
+
+<fr:ul><fr:li><fr:strong>small-step operational semantics</fr:strong> which describes the individual execution steps</fr:li>
+<fr:li><fr:strong>big-step operational semantics</fr:strong> which describes the overall results of execution</fr:li></fr:ul></fr:p>
+    <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:anchor>360</fr:anchor>
+        <fr:addr type="user">plt-semantics-0005</fr:addr>
+        <fr:route>plt-semantics-0005.xml</fr:route>
+        <fr:title text="Small-step operation semantics">Small-step operation semantics</fr:title>
+        <fr:authors />
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:p>A small-step semantics for a language ${T} of syntactic terms comprises two components:
+
+<fr:ul><fr:li>a set of <fr:em>execution states</fr:em> <fr:tex display="inline"><![CDATA[S]]></fr:tex></fr:li>
+<fr:li>a <fr:em>transition relation</fr:em> <fr:tex display="inline"><![CDATA[s \rightarrow  s']]></fr:tex> on <fr:tex display="inline"><![CDATA[S]]></fr:tex> that relates each state
+<fr:tex display="inline"><![CDATA[s]]></fr:tex> to each state <fr:tex display="inline"><![CDATA[s']]></fr:tex> that may be reached by performaing a single execution step</fr:li></fr:ul></fr:p>
+      </fr:mainmatter>
+      <fr:backmatter />
+    </fr:tree>
+  </fr:mainmatter>
   <fr:backmatter />
 </fr:tree>

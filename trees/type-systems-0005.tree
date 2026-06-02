@@ -1,0 +1,17 @@
+\title{Why [birectional STLC](type-systems-0004) needs both #{Anno\Rightarrow} and #{Sub\Leftarrow}}
+
+\p{The #{Anno\Rightarrow} and #{Sub\Leftarrow} rules, i.e.,  
+  \transclude{type-systems-0007}
+  \transclude{type-systems-000B}
+
+rules enable moving between checking and synthesis modes. 
+
+  \ol{
+
+    \li{Without the #{Anno\Rightarrow} rule, we could not synthesize a type for a
+    checkable term. When we reach a term that can be checked, but not synthesized, we
+    synthesize the type from the annotation by extraction in order to enable checking.} 
+
+    \li{Without the #{Sub\Leftarrow} rule, we could not check a term's actual, synthesized
+    type against an expected type. In other words, it exists to check a \em{synthesizable}
+    term against the expected type dictated by the surrounding context.}}}

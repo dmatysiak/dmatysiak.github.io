@@ -1,0 +1,6 @@
+\title{Completeness (Annotatability)}
+
+\p{A bidirectional system is \em{complete with respect to a type assignment system} if
+every rule in the type assignment system has a corresponding rule in the bidirectional
+system. In general, this correspondence is easy to achieve if we begin with a type
+assignment system and "bidirectionalize" each of its rules.}

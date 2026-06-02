@@ -1,0 +1,21 @@
+\title{Type judgement in bidirectional type systems}
+
+\p{Bidirectional type systems divide the type judgement #{e:A} into two kinds:
+
+\ul{
+  \li{#{e \Leftarrow A}, or \em{check}}
+  \li{#{e \Rightarrow A}, or \em{synthesize}}}}
+
+\p{This division allows type checking to be split into two \em{modes} or operations, namely,
+\em{checking} and \em{synthesis}. Checking and synthesis can be thought of determining the
+direction of flow of type information.
+
+  \ol{
+
+    \li{In checking, the type information flows from the expected type "inward" into a
+    term. Checking enables support for features for which synthesis is too complex or even
+    undecidable.}
+
+    \li{In synthesis, the type information flows "outward" from term. Synthesis can reduce
+    the burden of explicit type annotations. Bidrectional type systems alternate between
+    checking and synthesis, and the two modes can call each other.}}} 

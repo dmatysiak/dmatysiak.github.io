@@ -1,0 +1,5 @@
+\title{The addition language defined as a data type}
+
+\p{As a Haskell type, we can define the language this way:
+
+\blockquote{\code{data Expr = Val Int | Add Expr Expr}}}

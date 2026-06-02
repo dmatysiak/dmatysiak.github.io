@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?>
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+  <fr:frontmatter>
+    <fr:anchor>406</fr:anchor>
+    <fr:addr type="user">type-systems-000B</fr:addr>
+    <fr:route>type-systems-000B.xml</fr:route>
+    <fr:title text="Subsumption checking ({Sub})">Subsumption checking (<fr:tex display="inline"><![CDATA[\mathtt {Sub\Leftarrow }]]></fr:tex>)</fr:title>
+    <fr:authors />
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <fr:p>
+      <fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}              \Gamma  \vdash  e \Rightarrow  A & A = B            \end {array}}            {\Gamma  \vdash  e \Leftarrow  B}(\mathtt {Sub\Leftarrow })]]></fr:tex>
+    </fr:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:title text="Context">Context</fr:title>
+        <fr:authors />
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>407</fr:anchor>
+            <fr:addr type="user">type-systems-0004</fr:addr>
+            <fr:route>type-systems-0004.xml</fr:route>
+            <fr:title text="Bidirectional simply-typed lambda calculus with () : {unit} and type equality">Bidirectional simply-typed lambda calculus with <fr:tex display="inline"><![CDATA[() : \text {unit}]]></fr:tex> and type equality</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>A bidirectional variant of the <fr:link type="local" href="type-systems-0003.xml" addr="type-systems-0003" title="Simply-typed lambda calculus with () : {unit} and type equality">simply-typed lambda calculus</fr:link>
+(BDSTLC) can be expressed as follows: 
+
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>268</fr:anchor><fr:addr type="user">type-systems-0006</fr:addr><fr:route>type-systems-0006.xml</fr:route><fr:title text="Variable synthesis ({Var})">Variable synthesis (<fr:tex display="inline"><![CDATA[\mathtt {Var\Rightarrow }]]></fr:tex>)</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:p><fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}              (x:A) \in  \Gamma              \end {array}}             {\Gamma  \vdash  x \Rightarrow  A}(\mathtt {Var\Rightarrow })]]></fr:tex></fr:p></fr:mainmatter><fr:backmatter /></fr:tree>
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>269</fr:anchor><fr:addr type="user">type-systems-0007</fr:addr><fr:route>type-systems-0007.xml</fr:route><fr:title text="Annotation synthesis ({Anno})">Annotation synthesis (<fr:tex display="inline"><![CDATA[\mathtt {Anno\Rightarrow }]]></fr:tex>)</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:p><fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}              \Gamma  \vdash  e \Leftarrow  A            \end {array}}            {\Gamma  \vdash  (e::A) \Rightarrow  A}(\mathtt {Anno\Rightarrow })]]></fr:tex></fr:p></fr:mainmatter><fr:backmatter /></fr:tree>
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>270</fr:anchor><fr:addr type="user">type-systems-0008</fr:addr><fr:route>type-systems-0008.xml</fr:route><fr:title text="Arrow introduction checking ({ I})">Arrow introduction checking (<fr:tex display="inline"><![CDATA[\mathtt {\rightarrow  I\Leftarrow }]]></fr:tex>)</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:p><fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}              \Gamma , x:A_1 \vdash  e \Leftarrow  A_2            \end {array}}            {\Gamma  \vdash  (\lambda  x.e) \Leftarrow  A_1 \rightarrow  A_2}(\mathtt {\rightarrow  I\Leftarrow })]]></fr:tex></fr:p></fr:mainmatter><fr:backmatter /></fr:tree>
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>271</fr:anchor><fr:addr type="user">type-systems-0009</fr:addr><fr:route>type-systems-0009.xml</fr:route><fr:title text="Arrow elimination synthesis ({ E})">Arrow elimination synthesis (<fr:tex display="inline"><![CDATA[\mathtt {\rightarrow  E\Rightarrow }]]></fr:tex>)</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:p><fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}              \Gamma  \vdash  e_1 \Rightarrow  A_1 \rightarrow  A_2 & \Gamma  \vdash  e_2 \Leftarrow  A_1            \end {array}}            {\Gamma  \vdash  (e_1 e_2) \Rightarrow  A_2}(\mathtt {\rightarrow  E\Rightarrow })]]></fr:tex></fr:p></fr:mainmatter><fr:backmatter /></fr:tree>
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>272</fr:anchor><fr:addr type="user">type-systems-000A</fr:addr><fr:route>type-systems-000A.xml</fr:route><fr:title text="Unit introduction checking ({Unit-I})">Unit introduction checking (<fr:tex display="inline"><![CDATA[\mathtt {Unit-I\Leftarrow }]]></fr:tex>)</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:p><fr:tex display="block"><![CDATA[\frac {}           {\Gamma  \vdash  ()\Leftarrow \text {unit}}(\mathtt {Unit-I\Leftarrow })]]></fr:tex></fr:p></fr:mainmatter><fr:backmatter /></fr:tree>
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>273</fr:anchor><fr:addr type="user">type-systems-000B</fr:addr><fr:route>type-systems-000B.xml</fr:route><fr:title text="Subsumption checking ({Sub})">Subsumption checking (<fr:tex display="inline"><![CDATA[\mathtt {Sub\Leftarrow }]]></fr:tex>)</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:p><fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}              \Gamma  \vdash  e \Rightarrow  A & A = B            \end {array}}            {\Gamma  \vdash  e \Leftarrow  B}(\mathtt {Sub\Leftarrow })]]></fr:tex></fr:p></fr:mainmatter><fr:backmatter /></fr:tree></fr:p>
+            <fr:p>Explanation of the rules:
+  <fr:ol><fr:li><fr:tex display="inline"><![CDATA[\mathtt {Var\Rightarrow }]]></fr:tex> has no typing premise, but since <fr:tex display="inline"><![CDATA[x:A]]></fr:tex> is in the
+    context, we can synthesize the type of <fr:tex display="inline"><![CDATA[x]]></fr:tex>. Checking would require knowing the type
+    of <fr:tex display="inline"><![CDATA[x]]></fr:tex> in advance (i.e., from the term).</fr:li>
+
+    <fr:li><fr:tex display="inline"><![CDATA[\mathtt {Anno\Rightarrow }]]></fr:tex> synthesizes the type of an annotated term. Here,
+    synthesis and checking flip from synthesis to checking. Important to note that <fr:tex display="inline"><![CDATA[e ::     A]]></fr:tex> here is not a typing judgement—which belong to the metalanguage and do not have
+    type—but a term annotated with a type and therefore part of the object language.</fr:li>
+
+    <fr:li><fr:tex display="inline"><![CDATA[\mathtt {\rightarrow  I\Leftarrow }]]></fr:tex> checks a lambda abstraction against a function
+    (arrow) type. Synthesizing the type of <fr:tex display="inline"><![CDATA[\lambda  x.e]]></fr:tex> would require synthesizing the
+    type of <fr:tex display="inline"><![CDATA[e]]></fr:tex>, but not all bodies synthesize, e.g., <fr:tex display="inline"><![CDATA[()]]></fr:tex>. Furthermore, even when the
+    body does synthesize, the type of <fr:tex display="inline"><![CDATA[x]]></fr:tex> must be known in advance; the body may depend
+    on <fr:tex display="inline"><![CDATA[x]]></fr:tex>. However, synthesis doesn't know the type of <fr:tex display="inline"><![CDATA[x]]></fr:tex>, because it cannot accept
+    type arguments, and because its type is not yet known, it is not yet in the context.
+    It would need to guess the type, which is something we are trying to avoid.</fr:li>
+
+    <fr:li><fr:tex display="inline"><![CDATA[\mathtt {\rightarrow  E\Rightarrow }]]></fr:tex>, or <fr:em>arrow elimination</fr:em>, synthesizes the 
+    type of an application. Synthesize of the function type in the first premise is
+    possible, because
+
+      <fr:ol><fr:li><fr:tex display="inline"><![CDATA[\mathtt {Var\Rightarrow }]]></fr:tex> can synthesize the type of a variable</fr:li>
+        <fr:li><fr:tex display="inline"><![CDATA[\mathtt {Anno\Rightarrow }]]></fr:tex> can synthesize the type of an annotated term</fr:li>
+        <fr:li><fr:tex display="inline"><![CDATA[\mathtt {\rightarrow  E\Rightarrow }]]></fr:tex> can synthesize the type of an application</fr:li></fr:ol>
+
+      Once the function type is synthesized, we can check the argument against the
+      parameter type which can be obtained by analyzing the synthesized function type.</fr:li>
+   
+    <fr:li><fr:tex display="inline"><![CDATA[\mathtt {Unit-I\Leftarrow }]]></fr:tex> checks the unit term against the unit type.</fr:li>
+
+    <fr:li><fr:tex display="inline"><![CDATA[\mathtt {Sub\Leftarrow }]]></fr:tex> checks a term against its expected type by synthesizing
+    the term's type and then checking that it is equal to the expected type. Note that the
+    mode flips here like it does in <fr:tex display="inline"><![CDATA[\mathtt {Anno\Rightarrow }]]></fr:tex>, but in the opposite
+    direction, from checking to synthesis.</fr:li></fr:ol></fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>408</fr:anchor>
+            <fr:addr type="user">type-systems-0005</fr:addr>
+            <fr:route>type-systems-0005.xml</fr:route>
+            <fr:title text="Why birectional STLC needs both Anno and Sub">Why <fr:link type="local" href="type-systems-0004.xml" addr="type-systems-0004" title="Bidirectional simply-typed lambda calculus with () : {unit} and type equality">birectional STLC</fr:link> needs both <fr:tex display="inline"><![CDATA[Anno\Rightarrow ]]></fr:tex> and <fr:tex display="inline"><![CDATA[Sub\Leftarrow ]]></fr:tex></fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>The <fr:tex display="inline"><![CDATA[Anno\Rightarrow ]]></fr:tex> and <fr:tex display="inline"><![CDATA[Sub\Leftarrow ]]></fr:tex> rules, i.e.,  
+  <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>275</fr:anchor><fr:addr type="user">type-systems-0007</fr:addr><fr:route>type-systems-0007.xml</fr:route><fr:title text="Annotation synthesis ({Anno})">Annotation synthesis (<fr:tex display="inline"><![CDATA[\mathtt {Anno\Rightarrow }]]></fr:tex>)</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:p><fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}              \Gamma  \vdash  e \Leftarrow  A            \end {array}}            {\Gamma  \vdash  (e::A) \Rightarrow  A}(\mathtt {Anno\Rightarrow })]]></fr:tex></fr:p></fr:mainmatter><fr:backmatter /></fr:tree>
+  <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>276</fr:anchor><fr:addr type="user">type-systems-000B</fr:addr><fr:route>type-systems-000B.xml</fr:route><fr:title text="Subsumption checking ({Sub})">Subsumption checking (<fr:tex display="inline"><![CDATA[\mathtt {Sub\Leftarrow }]]></fr:tex>)</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:p><fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}              \Gamma  \vdash  e \Rightarrow  A & A = B            \end {array}}            {\Gamma  \vdash  e \Leftarrow  B}(\mathtt {Sub\Leftarrow })]]></fr:tex></fr:p></fr:mainmatter><fr:backmatter /></fr:tree>
+
+rules enable moving between checking and synthesis modes. 
+
+  <fr:ol><fr:li>Without the <fr:tex display="inline"><![CDATA[Anno\Rightarrow ]]></fr:tex> rule, we could not synthesize a type for a
+    checkable term. When we reach a term that can be checked, but not synthesized, we
+    synthesize the type from the annotation by extraction in order to enable checking.</fr:li> 
+
+    <fr:li>Without the <fr:tex display="inline"><![CDATA[Sub\Leftarrow ]]></fr:tex> rule, we could not check a term's actual, synthesized
+    type against an expected type. In other words, it exists to check a <fr:em>synthesizable</fr:em>
+    term against the expected type dictated by the surrounding context.</fr:li></fr:ol></fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+      </fr:mainmatter>
+      <fr:backmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

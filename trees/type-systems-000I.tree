@@ -1,0 +1,43 @@
+\title{Bottom and top type}
+
+\p{A \em{bottom type} is a type that has no values and therefore no constructors. It is
+often denoted by the symbol #{\bot}.}
+
+\p{A \em{top type} is a type that has all values as its members. It is often denoted by
+the symbol #{\top}.}
+
+\p{A bottom type can be used to represent the type of expressions that: 
+
+\ol{
+
+  \li{never return a value, such as infinite loops or exceptions.}
+
+  \li{are not well-typed, such as type errors.}
+
+  \li{are not inhabited, such as the empty set.}}}
+
+\p{A bottom type can also be used to define a subtyping relation in a type system. For
+example, if we have a type system with a top type #{\top} that has all values associated
+with it, we can define a subtyping relation such that #{\bot} is a subtype of all types,
+and all types are subtypes of #{\top}. This allows us to reason about the relationships
+between types in a more flexible way.}
+
+\p{A top type can be useful in a type system for several reasons:
+
+\ol{
+
+  \li{It can be used to represent the type of expressions that can have any value, such
+  as a function that can return any type.}
+
+  \li{It can be used to represent the type of expressions that are not well-typed, such
+  as type errors.}
+
+  \li{It can be used to represent the type of expressions that are inhabited by all
+  values, such as the set of all possible values.}}}
+
+\p{A top type can also be used to define a subtyping relation in a type system. For
+example, if we have a type system with a bottom type #{\bot} that has no values associated
+with it, we can define a subtyping relation such that #{\bot} is a subtype of all types,
+and all types are subtypes of #{\top}. This allows us to reason about the relationships
+between types in a more flexible way.}
+

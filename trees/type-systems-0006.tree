@@ -1,0 +1,8 @@
+\title{Variable synthesis (#{\mathtt{Var\Rightarrow}})}
+
+\p{
+  ##{\frac{\begin{array}{cc}
+             (x:A) \in \Gamma
+            \end{array}}
+            {\Gamma \vdash x \Rightarrow A}(\mathtt{Var\Rightarrow})}
+}

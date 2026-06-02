@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?>
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+  <fr:frontmatter>
+    <fr:anchor>424</fr:anchor>
+    <fr:addr type="user">type-systems-0001</fr:addr>
+    <fr:route>type-systems-0001.xml</fr:route>
+    <fr:title text="Type judgement in bidirectional type systems">Type judgement in bidirectional type systems</fr:title>
+    <fr:authors />
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <fr:p>Bidirectional type systems divide the type judgement <fr:tex display="inline"><![CDATA[e:A]]></fr:tex> into two kinds:
+
+<fr:ul><fr:li><fr:tex display="inline"><![CDATA[e \Leftarrow  A]]></fr:tex>, or <fr:em>check</fr:em></fr:li>
+  <fr:li><fr:tex display="inline"><![CDATA[e \Rightarrow  A]]></fr:tex>, or <fr:em>synthesize</fr:em></fr:li></fr:ul></fr:p>
+    <fr:p>This division allows type checking to be split into two <fr:em>modes</fr:em> or operations, namely,
+<fr:em>checking</fr:em> and <fr:em>synthesis</fr:em>. Checking and synthesis can be thought of determining the
+direction of flow of type information.
+
+  <fr:ol><fr:li>In checking, the type information flows from the expected type "inward" into a
+    term. Checking enables support for features for which synthesis is too complex or even
+    undecidable.</fr:li>
+
+    <fr:li>In synthesis, the type information flows "outward" from term. Synthesis can reduce
+    the burden of explicit type annotations. Bidrectional type systems alternate between
+    checking and synthesis, and the two modes can call each other.</fr:li></fr:ol></fr:p>
+  </fr:mainmatter>
+  <fr:backmatter />
+</fr:tree>

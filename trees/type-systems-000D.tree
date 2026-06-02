@@ -1,0 +1,86 @@
+\title{Mode-correctness}
+
+\p{A good rule avoids guessing types. A synthesized type should be derived from known
+information and not from, e.g., an enumeration of types.}
+
+\p{A rule is \em{mode-correct} if there is a strategy for recursively deriving the
+premises such that two conditions hold:
+
+  \ol{
+
+    \li{\strong{The premises are mode-correct.} For each premise every input meta-variable is
+    known, both from the inputs to the rule's conclusions annd from the outputs of earlier
+    premises.}
+
+    \li{\strong{The conclusions are mode-correct.} If all premises have been derived, then the
+    outputs of the rule's conclusions are known.}}}
+
+\p{For the [#{\rightarrow E \Rightarrow} rule](type-systems-000C)
+
+##{\frac{\begin{array}{cc}
+           \Gamma \vdash e_1 : A \rightarrow B 
+           & \Gamma \vdash e_2 : A
+           \end{array}}
+        {\Gamma \vdash e_1 e_2 : B}}
+
+while there are #{2^3=8} variations, only four are mode-correct:
+
+##{\frac{\begin{array}{cc}
+           \Gamma \vdash e_1 \Rightarrow A \rightarrow B 
+           & \Gamma \vdash e_2 \Rightarrow A
+           \end{array}}
+        {\Gamma \vdash e_1 e_2 \Rightarrow B}}
+
+##{\frac{\begin{array}{cc}
+           \Gamma \vdash e_1 \Rightarrow A \rightarrow B 
+           & \Gamma \vdash e_2 \Leftarrow A
+           \end{array}}
+        {\Gamma \vdash e_1 e_2 \Rightarrow B}}
+
+##{\frac{\begin{array}{cc}
+           \Gamma \vdash e_1 \Rightarrow A \rightarrow B 
+           & \Gamma \vdash e_2 \Leftarrow A
+           \end{array}}
+        {\Gamma \vdash e_1 e_2 \Leftarrow B}}
+
+##{\frac{\begin{array}{cc}
+           \Gamma \vdash e_1 \Leftarrow A \rightarrow B 
+           & \Gamma \vdash e_2 \Rightarrow A
+           \end{array}}
+        {\Gamma \vdash e_1 e_2 \Leftarrow B}}
+
+The last rule \em{seems} questionable, because #{A} is unknown in the conclusion, yet the
+first premise checks #{e_1} against #{A\rightarrow B}. However, the rule is mode-correct,
+because the second premise synthesizes the type #{A}, which is then used to check #{e_1}
+against #{A \rightarrow B}. The order of premises is, therefore, important, not for
+determining the meaning of the rule, but where the strategy of applying the rule is
+concerned. A strategy is effectively a set of permutations of the premises; in this case,
+there are two possible strategies, one of which is effective.}
+
+\p{We can rewrite the last rule to reflect the effective strategy:
+
+##{\frac{\begin{array}{cc}
+           \Gamma \vdash e_2 \Rightarrow A
+           & \Gamma \vdash e_1 \Leftarrow A \rightarrow B 
+           \end{array}}
+        {\Gamma \vdash e_1 e_2 \Leftarrow B}}}
+
+\p{An example of a rule that is not mode-correct is the following:
+
+##{\frac{\begin{array}{cc}
+           \Gamma \vdash e_1 \Leftarrow A \rightarrow B 
+           & \Gamma \vdash e_2 \Leftarrow A
+           \end{array}}
+        {\Gamma \vdash e_1 e_2 \Leftarrow B}}
+
+While the type #{B} is known from the conclusion, the type #{A \rightarrow B} is unknown
+when deriving the first premise, because the type #{A} is unknown and cannot be derived.
+For the same reason, the second premise #{\Gamma \vdash e_2 \Leftarrow A} is not
+mode-correct.}
+
+\p{Mode-correctness is necessary for directly implementing a bidirectional type system
+that is deterministic. However, mode-correctness alone is insufficient for a type system
+to be syntax-directed. For that, the inputs (the context, the term and if checking, the
+type) must match the conclusion of only one rule.}
+
+

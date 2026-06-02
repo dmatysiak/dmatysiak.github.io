@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?>
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+  <fr:frontmatter>
+    <fr:anchor>301</fr:anchor>
+    <fr:addr type="user">plt-semantics-0004</fr:addr>
+    <fr:route>plt-semantics-0004.xml</fr:route>
+    <fr:title text="Compositionality">Compositionality</fr:title>
+    <fr:authors />
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <fr:p>In the context of <fr:link type="local" href="plt-semantics-0001.xml" addr="plt-semantics-0001" title="Programming language semantics">semantics</fr:link>, the <fr:em>principle of
+compositionality</fr:em> holds that the meaning of a complex expression is determined by the
+meanings of its constituents and the way they enter into the structure of that complex
+expression.</fr:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:title text="Backlinks">Backlinks</fr:title>
+        <fr:authors />
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>302</fr:anchor>
+            <fr:addr type="user">plt-semantics-0002</fr:addr>
+            <fr:route>plt-semantics-0002.xml</fr:route>
+            <fr:title text="Denotational semantics">Denotational semantics</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>The <fr:em>denotational semantics</fr:em> defines the meanings of terms in a language <fr:tex display="inline"><![CDATA[T]]></fr:tex> using
+a <fr:em>valuation function</fr:em> that maps syntactic terms in the <fr:strong>syntactic domain</fr:strong> <fr:tex display="inline"><![CDATA[T]]></fr:tex>
+to semantic values in the <fr:strong>semantic domain</fr:strong> <fr:tex display="inline"><![CDATA[V]]></fr:tex>. Usually, we enclose expressions
+in <fr:em>semantic brackets</fr:em> to express their denotation, e.g., for term <fr:tex display="inline"><![CDATA[e]]></fr:tex>, we can write
+
+<fr:tex display="block"><![CDATA[\llbracket  e \rrbracket ]]></fr:tex>
+
+such that <fr:tex display="inline"><![CDATA[\llbracket  - \rrbracket  : T \to  V]]></fr:tex>.</fr:p>
+            <fr:p>The valuation function is <fr:link type="local" href="plt-semantics-0004.xml" addr="plt-semantics-0004" title="Compositionality"><fr:em>compositional</fr:em></fr:link>; the meaning of a
+compound term is defined purely in terms of the meanings of its subterms. This
+compositionality simplifies reasoning, allowing us to replace "equals by equals", i.e., we
+can substitute terms with other terms having the same meaning.
+
+<fr:tex display="block"><![CDATA[\frac {\llbracket  x \rrbracket  = \llbracket  x' \rrbracket }{\llbracket  f(x) \rrbracket  = \llbracket  f(x') \rrbracket }]]></fr:tex></fr:p>
+            <fr:p>Because terms and their semantics are built up inductively, proofs about denotation
+semantics typically proceed using <fr:link type="local" href="proof-techniques-0001.xml" addr="proof-techniques-0001" title="Structural induction">structural induction</fr:link>. For
+instance, we can prove that our expression semantics is <fr:em>total</fr:em>: for every expression
+<fr:tex display="inline"><![CDATA[e]]></fr:tex> in the language, there is a value <fr:tex display="inline"><![CDATA[v]]></fr:tex> such that <fr:tex display="inline"><![CDATA[\llbracket  e \rrbracket  = v]]></fr:tex>. The
+proof of totality proceeds by induction on the structure of the expression <fr:tex display="inline"><![CDATA[e]]></fr:tex>.</fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>303</fr:anchor>
+            <fr:addr type="user">proof-techniques-0001</fr:addr>
+            <fr:route>proof-techniques-0001.xml</fr:route>
+            <fr:title text="Structural induction">Structural induction</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p><fr:em>Structural induction</fr:em> is a syntax-directed proof style that defines a <fr:em>base
+case</fr:em> and an <fr:em>inductive case</fr:em>. The base case provides a term for which a property <fr:tex display="inline"><![CDATA[P]]></fr:tex>
+holds, while the inductive case shows how—assuming <fr:tex display="inline"><![CDATA[P]]></fr:tex> holds for some arbitrary
+subterm(s)—it also holds for a composition that includes these subterms.</fr:p>
+            <fr:p>Consider the case where you have an small <fr:link type="local" href="plt-languages-0001.xml" addr="plt-languages-0001" title="An addition language">addition
+language</fr:link>. Suppose we wish to prove that the <fr:link type="external" href="plt-language-0004">denotational semantics
+of the language</fr:link> is <fr:em>total</fr:em>, that is, that that for every expression
+<fr:tex display="inline"><![CDATA[e]]></fr:tex> there is an integer <fr:tex display="inline"><![CDATA[n]]></fr:tex> such that <fr:tex display="inline"><![CDATA[\llbracket  e \rrbracket  = n]]></fr:tex>. If we assume
+<fr:link type="local" href="plt-semantics-0004.xml" addr="plt-semantics-0004" title="Compositionality">compositionality</fr:link>, we can prove totality holds using structural
+induction.</fr:p>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>265</fr:anchor>
+                <fr:addr type="user">plt-languages-0005</fr:addr>
+                <fr:route>plt-languages-0005.xml</fr:route>
+                <fr:title text="The compositionality property of the addition language">The compositionality property of the addition language</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>The <fr:link type="local" href="plt-semantics-0004.xml" addr="plt-semantics-0004" title="Compositionality">compositionality</fr:link> of the language may be defined as follows:
+
+<fr:tex display="block"><![CDATA[\frac {\llbracket  x \rrbracket  = \llbracket  x' \rrbracket \ \llbracket  y \rrbracket  = \llbracket  y' \rrbracket }         {\llbracket  \text {Add}\ x\ y \rrbracket  = \llbracket  \text {Add}\ x'\ y' \rrbracket }]]></fr:tex></fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:p>The <fr:strong>base case</fr:strong> is the constructor <fr:tex display="inline"><![CDATA[e = \text {Val}\ n]]></fr:tex>.</fr:p>
+            <fr:p>This case is trivial given the <fr:link type="local" href="plt-languages-0004.xml" addr="plt-languages-0004" title="Denotational semantics of the addition language">semantics</fr:link>, specifically
+<fr:tex display="inline"><![CDATA[\llbracket  \text {Val}\ n \rrbracket  = n]]></fr:tex>.</fr:p>
+            <fr:p>The <fr:strong>inductive case</fr:strong> is the constructor <fr:tex display="inline"><![CDATA[e = \text {Add}\ x\ y]]></fr:tex>.</fr:p>
+            <fr:p>Assume <fr:tex display="inline"><![CDATA[\llbracket  x \rrbracket  = n]]></fr:tex> and <fr:tex display="inline"><![CDATA[\llbracket  y \rrbracket  = m]]></fr:tex> for some
+integers <fr:tex display="inline"><![CDATA[n]]></fr:tex> and <fr:tex display="inline"><![CDATA[m]]></fr:tex>. It follows from the <fr:link type="local" href="plt-languages-0004.xml" addr="plt-languages-0004" title="Denotational semantics of the addition language">valuation function</fr:link> that
+
+<fr:tex display="block"><![CDATA[\llbracket  \text {Add}\ x\ y \rrbracket  = \llbracket  x \rrbracket  + \llbracket  y \rrbracket  = n + m]]></fr:tex></fr:p>
+            <fr:p>By assuming that the subterms of <fr:tex display="inline"><![CDATA[\text {Add}]]></fr:tex> already satisfy totality—the so-called
+<fr:link type="local" href="proof-techniques-0002.xml" addr="proof-techniques-0002" title="Inductive hypothesis"><fr:em>inductive hypothesis</fr:em></fr:link>—we can prove that totality also holds
+for <fr:tex display="inline"><![CDATA[\text {Add}\ x\ y]]></fr:tex>.</fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>304</fr:anchor>
+            <fr:addr type="user">plt-languages-0005</fr:addr>
+            <fr:route>plt-languages-0005.xml</fr:route>
+            <fr:title text="The compositionality property of the addition language">The compositionality property of the addition language</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>The <fr:link type="local" href="plt-semantics-0004.xml" addr="plt-semantics-0004" title="Compositionality">compositionality</fr:link> of the language may be defined as follows:
+
+<fr:tex display="block"><![CDATA[\frac {\llbracket  x \rrbracket  = \llbracket  x' \rrbracket \ \llbracket  y \rrbracket  = \llbracket  y' \rrbracket }         {\llbracket  \text {Add}\ x\ y \rrbracket  = \llbracket  \text {Add}\ x'\ y' \rrbracket }]]></fr:tex></fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+      </fr:mainmatter>
+      <fr:backmatter />
+    </fr:tree>
+    <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:title text="Related">Related</fr:title>
+        <fr:authors />
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>305</fr:anchor>
+            <fr:addr type="user">plt-semantics-0001</fr:addr>
+            <fr:route>plt-semantics-0001.xml</fr:route>
+            <fr:title text="Programming language semantics">Programming language semantics</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>In computer science, programming language semantics seeks to give precise mathematical
+meaning to programs.</fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+      </fr:mainmatter>
+      <fr:backmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

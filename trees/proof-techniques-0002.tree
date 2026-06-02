@@ -1,0 +1,9 @@
+\title{Inductive hypothesis}
+
+\p{The \em{inductive hypothesis} in an inductive proof is the assumption made in the
+inductive case that a property #{P} we wish to prove holds for #{E} \em{already} holds for
+some component or subordinate case that #{E} depends on.}
+
+\p{For example, #{E} may be an arithmetic sum while a component might be a term #{t_i} in
+#{E}. We then seek to show that if #{P} holds for every #{t_i} in #{E}, then it also holds
+for #{E}. Together with a base case, we prove that #{P} holds for #{E}.}

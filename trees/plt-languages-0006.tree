@@ -1,0 +1,16 @@
+\title{Small-step operational semantics of the addition language}
+
+\p{The [small-step operational semantics](plt-semantics-0005) of the [addition
+language](plt-languages-0001) is given below.}
+
+\p{The first rule is the \em{reduction rule} (or \em{contraction rule}). It specified how
+the basic operation (here, addition) can be performed. Expressions matching this rule are
+called \em{reducible expressions} or \em{redexes}:
+
+##{\frac{}{\text{Add}\ (\text{Val}\ n)\ (\text{Val}\ m) \rightarrow \text{Val}\ (n + m)}}}
+
+\p{The last two rules are \em{structural rules} (or \em{congruence rules}) that define how
+larger terms can be reduced:
+
+##{\frac{x\rightarrow x'}{\text{Add}\ x\ y \rightarrow \text{Add}\ x'\ y}}
+##{\frac{y\rightarrow y'}{\text{Add}\ x\ y \rightarrow \text{Add}\ x\ y'}}}

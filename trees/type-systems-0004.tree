@@ -1,0 +1,51 @@
+\title{Bidirectional simply-typed lambda calculus with #{() : \text{unit}} and type equality}
+
+\p{A bidirectional variant of the [simply-typed lambda calculus](type-systems-0003)
+(BDSTLC) can be expressed as follows: 
+
+\transclude{type-systems-0006}
+\transclude{type-systems-0007}
+\transclude{type-systems-0008}
+\transclude{type-systems-0009}
+\transclude{type-systems-000A}
+\transclude{type-systems-000B}
+}
+
+\p{Explanation of the rules:
+  \ol{
+    \li{#{\mathtt{Var\Rightarrow}} has no typing premise, but since #{x:A} is in the
+    context, we can synthesize the type of #{x}. Checking would require knowing the type
+    of #{x} in advance (i.e., from the term).}
+
+    \li{#{\mathtt{Anno\Rightarrow}} synthesizes the type of an annotated term. Here,
+    synthesis and checking flip from synthesis to checking. Important to note that #{e ::
+    A} here is not a typing judgement—which belong to the metalanguage and do not have
+    type—but a term annotated with a type and therefore part of the object language.}
+
+    \li{#{\mathtt{\rightarrow I\Leftarrow}} checks a lambda abstraction against a function
+    (arrow) type. Synthesizing the type of #{\lambda x.e} would require synthesizing the
+    type of #{e}, but not all bodies synthesize, e.g., #{()}. Furthermore, even when the
+    body does synthesize, the type of #{x} must be known in advance; the body may depend
+    on #{x}. However, synthesis doesn't know the type of #{x}, because it cannot accept
+    type arguments, and because its type is not yet known, it is not yet in the context.
+    It would need to guess the type, which is something we are trying to avoid.}
+
+    \li{#{\mathtt{\rightarrow E\Rightarrow}}, or \em{arrow elimination}, synthesizes the 
+    type of an application. Synthesize of the function type in the first premise is
+    possible, because
+
+      \ol{
+        \li{#{\mathtt{Var\Rightarrow}} can synthesize the type of a variable}
+        \li{#{\mathtt{Anno\Rightarrow}} can synthesize the type of an annotated term}
+        \li{#{\mathtt{\rightarrow E\Rightarrow}} can synthesize the type of an application}
+      }
+
+      Once the function type is synthesized, we can check the argument against the
+      parameter type which can be obtained by analyzing the synthesized function type.}
+   
+    \li{#{\mathtt{Unit-I\Leftarrow}} checks the unit term against the unit type.}
+
+    \li{#{\mathtt{Sub\Leftarrow}} checks a term against its expected type by synthesizing
+    the term's type and then checking that it is equal to the expected type. Note that the
+    mode flips here like it does in #{\mathtt{Anno\Rightarrow}}, but in the opposite
+    direction, from checking to synthesis.}}}
