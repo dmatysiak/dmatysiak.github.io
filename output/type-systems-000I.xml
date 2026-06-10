@@ -5,41 +5,20 @@
     <fr:anchor>296</fr:anchor>
     <fr:addr type="user">type-systems-000I</fr:addr>
     <fr:route>type-systems-000I.xml</fr:route>
-    <fr:title text="Bottom and top type">Bottom and top type</fr:title>
+    <fr:title text="Bottom type and top type">Bottom type and top type</fr:title>
     <fr:authors />
   </fr:frontmatter>
   <fr:mainmatter>
-    <fr:p>A <fr:em>bottom type</fr:em> is a type that has no values and therefore no constructors. It is
-often denoted by the symbol <fr:tex display="inline"><![CDATA[\bot ]]></fr:tex>.</fr:p>
-    <fr:p>A <fr:em>top type</fr:em> is a type that has all values as its members. It is often denoted by
-the symbol <fr:tex display="inline"><![CDATA[\top ]]></fr:tex>.</fr:p>
-    <fr:p>A bottom type can be used to represent the type of expressions that: 
-
-<fr:ol><fr:li>never return a value, such as infinite loops or exceptions.</fr:li>
-
-  <fr:li>are not well-typed, such as type errors.</fr:li>
-
-  <fr:li>are not inhabited, such as the empty set.</fr:li></fr:ol></fr:p>
-    <fr:p>A bottom type can also be used to define a subtyping relation in a type system. For
-example, if we have a type system with a top type <fr:tex display="inline"><![CDATA[\top ]]></fr:tex> that has all values associated
-with it, we can define a subtyping relation such that <fr:tex display="inline"><![CDATA[\bot ]]></fr:tex> is a subtype of all types,
-and all types are subtypes of <fr:tex display="inline"><![CDATA[\top ]]></fr:tex>. This allows us to reason about the relationships
-between types in a more flexible way.</fr:p>
-    <fr:p>A top type can be useful in a type system for several reasons:
-
-<fr:ol><fr:li>It can be used to represent the type of expressions that can have any value, such
-  as a function that can return any type.</fr:li>
-
-  <fr:li>It can be used to represent the type of expressions that are not well-typed, such
-  as type errors.</fr:li>
-
-  <fr:li>It can be used to represent the type of expressions that are inhabited by all
-  values, such as the set of all possible values.</fr:li></fr:ol></fr:p>
-    <fr:p>A top type can also be used to define a subtyping relation in a type system. For
-example, if we have a type system with a bottom type <fr:tex display="inline"><![CDATA[\bot ]]></fr:tex> that has no values associated
-with it, we can define a subtyping relation such that <fr:tex display="inline"><![CDATA[\bot ]]></fr:tex> is a subtype of all types,
-and all types are subtypes of <fr:tex display="inline"><![CDATA[\top ]]></fr:tex>. This allows us to reason about the relationships
-between types in a more flexible way.</fr:p>
+    <fr:p>A <fr:em>bottom type</fr:em> is the universal subtype and an uninhabitated type that has no
+values and therefore no constructors. It is often denoted by the symbol <fr:tex display="inline"><![CDATA[\bot ]]></fr:tex>. If a
+function promises to return a bottom type, it will never terminate successfully (this
+includes errors and exceptions). As such, the bottom type can be used to represent the
+type of expressions that never return a value. Because <fr:tex display="inline"><![CDATA[\bot ]]></fr:tex> is a subtype of everything,
+you can safely use a bottom-type expression anywhere any other type is expected.</fr:p>
+    <fr:p>A <fr:em>top type</fr:em> is the universal supertype that encompasses all values as its
+inhabitants. It is often denoted by the symbol <fr:tex display="inline"><![CDATA[\top ]]></fr:tex>. A top type can be useful for
+representing the type of expressions that can have any value or where specific type
+information has been abstracted away.</fr:p>
   </fr:mainmatter>
   <fr:backmatter />
 </fr:tree>

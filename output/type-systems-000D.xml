@@ -170,7 +170,7 @@ assignment system and "bidirectionalize" each of its rules.</fr:p>
                 <fr:authors />
               </fr:frontmatter>
               <fr:mainmatter>
-                <fr:p>While tbe number of rules in a type system is not a strict measure of its complexity,
+                <fr:p>While the number of rules in a type system is not a strict measure of its complexity,
 it can be an effective heuristic for comparing two system in an inclusion relationship,
 e.g., when system <fr:tex display="inline"><![CDATA[S_1]]></fr:tex> is a strict subset of system <fr:tex display="inline"><![CDATA[S_2]]></fr:tex>. In such cases, one can
 reasonably claim that <fr:tex display="inline"><![CDATA[S_1]]></fr:tex> is simpler than <fr:tex display="inline"><![CDATA[S_2]]></fr:tex>, because it has fewer rules. Smaller
@@ -341,7 +341,7 @@ assignment system and "bidirectionalize" each of its rules.</fr:p>
                 <fr:authors />
               </fr:frontmatter>
               <fr:mainmatter>
-                <fr:p>While tbe number of rules in a type system is not a strict measure of its complexity,
+                <fr:p>While the number of rules in a type system is not a strict measure of its complexity,
 it can be an effective heuristic for comparing two system in an inclusion relationship,
 e.g., when system <fr:tex display="inline"><![CDATA[S_1]]></fr:tex> is a strict subset of system <fr:tex display="inline"><![CDATA[S_2]]></fr:tex>. In such cases, one can
 reasonably claim that <fr:tex display="inline"><![CDATA[S_1]]></fr:tex> is simpler than <fr:tex display="inline"><![CDATA[S_2]]></fr:tex>, because it has fewer rules. Smaller
