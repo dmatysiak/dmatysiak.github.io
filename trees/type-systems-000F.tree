@@ -1,6 +1,6 @@
 \title{Size of the rule set}
 
-\p{While tbe number of rules in a type system is not a strict measure of its complexity,
+\p{While the number of rules in a type system is not a strict measure of its complexity,
 it can be an effective heuristic for comparing two system in an inclusion relationship,
 e.g., when system #{S_1} is a strict subset of system #{S_2}. In such cases, one can
 reasonably claim that #{S_1} is simpler than #{S_2}, because it has fewer rules. Smaller
