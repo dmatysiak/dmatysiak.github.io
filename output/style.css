@@ -144,6 +144,9 @@ mrow:hover {
 .logo {
   font-weight: 1000;
   font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo a {
@@ -152,6 +155,27 @@ mrow:hover {
 }
 
 .logo a:hover {
+  color: #aaa;
+}
+
+.logo-switches {
+  display: inline-flex;
+  align-items: center;
+}
+
+button#search-button {
+  margin: auto 4px;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+  background: 0 0;
+  border: 0;
+  color: #666;
+  display: inline-flex;
+  align-items: center;
+}
+
+button#search-button:hover {
   color: #aaa;
 }
 

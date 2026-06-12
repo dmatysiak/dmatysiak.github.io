@@ -20,13 +20,25 @@
           </xsl:if>
         </script>
         <script type="module" src="forester.js"></script>
+        <script type="text/javascript">
+          // Event delegation, attached immediately, so it does not depend on
+          // DOMContentLoaded/load timing (unreliable in XSLT-transformed
+          // documents, esp. Firefox) or on when the button is parsed.
+          document.addEventListener('click', function (e) {
+            var t = e.target;
+            var btn = t &amp;&amp; t.closest ? t.closest('#search-button') : null;
+            if (btn) {
+              var ninja = document.querySelector('ninja-keys');
+              if (ninja &amp;&amp; ninja.open) ninja.open();
+            }
+          });
+        </script>
         <title>
           <xsl:value-of select="/f:tree/f:frontmatter/f:title[@text]" />
         </title>
       </head>
       <body>
         <ninja-keys placeholder="Start typing a note title or ID"></ninja-keys>
-        <xsl:if test="not(/f:tree[@root = 'true'])">
 <!--
           <header class="header">
             <nav class="nav">
@@ -47,7 +59,7 @@
         </a>
       </xsl:if>
       <span class="logo-switches">
-        <button id="search"><svg xmlns=
+        <button id="search-button" title="Search (Ctrl/Cmd-K)"><svg xmlns=
         "http://www.w3.org/2000/svg" width="24"
         height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2"
         stroke-linecap="round" stroke-linejoin="round">
@@ -58,7 +70,6 @@
     </div>
   </nav>
 </header>
-        </xsl:if>
         <div id="grid-wrapper">
           <article>
             <xsl:apply-templates select="f:tree" />
