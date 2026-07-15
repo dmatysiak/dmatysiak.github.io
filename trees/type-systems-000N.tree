@@ -1,0 +1,9 @@
+\title{Arrow elimination}
+
+\p{
+
+##{\frac{\begin{array}{cc}
+          \Gamma \vdash e_1 : A_1 \rightarrow A_2 & \Gamma \vdash e_2 : A_1
+        \end{array}}
+       {\Gamma \vdash (e_1 e_2) : A_2}(\mathtt{\rightarrow E})}
+}

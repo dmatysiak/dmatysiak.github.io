@@ -1,0 +1,6 @@
+\title{Bound variable}
+
+\p{A \strong{bound variable} is a variable that is declared within a term and is only
+valid within the scope of that term. In the lambda abstraction #{\lambda x.e}, the
+variable #{x} is bound within the scope of the abstraction, viz., the subterm #{e}, i.e.,
+the body of the abstraction.}

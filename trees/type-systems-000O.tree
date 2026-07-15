@@ -1,0 +1,10 @@
+\title{Annotation introduction}
+
+\p{
+
+##{\frac{\begin{array}{cc}
+           \Gamma \vdash e : A
+         \end{array}}
+        {\Gamma \vdash (e::A) : A}(\mathtt{Anno})}
+
+}

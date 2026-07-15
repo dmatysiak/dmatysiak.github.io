@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?>
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+  <fr:frontmatter>
+    <fr:anchor>553</fr:anchor>
+    <fr:addr type="user">plt-languages-000H</fr:addr>
+    <fr:route>plt-languages-000H.xml</fr:route>
+    <fr:title text="Alpha-conversion">Alpha-conversion</fr:title>
+    <fr:authors />
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <fr:p><fr:strong><fr:tex display="inline"><![CDATA[\alpha ]]></fr:tex>-conversion</fr:strong> is a rule that allows bound variable names to be changed
+consistently throughout a term. Two terms are considered equivalent under
+<fr:tex display="inline"><![CDATA[\alpha ]]></fr:tex>-conversion. For example, the following two terms are considered equivalent under
+alpha-conversion:
+
+<fr:tex display="block"><![CDATA[\lambda  x.x \equiv _\alpha  \lambda  y.y]]></fr:tex></fr:p>
+    <fr:p>Formally, we may define <fr:tex display="inline"><![CDATA[\alpha ]]></fr:tex>-equivalence, and implicitly <fr:tex display="inline"><![CDATA[\alpha ]]></fr:tex>-conversion, as
+follows: 
+
+<fr:tex display="block"><![CDATA[\frac {y \notin  \text {FV}(e)}         {\lambda  x.e \equiv _\alpha  \lambda  y.e[y/x]}]]></fr:tex></fr:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:title text="Backlinks">Backlinks</fr:title>
+        <fr:authors />
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>554</fr:anchor>
+            <fr:addr type="user">plt-languages-000G</fr:addr>
+            <fr:route>plt-languages-000G.xml</fr:route>
+            <fr:title text="De Bruijn indices versus de Bruijn levels">De Bruijn indices versus de Bruijn levels</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>555</fr:anchor>
+                <fr:addr type="user">plt-languages-000O</fr:addr>
+                <fr:route>plt-languages-000O.xml</fr:route>
+                <fr:title text="De Bruijn indices">De Bruijn indices</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p><fr:strong>De Bruijn indices</fr:strong> are <fr:link type="local" href="plt-languages-000P.xml" addr="plt-languages-000P" title="De Bruijn levels">a way</fr:link> of representing variables in
+a term without using names. Instead of naming variables, we use numbers to indicate how
+many binders away the variable is from its binding site. This makes indices <fr:em>relative</fr:em>
+to the binding site.</fr:p>
+                <fr:p>For example, consider the following terms: 
+
+<fr:tex display="block"><![CDATA[\begin {array}{c} \lambda  x. \lambda  y. \lambda  z. x \\ \lambda  x. \lambda  y. \lambda  z. y \\ \lambda  x. \lambda  y. \lambda  z. z \end {array}]]></fr:tex>
+
+In the first term, the variable <fr:tex display="inline"><![CDATA[x]]></fr:tex> is bound by the first lambda which is two binding
+sites away. As a result, it is represented by the index <fr:tex display="inline"><![CDATA[2]]></fr:tex>. Similarly, in the second
+term, the variable <fr:tex display="inline"><![CDATA[y]]></fr:tex> is bound by the second lambda, so it is represented by the index
+1. Lastly, the variable <fr:tex display="inline"><![CDATA[z]]></fr:tex> is bound by the third lambda, so it is represented by the
+index 0. This gives us the following indexed representations of these closed terms:
+
+<fr:tex display="block"><![CDATA[ \begin {align*}  \lambda  \overset {\red {2}}{\vphantom {y}x}.   \lambda  \overset {\gray {1}}{y}.   \lambda  \overset {\gray {0}}{\vphantom {y}z}. \underset {\red {2}}{x}   &\equiv  \lambda  \lambda  \lambda  \red {2} \\   \lambda  \overset {\gray {2}}{x}.   \lambda  \overset {\red {1}}{y}.   \lambda  \overset {\gray {0}}{\vphantom {y}z}. \underset {\red {1}}{y}   &\equiv  \lambda  \lambda  \lambda  \red {1} \\   \lambda  \overset {\gray {2}}{x}.   \lambda  \overset {\gray {1}}{y}.    \lambda  \overset {\red {0}}{\vphantom {y}z}. \underset {\red {0}}{z}   &\equiv  \lambda  \lambda  \lambda  \red {0}   \end {align*}]]></fr:tex></fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>556</fr:anchor>
+                <fr:addr type="user">plt-languages-000P</fr:addr>
+                <fr:route>plt-languages-000P.xml</fr:route>
+                <fr:title text="De Bruijn levels">De Bruijn levels</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p><fr:strong>De Bruijn levels</fr:strong> are <fr:link type="local" href="plt-languages-000O.xml" addr="plt-languages-000O" title="De Bruijn indices">a way</fr:link> of representing variables in
+a term without using names. Instead of using indices, we use levels to indicate how many
+binders away the variable is from the root of the term, making levels absolute. In this
+representation, the variable <fr:tex display="inline"><![CDATA[x]]></fr:tex> is represented by the level <fr:tex display="inline"><![CDATA[0]]></fr:tex>, the variable <fr:tex display="inline"><![CDATA[y]]></fr:tex> is
+represented by the level <fr:tex display="inline"><![CDATA[1]]></fr:tex> and the variable <fr:tex display="inline"><![CDATA[z]]></fr:tex> is represented by the level <fr:tex display="inline"><![CDATA[2]]></fr:tex>. This
+gives us the following level representations of these closed terms: 
+
+<fr:tex display="block"><![CDATA[ \begin {align*}  \lambda  \overset {\red {0}}{\vphantom {y}x}.   \lambda  \overset {\gray {1}}{y}.    \lambda  \overset {\gray {2}}{\vphantom {y}z}. \underset {\red {0}}{x}   &\equiv  \lambda  \lambda  \lambda  \red {0} \\   \lambda  \overset {\gray {0}}{\vphantom {y}x}.   \lambda  \overset {\red {1}}{y}.   \lambda  \overset {\gray {2}}{\vphantom {y}z}. \underset {\gray {1}}{y}   &\equiv  \lambda  \lambda  \lambda  \red {1} \\   \lambda  \overset {\gray {0}}{\vphantom {y}x}.   \lambda  \overset {\gray {1}}{y}.   \lambda  \overset {\red {2}}{\vphantom {y}z}. \underset {\red {2}}{z}   &\equiv  \lambda  \lambda  \lambda  red{2}   \end {align*}]]></fr:tex></fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:p>Both de Bruijn indices and de Bruijn levels eliminate the need for
+<fr:link type="local" href="plt-languages-000H.xml" addr="plt-languages-000H" title="Alpha-conversion"><fr:tex display="inline"><![CDATA[\alpha ]]></fr:tex>-conversion</fr:link>. However, each has different affordances that
+make one better suited for certain operations over the other. For instance, indices are 
+better suited for substitution of closed terms than levels, e.g.,
+
+<fr:tex display="block"><![CDATA[\begin {aligned} & \lambda  \overset {\red {2}}{\vphantom {y}x}.    \lambda  \overset {\gray {1}}{y}.    \lambda  \overset {\gray {0}}{\vphantom {y}z}. \underset {\red {2}}{x}~   \lambda  \overset {\red {0}}{\vphantom {y}x}. \underset {\red {0}}{x}  &\equiv   & \lambda  \lambda  \lambda  \red {2}~\lambda  \red {0} \\  \rightarrow _\beta ~  & \lambda  y.    \lambda  z.    \lambda  \overset {\red {0}}{\vphantom {y}x}. \underset {\red {0}}{x} &\equiv  & \lambda  \lambda  \lambda  \red {0} \end {aligned}]]></fr:tex>
+
+versus
+
+<fr:tex display="block"><![CDATA[\begin {aligned} & \lambda  \overset {\red {0}}{\vphantom {y}x}.    \lambda  \overset {\gray {1}}{y}.    \lambda  \overset {\gray {2}}{\vphantom {y}z}. \underset {\red {0}}{x}~   \lambda  \overset {\red {0}}{\vphantom {y}x}.    \underset {\red {0}}{x}  &\equiv   & \lambda  \lambda  \lambda  \red {0}~\lambda  \red {0} \\  \rightarrow _\beta ~  & \lambda  \overset {\gray {1}}{y}.    \lambda  \overset {\gray {2}}{\vphantom {y}z}.    \lambda  \overset {\red {0}}{\vphantom {y}x}. \underset {\red {0}}{x} &\equiv  & \lambda  \lambda  \lambda  \red {0}  \left .\right \rbrace  \hbox {\footnotesize \text {bad levels}}\\  \rightarrow ~   & \lambda  \overset {\gray {0}}{y}.    \lambda  \overset {\gray {1}}{\vphantom {y}z}.    \lambda  \overset {\red {2}}{\vphantom {y}x}. \underset {\red {2}}{x} &\equiv  & \lambda  \lambda  \lambda  \red {2}  \end {aligned}]]></fr:tex>
+
+Levels require shifting here, because, first, the application eliminates the outermost
+binder and, therefore, alters the root, and second, the new innermost subterm must be
+adjusted to align with the root. In contrast, indices are relative to the binding site
+which means that their alignment is preserved.</fr:p>
+            <fr:p>On the other hand, levels are better suited for keeping free variables stable in open
+terms. Consider the following example containing the free variable <fr:tex display="inline"><![CDATA[g]]></fr:tex> and using indices
+(where <fr:tex display="inline"><![CDATA[\Gamma _s]]></fr:tex> is the context stack): 
+
+<fr:tex display="block"><![CDATA[\begin {aligned} & \Gamma _s = [\overset {\red {3}}{g}, \overset {\red {2}}{x}, \overset {\gray {1}}{y}, \overset {\gray {0}}{z}] & \\  & \lambda  \overset {\red {2}}{x}.    \lambda  \overset {\gray {1}}{y}.    \lambda  \overset {\gray {0}}{z}. \underset {\red {3}}{g}~\underset {\red {2}}{\vphantom {g}x}~   \lambda  \overset {\red {0}}{x}. \underset {\red {0}}{x}  &\equiv   & \lambda  \lambda  \lambda  \red {3}~\red {2}~   \lambda  \red {0} \\  \hline  & \Gamma _s = [\overset {\red {3}}{g}, \overset {\gray {1}}{y}, \overset {\gray {0}}{z}] & \\  \rightarrow _\beta ~ & \lambda  \overset {\gray {1}}{y}.    \lambda  \overset {\gray {0}}{z}. \underset {\red {3}}{g}~   \lambda  \overset {\red {0}}{\vphantom {g}x}. \underset {\red {0}}{\vphantom {g}x} &\equiv   & \lambda  \lambda  \lambda  \red {3}~\red {0}  \left .\right \rbrace  \hbox {\footnotesize \text {bad free index}}\\  \hline  & \Gamma _s = [\overset {\red {2}}{g}, \overset {\gray {1}}{y}, \overset {\gray {0}}{z}] & \\  \rightarrow ~ & \lambda  \overset {\gray {1}}{y}.    \lambda  \overset {\gray {0}}{z}. \underset {\red {2}}{g}~   \lambda  \overset {\red {0}}{\vphantom {g}x}. \underset {\red {0}}{\vphantom {g}x} &\equiv   & \lambda  \lambda  \lambda  \red {2}~\red {0} \end {aligned}]]></fr:tex>
+
+Now consider the same example using levels:
+
+<fr:tex display="block"><![CDATA[\begin {aligned} & \Gamma _s = [\overset {\red {0}}{g}, \overset {\gray {1}}{x}, \overset {\gray {2}}{y}, \overset {\gray {3}}{z}] \\  & \lambda  \overset {\red {1}}{x}.    \lambda  \overset {\gray {2}}{y}.    \lambda  \overset {\gray {3}}{z}. \underset {\red {0}}{g}~\underset {\red {1}}{\vphantom {g}x}~    \lambda  \overset {\red {1}}{x}. \underset {\red {1}}{x}  &\equiv   & \lambda  \lambda  \lambda  \red {0}~\red {1}~\lambda  \red {1} \\  \hline  & \Gamma _s = [\overset {\red {0}}{g}, \overset {\gray {2}}{y}, \overset {\gray {3}}{z}] \\  \rightarrow _\beta ~ & \lambda  \overset {\gray {2}}{y}.    \lambda  \overset {\gray {3}}{z}. \underset {\red {0}}{g}~\lambda  \overset {\red {1}}{x}. \underset {\red {1}}{\vphantom {g}x}  &\equiv  & \lambda  \lambda  \lambda  \red {0}~\lambda  \red {1}   \left .\right \rbrace  \hbox {\footnotesize \text {bad binding levels}}\\  \hline  & \Gamma _s = [\overset {\red {0}}{g}, \overset {\gray {1}}{y}, \overset {\gray {2}}{z}] \\  \rightarrow ~ & \lambda  \overset {\gray {1}}{y}.    \lambda  \overset {\gray {2}}{z}. \underset {\red {0}}{g}~\lambda  \overset {\red {3}}{x}. \underset {\red {3}}{\vphantom {g}x}  &\equiv  & \lambda  \lambda  \lambda  \red {0}~\lambda  \red {3}  \end {aligned}]]></fr:tex>
+
+Furthemore, levels preserve the identity of bound variables without needing to adjust
+them. Consider the case using indices and two instances of the same variable <fr:tex display="inline"><![CDATA[x]]></fr:tex>:
+
+<fr:tex display="block"><![CDATA[\lambda  x. (x \lambda  y. x y) \equiv  \lambda  0~\lambda  1~0]]></fr:tex>
+
+and compare it to the case using levels:
+
+<fr:tex display="block"><![CDATA[\lambda  x. (x~\lambda  y. x~y) \equiv  \lambda  0~\lambda  0~1]]></fr:tex></fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+      </fr:mainmatter>
+      <fr:backmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

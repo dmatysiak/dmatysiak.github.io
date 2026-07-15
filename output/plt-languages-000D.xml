@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?>
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+  <fr:frontmatter>
+    <fr:anchor>392</fr:anchor>
+    <fr:addr type="user">plt-languages-000D</fr:addr>
+    <fr:route>plt-languages-000D.xml</fr:route>
+    <fr:title text="Introduction form">Introduction form</fr:title>
+    <fr:authors />
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <fr:p>An <fr:em>introduction form</fr:em> is a syntactic term that is constructed using a constructor
+in an introduction rule. For instance, given two natural numbers <fr:tex display="inline"><![CDATA[n]]></fr:tex> and <fr:tex display="inline"><![CDATA[m]]></fr:tex>, an
+introducton rule for pairs 
+
+<fr:tex display="block"><![CDATA[\frac {\Gamma  \vdash  n:\text {nat} \quad  \Gamma  \vdash  m:\text {nat}}         {\Gamma  \vdash  \langle  n, m\rangle :\text {pair}(\text {nat}, \text {nat})}]]></fr:tex>
+
+might produce the introduction form <fr:tex display="inline"><![CDATA[\langle  n, m\rangle ]]></fr:tex>.
+<fr:link type="local" href="plt-languages-000F.xml" addr="plt-languages-000F" title="Evaluation and reduction">Evaluation</fr:link> of an introduction form produces a corresponding
+<fr:link type="local" href="plt-languages-000B.xml" addr="plt-languages-000B" title="Value">value</fr:link> in the semantic domain.</fr:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:title text="Backlinks">Backlinks</fr:title>
+        <fr:authors />
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>393</fr:anchor>
+            <fr:addr type="user">plt-languages-000B</fr:addr>
+            <fr:route>plt-languages-000B.xml</fr:route>
+            <fr:title text="Value">Value</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>A <fr:em>value</fr:em> is a term that is fully reduced and cannot be reduced any further. Values
+are the final results of computations.</fr:p>
+            <fr:p>It is important to note that the word "value" is overloaded in programming language
+theory. Syntactically and <fr:link type="local" href="plt-semantics-0003.xml" addr="plt-semantics-0003" title="Operational semantics">operationally</fr:link>, a value is a fully reduced
+<fr:em>term</fr:em> in the syntactic domain characterized by an <fr:link type="local" href="plt-languages-000D.xml" addr="plt-languages-000D" title="Introduction form">introduction
+form</fr:link> and an absence of <fr:link type="local" href="plt-languages-000E.xml" addr="plt-languages-000E" title="Elimination form">elimination forms</fr:link>.
+Semantically and <fr:link type="local" href="plt-semantics-0002.xml" addr="plt-semantics-0002" title="Denotational semantics">denotationally</fr:link> speaking, a value is an object in
+the model or the semantic domain of the language. Whereas operationally, the expression
+<fr:tex display="inline"><![CDATA[\text {add}(2, 3)]]></fr:tex> is different from the expression <fr:tex display="inline"><![CDATA[5]]></fr:tex>, denotationally, they have the
+same value, i.e., <fr:tex display="inline"><![CDATA[\llbracket  \text {add}(2, 3)\rrbracket  = \llbracket  5 \rrbracket ]]></fr:tex>.</fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+      </fr:mainmatter>
+      <fr:backmatter />
+    </fr:tree>
+    <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:title text="Related">Related</fr:title>
+        <fr:authors />
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>394</fr:anchor>
+            <fr:addr type="user">plt-languages-000F</fr:addr>
+            <fr:route>plt-languages-000F.xml</fr:route>
+            <fr:title text="Evaluation and reduction">Evaluation and reduction</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p><fr:em>Evaluation</fr:em> is a function or a process of computing semantic values from syntactic
+terms. It is <fr:link type="local" href="plt-languages-0004.xml" addr="plt-languages-0004" title="Denotational semantics of the addition language">denotational</fr:link> in nature. Evaluation should be
+distinguished from <fr:em>reduction</fr:em>, which is the process of computing a syntactic term from
+another syntactic term—usually a <fr:link type="local" href="plt-languages-000C.xml" addr="plt-languages-000C" title="Redex">redex</fr:link>—that is equivalent, but
+having had some elimination rule applied. When a term can be reduced no further, it is a
+<fr:link type="local" href="plt-languages-000A.xml" addr="plt-languages-000A" title="Normal form">normal form</fr:link>.</fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>395</fr:anchor>
+            <fr:addr type="user">plt-languages-000B</fr:addr>
+            <fr:route>plt-languages-000B.xml</fr:route>
+            <fr:title text="Value">Value</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>A <fr:em>value</fr:em> is a term that is fully reduced and cannot be reduced any further. Values
+are the final results of computations.</fr:p>
+            <fr:p>It is important to note that the word "value" is overloaded in programming language
+theory. Syntactically and <fr:link type="local" href="plt-semantics-0003.xml" addr="plt-semantics-0003" title="Operational semantics">operationally</fr:link>, a value is a fully reduced
+<fr:em>term</fr:em> in the syntactic domain characterized by an <fr:link type="local" href="plt-languages-000D.xml" addr="plt-languages-000D" title="Introduction form">introduction
+form</fr:link> and an absence of <fr:link type="local" href="plt-languages-000E.xml" addr="plt-languages-000E" title="Elimination form">elimination forms</fr:link>.
+Semantically and <fr:link type="local" href="plt-semantics-0002.xml" addr="plt-semantics-0002" title="Denotational semantics">denotationally</fr:link> speaking, a value is an object in
+the model or the semantic domain of the language. Whereas operationally, the expression
+<fr:tex display="inline"><![CDATA[\text {add}(2, 3)]]></fr:tex> is different from the expression <fr:tex display="inline"><![CDATA[5]]></fr:tex>, denotationally, they have the
+same value, i.e., <fr:tex display="inline"><![CDATA[\llbracket  \text {add}(2, 3)\rrbracket  = \llbracket  5 \rrbracket ]]></fr:tex>.</fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+      </fr:mainmatter>
+      <fr:backmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

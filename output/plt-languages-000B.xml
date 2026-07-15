@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?>
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+  <fr:frontmatter>
+    <fr:anchor>537</fr:anchor>
+    <fr:addr type="user">plt-languages-000B</fr:addr>
+    <fr:route>plt-languages-000B.xml</fr:route>
+    <fr:title text="Value">Value</fr:title>
+    <fr:authors />
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <fr:p>A <fr:em>value</fr:em> is a term that is fully reduced and cannot be reduced any further. Values
+are the final results of computations.</fr:p>
+    <fr:p>It is important to note that the word "value" is overloaded in programming language
+theory. Syntactically and <fr:link type="local" href="plt-semantics-0003.xml" addr="plt-semantics-0003" title="Operational semantics">operationally</fr:link>, a value is a fully reduced
+<fr:em>term</fr:em> in the syntactic domain characterized by an <fr:link type="local" href="plt-languages-000D.xml" addr="plt-languages-000D" title="Introduction form">introduction
+form</fr:link> and an absence of <fr:link type="local" href="plt-languages-000E.xml" addr="plt-languages-000E" title="Elimination form">elimination forms</fr:link>.
+Semantically and <fr:link type="local" href="plt-semantics-0002.xml" addr="plt-semantics-0002" title="Denotational semantics">denotationally</fr:link> speaking, a value is an object in
+the model or the semantic domain of the language. Whereas operationally, the expression
+<fr:tex display="inline"><![CDATA[\text {add}(2, 3)]]></fr:tex> is different from the expression <fr:tex display="inline"><![CDATA[5]]></fr:tex>, denotationally, they have the
+same value, i.e., <fr:tex display="inline"><![CDATA[\llbracket  \text {add}(2, 3)\rrbracket  = \llbracket  5 \rrbracket ]]></fr:tex>.</fr:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:title text="Backlinks">Backlinks</fr:title>
+        <fr:authors />
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>538</fr:anchor>
+            <fr:addr type="user">plt-languages-000D</fr:addr>
+            <fr:route>plt-languages-000D.xml</fr:route>
+            <fr:title text="Introduction form">Introduction form</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>An <fr:em>introduction form</fr:em> is a syntactic term that is constructed using a constructor
+in an introduction rule. For instance, given two natural numbers <fr:tex display="inline"><![CDATA[n]]></fr:tex> and <fr:tex display="inline"><![CDATA[m]]></fr:tex>, an
+introducton rule for pairs 
+
+<fr:tex display="block"><![CDATA[\frac {\Gamma  \vdash  n:\text {nat} \quad  \Gamma  \vdash  m:\text {nat}}         {\Gamma  \vdash  \langle  n, m\rangle :\text {pair}(\text {nat}, \text {nat})}]]></fr:tex>
+
+might produce the introduction form <fr:tex display="inline"><![CDATA[\langle  n, m\rangle ]]></fr:tex>.
+<fr:link type="local" href="plt-languages-000F.xml" addr="plt-languages-000F" title="Evaluation and reduction">Evaluation</fr:link> of an introduction form produces a corresponding
+<fr:link type="local" href="plt-languages-000B.xml" addr="plt-languages-000B" title="Value">value</fr:link> in the semantic domain.</fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>539</fr:anchor>
+            <fr:addr type="user">plt-languages-0009</fr:addr>
+            <fr:route>plt-languages-0009.xml</fr:route>
+            <fr:title text="Neutral term">Neutral term</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>A <fr:em>neutral term</fr:em> is a <fr:link type="local" href="plt-languages-000A.xml" addr="plt-languages-000A" title="Normal form">normal form</fr:link> that is not a
+<fr:link type="local" href="plt-languages-000B.xml" addr="plt-languages-000B" title="Value">value</fr:link> and cannot be reduced further. In the <fr:link type="local" href="type-systems-0003.xml" addr="type-systems-0003" title="Simply-typed lambda calculus with () : {unit} and type equality">simply typed lambda
+calculus</fr:link>, neutral terms are unbound variables, applications of neutral
+terms to values and elimination forms applied to neutral terms.</fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>540</fr:anchor>
+            <fr:addr type="user">plt-languages-000A</fr:addr>
+            <fr:route>plt-languages-000A.xml</fr:route>
+            <fr:title text="Normal form">Normal form</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>A <fr:em>normal form</fr:em> is a term that cannot be reduced any further. In other words, it is
+a term that does not contain any <fr:link type="local" href="plt-languages-000C.xml" addr="plt-languages-000C" title="Redex">redexes</fr:link>. A term is a normal form if
+it is either a <fr:link type="local" href="plt-languages-000B.xml" addr="plt-languages-000B" title="Value">value</fr:link> or a <fr:link type="local" href="plt-languages-0009.xml" addr="plt-languages-0009" title="Neutral term">neutral term</fr:link>.</fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+      </fr:mainmatter>
+      <fr:backmatter />
+    </fr:tree>
+    <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:title text="Related">Related</fr:title>
+        <fr:authors />
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>541</fr:anchor>
+            <fr:addr type="user">plt-semantics-0002</fr:addr>
+            <fr:route>plt-semantics-0002.xml</fr:route>
+            <fr:title text="Denotational semantics">Denotational semantics</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>The <fr:em>denotational semantics</fr:em> defines the meanings of terms in a language <fr:tex display="inline"><![CDATA[T]]></fr:tex> using
+a <fr:em>valuation function</fr:em> that maps syntactic terms in the <fr:strong>syntactic domain</fr:strong> <fr:tex display="inline"><![CDATA[T]]></fr:tex>
+to semantic values in the <fr:strong>semantic domain</fr:strong> <fr:tex display="inline"><![CDATA[V]]></fr:tex>. Usually, we enclose expressions
+in <fr:em>semantic brackets</fr:em> to express their denotation, e.g., for term <fr:tex display="inline"><![CDATA[e]]></fr:tex>, we can write
+
+<fr:tex display="block"><![CDATA[\llbracket  e \rrbracket ]]></fr:tex>
+
+such that <fr:tex display="inline"><![CDATA[\llbracket  - \rrbracket  : T \to  V]]></fr:tex>.</fr:p>
+            <fr:p>The valuation function is <fr:link type="local" href="plt-semantics-0004.xml" addr="plt-semantics-0004" title="Compositionality"><fr:em>compositional</fr:em></fr:link>; the meaning of a
+compound term is defined purely in terms of the meanings of its subterms. This
+compositionality simplifies reasoning, allowing us to replace "equals by equals", i.e., we
+can substitute terms with other terms having the same meaning.
+
+<fr:tex display="block"><![CDATA[\frac {\llbracket  x \rrbracket  = \llbracket  x' \rrbracket }{\llbracket  f(x) \rrbracket  = \llbracket  f(x') \rrbracket }]]></fr:tex></fr:p>
+            <fr:p>Because terms and their semantics are built up inductively, proofs about denotation
+semantics typically proceed using <fr:link type="local" href="proof-techniques-0001.xml" addr="proof-techniques-0001" title="Structural induction">structural induction</fr:link>. For
+instance, we can prove that our expression semantics is <fr:em>total</fr:em>: for every expression
+<fr:tex display="inline"><![CDATA[e]]></fr:tex> in the language, there is a value <fr:tex display="inline"><![CDATA[v]]></fr:tex> such that <fr:tex display="inline"><![CDATA[\llbracket  e \rrbracket  = v]]></fr:tex>. The
+proof of totality proceeds by induction on the structure of the expression <fr:tex display="inline"><![CDATA[e]]></fr:tex>.</fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>542</fr:anchor>
+            <fr:addr type="user">plt-languages-000E</fr:addr>
+            <fr:route>plt-languages-000E.xml</fr:route>
+            <fr:title text="Elimination form">Elimination form</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>An <fr:em>elimination form</fr:em> is a term that is reducible by an elimination rule. For
+instance, <fr:tex display="inline"><![CDATA[\text {Left}\langle  n, m\rangle ]]></fr:tex> is an elimination form if there is an
+elimination rule for <fr:tex display="inline"><![CDATA[\text {Left}\langle  n, m\rangle ]]></fr:tex>. An example of such an elimination
+rule might be
+
+<fr:tex display="block"><![CDATA[\frac {\Gamma  \vdash  \text {Left}\langle  n, m\rangle :\text {pair}(\text {nat}, \text {nat})}         {\Gamma  \vdash  n:\text {nat}}]]></fr:tex></fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>543</fr:anchor>
+            <fr:addr type="user">plt-languages-000D</fr:addr>
+            <fr:route>plt-languages-000D.xml</fr:route>
+            <fr:title text="Introduction form">Introduction form</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>An <fr:em>introduction form</fr:em> is a syntactic term that is constructed using a constructor
+in an introduction rule. For instance, given two natural numbers <fr:tex display="inline"><![CDATA[n]]></fr:tex> and <fr:tex display="inline"><![CDATA[m]]></fr:tex>, an
+introducton rule for pairs 
+
+<fr:tex display="block"><![CDATA[\frac {\Gamma  \vdash  n:\text {nat} \quad  \Gamma  \vdash  m:\text {nat}}         {\Gamma  \vdash  \langle  n, m\rangle :\text {pair}(\text {nat}, \text {nat})}]]></fr:tex>
+
+might produce the introduction form <fr:tex display="inline"><![CDATA[\langle  n, m\rangle ]]></fr:tex>.
+<fr:link type="local" href="plt-languages-000F.xml" addr="plt-languages-000F" title="Evaluation and reduction">Evaluation</fr:link> of an introduction form produces a corresponding
+<fr:link type="local" href="plt-languages-000B.xml" addr="plt-languages-000B" title="Value">value</fr:link> in the semantic domain.</fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>544</fr:anchor>
+            <fr:addr type="user">plt-semantics-0003</fr:addr>
+            <fr:route>plt-semantics-0003.xml</fr:route>
+            <fr:title text="Operational semantics">Operational semantics</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>The <fr:em>operational semantics</fr:em> defines the meaning of terms in a langauge <fr:tex display="inline"><![CDATA[T]]></fr:tex> using an
+<fr:em>execution relation</fr:em> that specifies how terms can be executed in an appropriate machine
+model.</fr:p>
+            <fr:p>There are two forms of operations semantics:
+
+<fr:ul><fr:li><fr:strong>small-step operational semantics</fr:strong> which describes the individual execution steps</fr:li>
+<fr:li><fr:strong>big-step operational semantics</fr:strong> which describes the overall results of execution</fr:li></fr:ul></fr:p>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>438</fr:anchor>
+                <fr:addr type="user">plt-semantics-0005</fr:addr>
+                <fr:route>plt-semantics-0005.xml</fr:route>
+                <fr:title text="Small-step operation semantics">Small-step operation semantics</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>A small-step semantics for a language ${T} of syntactic terms comprises two components:
+
+<fr:ul><fr:li>a set of <fr:em>execution states</fr:em> <fr:tex display="inline"><![CDATA[S]]></fr:tex></fr:li>
+<fr:li>a <fr:em>transition relation</fr:em> <fr:tex display="inline"><![CDATA[s \rightarrow  s']]></fr:tex> on <fr:tex display="inline"><![CDATA[S]]></fr:tex> that relates each state
+<fr:tex display="inline"><![CDATA[s]]></fr:tex> to each state <fr:tex display="inline"><![CDATA[s']]></fr:tex> that may be reached by performaing a single execution step</fr:li></fr:ul></fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+      </fr:mainmatter>
+      <fr:backmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

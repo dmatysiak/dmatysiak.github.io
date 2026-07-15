@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?>
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+  <fr:frontmatter>
+    <fr:anchor>425</fr:anchor>
+    <fr:addr type="user">plt-languages-000A</fr:addr>
+    <fr:route>plt-languages-000A.xml</fr:route>
+    <fr:title text="Normal form">Normal form</fr:title>
+    <fr:authors />
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <fr:p>A <fr:em>normal form</fr:em> is a term that cannot be reduced any further. In other words, it is
+a term that does not contain any <fr:link type="local" href="plt-languages-000C.xml" addr="plt-languages-000C" title="Redex">redexes</fr:link>. A term is a normal form if
+it is either a <fr:link type="local" href="plt-languages-000B.xml" addr="plt-languages-000B" title="Value">value</fr:link> or a <fr:link type="local" href="plt-languages-0009.xml" addr="plt-languages-0009" title="Neutral term">neutral term</fr:link>.</fr:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:title text="Backlinks">Backlinks</fr:title>
+        <fr:authors />
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>426</fr:anchor>
+            <fr:addr type="user">plt-languages-000F</fr:addr>
+            <fr:route>plt-languages-000F.xml</fr:route>
+            <fr:title text="Evaluation and reduction">Evaluation and reduction</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p><fr:em>Evaluation</fr:em> is a function or a process of computing semantic values from syntactic
+terms. It is <fr:link type="local" href="plt-languages-0004.xml" addr="plt-languages-0004" title="Denotational semantics of the addition language">denotational</fr:link> in nature. Evaluation should be
+distinguished from <fr:em>reduction</fr:em>, which is the process of computing a syntactic term from
+another syntactic term—usually a <fr:link type="local" href="plt-languages-000C.xml" addr="plt-languages-000C" title="Redex">redex</fr:link>—that is equivalent, but
+having had some elimination rule applied. When a term can be reduced no further, it is a
+<fr:link type="local" href="plt-languages-000A.xml" addr="plt-languages-000A" title="Normal form">normal form</fr:link>.</fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>427</fr:anchor>
+            <fr:addr type="user">plt-languages-0009</fr:addr>
+            <fr:route>plt-languages-0009.xml</fr:route>
+            <fr:title text="Neutral term">Neutral term</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>A <fr:em>neutral term</fr:em> is a <fr:link type="local" href="plt-languages-000A.xml" addr="plt-languages-000A" title="Normal form">normal form</fr:link> that is not a
+<fr:link type="local" href="plt-languages-000B.xml" addr="plt-languages-000B" title="Value">value</fr:link> and cannot be reduced further. In the <fr:link type="local" href="type-systems-0003.xml" addr="type-systems-0003" title="Simply-typed lambda calculus with () : {unit} and type equality">simply typed lambda
+calculus</fr:link>, neutral terms are unbound variables, applications of neutral
+terms to values and elimination forms applied to neutral terms.</fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>428</fr:anchor>
+            <fr:addr type="user">plt-languages-000C</fr:addr>
+            <fr:route>plt-languages-000C.xml</fr:route>
+            <fr:title text="Redex">Redex</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>A <fr:em>redex</fr:em> or <fr:em>reducible expression</fr:em> is an expression that can be reduced by a
+single application of the <fr:tex display="inline"><![CDATA[\beta ]]></fr:tex>-reduction rule. If an expression is not reducible any
+further, it is a <fr:link type="local" href="plt-languages-000A.xml" addr="plt-languages-000A" title="Normal form">normal form</fr:link>.</fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+      </fr:mainmatter>
+      <fr:backmatter />
+    </fr:tree>
+    <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:title text="Related">Related</fr:title>
+        <fr:authors />
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>429</fr:anchor>
+            <fr:addr type="user">plt-languages-0009</fr:addr>
+            <fr:route>plt-languages-0009.xml</fr:route>
+            <fr:title text="Neutral term">Neutral term</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>A <fr:em>neutral term</fr:em> is a <fr:link type="local" href="plt-languages-000A.xml" addr="plt-languages-000A" title="Normal form">normal form</fr:link> that is not a
+<fr:link type="local" href="plt-languages-000B.xml" addr="plt-languages-000B" title="Value">value</fr:link> and cannot be reduced further. In the <fr:link type="local" href="type-systems-0003.xml" addr="type-systems-0003" title="Simply-typed lambda calculus with () : {unit} and type equality">simply typed lambda
+calculus</fr:link>, neutral terms are unbound variables, applications of neutral
+terms to values and elimination forms applied to neutral terms.</fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>430</fr:anchor>
+            <fr:addr type="user">plt-languages-000C</fr:addr>
+            <fr:route>plt-languages-000C.xml</fr:route>
+            <fr:title text="Redex">Redex</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>A <fr:em>redex</fr:em> or <fr:em>reducible expression</fr:em> is an expression that can be reduced by a
+single application of the <fr:tex display="inline"><![CDATA[\beta ]]></fr:tex>-reduction rule. If an expression is not reducible any
+further, it is a <fr:link type="local" href="plt-languages-000A.xml" addr="plt-languages-000A" title="Normal form">normal form</fr:link>.</fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>431</fr:anchor>
+            <fr:addr type="user">plt-languages-000B</fr:addr>
+            <fr:route>plt-languages-000B.xml</fr:route>
+            <fr:title text="Value">Value</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>A <fr:em>value</fr:em> is a term that is fully reduced and cannot be reduced any further. Values
+are the final results of computations.</fr:p>
+            <fr:p>It is important to note that the word "value" is overloaded in programming language
+theory. Syntactically and <fr:link type="local" href="plt-semantics-0003.xml" addr="plt-semantics-0003" title="Operational semantics">operationally</fr:link>, a value is a fully reduced
+<fr:em>term</fr:em> in the syntactic domain characterized by an <fr:link type="local" href="plt-languages-000D.xml" addr="plt-languages-000D" title="Introduction form">introduction
+form</fr:link> and an absence of <fr:link type="local" href="plt-languages-000E.xml" addr="plt-languages-000E" title="Elimination form">elimination forms</fr:link>.
+Semantically and <fr:link type="local" href="plt-semantics-0002.xml" addr="plt-semantics-0002" title="Denotational semantics">denotationally</fr:link> speaking, a value is an object in
+the model or the semantic domain of the language. Whereas operationally, the expression
+<fr:tex display="inline"><![CDATA[\text {add}(2, 3)]]></fr:tex> is different from the expression <fr:tex display="inline"><![CDATA[5]]></fr:tex>, denotationally, they have the
+same value, i.e., <fr:tex display="inline"><![CDATA[\llbracket  \text {add}(2, 3)\rrbracket  = \llbracket  5 \rrbracket ]]></fr:tex>.</fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+      </fr:mainmatter>
+      <fr:backmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

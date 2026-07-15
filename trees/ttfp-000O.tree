@@ -1,0 +1,8 @@
+\title{Disjunction elimination}
+
+##{\frac{\begin{array}{ccc}
+          & [A] & [B] \\
+          & \vdots & \vdots \\
+          A \lor B & C & C
+        \end{array}}
+       {C}(\mathtt{\lor{E}})}

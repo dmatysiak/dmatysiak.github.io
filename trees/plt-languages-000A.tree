@@ -1,0 +1,5 @@
+\title{Normal form}
+
+\p{A \em{normal form} is a term that cannot be reduced any further. In other words, it is
+a term that does not contain any [redexes](plt-languages-000C). A term is a normal form if
+it is either a [value](plt-languages-000B) or a [neutral term](plt-languages-0009).}

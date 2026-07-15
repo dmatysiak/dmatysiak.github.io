@@ -1,0 +1,12 @@
+\title{Introduction form}
+
+\p{An \em{introduction form} is a syntactic term that is constructed using a constructor
+in an introduction rule. For instance, given two natural numbers #{n} and #{m}, an
+introducton rule for pairs 
+
+##{\frac{\Gamma \vdash n:\text{nat} \quad \Gamma \vdash m:\text{nat}}
+        {\Gamma \vdash \langle n, m\rangle:\text{pair}(\text{nat}, \text{nat})}}
+
+might produce the introduction form #{\langle n, m\rangle}.
+[Evaluation](plt-languages-000F) of an introduction form produces a corresponding
+[value](plt-languages-000B) in the semantic domain.}

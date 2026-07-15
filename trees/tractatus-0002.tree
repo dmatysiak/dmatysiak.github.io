@@ -1,0 +1,53 @@
+\title{Simulation}
+
+\p{Simulation is a relation between two systems in which one system can mimic the
+observable behavior of the other.} 
+
+\p{From a linguistic perspective, we may say that simulation involves a correspondence of
+the syntax but not of the semantics of two languages or systems.} 
+
+\p{The key terms used in this definition are "mimic" and "correspondence". Where artifacts
+are concerned:
+
+\ol{
+
+\li{Mimicry cannot be said to be categorically objective, because mimicry entails
+\em{purposeful} imitation. Thus, whether a system is mimicking another is
+\em{observer-relative}. That is, we cannot speak of any purposeful intent that is
+\em{intrinsic} to the artifact or its behavior, but we can assign an interpretation to the
+behavior of a system #{S'} that ascribes to it and some other system #{S} the
+relational property "#{S'} mimicks #{S}". The decision to assign an interpretation is
+rooted in the \em{observer's} purposes and some accidental features and affordances of
+both systems that the observer finds relevant, similar or useful.}
+
+\li{Correspondence is not identity—two systems need not share the same syntax—but the case
+where the syntax of one systems or language can be related to that of the other in an
+analogical and structure-preserving way.}}}
+
+\p{In a formal language context, we may analyze simulation in terms of the syntactic and
+semantic properties of two systems. We may say that a system #{S'} simulates another
+system #{S} if there is an extensional correspondence between the syntactic terms of #{S'}
+and #{S} such that the denotations of the terms of #{S'} is equivalent to the denotations
+of the terms of #{S}. In other words, the denotational semantics of #{S'} is equivalent to
+the denotational semantics of #{S} under some interpretation of #{S'} that relates terms
+in #{S'} to terms in #{S}.
+
+##{\begin{array}{c}
+    \forall e'{:}S'\exists e{:}S . \llbracket e' \rrbracket_{S'} = \llbracket e
+\rrbracket_S \\
+    \forall e{:}S \exists e'{:}S' . \llbracket e \rrbracket_{S} = \llbracket e'
+\rrbracket_{S'} 
+\end{array}
+}}
+
+\p{Denotational semantics is the basis for simulation, because two corresponding systems
+are indiscernible under denotational semantics alone. This is due to the extensionality of
+such a semantics coupled with an interpretation. (If the syntactic terms are identical in
+both systems, then we have a tidy demonstration of two coextensive systems that are
+nonetheless not necessarily equivalent.) We can, however, distinguish the simulation from
+the real McCoy on intensional grounds, which we can do with an operational semantics.
+Operationally, we may say that a system #{S'} simulates another system #{S} if there is a
+correspondence between the terms of #{S'} and #{S} such that the evaluation of a term of
+#{S'} is equivalent to the evaluation of a term in #{S} and vice versa.}
+
+

@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="default.xsl"?>
 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>359</fr:anchor>
+    <fr:anchor>437</fr:anchor>
     <fr:addr type="user">plt-semantics-0003</fr:addr>
     <fr:route>plt-semantics-0003.xml</fr:route>
     <fr:title text="Operational semantics">Operational semantics</fr:title>
@@ -18,7 +18,7 @@ model.</fr:p>
 <fr:li><fr:strong>big-step operational semantics</fr:strong> which describes the overall results of execution</fr:li></fr:ul></fr:p>
     <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
       <fr:frontmatter>
-        <fr:anchor>360</fr:anchor>
+        <fr:anchor>438</fr:anchor>
         <fr:addr type="user">plt-semantics-0005</fr:addr>
         <fr:route>plt-semantics-0005.xml</fr:route>
         <fr:title text="Small-step operation semantics">Small-step operation semantics</fr:title>
@@ -34,5 +34,37 @@ model.</fr:p>
       <fr:backmatter />
     </fr:tree>
   </fr:mainmatter>
-  <fr:backmatter />
+  <fr:backmatter>
+    <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:title text="Backlinks">Backlinks</fr:title>
+        <fr:authors />
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>439</fr:anchor>
+            <fr:addr type="user">plt-languages-000B</fr:addr>
+            <fr:route>plt-languages-000B.xml</fr:route>
+            <fr:title text="Value">Value</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>A <fr:em>value</fr:em> is a term that is fully reduced and cannot be reduced any further. Values
+are the final results of computations.</fr:p>
+            <fr:p>It is important to note that the word "value" is overloaded in programming language
+theory. Syntactically and <fr:link type="local" href="plt-semantics-0003.xml" addr="plt-semantics-0003" title="Operational semantics">operationally</fr:link>, a value is a fully reduced
+<fr:em>term</fr:em> in the syntactic domain characterized by an <fr:link type="local" href="plt-languages-000D.xml" addr="plt-languages-000D" title="Introduction form">introduction
+form</fr:link> and an absence of <fr:link type="local" href="plt-languages-000E.xml" addr="plt-languages-000E" title="Elimination form">elimination forms</fr:link>.
+Semantically and <fr:link type="local" href="plt-semantics-0002.xml" addr="plt-semantics-0002" title="Denotational semantics">denotationally</fr:link> speaking, a value is an object in
+the model or the semantic domain of the language. Whereas operationally, the expression
+<fr:tex display="inline"><![CDATA[\text {add}(2, 3)]]></fr:tex> is different from the expression <fr:tex display="inline"><![CDATA[5]]></fr:tex>, denotationally, they have the
+same value, i.e., <fr:tex display="inline"><![CDATA[\llbracket  \text {add}(2, 3)\rrbracket  = \llbracket  5 \rrbracket ]]></fr:tex>.</fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+      </fr:mainmatter>
+      <fr:backmatter />
+    </fr:tree>
+  </fr:backmatter>
 </fr:tree>

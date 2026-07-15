@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?>
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+  <fr:frontmatter>
+    <fr:anchor>435</fr:anchor>
+    <fr:addr type="user">plt-languages-000L</fr:addr>
+    <fr:route>plt-languages-000L.xml</fr:route>
+    <fr:title text="Open term">Open term</fr:title>
+    <fr:authors />
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <fr:p>A term is said to be <fr:strong>open</fr:strong> if it contains at least one <fr:link type="local" href="plt-languages-000M.xml" addr="plt-languages-000M" title="Free variable">free
+variable</fr:link>.</fr:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:title text="Related">Related</fr:title>
+        <fr:authors />
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>436</fr:anchor>
+            <fr:addr type="user">plt-languages-000M</fr:addr>
+            <fr:route>plt-languages-000M.xml</fr:route>
+            <fr:title text="Free variable">Free variable</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>A <fr:strong>free variable</fr:strong> is a variable that is not <fr:link type="local" href="plt-languages-000N.xml" addr="plt-languages-000N" title="Bound variable">bound</fr:link> within a
+given term. In the lambda abstraction <fr:tex display="inline"><![CDATA[\lambda  y.x]]></fr:tex>, for example, the variable <fr:tex display="inline"><![CDATA[x]]></fr:tex> is
+free within the scope of the term as the only binding site is <fr:tex display="inline"><![CDATA[\lambda  y]]></fr:tex> which binds the
+variable <fr:tex display="inline"><![CDATA[y]]></fr:tex>.</fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+      </fr:mainmatter>
+      <fr:backmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

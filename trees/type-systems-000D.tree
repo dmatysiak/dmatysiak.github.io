@@ -26,28 +26,28 @@ premises such that two conditions hold:
 while there are #{2^3=8} variations, only four are mode-correct:
 
 ##{\frac{\begin{array}{cc}
-           \Gamma \vdash e_1 \Rightarrow A \rightarrow B 
-           & \Gamma \vdash e_2 \Rightarrow A
+           \Gamma \vdash e_1 \red{\Rightarrow} A \rightarrow B 
+           & \Gamma \vdash e_2 \red{\Rightarrow} A
            \end{array}}
-        {\Gamma \vdash e_1 e_2 \Rightarrow B}}
+        {\Gamma \vdash e_1 e_2 \red{\Rightarrow} B}}
 
 ##{\frac{\begin{array}{cc}
-           \Gamma \vdash e_1 \Rightarrow A \rightarrow B 
-           & \Gamma \vdash e_2 \Leftarrow A
+           \Gamma \vdash e_1 \red{\Rightarrow} A \rightarrow B 
+           & \Gamma \vdash e_2 \blue{\Leftarrow} A
            \end{array}}
-        {\Gamma \vdash e_1 e_2 \Rightarrow B}}
+        {\Gamma \vdash e_1 e_2 \red{\Rightarrow} B}}
 
 ##{\frac{\begin{array}{cc}
-           \Gamma \vdash e_1 \Rightarrow A \rightarrow B 
-           & \Gamma \vdash e_2 \Leftarrow A
+           \Gamma \vdash e_1 \red{\Rightarrow} A \rightarrow B 
+           & \Gamma \vdash e_2 \blue{\Leftarrow} A
            \end{array}}
-        {\Gamma \vdash e_1 e_2 \Leftarrow B}}
+        {\Gamma \vdash e_1 e_2 \blue{\Leftarrow} B}}
 
 ##{\frac{\begin{array}{cc}
-           \Gamma \vdash e_1 \Leftarrow A \rightarrow B 
-           & \Gamma \vdash e_2 \Rightarrow A
+           \Gamma \vdash e_1 \blue{\Leftarrow} A \rightarrow B 
+           & \Gamma \vdash e_2 \red{\Rightarrow} A
            \end{array}}
-        {\Gamma \vdash e_1 e_2 \Leftarrow B}}
+        {\Gamma \vdash e_1 e_2 \blue{\Leftarrow} B}}
 
 The last rule \em{seems} questionable, because #{A} is unknown in the conclusion, yet the
 first premise checks #{e_1} against #{A\rightarrow B}. However, the rule is mode-correct,

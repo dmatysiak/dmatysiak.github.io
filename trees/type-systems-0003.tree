@@ -1,39 +1,18 @@
 \title{Simply-typed lambda calculus with #{() : \text{unit}} and type equality}
 
-\p{The simply-typed lambda calculus (STLC) can be expressed as follows: 
+\p{The simply-typed lambda calculus (STLC) can be expressed as follows:} 
 
-##{\frac{\begin{array}{cc}
-           (x:A) \in \Gamma
-         \end{array}}
-        {\Gamma \vdash x : A}(\mathtt{Var})}
-
-##{\frac{\begin{array}{cc}
-          \Gamma, x:A_1 \vdash e : A_2
-        \end{array}}
-       {\Gamma \vdash (\lambda x.e):A_1 \rightarrow A_2}(\mathtt{\rightarrow I})}
-
-##{\frac{\begin{array}{cc}
-          \Gamma \vdash e_1 : A_1 \rightarrow A_2 & \Gamma \vdash e_2 : A_1
-        \end{array}}
-       {\Gamma \vdash (e_1 e_2) : A_2}(\mathtt{\rightarrow E})}
-}
+\transclude{type-systems-000L}
+\transclude{type-systems-000M}
+\transclude{type-systems-000N}
 
 \p{
-We may extend STLC with type annotations, a unit type and type equality, giving us six rules:
+We may extend STLC with type annotations, a unit type and type equality, giving us six
+rules:}
 
-##{\frac{\begin{array}{cc}
-           \Gamma \vdash e : A
-         \end{array}}
-        {\Gamma \vdash (e::A) : A}(\mathtt{Anno})}
-
-##{\frac{}
-        {\Gamma \vdash ():\text{unit}}(\mathtt{Unit-I})}
-
-##{\frac{\begin{array}{cc}
-          \Gamma \vdash e : A & A = B
-        \end{array}}
-       {\Gamma \vdash e : B}(\mathtt{TypeEq})}
-}
+\transclude{type-systems-000O}
+\transclude{type-systems-000P}
+\transclude{type-systems-000Q}
 
 \p{#{():\text{unit}} is included so that the system has a concrete base type and term.
 Type equality is technically gratuitous, because type equality here is trivial and already

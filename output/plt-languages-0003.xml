@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="default.xsl"?>
 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>413</fr:anchor>
+    <fr:anchor>517</fr:anchor>
     <fr:addr type="user">plt-languages-0003</fr:addr>
     <fr:route>plt-languages-0003.xml</fr:route>
     <fr:title text="The addition language defined as a data type">The addition language defined as a data type</fr:title>
@@ -22,7 +22,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>414</fr:anchor>
+            <fr:anchor>518</fr:anchor>
             <fr:addr type="user">plt-languages-0001</fr:addr>
             <fr:route>plt-languages-0001.xml</fr:route>
             <fr:title text="An addition language">An addition language</fr:title>
@@ -34,7 +34,7 @@ purpose of such a simply language is to illustrate concepts in programming langu
 without the complexity of more realistic languages to distract us.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>255</fr:anchor>
+                <fr:anchor>259</fr:anchor>
                 <fr:addr type="user">plt-languages-0002</fr:addr>
                 <fr:route>plt-languages-0002.xml</fr:route>
                 <fr:title text="The addition language grammar">The addition language grammar</fr:title>
@@ -52,7 +52,7 @@ where <fr:tex display="inline"><![CDATA[\text {Expr}]]></fr:tex> is the syntacti
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>256</fr:anchor>
+                <fr:anchor>260</fr:anchor>
                 <fr:addr type="user">plt-languages-0003</fr:addr>
                 <fr:route>plt-languages-0003.xml</fr:route>
                 <fr:title text="The addition language defined as a data type">The addition language defined as a data type</fr:title>
@@ -67,7 +67,7 @@ where <fr:tex display="inline"><![CDATA[\text {Expr}]]></fr:tex> is the syntacti
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>257</fr:anchor>
+                <fr:anchor>261</fr:anchor>
                 <fr:addr type="user">plt-languages-0004</fr:addr>
                 <fr:route>plt-languages-0004.xml</fr:route>
                 <fr:title text="Denotational semantics of the addition language">Denotational semantics of the addition language</fr:title>
@@ -84,7 +84,7 @@ language</fr:link> is given below:
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>258</fr:anchor>
+                <fr:anchor>262</fr:anchor>
                 <fr:addr type="user">plt-languages-0005</fr:addr>
                 <fr:route>plt-languages-0005.xml</fr:route>
                 <fr:title text="The compositionality property of the addition language">The compositionality property of the addition language</fr:title>
@@ -99,7 +99,7 @@ language</fr:link> is given below:
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>259</fr:anchor>
+                <fr:anchor>263</fr:anchor>
                 <fr:addr type="user">plt-languages-0006</fr:addr>
                 <fr:route>plt-languages-0006.xml</fr:route>
                 <fr:title text="Small-step operational semantics of the addition language">Small-step operational semantics of the addition language</fr:title>
@@ -123,7 +123,7 @@ larger terms can be reduced:
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>260</fr:anchor>
+                <fr:anchor>264</fr:anchor>
                 <fr:addr type="user">plt-languages-0007</fr:addr>
                 <fr:route>plt-languages-0007.xml</fr:route>
                 <fr:title text="Preservation of denotation under small-step semantics of the addition language">Preservation of denotation under small-step semantics of the addition language</fr:title>
@@ -183,7 +183,7 @@ is true. The proof is the same as above. <fr:tex display="inline"><![CDATA[\llbr
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>261</fr:anchor>
+                <fr:anchor>265</fr:anchor>
                 <fr:addr type="user">plt-languages-0008</fr:addr>
                 <fr:route>plt-languages-0008.xml</fr:route>
                 <fr:title text="Evaluation of expressions of the addition language">Evaluation of expressions of the addition language</fr:title>

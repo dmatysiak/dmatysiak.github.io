@@ -1,0 +1,11 @@
+\title{Principal connective}
+
+\p{The \em{principal connective} of 
+
+\ul{
+
+\li{an [introduction rule](type-systems-000J) is the connective that is being introduced
+by the rule}
+
+\li{an [elimination rule](type-systems-000K) is the connective that is being eliminated}}}
+

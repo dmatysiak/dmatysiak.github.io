@@ -1,0 +1,7 @@
+\title{Disjunction introduction}
+
+##{\frac{A}
+       {A \lor B}(\mathtt{\lor{I_A}})}
+
+##{\frac{B}
+       {A \lor B}(\mathtt{\lor{I_B}})}

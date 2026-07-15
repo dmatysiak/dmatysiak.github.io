@@ -1,0 +1,5 @@
+\title{Redex}
+
+\p{A \em{redex} or \em{reducible expression} is an expression that can be reduced by a
+single application of the #{\beta}-reduction rule. If an expression is not reducible any
+further, it is a [normal form](plt-languages-000A).}

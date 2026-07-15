@@ -1,7 +1,7 @@
 \title{Bidirectional simply-typed lambda calculus with #{() : \text{unit}} and type equality}
 
 \p{A bidirectional variant of the [simply-typed lambda calculus](type-systems-0003)
-(BDSTLC) can be expressed as follows: 
+(BDSTLC) can be expressed as follows:} 
 
 \transclude{type-systems-0006}
 \transclude{type-systems-0007}
@@ -9,7 +9,6 @@
 \transclude{type-systems-0009}
 \transclude{type-systems-000A}
 \transclude{type-systems-000B}
-}
 
 \p{Explanation of the rules:
   \ol{

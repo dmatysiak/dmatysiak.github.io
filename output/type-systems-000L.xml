@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?>
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+  <fr:frontmatter>
+    <fr:anchor>545</fr:anchor>
+    <fr:addr type="user">type-systems-000L</fr:addr>
+    <fr:route>type-systems-000L.xml</fr:route>
+    <fr:title text="Var">Var</fr:title>
+    <fr:authors />
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <fr:p>
+      <fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}            (x:A) \in  \Gamma           \end {array}}         {\Gamma  \vdash  x : A}(\mathtt {Var})]]></fr:tex>
+    </fr:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:title text="Context">Context</fr:title>
+        <fr:authors />
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>546</fr:anchor>
+            <fr:addr type="user">type-systems-0003</fr:addr>
+            <fr:route>type-systems-0003.xml</fr:route>
+            <fr:title text="Simply-typed lambda calculus with () : {unit} and type equality">Simply-typed lambda calculus with <fr:tex display="inline"><![CDATA[() : \text {unit}]]></fr:tex> and type equality</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>The simply-typed lambda calculus (STLC) can be expressed as follows:</fr:p>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>296</fr:anchor>
+                <fr:addr type="user">type-systems-000L</fr:addr>
+                <fr:route>type-systems-000L.xml</fr:route>
+                <fr:title text="Var">Var</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>
+                  <fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}            (x:A) \in  \Gamma           \end {array}}         {\Gamma  \vdash  x : A}(\mathtt {Var})]]></fr:tex>
+                </fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>297</fr:anchor>
+                <fr:addr type="user">type-systems-000M</fr:addr>
+                <fr:route>type-systems-000M.xml</fr:route>
+                <fr:title text="Arrow introduction">Arrow introduction</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>
+                  <fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}           \Gamma , x:A_1 \vdash  e : A_2         \end {array}}        {\Gamma  \vdash  (\lambda  x.e):A_1 \rightarrow  A_2}(\mathtt {\rightarrow  I})]]></fr:tex>
+                </fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>298</fr:anchor>
+                <fr:addr type="user">type-systems-000N</fr:addr>
+                <fr:route>type-systems-000N.xml</fr:route>
+                <fr:title text="Arrow elimination">Arrow elimination</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>
+                  <fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}           \Gamma  \vdash  e_1 : A_1 \rightarrow  A_2 & \Gamma  \vdash  e_2 : A_1         \end {array}}        {\Gamma  \vdash  (e_1 e_2) : A_2}(\mathtt {\rightarrow  E})]]></fr:tex>
+                </fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:p>We may extend STLC with type annotations, a unit type and type equality, giving us six
+rules:</fr:p>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>299</fr:anchor>
+                <fr:addr type="user">type-systems-000O</fr:addr>
+                <fr:route>type-systems-000O.xml</fr:route>
+                <fr:title text="Annotation introduction">Annotation introduction</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>
+                  <fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}            \Gamma  \vdash  e : A          \end {array}}         {\Gamma  \vdash  (e::A) : A}(\mathtt {Anno})]]></fr:tex>
+                </fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>300</fr:anchor>
+                <fr:addr type="user">type-systems-000P</fr:addr>
+                <fr:route>type-systems-000P.xml</fr:route>
+                <fr:title text="Unit introduction">Unit introduction</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>
+                  <fr:tex display="block"><![CDATA[\frac {}         {\Gamma  \vdash  ():\text {unit}}(\mathtt {Unit-I})]]></fr:tex>
+                </fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>301</fr:anchor>
+                <fr:addr type="user">type-systems-000Q</fr:addr>
+                <fr:route>type-systems-000Q.xml</fr:route>
+                <fr:title text="Type equality">Type equality</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>
+                  <fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}           \Gamma  \vdash  e : A & A = B         \end {array}} {\Gamma  \vdash  e : B}(\mathtt {TypeEq})]]></fr:tex>
+                </fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:p><fr:tex display="inline"><![CDATA[():\text {unit}]]></fr:tex> is included so that the system has a concrete base type and term.
+Type equality is technically gratuitous, because type equality here is trivial and already
+implicit in the metalanguage. (There is an implicit equality relation in
+<fr:tex display="inline"><![CDATA[\mathtt {\rightarrow  I}]]></fr:tex>, for instance.) It offers no new expressiveness. It merely
+injects this implicit equality into the object language. It is only included to show how a
+<fr:link type="local" href="type-systems-0004.xml" addr="type-systems-0004" title="Bidirectional simply-typed lambda calculus with () : {unit} and type equality">bidirectional variation</fr:link> of this type system can use type equality
+(which is itself an ancestor of type subsumption). Type annotations are also included for
+similar reasons, that is, to contrast it with the bidirectional version. It, too, offers
+no new expressiveness.</fr:p>
+            <fr:p>These rules are purely declarative—they do not entail or encode any particular
+execution model—and they do not immediately correspond to or lead to a type inference
+algorithm, because in <fr:tex display="inline"><![CDATA[\mathtt {\rightarrow  I}]]></fr:tex>, the type <fr:tex display="inline"><![CDATA[A_1]]></fr:tex> in <fr:tex display="inline"><![CDATA[x:A_1]]></fr:tex> must be
+guessed in traditional, non-bidirectional type checking. Traditional inference is
+"bottom-up", beginning with the leaves of the abstract syntax tree, working up to the
+root. There is no "check" operation here that takes a type as an input argument.</fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+      </fr:mainmatter>
+      <fr:backmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

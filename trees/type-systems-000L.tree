@@ -1,0 +1,6 @@
+\title{Var}
+
+\p{##{\frac{\begin{array}{cc}
+           (x:A) \in \Gamma
+         \end{array}}
+        {\Gamma \vdash x : A}(\mathtt{Var})}}

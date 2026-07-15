@@ -1,0 +1,13 @@
+\title{Value}
+
+\p{A \em{value} is a term that is fully reduced and cannot be reduced any further. Values
+are the final results of computations.} 
+
+\p{It is important to note that the word "value" is overloaded in programming language
+theory. Syntactically and [operationally](plt-semantics-0003), a value is a fully reduced
+\em{term} in the syntactic domain characterized by an [introduction
+form](plt-languages-000D) and an absence of [elimination forms](plt-languages-000E).
+Semantically and [denotationally](plt-semantics-0002) speaking, a value is an object in
+the model or the semantic domain of the language. Whereas operationally, the expression
+#{\text{add}(2, 3)} is different from the expression #{5}, denotationally, they have the
+same value, i.e., #{\llbracket \text{add}(2, 3)\rrbracket = \llbracket 5 \rrbracket}.}

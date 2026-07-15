@@ -1,0 +1,12 @@
+\title{Principal judgement}
+
+\p{The \em{principal judgement} of a rule is the judgement containing the [principle
+connective](type-systems-000R).} 
+
+\ul{
+
+\li{In an [introduction rule](type-systems-000J), the principle judgement is usually the
+conclusion.}
+
+\li{In an [elimination rule](type-systems-000K), the principle judgement is usually the
+first premise.}}

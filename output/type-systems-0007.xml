@@ -2,10 +2,10 @@
 <?xml-stylesheet type="text/xsl" href="default.xsl"?>
 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>266</fr:anchor>
+    <fr:anchor>270</fr:anchor>
     <fr:addr type="user">type-systems-0007</fr:addr>
     <fr:route>type-systems-0007.xml</fr:route>
-    <fr:title text="Annotation synthesis ({Anno})">Annotation synthesis (<fr:tex display="inline"><![CDATA[\mathtt {Anno\Rightarrow }]]></fr:tex>)</fr:title>
+    <fr:title text="Annotation synthesis">Annotation synthesis</fr:title>
     <fr:authors />
   </fr:frontmatter>
   <fr:mainmatter>
@@ -22,7 +22,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>267</fr:anchor>
+            <fr:anchor>271</fr:anchor>
             <fr:addr type="user">type-systems-0004</fr:addr>
             <fr:route>type-systems-0004.xml</fr:route>
             <fr:title text="Bidirectional simply-typed lambda calculus with () : {unit} and type equality">Bidirectional simply-typed lambda calculus with <fr:tex display="inline"><![CDATA[() : \text {unit}]]></fr:tex> and type equality</fr:title>
@@ -30,14 +30,97 @@
           </fr:frontmatter>
           <fr:mainmatter>
             <fr:p>A bidirectional variant of the <fr:link type="local" href="type-systems-0003.xml" addr="type-systems-0003" title="Simply-typed lambda calculus with () : {unit} and type equality">simply-typed lambda calculus</fr:link>
-(BDSTLC) can be expressed as follows: 
-
-<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>268</fr:anchor><fr:addr type="user">type-systems-0006</fr:addr><fr:route>type-systems-0006.xml</fr:route><fr:title text="Variable synthesis ({Var})">Variable synthesis (<fr:tex display="inline"><![CDATA[\mathtt {Var\Rightarrow }]]></fr:tex>)</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:p><fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}              (x:A) \in  \Gamma              \end {array}}             {\Gamma  \vdash  x \Rightarrow  A}(\mathtt {Var\Rightarrow })]]></fr:tex></fr:p></fr:mainmatter><fr:backmatter /></fr:tree>
-<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>269</fr:anchor><fr:addr type="user">type-systems-0007</fr:addr><fr:route>type-systems-0007.xml</fr:route><fr:title text="Annotation synthesis ({Anno})">Annotation synthesis (<fr:tex display="inline"><![CDATA[\mathtt {Anno\Rightarrow }]]></fr:tex>)</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:p><fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}              \Gamma  \vdash  e \Leftarrow  A            \end {array}}            {\Gamma  \vdash  (e::A) \Rightarrow  A}(\mathtt {Anno\Rightarrow })]]></fr:tex></fr:p></fr:mainmatter><fr:backmatter /></fr:tree>
-<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>270</fr:anchor><fr:addr type="user">type-systems-0008</fr:addr><fr:route>type-systems-0008.xml</fr:route><fr:title text="Arrow introduction checking ({ I})">Arrow introduction checking (<fr:tex display="inline"><![CDATA[\mathtt {\rightarrow  I\Leftarrow }]]></fr:tex>)</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:p><fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}              \Gamma , x:A_1 \vdash  e \Leftarrow  A_2            \end {array}}            {\Gamma  \vdash  (\lambda  x.e) \Leftarrow  A_1 \rightarrow  A_2}(\mathtt {\rightarrow  I\Leftarrow })]]></fr:tex></fr:p></fr:mainmatter><fr:backmatter /></fr:tree>
-<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>271</fr:anchor><fr:addr type="user">type-systems-0009</fr:addr><fr:route>type-systems-0009.xml</fr:route><fr:title text="Arrow elimination synthesis ({ E})">Arrow elimination synthesis (<fr:tex display="inline"><![CDATA[\mathtt {\rightarrow  E\Rightarrow }]]></fr:tex>)</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:p><fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}              \Gamma  \vdash  e_1 \Rightarrow  A_1 \rightarrow  A_2 & \Gamma  \vdash  e_2 \Leftarrow  A_1            \end {array}}            {\Gamma  \vdash  (e_1 e_2) \Rightarrow  A_2}(\mathtt {\rightarrow  E\Rightarrow })]]></fr:tex></fr:p></fr:mainmatter><fr:backmatter /></fr:tree>
-<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>272</fr:anchor><fr:addr type="user">type-systems-000A</fr:addr><fr:route>type-systems-000A.xml</fr:route><fr:title text="Unit introduction checking ({Unit-I})">Unit introduction checking (<fr:tex display="inline"><![CDATA[\mathtt {Unit-I\Leftarrow }]]></fr:tex>)</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:p><fr:tex display="block"><![CDATA[\frac {}           {\Gamma  \vdash  ()\Leftarrow \text {unit}}(\mathtt {Unit-I\Leftarrow })]]></fr:tex></fr:p></fr:mainmatter><fr:backmatter /></fr:tree>
-<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>273</fr:anchor><fr:addr type="user">type-systems-000B</fr:addr><fr:route>type-systems-000B.xml</fr:route><fr:title text="Subsumption checking ({Sub})">Subsumption checking (<fr:tex display="inline"><![CDATA[\mathtt {Sub\Leftarrow }]]></fr:tex>)</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:p><fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}              \Gamma  \vdash  e \Rightarrow  A & A = B            \end {array}}            {\Gamma  \vdash  e \Leftarrow  B}(\mathtt {Sub\Leftarrow })]]></fr:tex></fr:p></fr:mainmatter><fr:backmatter /></fr:tree></fr:p>
+(BDSTLC) can be expressed as follows:</fr:p>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>272</fr:anchor>
+                <fr:addr type="user">type-systems-0006</fr:addr>
+                <fr:route>type-systems-0006.xml</fr:route>
+                <fr:title text="Variable synthesis">Variable synthesis</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>
+                  <fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}              (x:A) \in  \Gamma              \end {array}}             {\Gamma  \vdash  x \Rightarrow  A}(\mathtt {Var\Rightarrow })]]></fr:tex>
+                </fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>273</fr:anchor>
+                <fr:addr type="user">type-systems-0007</fr:addr>
+                <fr:route>type-systems-0007.xml</fr:route>
+                <fr:title text="Annotation synthesis">Annotation synthesis</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>
+                  <fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}              \Gamma  \vdash  e \Leftarrow  A            \end {array}}            {\Gamma  \vdash  (e::A) \Rightarrow  A}(\mathtt {Anno\Rightarrow })]]></fr:tex>
+                </fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>274</fr:anchor>
+                <fr:addr type="user">type-systems-0008</fr:addr>
+                <fr:route>type-systems-0008.xml</fr:route>
+                <fr:title text="Arrow introduction checking">Arrow introduction checking</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>
+                  <fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}              \Gamma , x:A_1 \vdash  e \Leftarrow  A_2            \end {array}}            {\Gamma  \vdash  (\lambda  x.e) \Leftarrow  A_1 \rightarrow  A_2}(\mathtt {\rightarrow  I\Leftarrow })]]></fr:tex>
+                </fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>275</fr:anchor>
+                <fr:addr type="user">type-systems-0009</fr:addr>
+                <fr:route>type-systems-0009.xml</fr:route>
+                <fr:title text="Arrow elimination synthesis">Arrow elimination synthesis</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>
+                  <fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}              \Gamma  \vdash  e_1 \Rightarrow  A_1 \rightarrow  A_2 & \Gamma  \vdash  e_2 \Leftarrow  A_1            \end {array}}            {\Gamma  \vdash  (e_1 e_2) \Rightarrow  A_2}(\mathtt {\rightarrow  E\Rightarrow })]]></fr:tex>
+                </fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>276</fr:anchor>
+                <fr:addr type="user">type-systems-000A</fr:addr>
+                <fr:route>type-systems-000A.xml</fr:route>
+                <fr:title text="Unit introduction checking">Unit introduction checking</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>
+                  <fr:tex display="block"><![CDATA[\frac {}           {\Gamma  \vdash  ()\Leftarrow \text {unit}}(\mathtt {Unit-I\Leftarrow })]]></fr:tex>
+                </fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>277</fr:anchor>
+                <fr:addr type="user">type-systems-000B</fr:addr>
+                <fr:route>type-systems-000B.xml</fr:route>
+                <fr:title text="Subsumption checking">Subsumption checking</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>
+                  <fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}              \Gamma  \vdash  e \Rightarrow  A & A = B            \end {array}}            {\Gamma  \vdash  e \Leftarrow  B}(\mathtt {Sub\Leftarrow })]]></fr:tex>
+                </fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
             <fr:p>Explanation of the rules:
   <fr:ol><fr:li><fr:tex display="inline"><![CDATA[\mathtt {Var\Rightarrow }]]></fr:tex> has no typing premise, but since <fr:tex display="inline"><![CDATA[x:A]]></fr:tex> is in the
     context, we can synthesize the type of <fr:tex display="inline"><![CDATA[x]]></fr:tex>. Checking would require knowing the type
@@ -77,7 +160,7 @@
         </fr:tree>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>274</fr:anchor>
+            <fr:anchor>278</fr:anchor>
             <fr:addr type="user">type-systems-0005</fr:addr>
             <fr:route>type-systems-0005.xml</fr:route>
             <fr:title text="Why birectional STLC needs both Anno and Sub">Why <fr:link type="local" href="type-systems-0004.xml" addr="type-systems-0004" title="Bidirectional simply-typed lambda calculus with () : {unit} and type equality">birectional STLC</fr:link> needs both <fr:tex display="inline"><![CDATA[Anno\Rightarrow ]]></fr:tex> and <fr:tex display="inline"><![CDATA[Sub\Leftarrow ]]></fr:tex></fr:title>
@@ -85,8 +168,8 @@
           </fr:frontmatter>
           <fr:mainmatter>
             <fr:p>The <fr:tex display="inline"><![CDATA[Anno\Rightarrow ]]></fr:tex> and <fr:tex display="inline"><![CDATA[Sub\Leftarrow ]]></fr:tex> rules, i.e.,  
-  <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>275</fr:anchor><fr:addr type="user">type-systems-0007</fr:addr><fr:route>type-systems-0007.xml</fr:route><fr:title text="Annotation synthesis ({Anno})">Annotation synthesis (<fr:tex display="inline"><![CDATA[\mathtt {Anno\Rightarrow }]]></fr:tex>)</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:p><fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}              \Gamma  \vdash  e \Leftarrow  A            \end {array}}            {\Gamma  \vdash  (e::A) \Rightarrow  A}(\mathtt {Anno\Rightarrow })]]></fr:tex></fr:p></fr:mainmatter><fr:backmatter /></fr:tree>
-  <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>276</fr:anchor><fr:addr type="user">type-systems-000B</fr:addr><fr:route>type-systems-000B.xml</fr:route><fr:title text="Subsumption checking ({Sub})">Subsumption checking (<fr:tex display="inline"><![CDATA[\mathtt {Sub\Leftarrow }]]></fr:tex>)</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:p><fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}              \Gamma  \vdash  e \Rightarrow  A & A = B            \end {array}}            {\Gamma  \vdash  e \Leftarrow  B}(\mathtt {Sub\Leftarrow })]]></fr:tex></fr:p></fr:mainmatter><fr:backmatter /></fr:tree>
+  <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>279</fr:anchor><fr:addr type="user">type-systems-0007</fr:addr><fr:route>type-systems-0007.xml</fr:route><fr:title text="Annotation synthesis">Annotation synthesis</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:p><fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}              \Gamma  \vdash  e \Leftarrow  A            \end {array}}            {\Gamma  \vdash  (e::A) \Rightarrow  A}(\mathtt {Anno\Rightarrow })]]></fr:tex></fr:p></fr:mainmatter><fr:backmatter /></fr:tree>
+  <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>280</fr:anchor><fr:addr type="user">type-systems-000B</fr:addr><fr:route>type-systems-000B.xml</fr:route><fr:title text="Subsumption checking">Subsumption checking</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:p><fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}              \Gamma  \vdash  e \Rightarrow  A & A = B            \end {array}}            {\Gamma  \vdash  e \Leftarrow  B}(\mathtt {Sub\Leftarrow })]]></fr:tex></fr:p></fr:mainmatter><fr:backmatter /></fr:tree>
 
 rules enable moving between checking and synthesis modes. 
 

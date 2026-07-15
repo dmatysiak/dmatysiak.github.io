@@ -1,0 +1,8 @@
+\title{Evaluation and reduction}
+
+\p{\em{Evaluation} is a function or a process of computing semantic values from syntactic
+terms. It is [denotational](plt-languages-0004) in nature. Evaluation should be
+distinguished from \em{reduction}, which is the process of computing a syntactic term from
+another syntactic term—usually a [redex](plt-languages-000C)—that is equivalent, but
+having had some elimination rule applied. When a term can be reduced no further, it is a
+[normal form](plt-languages-000A).}

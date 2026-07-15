@@ -1,0 +1,39 @@
+\title{de Bruijn indices}
+
+\p{\strong{De Bruijn indices} are [a way](plt-languages-000P) of representing variables in
+a term without using names. Instead of naming variables, we use numbers to indicate how
+many binders away the variable is from its binding site. This makes indices \em{relative}
+to the binding site.} 
+
+\p{For example, consider the following terms: 
+
+##{\begin{array}{c}
+\lambda x. \lambda y. \lambda z. x \\
+\lambda x. \lambda y. \lambda z. y \\
+\lambda x. \lambda y. \lambda z. z
+\end{array}}
+
+In the first term, the variable #{x} is bound by the first lambda which is two binding
+sites away. As a result, it is represented by the index #{2}. Similarly, in the second
+term, the variable #{y} is bound by the second lambda, so it is represented by the index
+1. Lastly, the variable #{z} is bound by the third lambda, so it is represented by the
+index 0. This gives us the following indexed representations of these closed terms:
+
+##{
+\begin{align*}
+ \lambda \overset{\red{2}}{\vphantom{y}x}. 
+ \lambda \overset{\gray{1}}{y}. 
+ \lambda \overset{\gray{0}}{\vphantom{y}z}. \underset{\red{2}}{x}  
+&\equiv \lambda \lambda \lambda \red{2} \\
+
+ \lambda \overset{\gray{2}}{x}. 
+ \lambda \overset{\red{1}}{y}. 
+ \lambda \overset{\gray{0}}{\vphantom{y}z}. \underset{\red{1}}{y}  
+&\equiv \lambda \lambda \lambda \red{1} \\
+
+ \lambda \overset{\gray{2}}{x}. 
+ \lambda \overset{\gray{1}}{y}. 
+  \lambda \overset{\red{0}}{\vphantom{y}z}. \underset{\red{0}}{z}  
+&\equiv \lambda \lambda \lambda \red{0} 
+
+\end{align*}}}

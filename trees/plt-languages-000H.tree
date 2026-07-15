@@ -1,0 +1,17 @@
+\title{alpha-conversion}
+
+\p{\strong{#{\alpha}-conversion} is a rule that allows bound variable names to be changed
+consistently throughout a term. Two terms are considered equivalent under
+#{\alpha}-conversion. For example, the following two terms are considered equivalent under
+alpha-conversion:
+
+##{\lambda x.x \equiv_\alpha \lambda y.y}
+}
+
+\p{Formally, we may define #{\alpha}-equivalence, and implicitly #{\alpha}-conversion, as
+follows: 
+
+##{\frac{y \notin \text{FV}(e)}
+        {\lambda x.e \equiv_\alpha \lambda y.e[y/x]}}}
+
+

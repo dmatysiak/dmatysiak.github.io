@@ -1,0 +1,10 @@
+\title{Type equality}
+
+\p{
+
+##{\frac{\begin{array}{cc}
+          \Gamma \vdash e : A & A = B
+        \end{array}}
+{\Gamma \vdash e : B}(\mathtt{TypeEq})}
+
+}

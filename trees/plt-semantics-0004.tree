@@ -4,3 +4,26 @@
 compositionality} holds that the meaning of a complex expression is determined by the
 meanings of its constituents and the way they enter into the structure of that complex
 expression.}
+
+\p{A consequence of compositionality is \em{substitutivity}: if two expressions have the
+same meaning, then one can be substituted for the other in any context without changing
+the meaning of expressions into which one or the other enters. Substitutivity is
+\em{intensional} in nature. Consider that if it were purely extensional, this would lead
+to changes in meaning, thus violating the very principle of compositionality. For
+instance, the extensions of "organisms with a heart" and "organisms with a kidney" are the
+same, but substituting one for the other in the sentence "all organisms with a heart are
+organisms with a kidney" can produce four sentences with different meanings:
+
+\ol{
+
+\li{All organisms with a heart are organisms with a kidney.}
+
+\li{All organisms with a kidney are organisms with a heart.}
+
+\li{All organisms with a heart are organisms with a heart.}
+
+\li{All organisms with a kidney are organisms with a kidney.}}
+
+The last two sentences are tautological, but the first two are not. Furthermore, the
+first two sentences are converses of each other. 
+}

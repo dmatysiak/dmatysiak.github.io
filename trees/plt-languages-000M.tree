@@ -1,0 +1,6 @@
+\title{Free variable}
+
+\p{A \strong{free variable} is a variable that is not [bound](plt-languages-000N) within a
+given term. In the lambda abstraction #{\lambda y.x}, for example, the variable #{x} is
+free within the scope of the term as the only binding site is #{\lambda y} which binds the
+variable #{y}.} 

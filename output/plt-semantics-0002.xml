@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="default.xsl"?>
 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>317</fr:anchor>
+    <fr:anchor>348</fr:anchor>
     <fr:addr type="user">plt-semantics-0002</fr:addr>
     <fr:route>plt-semantics-0002.xml</fr:route>
     <fr:title text="Denotational semantics">Denotational semantics</fr:title>
@@ -38,7 +38,7 @@ proof of totality proceeds by induction on the structure of the expression <fr:t
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>318</fr:anchor>
+            <fr:anchor>349</fr:anchor>
             <fr:addr type="user">plt-languages-0004</fr:addr>
             <fr:route>plt-languages-0004.xml</fr:route>
             <fr:title text="Denotational semantics of the addition language">Denotational semantics of the addition language</fr:title>
@@ -53,6 +53,28 @@ language</fr:link> is given below:
           </fr:mainmatter>
           <fr:backmatter />
         </fr:tree>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>350</fr:anchor>
+            <fr:addr type="user">plt-languages-000B</fr:addr>
+            <fr:route>plt-languages-000B.xml</fr:route>
+            <fr:title text="Value">Value</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>A <fr:em>value</fr:em> is a term that is fully reduced and cannot be reduced any further. Values
+are the final results of computations.</fr:p>
+            <fr:p>It is important to note that the word "value" is overloaded in programming language
+theory. Syntactically and <fr:link type="local" href="plt-semantics-0003.xml" addr="plt-semantics-0003" title="Operational semantics">operationally</fr:link>, a value is a fully reduced
+<fr:em>term</fr:em> in the syntactic domain characterized by an <fr:link type="local" href="plt-languages-000D.xml" addr="plt-languages-000D" title="Introduction form">introduction
+form</fr:link> and an absence of <fr:link type="local" href="plt-languages-000E.xml" addr="plt-languages-000E" title="Elimination form">elimination forms</fr:link>.
+Semantically and <fr:link type="local" href="plt-semantics-0002.xml" addr="plt-semantics-0002" title="Denotational semantics">denotationally</fr:link> speaking, a value is an object in
+the model or the semantic domain of the language. Whereas operationally, the expression
+<fr:tex display="inline"><![CDATA[\text {add}(2, 3)]]></fr:tex> is different from the expression <fr:tex display="inline"><![CDATA[5]]></fr:tex>, denotationally, they have the
+same value, i.e., <fr:tex display="inline"><![CDATA[\llbracket  \text {add}(2, 3)\rrbracket  = \llbracket  5 \rrbracket ]]></fr:tex>.</fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
       </fr:mainmatter>
       <fr:backmatter />
     </fr:tree>
@@ -64,7 +86,7 @@ language</fr:link> is given below:
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>319</fr:anchor>
+            <fr:anchor>351</fr:anchor>
             <fr:addr type="user">plt-semantics-0004</fr:addr>
             <fr:route>plt-semantics-0004.xml</fr:route>
             <fr:title text="Compositionality">Compositionality</fr:title>
@@ -75,12 +97,31 @@ language</fr:link> is given below:
 compositionality</fr:em> holds that the meaning of a complex expression is determined by the
 meanings of its constituents and the way they enter into the structure of that complex
 expression.</fr:p>
+            <fr:p>A consequence of compositionality is <fr:em>substitutivity</fr:em>: if two expressions have the
+same meaning, then one can be substituted for the other in any context without changing
+the meaning of expressions into which one or the other enters. Substitutivity is
+<fr:em>intensional</fr:em> in nature. Consider that if it were purely extensional, this would lead
+to changes in meaning, thus violating the very principle of compositionality. For
+instance, the extensions of "organisms with a heart" and "organisms with a kidney" are the
+same, but substituting one for the other in the sentence "all organisms with a heart are
+organisms with a kidney" can produce four sentences with different meanings:
+
+<fr:ol><fr:li>All organisms with a heart are organisms with a kidney.</fr:li>
+
+<fr:li>All organisms with a kidney are organisms with a heart.</fr:li>
+
+<fr:li>All organisms with a heart are organisms with a heart.</fr:li>
+
+<fr:li>All organisms with a kidney are organisms with a kidney.</fr:li></fr:ol>
+
+The last two sentences are tautological, but the first two are not. Furthermore, the
+first two sentences are converses of each other.</fr:p>
           </fr:mainmatter>
           <fr:backmatter />
         </fr:tree>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>320</fr:anchor>
+            <fr:anchor>352</fr:anchor>
             <fr:addr type="user">proof-techniques-0001</fr:addr>
             <fr:route>proof-techniques-0001.xml</fr:route>
             <fr:title text="Structural induction">Structural induction</fr:title>
@@ -99,7 +140,7 @@ of the language</fr:link> is <fr:em>total</fr:em>, that is, that that for every 
 induction.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>265</fr:anchor>
+                <fr:anchor>269</fr:anchor>
                 <fr:addr type="user">plt-languages-0005</fr:addr>
                 <fr:route>plt-languages-0005.xml</fr:route>
                 <fr:title text="The compositionality property of the addition language">The compositionality property of the addition language</fr:title>

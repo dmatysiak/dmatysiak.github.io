@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?>
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+  <fr:frontmatter>
+    <fr:anchor>358</fr:anchor>
+    <fr:addr type="user">ttfp-000N</fr:addr>
+    <fr:route>ttfp-000N.xml</fr:route>
+    <fr:title text="Disjunction introduction">Disjunction introduction</fr:title>
+    <fr:authors />
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <fr:tex display="block"><![CDATA[\frac {A}        {A \lor  B}(\mathtt {\lor {I_A}})]]></fr:tex>
+    <fr:tex display="block"><![CDATA[\frac {B}        {A \lor  B}(\mathtt {\lor {I_B}})]]></fr:tex>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:title text="Context">Context</fr:title>
+        <fr:authors />
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>359</fr:anchor>
+            <fr:addr type="user">ttfp-000B</fr:addr>
+            <fr:route>ttfp-000B.xml</fr:route>
+            <fr:title text="Disjunction rules">Disjunction rules</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p><fr:em>Disjunction</fr:em> has two introduction rules, depending on which disjunct we have a proof for:
+
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>247</fr:anchor><fr:addr type="user">ttfp-000N</fr:addr><fr:route>ttfp-000N.xml</fr:route><fr:title text="Disjunction introduction">Disjunction introduction</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:tex display="block"><![CDATA[\frac {A}        {A \lor  B}(\mathtt {\lor {I_A}})]]></fr:tex><fr:tex display="block"><![CDATA[\frac {B}        {A \lor  B}(\mathtt {\lor {I_B}})]]></fr:tex></fr:mainmatter><fr:backmatter /></fr:tree>
+
+Because we don't necessarily know which disjunct in a disjuntion we have a proof for, the elimination rule works by showing that, if we know that <fr:tex display="inline"><![CDATA[A \lor  B]]></fr:tex>, and that <fr:tex display="inline"><![CDATA[C]]></fr:tex> can be derived from both <fr:tex display="inline"><![CDATA[A]]></fr:tex> and <fr:tex display="inline"><![CDATA[B]]></fr:tex>, then we can conclude that <fr:tex display="inline"><![CDATA[C]]></fr:tex>:
+
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>248</fr:anchor><fr:addr type="user">ttfp-000O</fr:addr><fr:route>ttfp-000O.xml</fr:route><fr:title text="Disjunction elimination">Disjunction elimination</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:tex display="block"><![CDATA[\frac {\begin {array}{ccc}           & [A] & [B] \\           & \vdots  & \vdots  \\           A \lor  B & C & C         \end {array}}        {C}(\mathtt {\lor {E}})]]></fr:tex></fr:mainmatter><fr:backmatter /></fr:tree>
+
+The premises <fr:tex display="inline"><![CDATA[A]]></fr:tex> and <fr:tex display="inline"><![CDATA[B]]></fr:tex> are discharged in order to infer <fr:tex display="inline"><![CDATA[C]]></fr:tex>.</fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+      </fr:mainmatter>
+      <fr:backmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

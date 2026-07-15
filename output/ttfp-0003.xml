@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="default.xsl"?>
 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>321</fr:anchor>
+    <fr:anchor>353</fr:anchor>
     <fr:addr type="user">ttfp-0003</fr:addr>
     <fr:route>ttfp-0003.xml</fr:route>
     <fr:title text="Derivation rules for propositional logic">Derivation rules for propositional logic</fr:title>
@@ -11,7 +11,7 @@
   <fr:mainmatter>
     <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
       <fr:frontmatter>
-        <fr:anchor>241</fr:anchor>
+        <fr:anchor>243</fr:anchor>
         <fr:addr type="user">ttfp-0008</fr:addr>
         <fr:route>ttfp-0008.xml</fr:route>
         <fr:title text="Assumption rule">Assumption rule</fr:title>
@@ -26,7 +26,7 @@
     </fr:tree>
     <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
       <fr:frontmatter>
-        <fr:anchor>242</fr:anchor>
+        <fr:anchor>244</fr:anchor>
         <fr:addr type="user">ttfp-0009</fr:addr>
         <fr:route>ttfp-0009.xml</fr:route>
         <fr:title text="Conjunction rules">Conjunction rules</fr:title>
@@ -46,7 +46,7 @@
     </fr:tree>
     <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
       <fr:frontmatter>
-        <fr:anchor>243</fr:anchor>
+        <fr:anchor>245</fr:anchor>
         <fr:addr type="user">ttfp-000A</fr:addr>
         <fr:route>ttfp-000A.xml</fr:route>
         <fr:title text="Implication rules">Implication rules</fr:title>
@@ -66,7 +66,7 @@ The application of the introduction rule can be related to the discharged premis
     </fr:tree>
     <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
       <fr:frontmatter>
-        <fr:anchor>244</fr:anchor>
+        <fr:anchor>246</fr:anchor>
         <fr:addr type="user">ttfp-000B</fr:addr>
         <fr:route>ttfp-000B.xml</fr:route>
         <fr:title text="Disjunction rules">Disjunction rules</fr:title>
@@ -75,13 +75,11 @@ The application of the introduction rule can be related to the discharged premis
       <fr:mainmatter>
         <fr:p><fr:em>Disjunction</fr:em> has two introduction rules, depending on which disjunct we have a proof for:
 
-<fr:tex display="block"><![CDATA[\frac {A}        {A \lor  B}(\mathtt {\lor {I_A}})]]></fr:tex>
-
-<fr:tex display="block"><![CDATA[\frac {B}        {A \lor  B}(\mathtt {\lor {I_B}})]]></fr:tex>
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>247</fr:anchor><fr:addr type="user">ttfp-000N</fr:addr><fr:route>ttfp-000N.xml</fr:route><fr:title text="Disjunction introduction">Disjunction introduction</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:tex display="block"><![CDATA[\frac {A}        {A \lor  B}(\mathtt {\lor {I_A}})]]></fr:tex><fr:tex display="block"><![CDATA[\frac {B}        {A \lor  B}(\mathtt {\lor {I_B}})]]></fr:tex></fr:mainmatter><fr:backmatter /></fr:tree>
 
 Because we don't necessarily know which disjunct in a disjuntion we have a proof for, the elimination rule works by showing that, if we know that <fr:tex display="inline"><![CDATA[A \lor  B]]></fr:tex>, and that <fr:tex display="inline"><![CDATA[C]]></fr:tex> can be derived from both <fr:tex display="inline"><![CDATA[A]]></fr:tex> and <fr:tex display="inline"><![CDATA[B]]></fr:tex>, then we can conclude that <fr:tex display="inline"><![CDATA[C]]></fr:tex>:
 
-<fr:tex display="block"><![CDATA[\frac {\begin {array}{ccc}           & [A] & [B] \\           & \vdots  & \vdots  \\           A \lor  B & C & C         \end {array}}        {C}(\mathtt {\lor {E}})]]></fr:tex>
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>248</fr:anchor><fr:addr type="user">ttfp-000O</fr:addr><fr:route>ttfp-000O.xml</fr:route><fr:title text="Disjunction elimination">Disjunction elimination</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:tex display="block"><![CDATA[\frac {\begin {array}{ccc}           & [A] & [B] \\           & \vdots  & \vdots  \\           A \lor  B & C & C         \end {array}}        {C}(\mathtt {\lor {E}})]]></fr:tex></fr:mainmatter><fr:backmatter /></fr:tree>
 
 The premises <fr:tex display="inline"><![CDATA[A]]></fr:tex> and <fr:tex display="inline"><![CDATA[B]]></fr:tex> are discharged in order to infer <fr:tex display="inline"><![CDATA[C]]></fr:tex>.</fr:p>
       </fr:mainmatter>
@@ -89,7 +87,7 @@ The premises <fr:tex display="inline"><![CDATA[A]]></fr:tex> and <fr:tex display
     </fr:tree>
     <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
       <fr:frontmatter>
-        <fr:anchor>245</fr:anchor>
+        <fr:anchor>249</fr:anchor>
         <fr:addr type="user">ttfp-000C</fr:addr>
         <fr:route>ttfp-000C.xml</fr:route>
         <fr:title text="Absurdity">Absurdity</fr:title>
@@ -104,7 +102,7 @@ The premises <fr:tex display="inline"><![CDATA[A]]></fr:tex> and <fr:tex display
     </fr:tree>
     <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
       <fr:frontmatter>
-        <fr:anchor>246</fr:anchor>
+        <fr:anchor>250</fr:anchor>
         <fr:addr type="user">ttfp-000D</fr:addr>
         <fr:route>ttfp-000D.xml</fr:route>
         <fr:title text="Negation rule">Negation rule</fr:title>
@@ -127,7 +125,7 @@ and elimination:
     </fr:tree>
     <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
       <fr:frontmatter>
-        <fr:anchor>247</fr:anchor>
+        <fr:anchor>251</fr:anchor>
         <fr:addr type="user">ttfp-000E</fr:addr>
         <fr:route>ttfp-000E.xml</fr:route>
         <fr:title text="Bi-implication rules">Bi-implication rules</fr:title>
@@ -153,7 +151,7 @@ and elimination:
     <fr:p>Thompson notes that the approach taken here is intuitionistic.</fr:p>
     <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
       <fr:frontmatter>
-        <fr:anchor>248</fr:anchor>
+        <fr:anchor>252</fr:anchor>
         <fr:addr type="user">ttfp-000F</fr:addr>
         <fr:route>ttfp-000F.xml</fr:route>
         <fr:title text="Classical logic as extension of intuitionistic logic">Classical logic as extension of intuitionistic logic</fr:title>
@@ -185,7 +183,7 @@ and the <fr:em>rule of proof by contradiction</fr:em>:
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>322</fr:anchor>
+            <fr:anchor>354</fr:anchor>
             <fr:addr type="user">ttfp-0002</fr:addr>
             <fr:route>ttfp-0002.xml</fr:route>
             <fr:title text="Propositional logic">Propositional logic</fr:title>
@@ -213,7 +211,7 @@ from zero or more assumptions. Deduction rules are used to construct larger deri
 out of smaller deductions.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>323</fr:anchor>
+                <fr:anchor>355</fr:anchor>
                 <fr:addr type="user">ttfp-0003</fr:addr>
                 <fr:route>ttfp-0003.xml</fr:route>
                 <fr:title text="Derivation rules for propositional logic">Derivation rules for propositional logic</fr:title>
@@ -222,7 +220,7 @@ out of smaller deductions.</fr:p>
               <fr:mainmatter>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>241</fr:anchor>
+                    <fr:anchor>243</fr:anchor>
                     <fr:addr type="user">ttfp-0008</fr:addr>
                     <fr:route>ttfp-0008.xml</fr:route>
                     <fr:title text="Assumption rule">Assumption rule</fr:title>
@@ -237,7 +235,7 @@ out of smaller deductions.</fr:p>
                 </fr:tree>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>242</fr:anchor>
+                    <fr:anchor>244</fr:anchor>
                     <fr:addr type="user">ttfp-0009</fr:addr>
                     <fr:route>ttfp-0009.xml</fr:route>
                     <fr:title text="Conjunction rules">Conjunction rules</fr:title>
@@ -257,7 +255,7 @@ out of smaller deductions.</fr:p>
                 </fr:tree>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>243</fr:anchor>
+                    <fr:anchor>245</fr:anchor>
                     <fr:addr type="user">ttfp-000A</fr:addr>
                     <fr:route>ttfp-000A.xml</fr:route>
                     <fr:title text="Implication rules">Implication rules</fr:title>
@@ -277,7 +275,7 @@ The application of the introduction rule can be related to the discharged premis
                 </fr:tree>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>244</fr:anchor>
+                    <fr:anchor>246</fr:anchor>
                     <fr:addr type="user">ttfp-000B</fr:addr>
                     <fr:route>ttfp-000B.xml</fr:route>
                     <fr:title text="Disjunction rules">Disjunction rules</fr:title>
@@ -286,13 +284,11 @@ The application of the introduction rule can be related to the discharged premis
                   <fr:mainmatter>
                     <fr:p><fr:em>Disjunction</fr:em> has two introduction rules, depending on which disjunct we have a proof for:
 
-<fr:tex display="block"><![CDATA[\frac {A}        {A \lor  B}(\mathtt {\lor {I_A}})]]></fr:tex>
-
-<fr:tex display="block"><![CDATA[\frac {B}        {A \lor  B}(\mathtt {\lor {I_B}})]]></fr:tex>
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>247</fr:anchor><fr:addr type="user">ttfp-000N</fr:addr><fr:route>ttfp-000N.xml</fr:route><fr:title text="Disjunction introduction">Disjunction introduction</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:tex display="block"><![CDATA[\frac {A}        {A \lor  B}(\mathtt {\lor {I_A}})]]></fr:tex><fr:tex display="block"><![CDATA[\frac {B}        {A \lor  B}(\mathtt {\lor {I_B}})]]></fr:tex></fr:mainmatter><fr:backmatter /></fr:tree>
 
 Because we don't necessarily know which disjunct in a disjuntion we have a proof for, the elimination rule works by showing that, if we know that <fr:tex display="inline"><![CDATA[A \lor  B]]></fr:tex>, and that <fr:tex display="inline"><![CDATA[C]]></fr:tex> can be derived from both <fr:tex display="inline"><![CDATA[A]]></fr:tex> and <fr:tex display="inline"><![CDATA[B]]></fr:tex>, then we can conclude that <fr:tex display="inline"><![CDATA[C]]></fr:tex>:
 
-<fr:tex display="block"><![CDATA[\frac {\begin {array}{ccc}           & [A] & [B] \\           & \vdots  & \vdots  \\           A \lor  B & C & C         \end {array}}        {C}(\mathtt {\lor {E}})]]></fr:tex>
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>248</fr:anchor><fr:addr type="user">ttfp-000O</fr:addr><fr:route>ttfp-000O.xml</fr:route><fr:title text="Disjunction elimination">Disjunction elimination</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:tex display="block"><![CDATA[\frac {\begin {array}{ccc}           & [A] & [B] \\           & \vdots  & \vdots  \\           A \lor  B & C & C         \end {array}}        {C}(\mathtt {\lor {E}})]]></fr:tex></fr:mainmatter><fr:backmatter /></fr:tree>
 
 The premises <fr:tex display="inline"><![CDATA[A]]></fr:tex> and <fr:tex display="inline"><![CDATA[B]]></fr:tex> are discharged in order to infer <fr:tex display="inline"><![CDATA[C]]></fr:tex>.</fr:p>
                   </fr:mainmatter>
@@ -300,7 +296,7 @@ The premises <fr:tex display="inline"><![CDATA[A]]></fr:tex> and <fr:tex display
                 </fr:tree>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>245</fr:anchor>
+                    <fr:anchor>249</fr:anchor>
                     <fr:addr type="user">ttfp-000C</fr:addr>
                     <fr:route>ttfp-000C.xml</fr:route>
                     <fr:title text="Absurdity">Absurdity</fr:title>
@@ -315,7 +311,7 @@ The premises <fr:tex display="inline"><![CDATA[A]]></fr:tex> and <fr:tex display
                 </fr:tree>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>246</fr:anchor>
+                    <fr:anchor>250</fr:anchor>
                     <fr:addr type="user">ttfp-000D</fr:addr>
                     <fr:route>ttfp-000D.xml</fr:route>
                     <fr:title text="Negation rule">Negation rule</fr:title>
@@ -338,7 +334,7 @@ and elimination:
                 </fr:tree>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>247</fr:anchor>
+                    <fr:anchor>251</fr:anchor>
                     <fr:addr type="user">ttfp-000E</fr:addr>
                     <fr:route>ttfp-000E.xml</fr:route>
                     <fr:title text="Bi-implication rules">Bi-implication rules</fr:title>
@@ -364,7 +360,7 @@ and elimination:
                 <fr:p>Thompson notes that the approach taken here is intuitionistic.</fr:p>
                 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
                   <fr:frontmatter>
-                    <fr:anchor>248</fr:anchor>
+                    <fr:anchor>252</fr:anchor>
                     <fr:addr type="user">ttfp-000F</fr:addr>
                     <fr:route>ttfp-000F.xml</fr:route>
                     <fr:title text="Classical logic as extension of intuitionistic logic">Classical logic as extension of intuitionistic logic</fr:title>

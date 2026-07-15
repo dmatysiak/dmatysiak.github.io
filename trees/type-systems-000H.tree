@@ -1,5 +1,101 @@
 \title{Pfennig recipe}
 
-\p{The \em{Pfennig recipe} is a method for 
+\p{The \em{Pfennig recipe} is a method for constructing bidirectional type systems that
+satisfy many of the [criteria](type-systems-000C) that are desirable for such a system. It
+functions as a good starting point for building up a bidirectional type system. The
+disadvantages of the Pfennig recipe—especially with respect to [annotation
+discipline](type-systems-000G)—can be mitigated in exchange for a [larger set of
+rules](type-systems-000F).
+}
+
+\transclude{type-systems-000J}
+\transclude{type-systems-000K}
+
+\p{The first step is to locate the principal judgement.}
+
+\transclude{type-systems-000R}
+\transclude{type-systems-000S}
+
+\p{The second step is to bidirectionalize the principal judgement.
+
+\ul{
+
+\li{If the rule is an [introduction rule](type-systems-000J), then make the principal
+judgement a checking judgement.}
+
+\li{If the rule is an [elimination rule](type-systems-000K), then make the principal
+judgement a synthesis judgement.}}}
+
+\p{The third step is to bidirectionalize the remaining judgements in the rule. The
+direction or mode of the principal judgment provides guidance for the direction of the
+other judgements.
+
+\ul{
+
+\li{If the principal judgement is a conclusion, then the only judgements left are
+premises. The conclusion's mode provides sufficient information to determine the modes of
+the premises. Here, we should utilize known information. For example, if a conclusion checks
+against a type #{A} and a premise also contains type #{A}, then the premise should also be
+a checking judgement.}
+
+\li{If the principal judgement is a premise (usually the first), then it is better to
+bidrectionalize the premises first, before the conclusion. This maximizes the chances of
+having enough information to synthesize the type of the conclusion. As before, we should
+utilize known information. If we know the type of a judgement, then the judgement should
+use checking. Here, if an earlier premise synthesizes a type #{B}, then a later premise
+having type #{B} should use checking.}}
+
+The modes we choose should be [mode-correct](type-systems-000D) and should also be guided
+by considerations of [annotatability](type-systems-000E) and [annotation
+character](type-systems-000G).}
+
+\p{Here is an example using \em{product introduction rule} (#{\mathtt{\times I}}).
+
+##{\frac{\Gamma \vdash e_1 : A_1 \quad \Gamma \vdash e_2 : A_2}
+        {\mathbf{\Gamma \vdash \langle e_1, e_2 \rangle : A_1 \times
+        A_2}}(#{\mathtt{\times I}})}
+
+The principal judgment is the conclusion (in bold). Because this is an introduction rule,
+we make the conclusion a checking judgement.
+
+##{\mathbf{\Gamma \vdash \langle e_1, e_2 \rangle \Leftarrow A_1 \times A_2}}
+
+The types #{A_1} and #{A_2} are known, so we can use checking for the premises as well.
+
+##{\begin{array}{cc}
+          \Gamma \vdash e_1 \Leftarrow A_1 & \Gamma \vdash e_2 \Leftarrow A_2 \\
+        \end{array}}
+
+The final bidirectionalized rule is
+
+##{\frac{\Gamma \vdash e_1 \Leftarrow A_1 \quad \Gamma \vdash e_2 \Leftarrow A_2}
+        {\mathbf{\Gamma \vdash \langle e_1, e_2 \rangle \Leftarrow A_1 \times
+        A_2}}(#{\mathtt{\Leftarrow\times I}})}
+}
+
+\p{Typically, the type assignment rules are treated as the "ground truth" against
+annotatability or completeness is measured. However, there are cases where these rules
+must be examined more critically. 
+}
+
+\p{Consider the following sum-elimination rule:
+
+##{\frac{\begin{array}{cc}
+             & \Gamma, x_1:A_1 \vdash e_1 : B \\ 
+             \Gamma \vdash e : A_1 + A_2
+             & \Gamma, x_2:A_2 \vdash e_2 : B
+           \end{array}}
+           {\Gamma \vdash \mathtt{case}\ e\ \mathtt{of}\ 
+            \{\mathtt{inj}_1\ x_1 \mapsto e_2\ 
+            |\ \mathtt{inj}_2\ x_2 \mapsto e_3\} 
+            : B}(\mathtt{+E})}
+
+This rule is a special case of reasoning by cases:
+
+\transclude{ttfp-000O}
 
 }
+
+
+
+

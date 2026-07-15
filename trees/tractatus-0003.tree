@@ -1,0 +1,69 @@
+\title{Simulation of addition}
+
+\p{Consider the bounded addition function 
+
+##{\text{add} : \mathbb{N}_2 \times \mathbb{N}_2 \rightarrow \mathbb{N}_4} 
+
+that takes two natural numbers less than or equal to #{2} and returns their sum: 
+
+##{\text{add}(x, y) = x + y \text{ for } x, y \in \mathbb{N}_2}
+
+We may define a second function 
+
+##{\text{add}_\text{sim} : \Sigma_2 \times \Sigma_2 \rightarrow \Sigma_4}
+
+that simulates the behavior of #{\text{add}} by
+
+\ol{
+
+\li{operating on a domain of pairs of symbols #{\Sigma_2 \times \Sigma_2} drawn from an
+alphabet
+
+##{\Sigma_2 = \{\ulcorner 1 \urcorner, \ulcorner 2 \urcorner, \ulcorner 3 \urcorner\}} 
+
+whose members denote by assignment the natural numbers in #{\mathbb{N}_2};} 
+
+\li{associating with each symbol pair of the domain a symbol of the codomain 
+
+##{\Sigma_4 = \{\ulcorner 1 \urcorner, \ulcorner 2 \urcorner, \ulcorner 3 \urcorner, \ulcorner 4 \urcorner\}}
+
+that denotes by assignment the sum of the denoted values of the pair's symbols:
+
+##{
+\begin{array}{ccc}
+ (\ulcorner 1 \urcorner, \ulcorner 1 \urcorner) & \rightarrow & \ulcorner 2 \urcorner \\
+ (\ulcorner 1 \urcorner, \ulcorner 2 \urcorner) & \rightarrow & \ulcorner 3 \urcorner \\
+ (\ulcorner 2 \urcorner, \ulcorner 1 \urcorner) & \rightarrow & \ulcorner 3 \urcorner \\
+ (\ulcorner 2 \urcorner, \ulcorner 2 \urcorner) & \rightarrow & \ulcorner 4 \urcorner 
+ \end{array}
+}
+
+where the denotation is given by 
+
+##{\llbracket \ulcorner n \urcorner \rrbracket = n \text{ for } n \in \mathbb{N}_2} 
+
+and 
+
+##{\llbracket \ulcorner n \urcorner \rrbracket = n \text{ for } n \in \mathbb{N}_4,} 
+
+respectively.}}}
+
+\p{It is apparent that one could not say that #{\text{add}_\text{sim}} is adding its
+arguments, because the nature of the mapping is purely extensional—the relation between
+the domain and the codomain is here a mapping with a purely lookup operational
+semantics—and its domain and codomain are inhabited by \em{symbolic expressions} of the
+natural numbers rather than the natural numbers themselves.} 
+
+\p{There is also nothing remarkable about the choice of expressions as these are
+inherently arbitrary in relation to the denoted numbers. We could have just as easily
+chosen a different alphabet of symbols to represent the natural numbers and the simulation
+would still hold. The denotation of these symbols is entirely conventional in nature and,
+therefore, in the mind of the observer.}
+
+\p{One could also argue that #{add_\text{sim}} simulates the behavior of addition as such,
+e.g., #{+ : \mathbb{N} \times \mathbb{N} \rightarrow \mathbb{N}} as we commonly understand
+it, but that this simulation is partial given that it is undefined for most (expressions
+of the) natural numbers. This argument is plausible given the common usage in computer
+science (we speak of addition operators or functions in programming languages \em{as if}
+they were total with respect to the natural numbers or whatever the class of numerical
+values under consideration).}

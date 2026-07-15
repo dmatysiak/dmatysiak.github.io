@@ -1,0 +1,9 @@
+\title{Elimination form}
+
+\p{An \em{elimination form} is a term that is reducible by an elimination rule. For
+instance, #{\text{Left}\langle n, m\rangle} is an elimination form if there is an
+elimination rule for #{\text{Left}\langle n, m\rangle}. An example of such an elimination
+rule might be
+
+##{\frac{\Gamma \vdash \text{Left}\langle n, m\rangle:\text{pair}(\text{nat}, \text{nat})}
+        {\Gamma \vdash n:\text{nat}}}}

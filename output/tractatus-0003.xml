@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?>
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+  <fr:frontmatter>
+    <fr:anchor>481</fr:anchor>
+    <fr:addr type="user">tractatus-0003</fr:addr>
+    <fr:route>tractatus-0003.xml</fr:route>
+    <fr:title text="Simulation of addition">Simulation of addition</fr:title>
+    <fr:authors />
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <fr:p>Consider the bounded addition function 
+
+<fr:tex display="block"><![CDATA[\text {add} : \mathbb {N}_2 \times  \mathbb {N}_2 \rightarrow  \mathbb {N}_4]]></fr:tex> 
+
+that takes two natural numbers less than or equal to <fr:tex display="inline"><![CDATA[2]]></fr:tex> and returns their sum: 
+
+<fr:tex display="block"><![CDATA[\text {add}(x, y) = x + y \text { for } x, y \in  \mathbb {N}_2]]></fr:tex>
+
+We may define a second function 
+
+<fr:tex display="block"><![CDATA[\text {add}_\text {sim} : \Sigma _2 \times  \Sigma _2 \rightarrow  \Sigma _4]]></fr:tex>
+
+that simulates the behavior of <fr:tex display="inline"><![CDATA[\text {add}]]></fr:tex> by
+
+<fr:ol><fr:li>operating on a domain of pairs of symbols <fr:tex display="inline"><![CDATA[\Sigma _2 \times  \Sigma _2]]></fr:tex> drawn from an
+alphabet
+
+<fr:tex display="block"><![CDATA[\Sigma _2 = \{\ulcorner  1 \urcorner , \ulcorner  2 \urcorner , \ulcorner  3 \urcorner \}]]></fr:tex> 
+
+whose members denote by assignment the natural numbers in <fr:tex display="inline"><![CDATA[\mathbb {N}_2]]></fr:tex>;</fr:li> 
+
+<fr:li>associating with each symbol pair of the domain a symbol of the codomain 
+
+<fr:tex display="block"><![CDATA[\Sigma _4 = \{\ulcorner  1 \urcorner , \ulcorner  2 \urcorner , \ulcorner  3 \urcorner , \ulcorner  4 \urcorner \}]]></fr:tex>
+
+that denotes by assignment the sum of the denoted values of the pair's symbols:
+
+<fr:tex display="block"><![CDATA[ \begin {array}{ccc}  (\ulcorner  1 \urcorner , \ulcorner  1 \urcorner ) & \rightarrow  & \ulcorner  2 \urcorner  \\  (\ulcorner  1 \urcorner , \ulcorner  2 \urcorner ) & \rightarrow  & \ulcorner  3 \urcorner  \\  (\ulcorner  2 \urcorner , \ulcorner  1 \urcorner ) & \rightarrow  & \ulcorner  3 \urcorner  \\  (\ulcorner  2 \urcorner , \ulcorner  2 \urcorner ) & \rightarrow  & \ulcorner  4 \urcorner    \end {array} ]]></fr:tex>
+
+where the denotation is given by 
+
+<fr:tex display="block"><![CDATA[\llbracket  \ulcorner  n \urcorner  \rrbracket  = n \text { for } n \in  \mathbb {N}_2]]></fr:tex> 
+
+and 
+
+<fr:tex display="block"><![CDATA[\llbracket  \ulcorner  n \urcorner  \rrbracket  = n \text { for } n \in  \mathbb {N}_4,]]></fr:tex> 
+
+respectively.</fr:li></fr:ol></fr:p>
+    <fr:p>It is apparent that one could not say that <fr:tex display="inline"><![CDATA[\text {add}_\text {sim}]]></fr:tex> is adding its
+arguments, because the nature of the mapping is purely extensional—the relation between
+the domain and the codomain is here a mapping with a purely lookup operational
+semantics—and its domain and codomain are inhabited by <fr:em>symbolic expressions</fr:em> of the
+natural numbers rather than the natural numbers themselves.</fr:p>
+    <fr:p>There is also nothing remarkable about the choice of expressions as these are
+inherently arbitrary in relation to the denoted numbers. We could have just as easily
+chosen a different alphabet of symbols to represent the natural numbers and the simulation
+would still hold. The denotation of these symbols is entirely conventional in nature and,
+therefore, in the mind of the observer.</fr:p>
+    <fr:p>One could also argue that <fr:tex display="inline"><![CDATA[add_\text {sim}]]></fr:tex> simulates the behavior of addition as such,
+e.g., <fr:tex display="inline"><![CDATA[+ : \mathbb {N} \times  \mathbb {N} \rightarrow  \mathbb {N}]]></fr:tex> as we commonly understand
+it, but that this simulation is partial given that it is undefined for most (expressions
+of the) natural numbers. This argument is plausible given the common usage in computer
+science (we speak of addition operators or functions in programming languages <fr:em>as if</fr:em>
+they were total with respect to the natural numbers or whatever the class of numerical
+values under consideration).</fr:p>
+  </fr:mainmatter>
+  <fr:backmatter />
+</fr:tree>

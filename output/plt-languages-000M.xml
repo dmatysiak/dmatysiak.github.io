@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?>
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+  <fr:frontmatter>
+    <fr:anchor>383</fr:anchor>
+    <fr:addr type="user">plt-languages-000M</fr:addr>
+    <fr:route>plt-languages-000M.xml</fr:route>
+    <fr:title text="Free variable">Free variable</fr:title>
+    <fr:authors />
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <fr:p>A <fr:strong>free variable</fr:strong> is a variable that is not <fr:link type="local" href="plt-languages-000N.xml" addr="plt-languages-000N" title="Bound variable">bound</fr:link> within a
+given term. In the lambda abstraction <fr:tex display="inline"><![CDATA[\lambda  y.x]]></fr:tex>, for example, the variable <fr:tex display="inline"><![CDATA[x]]></fr:tex> is
+free within the scope of the term as the only binding site is <fr:tex display="inline"><![CDATA[\lambda  y]]></fr:tex> which binds the
+variable <fr:tex display="inline"><![CDATA[y]]></fr:tex>.</fr:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:title text="Backlinks">Backlinks</fr:title>
+        <fr:authors />
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>384</fr:anchor>
+            <fr:addr type="user">plt-languages-000K</fr:addr>
+            <fr:route>plt-languages-000K.xml</fr:route>
+            <fr:title text="Closed term">Closed term</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>A term is said to be <fr:strong>closed</fr:strong> if it contains no <fr:link type="local" href="plt-languages-000M.xml" addr="plt-languages-000M" title="Free variable">free
+variables</fr:link>.</fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>385</fr:anchor>
+            <fr:addr type="user">plt-languages-000L</fr:addr>
+            <fr:route>plt-languages-000L.xml</fr:route>
+            <fr:title text="Open term">Open term</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>A term is said to be <fr:strong>open</fr:strong> if it contains at least one <fr:link type="local" href="plt-languages-000M.xml" addr="plt-languages-000M" title="Free variable">free
+variable</fr:link>.</fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+      </fr:mainmatter>
+      <fr:backmatter />
+    </fr:tree>
+    <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:title text="Related">Related</fr:title>
+        <fr:authors />
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>386</fr:anchor>
+            <fr:addr type="user">plt-languages-000N</fr:addr>
+            <fr:route>plt-languages-000N.xml</fr:route>
+            <fr:title text="Bound variable">Bound variable</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>A <fr:strong>bound variable</fr:strong> is a variable that is declared within a term and is only
+valid within the scope of that term. In the lambda abstraction <fr:tex display="inline"><![CDATA[\lambda  x.e]]></fr:tex>, the
+variable <fr:tex display="inline"><![CDATA[x]]></fr:tex> is bound within the scope of the abstraction, viz., the subterm <fr:tex display="inline"><![CDATA[e]]></fr:tex>, i.e.,
+the body of the abstraction.</fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+      </fr:mainmatter>
+      <fr:backmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

@@ -1,0 +1,28 @@
+\title{de Bruijn levels}
+
+\p{\strong{De Bruijn levels} are [a way](plt-languages-000O) of representing variables in
+a term without using names. Instead of using indices, we use levels to indicate how many
+binders away the variable is from the root of the term, making levels absolute. In this
+representation, the variable #{x} is represented by the level #{0}, the variable #{y} is
+represented by the level #{1} and the variable #{z} is represented by the level #{2}. This
+gives us the following level representations of these closed terms: 
+
+##{
+\begin{align*}
+ \lambda \overset{\red{0}}{\vphantom{y}x}. 
+ \lambda \overset{\gray{1}}{y}. 
+  \lambda \overset{\gray{2}}{\vphantom{y}z}. \underset{\red{0}}{x}  
+&\equiv \lambda \lambda \lambda \red{0} \\
+
+ \lambda \overset{\gray{0}}{\vphantom{y}x}. 
+ \lambda \overset{\red{1}}{y}. 
+ \lambda \overset{\gray{2}}{\vphantom{y}z}. \underset{\gray{1}}{y}  
+&\equiv \lambda \lambda \lambda \red{1} \\
+
+ \lambda \overset{\gray{0}}{\vphantom{y}x}. 
+ \lambda \overset{\gray{1}}{y}. 
+ \lambda \overset{\red{2}}{\vphantom{y}z}. \underset{\red{2}}{z}  
+&\equiv \lambda \lambda \lambda red{2} 
+
+\end{align*}}}
+

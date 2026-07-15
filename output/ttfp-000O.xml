@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?>
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+  <fr:frontmatter>
+    <fr:anchor>360</fr:anchor>
+    <fr:addr type="user">ttfp-000O</fr:addr>
+    <fr:route>ttfp-000O.xml</fr:route>
+    <fr:title text="Disjunction elimination">Disjunction elimination</fr:title>
+    <fr:authors />
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <fr:tex display="block"><![CDATA[\frac {\begin {array}{ccc}           & [A] & [B] \\           & \vdots  & \vdots  \\           A \lor  B & C & C         \end {array}}        {C}(\mathtt {\lor {E}})]]></fr:tex>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:title text="Context">Context</fr:title>
+        <fr:authors />
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>361</fr:anchor>
+            <fr:addr type="user">ttfp-000B</fr:addr>
+            <fr:route>ttfp-000B.xml</fr:route>
+            <fr:title text="Disjunction rules">Disjunction rules</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p><fr:em>Disjunction</fr:em> has two introduction rules, depending on which disjunct we have a proof for:
+
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>247</fr:anchor><fr:addr type="user">ttfp-000N</fr:addr><fr:route>ttfp-000N.xml</fr:route><fr:title text="Disjunction introduction">Disjunction introduction</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:tex display="block"><![CDATA[\frac {A}        {A \lor  B}(\mathtt {\lor {I_A}})]]></fr:tex><fr:tex display="block"><![CDATA[\frac {B}        {A \lor  B}(\mathtt {\lor {I_B}})]]></fr:tex></fr:mainmatter><fr:backmatter /></fr:tree>
+
+Because we don't necessarily know which disjunct in a disjuntion we have a proof for, the elimination rule works by showing that, if we know that <fr:tex display="inline"><![CDATA[A \lor  B]]></fr:tex>, and that <fr:tex display="inline"><![CDATA[C]]></fr:tex> can be derived from both <fr:tex display="inline"><![CDATA[A]]></fr:tex> and <fr:tex display="inline"><![CDATA[B]]></fr:tex>, then we can conclude that <fr:tex display="inline"><![CDATA[C]]></fr:tex>:
+
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>248</fr:anchor><fr:addr type="user">ttfp-000O</fr:addr><fr:route>ttfp-000O.xml</fr:route><fr:title text="Disjunction elimination">Disjunction elimination</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:tex display="block"><![CDATA[\frac {\begin {array}{ccc}           & [A] & [B] \\           & \vdots  & \vdots  \\           A \lor  B & C & C         \end {array}}        {C}(\mathtt {\lor {E}})]]></fr:tex></fr:mainmatter><fr:backmatter /></fr:tree>
+
+The premises <fr:tex display="inline"><![CDATA[A]]></fr:tex> and <fr:tex display="inline"><![CDATA[B]]></fr:tex> are discharged in order to infer <fr:tex display="inline"><![CDATA[C]]></fr:tex>.</fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>362</fr:anchor>
+            <fr:addr type="user">type-systems-000H</fr:addr>
+            <fr:route>type-systems-000H.xml</fr:route>
+            <fr:title text="Pfennig recipe">Pfennig recipe</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>The <fr:em>Pfennig recipe</fr:em> is a method for constructing bidirectional type systems that
+satisfy many of the <fr:link type="local" href="type-systems-000C.xml" addr="type-systems-000C" title="Criteria for selecting rules for a bidirectional type system">criteria</fr:link> that are desirable for such a system. It
+functions as a good starting point for building up a bidirectional type system. The
+disadvantages of the Pfennig recipe—especially with respect to <fr:link type="local" href="type-systems-000G.xml" addr="type-systems-000G" title="Annotation character">annotation
+discipline</fr:link>—can be mitigated in exchange for a <fr:link type="local" href="type-systems-000F.xml" addr="type-systems-000F" title="Size of the rule set">larger set of
+rules</fr:link>.</fr:p>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>288</fr:anchor>
+                <fr:addr type="user">type-systems-000J</fr:addr>
+                <fr:route>type-systems-000J.xml</fr:route>
+                <fr:title text="Introduction rule">Introduction rule</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>An <fr:em>introduction rule</fr:em> introduces a type connective that occurs in the conclusions
+of a rule.</fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>289</fr:anchor>
+                <fr:addr type="user">type-systems-000K</fr:addr>
+                <fr:route>type-systems-000K.xml</fr:route>
+                <fr:title text="Elimiation rule">Elimiation rule</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>An <fr:em>elimination rule</fr:em> eliminates a type connective that occurs in a premise of a
+rule.</fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:p>The first step is to locate the principal judgement.</fr:p>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>290</fr:anchor>
+                <fr:addr type="user">type-systems-000R</fr:addr>
+                <fr:route>type-systems-000R.xml</fr:route>
+                <fr:title text="Principal connective">Principal connective</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>The <fr:em>principal connective</fr:em> of 
+
+<fr:ul><fr:li>an <fr:link type="local" href="type-systems-000J.xml" addr="type-systems-000J" title="Introduction rule">introduction rule</fr:link> is the connective that is being introduced
+by the rule</fr:li>
+
+<fr:li>an <fr:link type="local" href="type-systems-000K.xml" addr="type-systems-000K" title="Elimiation rule">elimination rule</fr:link> is the connective that is being eliminated</fr:li></fr:ul></fr:p>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+              <fr:frontmatter>
+                <fr:anchor>291</fr:anchor>
+                <fr:addr type="user">type-systems-000S</fr:addr>
+                <fr:route>type-systems-000S.xml</fr:route>
+                <fr:title text="Principal judgement">Principal judgement</fr:title>
+                <fr:authors />
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <fr:p>The <fr:em>principal judgement</fr:em> of a rule is the judgement containing the <fr:link type="local" href="type-systems-000R.xml" addr="type-systems-000R" title="Principal connective">principle
+connective</fr:link>.</fr:p>
+                <fr:ul><fr:li>In an <fr:link type="local" href="type-systems-000J.xml" addr="type-systems-000J" title="Introduction rule">introduction rule</fr:link>, the principle judgement is usually the
+conclusion.</fr:li>
+
+<fr:li>In an <fr:link type="local" href="type-systems-000K.xml" addr="type-systems-000K" title="Elimiation rule">elimination rule</fr:link>, the principle judgement is usually the
+first premise.</fr:li></fr:ul>
+              </fr:mainmatter>
+              <fr:backmatter />
+            </fr:tree>
+            <fr:p>The second step is to bidirectionalize the principal judgement.
+
+<fr:ul><fr:li>If the rule is an <fr:link type="local" href="type-systems-000J.xml" addr="type-systems-000J" title="Introduction rule">introduction rule</fr:link>, then make the principal
+judgement a checking judgement.</fr:li>
+
+<fr:li>If the rule is an <fr:link type="local" href="type-systems-000K.xml" addr="type-systems-000K" title="Elimiation rule">elimination rule</fr:link>, then make the principal
+judgement a synthesis judgement.</fr:li></fr:ul></fr:p>
+            <fr:p>The third step is to bidirectionalize the remaining judgements in the rule. The
+direction or mode of the principal judgment provides guidance for the direction of the
+other judgements.
+
+<fr:ul><fr:li>If the principal judgement is a conclusion, then the only judgements left are
+premises. The conclusion's mode provides sufficient information to determine the modes of
+the premises. Here, we should utilize known information. For example, if a conclusion checks
+against a type <fr:tex display="inline"><![CDATA[A]]></fr:tex> and a premise also contains type <fr:tex display="inline"><![CDATA[A]]></fr:tex>, then the premise should also be
+a checking judgement.</fr:li>
+
+<fr:li>If the principal judgement is a premise (usually the first), then it is better to
+bidrectionalize the premises first, before the conclusion. This maximizes the chances of
+having enough information to synthesize the type of the conclusion. As before, we should
+utilize known information. If we know the type of a judgement, then the judgement should
+use checking. Here, if an earlier premise synthesizes a type <fr:tex display="inline"><![CDATA[B]]></fr:tex>, then a later premise
+having type <fr:tex display="inline"><![CDATA[B]]></fr:tex> should use checking.</fr:li></fr:ul>
+
+The modes we choose should be <fr:link type="local" href="type-systems-000D.xml" addr="type-systems-000D" title="Mode-correctness">mode-correct</fr:link> and should also be guided
+by considerations of <fr:link type="local" href="type-systems-000E.xml" addr="type-systems-000E" title="Completeness (Annotatability)">annotatability</fr:link> and <fr:link type="local" href="type-systems-000G.xml" addr="type-systems-000G" title="Annotation character">annotation
+character</fr:link>.</fr:p>
+            <fr:p>Here is an example using <fr:em>product introduction rule</fr:em> (<fr:tex display="inline"><![CDATA[\mathtt {\times  I}]]></fr:tex>).
+
+<fr:tex display="block"><![CDATA[\frac {\Gamma  \vdash  e_1 : A_1 \quad  \Gamma  \vdash  e_2 : A_2}         {\mathbf {\Gamma  \vdash  \langle  e_1, e_2 \rangle  : A_1 \times          A_2}}(\mathtt {\times  I})]]></fr:tex>
+
+The principal judgment is the conclusion (in bold). Because this is an introduction rule,
+we make the conclusion a checking judgement.
+
+<fr:tex display="block"><![CDATA[\mathbf {\Gamma  \vdash  \langle  e_1, e_2 \rangle  \Leftarrow  A_1 \times  A_2}]]></fr:tex>
+
+The types <fr:tex display="inline"><![CDATA[A_1]]></fr:tex> and <fr:tex display="inline"><![CDATA[A_2]]></fr:tex> are known, so we can use checking for the premises as well.
+
+<fr:tex display="block"><![CDATA[\begin {array}{cc}           \Gamma  \vdash  e_1 \Leftarrow  A_1 & \Gamma  \vdash  e_2 \Leftarrow  A_2 \\         \end {array}]]></fr:tex>
+
+The final bidirectionalized rule is
+
+<fr:tex display="block"><![CDATA[\frac {\Gamma  \vdash  e_1 \Leftarrow  A_1 \quad  \Gamma  \vdash  e_2 \Leftarrow  A_2}         {\mathbf {\Gamma  \vdash  \langle  e_1, e_2 \rangle  \Leftarrow  A_1 \times          A_2}}(\mathtt {\Leftarrow \times  I})]]></fr:tex></fr:p>
+            <fr:p>Typically, the type assignment rules are treated as the "ground truth" against
+annotatability or completeness is measured. However, there are cases where these rules
+must be examined more critically.</fr:p>
+            <fr:p>Consider the following sum-elimination rule:
+
+<fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}              & \Gamma , x_1:A_1 \vdash  e_1 : B \\               \Gamma  \vdash  e : A_1 + A_2              & \Gamma , x_2:A_2 \vdash  e_2 : B            \end {array}}            {\Gamma  \vdash  \mathtt {case}\ e\ \mathtt {of}\              \{\mathtt {inj}_1\ x_1 \mapsto  e_2\              |\ \mathtt {inj}_2\ x_2 \mapsto  e_3\}              : B}(\mathtt {+E})]]></fr:tex>
+
+This rule is a special case of reasoning by cases:
+
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>292</fr:anchor><fr:addr type="user">ttfp-000O</fr:addr><fr:route>ttfp-000O.xml</fr:route><fr:title text="Disjunction elimination">Disjunction elimination</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:tex display="block"><![CDATA[\frac {\begin {array}{ccc}           & [A] & [B] \\           & \vdots  & \vdots  \\           A \lor  B & C & C         \end {array}}        {C}(\mathtt {\lor {E}})]]></fr:tex></fr:mainmatter><fr:backmatter /></fr:tree></fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+      </fr:mainmatter>
+      <fr:backmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

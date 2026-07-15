@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?>
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+  <fr:frontmatter>
+    <fr:anchor>373</fr:anchor>
+    <fr:addr type="user">plt-languages-000F</fr:addr>
+    <fr:route>plt-languages-000F.xml</fr:route>
+    <fr:title text="Evaluation and reduction">Evaluation and reduction</fr:title>
+    <fr:authors />
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <fr:p><fr:em>Evaluation</fr:em> is a function or a process of computing semantic values from syntactic
+terms. It is <fr:link type="local" href="plt-languages-0004.xml" addr="plt-languages-0004" title="Denotational semantics of the addition language">denotational</fr:link> in nature. Evaluation should be
+distinguished from <fr:em>reduction</fr:em>, which is the process of computing a syntactic term from
+another syntactic term—usually a <fr:link type="local" href="plt-languages-000C.xml" addr="plt-languages-000C" title="Redex">redex</fr:link>—that is equivalent, but
+having had some elimination rule applied. When a term can be reduced no further, it is a
+<fr:link type="local" href="plt-languages-000A.xml" addr="plt-languages-000A" title="Normal form">normal form</fr:link>.</fr:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:title text="Backlinks">Backlinks</fr:title>
+        <fr:authors />
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>374</fr:anchor>
+            <fr:addr type="user">plt-languages-000I</fr:addr>
+            <fr:route>plt-languages-000I.xml</fr:route>
+            <fr:title text="Beta-reduction">Beta-reduction</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p><fr:strong><fr:tex display="inline"><![CDATA[\beta ]]></fr:tex>-reduction</fr:strong> is a <fr:link type="local" href="plt-languages-000F.xml" addr="plt-languages-000F" title="Evaluation and reduction">reduction rule</fr:link> that allows an
+application of a lambda abstraction to be simplified by substituting the argument for the
+bound variable in the body of the abstraction. Formally, it is defined as follows: 
+
+<fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}           (\lambda  x.e_1)~e_2          \end {array}}        {e_1[e_2/x]}]]></fr:tex></fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>375</fr:anchor>
+            <fr:addr type="user">plt-languages-000D</fr:addr>
+            <fr:route>plt-languages-000D.xml</fr:route>
+            <fr:title text="Introduction form">Introduction form</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>An <fr:em>introduction form</fr:em> is a syntactic term that is constructed using a constructor
+in an introduction rule. For instance, given two natural numbers <fr:tex display="inline"><![CDATA[n]]></fr:tex> and <fr:tex display="inline"><![CDATA[m]]></fr:tex>, an
+introducton rule for pairs 
+
+<fr:tex display="block"><![CDATA[\frac {\Gamma  \vdash  n:\text {nat} \quad  \Gamma  \vdash  m:\text {nat}}         {\Gamma  \vdash  \langle  n, m\rangle :\text {pair}(\text {nat}, \text {nat})}]]></fr:tex>
+
+might produce the introduction form <fr:tex display="inline"><![CDATA[\langle  n, m\rangle ]]></fr:tex>.
+<fr:link type="local" href="plt-languages-000F.xml" addr="plt-languages-000F" title="Evaluation and reduction">Evaluation</fr:link> of an introduction form produces a corresponding
+<fr:link type="local" href="plt-languages-000B.xml" addr="plt-languages-000B" title="Value">value</fr:link> in the semantic domain.</fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+      </fr:mainmatter>
+      <fr:backmatter />
+    </fr:tree>
+    <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:title text="Related">Related</fr:title>
+        <fr:authors />
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>376</fr:anchor>
+            <fr:addr type="user">plt-languages-0004</fr:addr>
+            <fr:route>plt-languages-0004.xml</fr:route>
+            <fr:title text="Denotational semantics of the addition language">Denotational semantics of the addition language</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>The <fr:link type="local" href="plt-semantics-0002.xml" addr="plt-semantics-0002" title="Denotational semantics">denotational semantics</fr:link> of the <fr:link type="local" href="plt-languages-0001.xml" addr="plt-languages-0001" title="An addition language">addition
+language</fr:link> is given below:
+
+<fr:tex display="block"><![CDATA[\llbracket  \text {Val}\ n \rrbracket  = n]]></fr:tex>
+<fr:tex display="block"><![CDATA[\llbracket  \text {Add}\ x\ y \rrbracket  = \llbracket  x \rrbracket  + \llbracket  y \rrbracket ]]></fr:tex></fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>377</fr:anchor>
+            <fr:addr type="user">plt-languages-000A</fr:addr>
+            <fr:route>plt-languages-000A.xml</fr:route>
+            <fr:title text="Normal form">Normal form</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>A <fr:em>normal form</fr:em> is a term that cannot be reduced any further. In other words, it is
+a term that does not contain any <fr:link type="local" href="plt-languages-000C.xml" addr="plt-languages-000C" title="Redex">redexes</fr:link>. A term is a normal form if
+it is either a <fr:link type="local" href="plt-languages-000B.xml" addr="plt-languages-000B" title="Value">value</fr:link> or a <fr:link type="local" href="plt-languages-0009.xml" addr="plt-languages-0009" title="Neutral term">neutral term</fr:link>.</fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>378</fr:anchor>
+            <fr:addr type="user">plt-languages-000C</fr:addr>
+            <fr:route>plt-languages-000C.xml</fr:route>
+            <fr:title text="Redex">Redex</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>A <fr:em>redex</fr:em> or <fr:em>reducible expression</fr:em> is an expression that can be reduced by a
+single application of the <fr:tex display="inline"><![CDATA[\beta ]]></fr:tex>-reduction rule. If an expression is not reducible any
+further, it is a <fr:link type="local" href="plt-languages-000A.xml" addr="plt-languages-000A" title="Normal form">normal form</fr:link>.</fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+      </fr:mainmatter>
+      <fr:backmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

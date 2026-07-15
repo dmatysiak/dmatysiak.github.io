@@ -1,0 +1,4 @@
+\title{Closed term}
+
+\p{A term is said to be \strong{closed} if it contains no [free
+variables](plt-languages-000M).} 

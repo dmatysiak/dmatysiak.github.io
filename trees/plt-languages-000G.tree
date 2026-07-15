@@ -1,0 +1,138 @@
+\title{de Bruijn indices versus de Bruijn levels}
+
+\transclude{plt-languages-000O}
+\transclude{plt-languages-000P}
+
+\p{Both de Bruijn indices and de Bruijn levels eliminate the need for
+[#{\alpha}-conversion](plt-languages-000H). However, each has different affordances that
+make one better suited for certain operations over the other. For instance, indices are 
+better suited for substitution of closed terms than levels, e.g.,
+
+##{\begin{aligned}
+& \lambda \overset{\red{2}}{\vphantom{y}x}. 
+  \lambda \overset{\gray{1}}{y}. 
+  \lambda \overset{\gray{0}}{\vphantom{y}z}. \underset{\red{2}}{x}~
+  \lambda \overset{\red{0}}{\vphantom{y}x}. \underset{\red{0}}{x} 
+&\equiv 
+& \lambda \lambda \lambda \red{2}~\lambda \red{0} \\
+
+\rightarrow_\beta~ 
+& \lambda y. 
+  \lambda z. 
+  \lambda \overset{\red{0}}{\vphantom{y}x}. \underset{\red{0}}{x}
+&\equiv
+& \lambda \lambda \lambda \red{0}
+\end{aligned}}
+
+versus
+
+##{\begin{aligned}
+& \lambda \overset{\red{0}}{\vphantom{y}x}. 
+  \lambda \overset{\gray{1}}{y}. 
+  \lambda \overset{\gray{2}}{\vphantom{y}z}. \underset{\red{0}}{x}~
+  \lambda \overset{\red{0}}{\vphantom{y}x}. 
+  \underset{\red{0}}{x} 
+&\equiv 
+& \lambda \lambda \lambda \red{0}~\lambda \red{0} \\
+
+\rightarrow_\beta~ 
+& \lambda \overset{\gray{1}}{y}. 
+  \lambda \overset{\gray{2}}{\vphantom{y}z}. 
+  \lambda \overset{\red{0}}{\vphantom{y}x}. \underset{\red{0}}{x}
+&\equiv
+& \lambda \lambda \lambda \red{0} 
+\left.\right\rbrace \hbox{\footnotesize\text{bad levels}}\\
+
+\rightarrow~  
+& \lambda \overset{\gray{0}}{y}. 
+  \lambda \overset{\gray{1}}{\vphantom{y}z}. 
+  \lambda \overset{\red{2}}{\vphantom{y}x}. \underset{\red{2}}{x}
+&\equiv
+& \lambda \lambda \lambda \red{2} 
+\end{aligned}}
+
+Levels require shifting here, because, first, the application eliminates the outermost
+binder and, therefore, alters the root, and second, the new innermost subterm must be
+adjusted to align with the root. In contrast, indices are relative to the binding site
+which means that their alignment is preserved.} 
+
+\p{On the other hand, levels are better suited for keeping free variables stable in open
+terms. Consider the following example containing the free variable #{g} and using indices
+(where #{\Gamma_s} is the context stack): 
+
+##{\begin{aligned}
+& \Gamma_s = [\overset{\red{3}}{g}, \overset{\red{2}}{x}, \overset{\gray{1}}{y}, \overset{\gray{0}}{z}] & \\
+
+& \lambda \overset{\red{2}}{x}. 
+  \lambda \overset{\gray{1}}{y}. 
+  \lambda \overset{\gray{0}}{z}. \underset{\red{3}}{g}~\underset{\red{2}}{\vphantom{g}x}~
+  \lambda \overset{\red{0}}{x}. \underset{\red{0}}{x} 
+&\equiv 
+& \lambda \lambda \lambda \red{3}~\red{2}~
+  \lambda \red{0} \\
+
+\hline
+& \Gamma_s = [\overset{\red{3}}{g}, \overset{\gray{1}}{y}, \overset{\gray{0}}{z}] & \\
+
+\rightarrow_\beta~
+& \lambda \overset{\gray{1}}{y}. 
+  \lambda \overset{\gray{0}}{z}. \underset{\red{3}}{g}~
+  \lambda \overset{\red{0}}{\vphantom{g}x}. \underset{\red{0}}{\vphantom{g}x}
+&\equiv 
+& \lambda \lambda \lambda \red{3}~\red{0} 
+\left.\right\rbrace \hbox{\footnotesize\text{bad free index}}\\
+
+\hline
+& \Gamma_s = [\overset{\red{2}}{g}, \overset{\gray{1}}{y}, \overset{\gray{0}}{z}] & \\
+
+\rightarrow~
+& \lambda \overset{\gray{1}}{y}. 
+  \lambda \overset{\gray{0}}{z}. \underset{\red{2}}{g}~
+  \lambda \overset{\red{0}}{\vphantom{g}x}. \underset{\red{0}}{\vphantom{g}x}
+&\equiv 
+& \lambda \lambda \lambda \red{2}~\red{0}
+\end{aligned}}
+
+Now consider the same example using levels:
+
+##{\begin{aligned}
+& \Gamma_s = [\overset{\red{0}}{g}, \overset{\gray{1}}{x}, \overset{\gray{2}}{y}, \overset{\gray{3}}{z}] \\
+
+& \lambda \overset{\red{1}}{x}. 
+  \lambda \overset{\gray{2}}{y}. 
+  \lambda \overset{\gray{3}}{z}. \underset{\red{0}}{g}~\underset{\red{1}}{\vphantom{g}x}~ 
+  \lambda \overset{\red{1}}{x}. \underset{\red{1}}{x} 
+&\equiv 
+& \lambda \lambda \lambda \red{0}~\red{1}~\lambda \red{1} \\
+
+\hline
+& \Gamma_s = [\overset{\red{0}}{g}, \overset{\gray{2}}{y}, \overset{\gray{3}}{z}] \\
+
+\rightarrow_\beta~
+& \lambda \overset{\gray{2}}{y}. 
+  \lambda \overset{\gray{3}}{z}. \underset{\red{0}}{g}~\lambda \overset{\red{1}}{x}. \underset{\red{1}}{\vphantom{g}x} 
+&\equiv
+& \lambda \lambda \lambda \red{0}~\lambda \red{1}  
+\left.\right\rbrace \hbox{\footnotesize\text{bad binding levels}}\\
+
+\hline
+& \Gamma_s = [\overset{\red{0}}{g}, \overset{\gray{1}}{y}, \overset{\gray{2}}{z}] \\
+
+\rightarrow~
+& \lambda \overset{\gray{1}}{y}. 
+  \lambda \overset{\gray{2}}{z}. \underset{\red{0}}{g}~\lambda \overset{\red{3}}{x}. \underset{\red{3}}{\vphantom{g}x} 
+&\equiv
+& \lambda \lambda \lambda \red{0}~\lambda \red{3} 
+\end{aligned}}
+
+Furthemore, levels preserve the identity of bound variables without needing to adjust
+them. Consider the case using indices and two instances of the same variable #{x}:
+
+##{\lambda x. (x \lambda y. x y) \equiv \lambda 0~\lambda 1~0}
+
+and compare it to the case using levels:
+
+##{\lambda x. (x~\lambda y. x~y) \equiv \lambda 0~\lambda 0~1}
+}
+
+

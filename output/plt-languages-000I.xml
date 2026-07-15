@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?>
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+  <fr:frontmatter>
+    <fr:anchor>312</fr:anchor>
+    <fr:addr type="user">plt-languages-000I</fr:addr>
+    <fr:route>plt-languages-000I.xml</fr:route>
+    <fr:title text="Beta-reduction">Beta-reduction</fr:title>
+    <fr:authors />
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <fr:p><fr:strong><fr:tex display="inline"><![CDATA[\beta ]]></fr:tex>-reduction</fr:strong> is a <fr:link type="local" href="plt-languages-000F.xml" addr="plt-languages-000F" title="Evaluation and reduction">reduction rule</fr:link> that allows an
+application of a lambda abstraction to be simplified by substituting the argument for the
+bound variable in the body of the abstraction. Formally, it is defined as follows: 
+
+<fr:tex display="block"><![CDATA[\frac {\begin {array}{cc}           (\lambda  x.e_1)~e_2          \end {array}}        {e_1[e_2/x]}]]></fr:tex></fr:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree toc="false" numbered="false" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+      <fr:frontmatter>
+        <fr:title text="Related">Related</fr:title>
+        <fr:authors />
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+          <fr:frontmatter>
+            <fr:anchor>313</fr:anchor>
+            <fr:addr type="user">plt-languages-000F</fr:addr>
+            <fr:route>plt-languages-000F.xml</fr:route>
+            <fr:title text="Evaluation and reduction">Evaluation and reduction</fr:title>
+            <fr:authors />
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p><fr:em>Evaluation</fr:em> is a function or a process of computing semantic values from syntactic
+terms. It is <fr:link type="local" href="plt-languages-0004.xml" addr="plt-languages-0004" title="Denotational semantics of the addition language">denotational</fr:link> in nature. Evaluation should be
+distinguished from <fr:em>reduction</fr:em>, which is the process of computing a syntactic term from
+another syntactic term—usually a <fr:link type="local" href="plt-languages-000C.xml" addr="plt-languages-000C" title="Redex">redex</fr:link>—that is equivalent, but
+having had some elimination rule applied. When a term can be reduced no further, it is a
+<fr:link type="local" href="plt-languages-000A.xml" addr="plt-languages-000A" title="Normal form">normal form</fr:link>.</fr:p>
+          </fr:mainmatter>
+          <fr:backmatter />
+        </fr:tree>
+      </fr:mainmatter>
+      <fr:backmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

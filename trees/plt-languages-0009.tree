@@ -1,0 +1,6 @@
+\title{Neutral term}
+
+\p{A \em{neutral term} is a [normal form](plt-languages-000A) that is not a
+[value](plt-languages-000B) and cannot be reduced further. In the [simply typed lambda
+calculus](type-systems-0003), neutral terms are unbound variables, applications of neutral
+terms to values and elimination forms applied to neutral terms.}

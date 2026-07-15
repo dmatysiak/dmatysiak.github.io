@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?>
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
+  <fr:frontmatter>
+    <fr:anchor>480</fr:anchor>
+    <fr:addr type="user">tractatus-0002</fr:addr>
+    <fr:route>tractatus-0002.xml</fr:route>
+    <fr:title text="Simulation">Simulation</fr:title>
+    <fr:authors />
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <fr:p>Simulation is a relation between two systems in which one system can mimic the
+observable behavior of the other.</fr:p>
+    <fr:p>From a linguistic perspective, we may say that simulation involves a correspondence of
+the syntax but not of the semantics of two languages or systems.</fr:p>
+    <fr:p>The key terms used in this definition are "mimic" and "correspondence". Where artifacts
+are concerned:
+
+<fr:ol><fr:li>Mimicry cannot be said to be categorically objective, because mimicry entails
+<fr:em>purposeful</fr:em> imitation. Thus, whether a system is mimicking another is
+<fr:em>observer-relative</fr:em>. That is, we cannot speak of any purposeful intent that is
+<fr:em>intrinsic</fr:em> to the artifact or its behavior, but we can assign an interpretation to the
+behavior of a system <fr:tex display="inline"><![CDATA[S']]></fr:tex> that ascribes to it and some other system <fr:tex display="inline"><![CDATA[S]]></fr:tex> the
+relational property "<fr:tex display="inline"><![CDATA[S']]></fr:tex> mimicks <fr:tex display="inline"><![CDATA[S]]></fr:tex>". The decision to assign an interpretation is
+rooted in the <fr:em>observer's</fr:em> purposes and some accidental features and affordances of
+both systems that the observer finds relevant, similar or useful.</fr:li>
+
+<fr:li>Correspondence is not identity—two systems need not share the same syntax—but the case
+where the syntax of one systems or language can be related to that of the other in an
+analogical and structure-preserving way.</fr:li></fr:ol></fr:p>
+    <fr:p>In a formal language context, we may analyze simulation in terms of the syntactic and
+semantic properties of two systems. We may say that a system <fr:tex display="inline"><![CDATA[S']]></fr:tex> simulates another
+system <fr:tex display="inline"><![CDATA[S]]></fr:tex> if there is an extensional correspondence between the syntactic terms of <fr:tex display="inline"><![CDATA[S']]></fr:tex>
+and <fr:tex display="inline"><![CDATA[S]]></fr:tex> such that the denotations of the terms of <fr:tex display="inline"><![CDATA[S']]></fr:tex> is equivalent to the denotations
+of the terms of <fr:tex display="inline"><![CDATA[S]]></fr:tex>. In other words, the denotational semantics of <fr:tex display="inline"><![CDATA[S']]></fr:tex> is equivalent to
+the denotational semantics of <fr:tex display="inline"><![CDATA[S]]></fr:tex> under some interpretation of <fr:tex display="inline"><![CDATA[S']]></fr:tex> that relates terms
+in <fr:tex display="inline"><![CDATA[S']]></fr:tex> to terms in <fr:tex display="inline"><![CDATA[S]]></fr:tex>.
+
+<fr:tex display="block"><![CDATA[\begin {array}{c}     \forall  e'{:}S'\exists  e{:}S . \llbracket  e' \rrbracket _{S'} = \llbracket  e \rrbracket _S \\     \forall  e{:}S \exists  e'{:}S' . \llbracket  e \rrbracket _{S} = \llbracket  e' \rrbracket _{S'}  \end {array} ]]></fr:tex></fr:p>
+    <fr:p>Denotational semantics is the basis for simulation, because two corresponding systems
+are indiscernible under denotational semantics alone. This is due to the extensionality of
+such a semantics coupled with an interpretation. (If the syntactic terms are identical in
+both systems, then we have a tidy demonstration of two coextensive systems that are
+nonetheless not necessarily equivalent.) We can, however, distinguish the simulation from
+the real McCoy on intensional grounds, which we can do with an operational semantics.
+Operationally, we may say that a system <fr:tex display="inline"><![CDATA[S']]></fr:tex> simulates another system <fr:tex display="inline"><![CDATA[S]]></fr:tex> if there is a
+correspondence between the terms of <fr:tex display="inline"><![CDATA[S']]></fr:tex> and <fr:tex display="inline"><![CDATA[S]]></fr:tex> such that the evaluation of a term of
+<fr:tex display="inline"><![CDATA[S']]></fr:tex> is equivalent to the evaluation of a term in <fr:tex display="inline"><![CDATA[S]]></fr:tex> and vice versa.</fr:p>
+  </fr:mainmatter>
+  <fr:backmatter />
+</fr:tree>

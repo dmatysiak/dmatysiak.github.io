@@ -1,0 +1,11 @@
+\title{Beta-reduction}
+
+\p{\strong{#{\beta}-reduction} is a [reduction rule](plt-languages-000F) that allows an
+application of a lambda abstraction to be simplified by substituting the argument for the
+bound variable in the body of the abstraction. Formally, it is defined as follows: 
+
+##{\frac{\begin{array}{cc}
+          (\lambda x.e_1)~e_2 
+        \end{array}}
+       {e_1[e_2/x]}}
+}

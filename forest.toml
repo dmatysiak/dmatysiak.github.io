@@ -2,3 +2,9 @@
 trees = ["trees" ]                   # The directories in which your trees are stored
 assets = ["assets"]                  # The directories in which your assets are stored
 theme = "theme"                      # The directory in which your theme is stored
+
+[math.macros]
+"\\red" = "\\color{#E30022}{#1}"
+"\\gray" = "\\color{gray}{#1}"
+"\\grey" = "\\color{gray}{#1}"
+"\\blue" = "\\color{#4B0082}{#1}"
