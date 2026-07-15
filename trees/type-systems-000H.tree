@@ -8,13 +8,17 @@ discipline](type-systems-000G)—can be mitigated in exchange for a [larger set 
 rules](type-systems-000F).
 }
 
+\p{Some preliminary definitions are in order.
+
 \transclude{type-systems-000J}
 \transclude{type-systems-000K}
+}
 
-\p{The first step is to locate the principal judgement.}
+\p{The first step is to locate the principal judgement.
 
 \transclude{type-systems-000R}
 \transclude{type-systems-000S}
+}
 
 \p{The second step is to bidirectionalize the principal judgement.
 
