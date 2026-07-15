@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="default.xsl"?>
 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>547</fr:anchor>
+    <fr:anchor>552</fr:anchor>
     <fr:addr type="user">type-systems-0006</fr:addr>
     <fr:route>type-systems-0006.xml</fr:route>
     <fr:title text="Variable synthesis">Variable synthesis</fr:title>
@@ -22,7 +22,7 @@
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>548</fr:anchor>
+            <fr:anchor>553</fr:anchor>
             <fr:addr type="user">type-systems-0004</fr:addr>
             <fr:route>type-systems-0004.xml</fr:route>
             <fr:title text="Bidirectional simply-typed lambda calculus with () : {unit} and type equality">Bidirectional simply-typed lambda calculus with <fr:tex display="inline"><![CDATA[() : \text {unit}]]></fr:tex> and type equality</fr:title>
@@ -33,7 +33,7 @@
 (BDSTLC) can be expressed as follows:</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>272</fr:anchor>
+                <fr:anchor>271</fr:anchor>
                 <fr:addr type="user">type-systems-0006</fr:addr>
                 <fr:route>type-systems-0006.xml</fr:route>
                 <fr:title text="Variable synthesis">Variable synthesis</fr:title>
@@ -48,7 +48,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>273</fr:anchor>
+                <fr:anchor>272</fr:anchor>
                 <fr:addr type="user">type-systems-0007</fr:addr>
                 <fr:route>type-systems-0007.xml</fr:route>
                 <fr:title text="Annotation synthesis">Annotation synthesis</fr:title>
@@ -63,7 +63,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>274</fr:anchor>
+                <fr:anchor>273</fr:anchor>
                 <fr:addr type="user">type-systems-0008</fr:addr>
                 <fr:route>type-systems-0008.xml</fr:route>
                 <fr:title text="Arrow introduction checking">Arrow introduction checking</fr:title>
@@ -78,7 +78,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>275</fr:anchor>
+                <fr:anchor>274</fr:anchor>
                 <fr:addr type="user">type-systems-0009</fr:addr>
                 <fr:route>type-systems-0009.xml</fr:route>
                 <fr:title text="Arrow elimination synthesis">Arrow elimination synthesis</fr:title>
@@ -93,7 +93,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>276</fr:anchor>
+                <fr:anchor>275</fr:anchor>
                 <fr:addr type="user">type-systems-000A</fr:addr>
                 <fr:route>type-systems-000A.xml</fr:route>
                 <fr:title text="Unit introduction checking">Unit introduction checking</fr:title>
@@ -108,7 +108,7 @@
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>277</fr:anchor>
+                <fr:anchor>276</fr:anchor>
                 <fr:addr type="user">type-systems-000B</fr:addr>
                 <fr:route>type-systems-000B.xml</fr:route>
                 <fr:title text="Subsumption checking">Subsumption checking</fr:title>

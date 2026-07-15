@@ -1,0 +1,7 @@
+\title{Model}
+
+\p{A \strong{model} is a mapping from the syntax to the semantics of a language. The
+[denotation function](plt-semantics-0002) of a language defined the model of that
+language.} 
+
+\transclude{plt-semantics-0002}

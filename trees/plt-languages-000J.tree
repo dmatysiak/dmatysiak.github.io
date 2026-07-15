@@ -1,1 +1,24 @@
-\date{2026-07-09}
+\title{Encoding}
+
+\p{An \strong{encoding} is a mapping from one language to another.}
+
+\p{The source language is the \em{encoded language} and the target language is the
+\em{encoding language}. 
+
+An encoding is
+\ul{
+
+  \li{\em{faithful} if it preserves the semantics of the encoded language} 
+
+  \li{\em{full} if it preserves the meaning of the encoded language and the encoding
+  language} 
+
+  \li{\em{compositional} if it preserves the structure of the encoded language}}}
+
+\p{Where formal languages are concerned, the relationship between the concrete syntax and the
+abstract syntax is an encoding. The parser is here the encoding function, while the
+pretty-printer is the decoding function.} 
+
+
+
+

@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="default.xsl"?>
 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>312</fr:anchor>
+    <fr:anchor>311</fr:anchor>
     <fr:addr type="user">plt-languages-000I</fr:addr>
     <fr:route>plt-languages-000I.xml</fr:route>
     <fr:title text="Beta-reduction">Beta-reduction</fr:title>
@@ -24,7 +24,7 @@ bound variable in the body of the abstraction. Formally, it is defined as follow
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>313</fr:anchor>
+            <fr:anchor>312</fr:anchor>
             <fr:addr type="user">plt-languages-000F</fr:addr>
             <fr:route>plt-languages-000F.xml</fr:route>
             <fr:title text="Evaluation and reduction">Evaluation and reduction</fr:title>

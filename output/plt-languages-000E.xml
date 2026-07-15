@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="default.xsl"?>
 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>368</fr:anchor>
+    <fr:anchor>370</fr:anchor>
     <fr:addr type="user">plt-languages-000E</fr:addr>
     <fr:route>plt-languages-000E.xml</fr:route>
     <fr:title text="Elimination form">Elimination form</fr:title>
@@ -25,7 +25,7 @@ rule might be
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>369</fr:anchor>
+            <fr:anchor>371</fr:anchor>
             <fr:addr type="user">plt-languages-000B</fr:addr>
             <fr:route>plt-languages-000B.xml</fr:route>
             <fr:title text="Value">Value</fr:title>

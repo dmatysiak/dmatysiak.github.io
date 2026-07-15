@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="default.xsl"?>
 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>383</fr:anchor>
+    <fr:anchor>386</fr:anchor>
     <fr:addr type="user">plt-languages-000M</fr:addr>
     <fr:route>plt-languages-000M.xml</fr:route>
     <fr:title text="Free variable">Free variable</fr:title>
@@ -23,7 +23,7 @@ variable <fr:tex display="inline"><![CDATA[y]]></fr:tex>.</fr:p>
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>384</fr:anchor>
+            <fr:anchor>387</fr:anchor>
             <fr:addr type="user">plt-languages-000K</fr:addr>
             <fr:route>plt-languages-000K.xml</fr:route>
             <fr:title text="Closed term">Closed term</fr:title>
@@ -37,7 +37,7 @@ variables</fr:link>.</fr:p>
         </fr:tree>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>385</fr:anchor>
+            <fr:anchor>388</fr:anchor>
             <fr:addr type="user">plt-languages-000L</fr:addr>
             <fr:route>plt-languages-000L.xml</fr:route>
             <fr:title text="Open term">Open term</fr:title>
@@ -60,7 +60,7 @@ variable</fr:link>.</fr:p>
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>386</fr:anchor>
+            <fr:anchor>389</fr:anchor>
             <fr:addr type="user">plt-languages-000N</fr:addr>
             <fr:route>plt-languages-000N.xml</fr:route>
             <fr:title text="Bound variable">Bound variable</fr:title>

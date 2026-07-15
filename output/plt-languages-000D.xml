@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="default.xsl"?>
 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>392</fr:anchor>
+    <fr:anchor>395</fr:anchor>
     <fr:addr type="user">plt-languages-000D</fr:addr>
     <fr:route>plt-languages-000D.xml</fr:route>
     <fr:title text="Introduction form">Introduction form</fr:title>
@@ -28,7 +28,7 @@ might produce the introduction form <fr:tex display="inline"><![CDATA[\langle  n
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>393</fr:anchor>
+            <fr:anchor>396</fr:anchor>
             <fr:addr type="user">plt-languages-000B</fr:addr>
             <fr:route>plt-languages-000B.xml</fr:route>
             <fr:title text="Value">Value</fr:title>
@@ -59,7 +59,7 @@ same value, i.e., <fr:tex display="inline"><![CDATA[\llbracket  \text {add}(2, 3
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>394</fr:anchor>
+            <fr:anchor>397</fr:anchor>
             <fr:addr type="user">plt-languages-000F</fr:addr>
             <fr:route>plt-languages-000F.xml</fr:route>
             <fr:title text="Evaluation and reduction">Evaluation and reduction</fr:title>
@@ -77,7 +77,7 @@ having had some elimination rule applied. When a term can be reduced no further,
         </fr:tree>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>395</fr:anchor>
+            <fr:anchor>398</fr:anchor>
             <fr:addr type="user">plt-languages-000B</fr:addr>
             <fr:route>plt-languages-000B.xml</fr:route>
             <fr:title text="Value">Value</fr:title>

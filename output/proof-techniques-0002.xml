@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="default.xsl"?>
 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>389</fr:anchor>
+    <fr:anchor>392</fr:anchor>
     <fr:addr type="user">proof-techniques-0002</fr:addr>
     <fr:route>proof-techniques-0002.xml</fr:route>
     <fr:title text="Inductive hypothesis">Inductive hypothesis</fr:title>
@@ -25,7 +25,7 @@ for <fr:tex display="inline"><![CDATA[E]]></fr:tex>. Together with a base case, 
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>390</fr:anchor>
+            <fr:anchor>393</fr:anchor>
             <fr:addr type="user">plt-languages-0007</fr:addr>
             <fr:route>plt-languages-0007.xml</fr:route>
             <fr:title text="Preservation of denotation under small-step semantics of the addition language">Preservation of denotation under small-step semantics of the addition language</fr:title>
@@ -85,7 +85,7 @@ is true. The proof is the same as above. <fr:tex display="inline"><![CDATA[\llbr
         </fr:tree>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>391</fr:anchor>
+            <fr:anchor>394</fr:anchor>
             <fr:addr type="user">proof-techniques-0001</fr:addr>
             <fr:route>proof-techniques-0001.xml</fr:route>
             <fr:title text="Structural induction">Structural induction</fr:title>
@@ -104,7 +104,7 @@ of the language</fr:link> is <fr:em>total</fr:em>, that is, that that for every 
 induction.</fr:p>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>269</fr:anchor>
+                <fr:anchor>268</fr:anchor>
                 <fr:addr type="user">plt-languages-0005</fr:addr>
                 <fr:route>plt-languages-0005.xml</fr:route>
                 <fr:title text="The compositionality property of the addition language">The compositionality property of the addition language</fr:title>

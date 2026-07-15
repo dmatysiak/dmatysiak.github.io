@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="default.xsl"?>
 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>373</fr:anchor>
+    <fr:anchor>376</fr:anchor>
     <fr:addr type="user">plt-languages-000F</fr:addr>
     <fr:route>plt-languages-000F.xml</fr:route>
     <fr:title text="Evaluation and reduction">Evaluation and reduction</fr:title>
@@ -25,7 +25,7 @@ having had some elimination rule applied. When a term can be reduced no further,
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>374</fr:anchor>
+            <fr:anchor>377</fr:anchor>
             <fr:addr type="user">plt-languages-000I</fr:addr>
             <fr:route>plt-languages-000I.xml</fr:route>
             <fr:title text="Beta-reduction">Beta-reduction</fr:title>
@@ -42,7 +42,7 @@ bound variable in the body of the abstraction. Formally, it is defined as follow
         </fr:tree>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>375</fr:anchor>
+            <fr:anchor>378</fr:anchor>
             <fr:addr type="user">plt-languages-000D</fr:addr>
             <fr:route>plt-languages-000D.xml</fr:route>
             <fr:title text="Introduction form">Introduction form</fr:title>
@@ -72,7 +72,7 @@ might produce the introduction form <fr:tex display="inline"><![CDATA[\langle  n
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>376</fr:anchor>
+            <fr:anchor>379</fr:anchor>
             <fr:addr type="user">plt-languages-0004</fr:addr>
             <fr:route>plt-languages-0004.xml</fr:route>
             <fr:title text="Denotational semantics of the addition language">Denotational semantics of the addition language</fr:title>
@@ -89,7 +89,7 @@ language</fr:link> is given below:
         </fr:tree>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>377</fr:anchor>
+            <fr:anchor>380</fr:anchor>
             <fr:addr type="user">plt-languages-000A</fr:addr>
             <fr:route>plt-languages-000A.xml</fr:route>
             <fr:title text="Normal form">Normal form</fr:title>
@@ -104,7 +104,7 @@ it is either a <fr:link type="local" href="plt-languages-000B.xml" addr="plt-lan
         </fr:tree>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>378</fr:anchor>
+            <fr:anchor>381</fr:anchor>
             <fr:addr type="user">plt-languages-000C</fr:addr>
             <fr:route>plt-languages-000C.xml</fr:route>
             <fr:title text="Redex">Redex</fr:title>

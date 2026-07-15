@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="default.xsl"?>
 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>321</fr:anchor>
+    <fr:anchor>320</fr:anchor>
     <fr:addr type="user">plt-languages-000N</fr:addr>
     <fr:route>plt-languages-000N.xml</fr:route>
     <fr:title text="Bound variable">Bound variable</fr:title>
@@ -23,7 +23,7 @@ the body of the abstraction.</fr:p>
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>322</fr:anchor>
+            <fr:anchor>321</fr:anchor>
             <fr:addr type="user">plt-languages-000M</fr:addr>
             <fr:route>plt-languages-000M.xml</fr:route>
             <fr:title text="Free variable">Free variable</fr:title>

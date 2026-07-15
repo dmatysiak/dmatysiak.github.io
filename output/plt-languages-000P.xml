@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="default.xsl"?>
 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>563</fr:anchor>
+    <fr:anchor>568</fr:anchor>
     <fr:addr type="user">plt-languages-000P</fr:addr>
     <fr:route>plt-languages-000P.xml</fr:route>
     <fr:title text="De Bruijn levels">De Bruijn levels</fr:title>
@@ -27,7 +27,7 @@ gives us the following level representations of these closed terms:
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>564</fr:anchor>
+            <fr:anchor>569</fr:anchor>
             <fr:addr type="user">plt-languages-000G</fr:addr>
             <fr:route>plt-languages-000G.xml</fr:route>
             <fr:title text="De Bruijn indices versus de Bruijn levels">De Bruijn indices versus de Bruijn levels</fr:title>
@@ -36,7 +36,7 @@ gives us the following level representations of these closed terms:
           <fr:mainmatter>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>555</fr:anchor>
+                <fr:anchor>560</fr:anchor>
                 <fr:addr type="user">plt-languages-000O</fr:addr>
                 <fr:route>plt-languages-000O.xml</fr:route>
                 <fr:title text="De Bruijn indices">De Bruijn indices</fr:title>
@@ -63,7 +63,7 @@ index 0. This gives us the following indexed representations of these closed ter
             </fr:tree>
             <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
               <fr:frontmatter>
-                <fr:anchor>556</fr:anchor>
+                <fr:anchor>561</fr:anchor>
                 <fr:addr type="user">plt-languages-000P</fr:addr>
                 <fr:route>plt-languages-000P.xml</fr:route>
                 <fr:title text="De Bruijn levels">De Bruijn levels</fr:title>
@@ -128,7 +128,7 @@ and compare it to the case using levels:
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>565</fr:anchor>
+            <fr:anchor>570</fr:anchor>
             <fr:addr type="user">plt-languages-000O</fr:addr>
             <fr:route>plt-languages-000O.xml</fr:route>
             <fr:title text="De Bruijn indices">De Bruijn indices</fr:title>
@@ -164,7 +164,7 @@ index 0. This gives us the following indexed representations of these closed ter
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>566</fr:anchor>
+            <fr:anchor>571</fr:anchor>
             <fr:addr type="user">plt-languages-000O</fr:addr>
             <fr:route>plt-languages-000O.xml</fr:route>
             <fr:title text="De Bruijn indices">De Bruijn indices</fr:title>

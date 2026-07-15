@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="default.xsl"?>
 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>325</fr:anchor>
+    <fr:anchor>324</fr:anchor>
     <fr:addr type="user">plt-languages-000K</fr:addr>
     <fr:route>plt-languages-000K.xml</fr:route>
     <fr:title text="Closed term">Closed term</fr:title>
@@ -21,7 +21,7 @@ variables</fr:link>.</fr:p>
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>326</fr:anchor>
+            <fr:anchor>325</fr:anchor>
             <fr:addr type="user">plt-languages-000M</fr:addr>
             <fr:route>plt-languages-000M.xml</fr:route>
             <fr:title text="Free variable">Free variable</fr:title>

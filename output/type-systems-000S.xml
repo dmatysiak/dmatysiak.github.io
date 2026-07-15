@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="default.xsl"?>
 <fr:tree toc="true" numbered="true" show-heading="true" show-metadata="true" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
   <fr:frontmatter>
-    <fr:anchor>461</fr:anchor>
+    <fr:anchor>466</fr:anchor>
     <fr:addr type="user">type-systems-000S</fr:addr>
     <fr:route>type-systems-000S.xml</fr:route>
     <fr:title text="Principal judgement">Principal judgement</fr:title>
@@ -26,7 +26,7 @@ first premise.</fr:li></fr:ul>
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>462</fr:anchor>
+            <fr:anchor>467</fr:anchor>
             <fr:addr type="user">type-systems-000H</fr:addr>
             <fr:route>type-systems-000H.xml</fr:route>
             <fr:title text="Pfennig recipe">Pfennig recipe</fr:title>
@@ -41,19 +41,19 @@ discipline</fr:link>—can be mitigated in exchange for a <fr:link type="local" 
 rules</fr:link>.</fr:p>
             <fr:p>Some preliminary definitions are in order.
 
-<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>288</fr:anchor><fr:addr type="user">type-systems-000J</fr:addr><fr:route>type-systems-000J.xml</fr:route><fr:title text="Introduction rule">Introduction rule</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:p>An <fr:em>introduction rule</fr:em> introduces a type connective that occurs in the conclusions
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>287</fr:anchor><fr:addr type="user">type-systems-000J</fr:addr><fr:route>type-systems-000J.xml</fr:route><fr:title text="Introduction rule">Introduction rule</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:p>An <fr:em>introduction rule</fr:em> introduces a type connective that occurs in the conclusions
 of a rule.</fr:p></fr:mainmatter><fr:backmatter /></fr:tree>
-<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>289</fr:anchor><fr:addr type="user">type-systems-000K</fr:addr><fr:route>type-systems-000K.xml</fr:route><fr:title text="Elimiation rule">Elimiation rule</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:p>An <fr:em>elimination rule</fr:em> eliminates a type connective that occurs in a premise of a
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>288</fr:anchor><fr:addr type="user">type-systems-000K</fr:addr><fr:route>type-systems-000K.xml</fr:route><fr:title text="Elimiation rule">Elimiation rule</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:p>An <fr:em>elimination rule</fr:em> eliminates a type connective that occurs in a premise of a
 rule.</fr:p></fr:mainmatter><fr:backmatter /></fr:tree></fr:p>
             <fr:p>The first step is to locate the principal judgement.
 
-<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>290</fr:anchor><fr:addr type="user">type-systems-000R</fr:addr><fr:route>type-systems-000R.xml</fr:route><fr:title text="Principal connective">Principal connective</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:p>The <fr:em>principal connective</fr:em> of 
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>289</fr:anchor><fr:addr type="user">type-systems-000R</fr:addr><fr:route>type-systems-000R.xml</fr:route><fr:title text="Principal connective">Principal connective</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:p>The <fr:em>principal connective</fr:em> of 
 
 <fr:ul><fr:li>an <fr:link type="local" href="type-systems-000J.xml" addr="type-systems-000J" title="Introduction rule">introduction rule</fr:link> is the connective that is being introduced
 by the rule</fr:li>
 
 <fr:li>an <fr:link type="local" href="type-systems-000K.xml" addr="type-systems-000K" title="Elimiation rule">elimination rule</fr:link> is the connective that is being eliminated</fr:li></fr:ul></fr:p></fr:mainmatter><fr:backmatter /></fr:tree>
-<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>291</fr:anchor><fr:addr type="user">type-systems-000S</fr:addr><fr:route>type-systems-000S.xml</fr:route><fr:title text="Principal judgement">Principal judgement</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:p>The <fr:em>principal judgement</fr:em> of a rule is the judgement containing the <fr:link type="local" href="type-systems-000R.xml" addr="type-systems-000R" title="Principal connective">principle
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>290</fr:anchor><fr:addr type="user">type-systems-000S</fr:addr><fr:route>type-systems-000S.xml</fr:route><fr:title text="Principal judgement">Principal judgement</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:p>The <fr:em>principal judgement</fr:em> of a rule is the judgement containing the <fr:link type="local" href="type-systems-000R.xml" addr="type-systems-000R" title="Principal connective">principle
 connective</fr:link>.</fr:p><fr:ul><fr:li>In an <fr:link type="local" href="type-systems-000J.xml" addr="type-systems-000J" title="Introduction rule">introduction rule</fr:link>, the principle judgement is usually the
 conclusion.</fr:li>
 
@@ -111,7 +111,7 @@ must be examined more critically.</fr:p>
 
 This rule is a special case of reasoning by cases:
 
-<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>292</fr:anchor><fr:addr type="user">ttfp-000O</fr:addr><fr:route>ttfp-000O.xml</fr:route><fr:title text="Disjunction elimination">Disjunction elimination</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:tex display="block"><![CDATA[\frac {\begin {array}{ccc}           & [A] & [B] \\           & \vdots  & \vdots  \\           A \lor  B & C & C         \end {array}}        {C}(\mathtt {\lor {E}})]]></fr:tex></fr:mainmatter><fr:backmatter /></fr:tree></fr:p>
+<fr:tree toc="true" numbered="true" show-heading="true" show-metadata="false" expanded="true" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>291</fr:anchor><fr:addr type="user">ttfp-000O</fr:addr><fr:route>ttfp-000O.xml</fr:route><fr:title text="Disjunction elimination">Disjunction elimination</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:tex display="block"><![CDATA[\frac {\begin {array}{ccc}           & [A] & [B] \\           & \vdots  & \vdots  \\           A \lor  B & C & C         \end {array}}        {C}(\mathtt {\lor {E}})]]></fr:tex></fr:mainmatter><fr:backmatter /></fr:tree></fr:p>
           </fr:mainmatter>
           <fr:backmatter />
         </fr:tree>
@@ -126,7 +126,7 @@ This rule is a special case of reasoning by cases:
       <fr:mainmatter>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>463</fr:anchor>
+            <fr:anchor>468</fr:anchor>
             <fr:addr type="user">type-systems-000K</fr:addr>
             <fr:route>type-systems-000K.xml</fr:route>
             <fr:title text="Elimiation rule">Elimiation rule</fr:title>
@@ -140,7 +140,7 @@ rule.</fr:p>
         </fr:tree>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>464</fr:anchor>
+            <fr:anchor>469</fr:anchor>
             <fr:addr type="user">type-systems-000J</fr:addr>
             <fr:route>type-systems-000J.xml</fr:route>
             <fr:title text="Introduction rule">Introduction rule</fr:title>
@@ -154,7 +154,7 @@ of a rule.</fr:p>
         </fr:tree>
         <fr:tree toc="true" numbered="false" show-heading="true" show-metadata="true" expanded="false" root="false" xmlns:fr="http://www.jonmsterling.com/jms-005P.xml">
           <fr:frontmatter>
-            <fr:anchor>465</fr:anchor>
+            <fr:anchor>470</fr:anchor>
             <fr:addr type="user">type-systems-000R</fr:addr>
             <fr:route>type-systems-000R.xml</fr:route>
             <fr:title text="Principal connective">Principal connective</fr:title>
